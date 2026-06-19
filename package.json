@@ -1,0 +1,23 @@
+{
+  "name": "desktop-design-language",
+  "private": true,
+  "type": "module",
+  "style": "./src/design-language.css",
+  "exports": {
+    "./css": "./src/design-language.css",
+    "./css/docs": "./src/design-language.docs.css",
+    "./css/*": "./css/*",
+    "./icons/*": "./icons/*"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run icons:check && vite build",
+    "preview": "vite preview",
+    "icons:build": "node tools/build-icons.mjs",
+    "icons:check": "node tools/build-icons.mjs --check"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.66",
+    "vite": "^8.0.16"
+  }
+}

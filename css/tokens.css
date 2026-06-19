@@ -1,0 +1,177 @@
+/* ============================================================
+   UI Kit — Design Tokens
+   A generic desktop-app design system. The default theme is
+   "graphite dark": near-black surfaces, white/grey ink,
+   accent = the OS system accent. Any app can:
+     • set a brand --accent (+ --accent-ink)
+     • switch theme with  <html data-theme="light">
+     • switch density with <html data-density="compact">
+     • opt into semantic colors (success/warning/info/danger)
+   Everything below is a token — components never hardcode color.
+   ============================================================ */
+
+:root {
+  /* ---- Surfaces ---- */
+  --bg:          #0c0d0e;            /* app background (near-black)        */
+  --rail:        #141516;            /* sidebar / chrome                   */
+  --surface:     #171819;            /* cards & panels                     */
+  --surface-2:   #1d1e1f;            /* raised surface / hovered rows      */
+  --inset:       #090a0a;            /* recessed: inputs, wells            */
+  --hover:       rgba(255,255,255,.05);
+  --fill:        rgba(255,255,255,.07);  /* secondary control fill         */
+  --fill-hover:  rgba(255,255,255,.12);
+  --selected:    var(--fill-hover);  /* neutral "row is selected" fill */
+
+  /* ---- Borders ---- */
+  --border:        rgba(255,255,255,.08);
+  --border-soft:   rgba(255,255,255,.05);
+  --border-strong: rgba(255,255,255,.16);
+
+  /* ---- Text / ink ---- */
+  --text:        #f3f3f4;            /* primary                            */
+  --text-2:      #9c9ea1;            /* secondary                          */
+  --text-3:      #616264;            /* tertiary / muted / labels          */
+  --text-invert: #0c0d0e;            /* ink on light fills                 */
+
+  /* ---- Accent (override these to brand the system) ----
+     Default follows the OS accent color, e.g. Windows accent. */
+  --accent:       AccentColor;
+  --accent-hover: AccentColor;
+  --accent-ink:   AccentColorText;       /* text/icon on accent fills      */
+  --accent-soft:  color-mix(in srgb, AccentColor 22%, transparent);
+  --accent-border:color-mix(in srgb, AccentColor 45%, transparent);
+
+  /* ---- Semantic colors (reserved for explicit status meaning) ---- */
+  --success:#5ec98c; --success-soft:rgba(94,201,140,.14); --success-ink:#bdeccf;
+  --warning:#e6b450; --warning-soft:rgba(230,180,80,.14);  --warning-ink:#f0d7a0;
+  --info:   #6aa6e8; --info-soft:   rgba(106,166,232,.14); --info-ink:#bcd8f5;
+  --danger: #d6534e; --danger-soft: rgba(214,83,78,.15);   --danger-ink:#f0bcb9;
+  --danger-contrast:#ffffff;
+  --danger-strong:#b32b27;          /* the deep red for window-close       */
+
+  /* ---- Component color hooks (themeable) ---- */
+  --titlebar-bg: #000000;
+  --tooltip-bg:  #000000;
+  --tooltip-ink: #ffffff;
+  --overlay-bg:  rgba(0,0,0,.55);
+
+  /* ---- Focus ring ---- */
+  --focus:      rgba(255,255,255,.55);
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--focus);
+
+  /* ---- Typography ---- */
+  --font-sans: "Sora", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "Consolas", monospace;
+
+  --fz-2xs: 10px;
+  --fz-xs:  11px;
+  --fz-sm:  12.5px;
+  --fz-base:13px;
+  --fz-md:  15px;
+  --fz-lg:  18px;
+  --fz-xl:  23px;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --lh-tight: 1.2;
+  --lh-base:  1.5;
+  --label-ls: .05em;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* ---- Spacing scale (4px base) ---- */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 14px;
+  --space-7: 16px;
+  --space-8: 20px;
+  --space-9: 24px;
+  --space-10:30px;
+
+  /* ---- Control heights (scaled by density) ---- */
+  --control-h:    34px;
+  --control-h-sm: 28px;
+  --control-h-lg: 40px;
+
+  /* ---- Elevation ---- */
+  --shadow-popover: 0 8px 20px -8px rgba(0,0,0,.7);
+  --shadow-dialog:  0 30px 70px -24px rgba(0,0,0,.85);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.2,.6,.2,1);
+  --dur:  .14s;
+
+  /* ---- Layout ---- */
+  --titlebar-h: 36px;
+  --rail-w:     198px;
+
+  /* ---- Tree ---- */
+  --ds-tree-indent: 18px;
+
+  /* ---- Resizable panes ---- */
+  --ds-pane-min: 160px;
+  --ds-pane-max: 60%;
+}
+
+/* ============================================================
+   LIGHT THEME — set  data-theme="light"  on <html> (or any node)
+   ============================================================ */
+[data-theme="light"] {
+  --bg:          #f3f4f6;
+  --rail:        #eaecef;
+  --surface:     #ffffff;
+  --surface-2:   #f4f5f7;
+  --inset:       #eceef1;
+  --hover:       rgba(0,0,0,.04);
+  --fill:        rgba(0,0,0,.05);
+  --fill-hover:  rgba(0,0,0,.09);
+
+  --border:        rgba(0,0,0,.10);
+  --border-soft:   rgba(0,0,0,.06);
+  --border-strong: rgba(0,0,0,.18);
+
+  --text:        #1b1d21;
+  --text-2:      #5b616b;
+  --text-3:      #9aa0a8;
+  --text-invert: #ffffff;
+
+  --accent:       AccentColor;
+  --accent-hover: AccentColor;
+  --accent-ink:   AccentColorText;
+  --accent-soft:  color-mix(in srgb, AccentColor 18%, transparent);
+  --accent-border:color-mix(in srgb, AccentColor 38%, transparent);
+
+  --success-ink:#247245;
+  --warning-ink:#805800;
+  --info-ink:#245f9f;
+  --danger-ink:#9a302c;
+
+  --titlebar-bg: #e4e6ea;
+  --tooltip-bg:  #1b1d21;
+  --overlay-bg:  rgba(0,0,0,.35);
+
+  --focus:      rgba(0,0,0,.45);
+  --shadow-popover: 0 8px 20px -8px rgba(0,0,0,.22);
+  --shadow-dialog:  0 30px 70px -24px rgba(0,0,0,.28);
+}
+
+/* ============================================================
+   DENSITY — set  data-density="compact"  for tighter desktops
+   ============================================================ */
+[data-density="compact"] {
+  --control-h:    30px;
+  --control-h-sm: 25px;
+  --control-h-lg: 36px;
+  --fz-base: 12.5px;
+  --titlebar-h: 32px;
+}

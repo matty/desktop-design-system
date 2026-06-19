@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>try{if(localStorage.getItem('ds-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<title>Desktop Design Language</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/utilities.css" />
+<link rel="stylesheet" href="css/patterns.css" />
+<link rel="stylesheet" href="css/docs.css" />
+</head>
+<body>
+<div class="doc">
+  <div class="ds-titlebar">
+    <div class="ds-titlebar-title">Desktop Design Language</div>
+    <div class="ds-winbtns">
+      <button title="Minimize"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+      <button title="Maximize"><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+      <button class="is-close" title="Close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="doc-body">
+    <nav class="ds-rail doc-nav">
+      <div class="doc-nav-brand"><b>Desktop</b><span>Design Language</span></div>
+      <a class="ds-navi is-active" href="index.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></g></svg>Overview</a>
+      <a class="ds-navi" href="pages/foundations.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></svg>Foundations</a>
+      <a class="ds-navi" href="pages/utilities.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>Utilities</a>
+      <a class="ds-navi" href="pages/patterns.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg>Patterns</a>
+      <a class="ds-navi" href="pages/buttons.html"><svg viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>Buttons</a>
+      <a class="ds-navi" href="pages/forms.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01M17 12h.01M7 12h.01"/></g></svg>Forms &amp; Inputs</a>
+      <a class="ds-navi" href="pages/data-display.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>Data Display</a>
+      <a class="ds-navi" href="pages/feedback.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>Feedback</a>
+      <a class="ds-navi" href="pages/navigation.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></g></svg>Navigation</a>
+      <a class="ds-navi" href="pages/keyboard.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M8 13h.01M12 13h.01M16 13h.01M6 17h12"/></g></svg>Keyboard</a>
+      <a class="ds-navi" href="pages/system.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></svg>System &amp; Theming</a>
+      <div class="ds-rail-spacer"></div>
+      <div class="doc-theme-toggle">
+        <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <label class="ds-switch"><input type="checkbox" id="themeToggle" aria-label="Toggle light theme" /><span class="ds-track"></span></label>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </div>
+    </nav>
+
+    <main class="doc-main">
+      <div class="doc-main-inner">
+        <div class="doc-header">
+          <h1>Desktop Design Language</h1>
+          <p>A desktop-native design language and CSS grammar. Near-black surfaces, white &amp; grey ink, and primary controls that follow the OS system accent by default — on Windows, that means the selected Windows accent color. Compose tokens, primitives, utilities, states, and full-screen patterns; switch to light, set a brand accent override, or reserve semantic colors for explicit meaning. Danger red is reserved for destructive actions and window-close.</p>
+        </div>
+
+        <!-- principles -->
+        <section class="doc-section">
+          <h2>Principles</h2>
+          <div class="stack" style="margin-top:14px">
+            <div class="ds-card" style="padding:16px 18px"><b class="ds-h2">System accent by default</b><p class="ds-sub" style="margin-top:5px">Primary controls use <code>AccentColor</code> and <code>AccentColorText</code>, so the UI inherits the platform accent while state still relies on brightness and weight.</p></div>
+            <div class="ds-card" style="padding:16px 18px"><b class="ds-h2">Desktop density</b><p class="ds-sub" style="margin-top:5px">Compact 34px controls, hairline dividers, top-left aligned content. It reads like a utility, not a website.</p></div>
+            <div class="ds-card" style="padding:16px 18px"><b class="ds-h2">Mono for data</b><p class="ds-sub" style="margin-top:5px">Numbers, IDs, addresses and live values use JetBrains&nbsp;Mono so they stay legible and aligned. Sora carries everything else.</p></div>
+          </div>
+        </section>
+
+        <!-- live shell -->
+        <section class="doc-section">
+          <h2>The shell</h2>
+          <p class="desc">An app shell composed from design-system primitives, utilities, and states.</p>
+          <div class="example">
+            <div class="example-preview center" style="padding:0; overflow:hidden">
+              <div style="width:100%; height:300px; display:grid; grid-template-rows:var(--titlebar-h) 1fr; background:var(--bg); border-radius:var(--radius); overflow:hidden">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Demo App</div>
+                  <div class="ds-winbtns">
+                    <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+                    <button><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+                    <button class="is-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+                  </div>
+                </div>
+                <div style="display:grid; grid-template-columns:var(--rail-w) 1fr; min-height:0">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></svg>Home</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 3v18m-9-9h18"/><rect width="18" height="18" x="3" y="3" rx="2"/></g></svg>Library</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></svg>Browse</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></svg>Settings</a>
+                    <div class="ds-rail-spacer"></div>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></g></svg>About</a>
+                  </nav>
+                  <div style="padding:18px 20px; overflow:hidden">
+                    <h1 class="ds-h1">Home</h1>
+                    <p class="ds-sub" style="margin-top:3px">Welcome back — here's where things stand.</p>
+                    <div class="ds-panel" style="margin-top:14px">
+                      <div class="u-flex u-items-center u-gap-6" style="padding:14px 16px">
+                        <div class="ds-indicator is-on"><div class="ds-core"></div></div>
+                        <div><div class="ds-h2">Connected</div><div class="ds-value" style="color:var(--text-2)">all services healthy</div></div>
+                        <div class="u-flex u-gap-3" style="margin-left:auto">
+                          <button class="ds-btn is-primary is-sm"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g></svg>Sync</button>
+                          <button class="ds-btn is-icon is-sm"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></g></svg></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption">Composed from <b>.ds-titlebar</b>, <b>.ds-rail</b>, <b>.ds-navi</b>, <b>.ds-panel</b>, <b>.ds-indicator</b>, <b>.ds-btn</b></div>
+          </div>
+        </section>
+
+        <!-- primitive index -->
+        <section class="doc-section">
+          <h2>Explore</h2>
+          <div class="swatch-grid" style="margin-top:14px">
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/foundations.html"><b class="ds-h2">Foundations</b><p class="ds-sub" style="margin-top:4px">Color, type, spacing, radius, icons, motion.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/utilities.html"><b class="ds-h2">Utilities</b><p class="ds-sub" style="margin-top:4px">Layout, spacing, panes, form grids, settings lists.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/buttons.html"><b class="ds-h2">Buttons</b><p class="ds-sub" style="margin-top:4px">Primary, secondary, ghost, danger, icon, groups.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/forms.html"><b class="ds-h2">Forms &amp; Inputs</b><p class="ds-sub" style="margin-top:4px">Text, number, select, switch, checkbox, slider, filterable &amp; multi-select combobox.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/data-display.html"><b class="ds-h2">Data Display</b><p class="ds-sub" style="margin-top:4px">Panels, facts, tables, badges, meters, status, tree view, drag-and-drop reordering.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/feedback.html"><b class="ds-h2">Feedback</b><p class="ds-sub" style="margin-top:4px">Alerts, empty states, tooltips, dialogs.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/navigation.html"><b class="ds-h2">Navigation</b><p class="ds-sub" style="margin-top:4px">Titlebar, sidebar, tabs, segmented, menus, context menu.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/patterns.html"><b class="ds-h2">Patterns</b><p class="ds-sub" style="margin-top:4px">Settings, inspector splits, command palettes, resizable split panes, and full-screen recipes.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/keyboard.html"><b class="ds-h2">Keyboard</b><p class="ds-sub" style="margin-top:4px">Interaction contracts — key bindings and focus behaviour for every interactive primitive.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="pages/system.html"><b class="ds-h2">System &amp; Theming</b><p class="ds-sub" style="margin-top:4px">Light/dark, density, OS accent, brand overrides, semantic colors.</p></a>
+            <a class="ds-card" style="padding:16px; text-decoration:none" href="LLM_GUIDE.md"><b class="ds-h2">LLM Guide</b><p class="ds-sub" style="margin-top:4px">Rules for agents and code generators composing app screens.</p></a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+<script defer src="js/ds.js"></script>
+</body>
+</html>

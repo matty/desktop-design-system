@@ -1,0 +1,75 @@
+/* ============================================================
+   UI Kit Design Language — Documentation site chrome
+   (only used by the example pages, not by the product)
+   ============================================================ */
+
+.doc { height:100vh; display:grid; grid-template-rows:var(--titlebar-h) 1fr; overflow:hidden; }
+.doc-body { display:grid; grid-template-columns:var(--rail-w) 1fr; min-height:0; }
+
+/* left nav reuses .ds-rail / .ds-navi */
+.doc-nav .doc-nav-brand { padding:10px 11px 12px; }
+.doc-nav .doc-nav-brand b { font-size:var(--fz-base); font-weight:var(--fw-bold); letter-spacing:.01em; }
+.doc-nav .doc-nav-brand span { display:block; font-size:var(--fz-2xs); color:var(--text-3); letter-spacing:var(--label-ls); text-transform:uppercase; margin-top:2px; }
+
+.doc-main { overflow-y:auto; }
+.doc-main-inner { max-width:920px; padding:30px 40px 80px; }
+
+.doc-header { margin-bottom:30px; }
+.doc-header h1 { margin:0; font-size:var(--fz-xl); font-weight:var(--fw-bold); letter-spacing:-.02em; }
+.doc-header p { margin:8px 0 0; color:var(--text-2); font-size:var(--fz-md); max-width:640px; line-height:1.55; }
+
+.doc-section { margin-top:42px; }
+.doc-section > h2 { font-size:var(--fz-lg); font-weight:var(--fw-semibold); margin:0 0 4px; letter-spacing:-.01em; }
+.doc-section > .desc { color:var(--text-2); font-size:var(--fz-base); margin:0 0 18px; max-width:620px; }
+.doc-section-sub { font-size:var(--fz-2xs); letter-spacing:var(--label-ls); text-transform:uppercase; color:var(--text-3); font-weight:var(--fw-semibold); margin:26px 0 12px; }
+
+/* example block */
+.example { margin-bottom:18px; }
+.example-preview {
+  background:var(--rail);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:14px;
+}
+.example-preview.col { flex-direction:column; align-items:stretch; }
+.example-preview.center { justify-content:center; }
+.example-caption { margin-top:8px; font-family:var(--font-mono); font-size:var(--fz-xs); color:var(--text-3); }
+.example-caption b { color:var(--text-2); font-weight:var(--fw-medium); }
+
+/* code chip */
+code.chip { font-family:var(--font-mono); font-size:var(--fz-xs); background:var(--inset); border:1px solid var(--border-soft); border-radius:5px; padding:2px 6px; color:var(--text-2); }
+
+/* swatches */
+.swatch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; }
+.swatch { border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:var(--surface); }
+.swatch .chip-color { height:64px; border-bottom:1px solid var(--border-soft); }
+.swatch .swatch-meta { padding:9px 11px; }
+.swatch .swatch-meta b { display:block; font-size:var(--fz-sm); font-weight:var(--fw-medium); }
+.swatch .swatch-meta span { font-family:var(--font-mono); font-size:var(--fz-xs); color:var(--text-3); }
+
+/* type specimens */
+.type-row { display:flex; align-items:baseline; gap:18px; padding:13px 0; border-bottom:1px solid var(--border-soft); }
+.type-row:last-child { border-bottom:0; }
+.type-row .type-meta { width:160px; flex:none; font-family:var(--font-mono); font-size:var(--fz-xs); color:var(--text-3); }
+
+/* spacing/radius specimens */
+.spec-grid { display:flex; flex-wrap:wrap; gap:20px; }
+.spec { text-align:center; }
+.spec .box { background:var(--fill-hover); border:1px solid var(--border); }
+.spec .spec-label { margin-top:7px; font-family:var(--font-mono); font-size:var(--fz-xs); color:var(--text-3); }
+
+/* icon grid */
+.icon-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(96px,1fr)); gap:10px; }
+.icon-cell { display:flex; flex-direction:column; align-items:center; gap:8px; padding:16px 8px; border:1px solid var(--border-soft); border-radius:var(--radius); background:var(--surface); }
+.icon-cell svg { width:22px; height:22px; stroke:var(--text); stroke-width:1.8; fill:none; }
+.icon-cell span { font-family:var(--font-mono); font-size:var(--fz-2xs); color:var(--text-3); }
+
+/* utility rows */
+.row-wrap { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+.stack { display:grid; gap:14px; }
+.w-260 { width:260px; } .w-180 { width:180px; } .w-320 { width:320px; }
+
+/* theme toggle pinned to the bottom of the docs rail */
+.doc-theme-toggle { display:flex; align-items:center; gap:10px; padding:10px 11px 6px; }
+.doc-theme-toggle svg { width:15px; height:15px; color:var(--text-3); flex:none; stroke:currentColor; stroke-width:2; fill:none; }

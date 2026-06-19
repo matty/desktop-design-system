@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>try{if(localStorage.getItem('ds-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<title>Forms &amp; Inputs — Desktop Design Language</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/tokens.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/utilities.css" />
+<link rel="stylesheet" href="../css/patterns.css" />
+<link rel="stylesheet" href="../css/docs.css" />
+</head>
+<body>
+<div class="doc">
+  <div class="ds-titlebar">
+    <div class="ds-titlebar-title">Desktop Design Language</div>
+    <div class="ds-winbtns">
+      <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+      <button><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+      <button class="is-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="doc-body">
+    <nav class="ds-rail doc-nav">
+      <div class="doc-nav-brand"><b>Desktop</b><span>Design Language</span></div>
+      <a class="ds-navi" href="../index.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></g></svg>Overview</a>
+      <a class="ds-navi" href="foundations.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></svg>Foundations</a>
+      <a class="ds-navi" href="utilities.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>Utilities</a>
+      <a class="ds-navi" href="patterns.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg>Patterns</a>
+      <a class="ds-navi" href="buttons.html"><svg viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>Buttons</a>
+      <a class="ds-navi is-active" href="forms.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01M17 12h.01M7 12h.01"/></g></svg>Forms &amp; Inputs</a>
+      <a class="ds-navi" href="data-display.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>Data Display</a>
+      <a class="ds-navi" href="feedback.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>Feedback</a>
+      <a class="ds-navi" href="navigation.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></g></svg>Navigation</a>
+      <a class="ds-navi" href="system.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></svg>System &amp; Theming</a>
+      <div class="ds-rail-spacer"></div>
+      <div class="doc-theme-toggle">
+        <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <label class="ds-switch"><input type="checkbox" id="themeToggle" aria-label="Toggle light theme" /><span class="ds-track"></span></label>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </div>
+    </nav>
+
+    <main class="doc-main">
+      <div class="doc-main-inner">
+        <div class="doc-header">
+          <h1>Forms &amp; Inputs</h1>
+          <p>Recessed inset fields, hairline borders, and an accent-colored focus ring. Validation states (error / success) override the accent. Settings read as label-left / control-right rows.</p>
+        </div>
+
+        <section class="doc-section">
+          <h2>Text input</h2>
+          <div class="example">
+            <div class="example-preview col">
+              <div class="ds-field w-320">
+                <label class="ds-field-label">Display name</label>
+                <input class="ds-input" value="Jordan Rivera" />
+              </div>
+              <div class="ds-field w-320">
+                <label class="ds-field-label">With leading icon</label>
+                <div class="ds-input-wrap">
+                  <span class="ds-adorn"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></svg></span>
+                  <input class="ds-input" placeholder="Search…" />
+                </div>
+              </div>
+              <div class="ds-field w-320">
+                <label class="ds-field-label" for="widthErr">Error state</label>
+                <div class="ds-input-wrap">
+                  <input id="widthErr" class="ds-input is-mono is-invalid" value="70000"
+                         aria-invalid="true" aria-describedby="widthErrMsg" />
+                  <span class="ds-suffix">px</span>
+                </div>
+                <div class="ds-field-error" id="widthErrMsg">
+                  <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+                  Width must be between 1 and 4096.
+                </div>
+              </div>
+              <div class="ds-field w-320">
+                <label class="ds-field-label">Success state</label>
+                <input class="ds-input is-valid" value="jordan@example.com" />
+                <span class="ds-field-hint" style="color:var(--success)">Address is available.</span>
+              </div>
+            </div>
+            <div class="example-caption">Focus uses <b>--accent</b>; <b>.is-invalid</b> / <b>.is-valid</b> override it with danger / success — click a field to see the ring. Error text uses <b>.ds-field-error</b> with icon + text (never color-only), wired via <b>aria-invalid="true"</b> + <b>aria-describedby</b></div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Number</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-field">
+                <label class="ds-field-label">Port</label>
+                <div class="ds-number">
+                  <input id="num" type="text" value="8080" inputmode="numeric" />
+                  <div class="ds-step">
+                    <button data-step="1"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></svg></button>
+                    <button data-step="-1"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>
+                  </div>
+                </div>
+              </div>
+              <div class="ds-field">
+                <label class="ds-field-label">Max threads</label>
+                <div class="ds-number">
+                  <input type="text" value="8" inputmode="numeric" />
+                  <div class="ds-step">
+                    <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></svg></button>
+                    <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-number</b> with <b>.ds-step</b> increment/decrement</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Select</h2>
+          <p class="desc">A fully styled select — the popup is themed too, unlike a native <code class="chip">&lt;select&gt;</code> whose open list is drawn by the OS. Click to open; the selected option is checked.</p>
+          <div class="example">
+            <div class="example-preview u-items-start">
+              <div class="ds-field w-260">
+                <label class="ds-field-label">Export format</label>
+                <div class="ds-combo u-w-full">
+                  <button class="ds-combo-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="ds-combo-value">PNG</span>
+                    <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                  </button>
+                  <div class="ds-combo-menu" hidden role="listbox">
+                    <div class="ds-combo-option is-selected" data-value="png">PNG<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="jpeg">JPEG<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="webp">WebP<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="svg">SVG<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="ds-field w-260">
+                <label class="ds-field-label">Theme</label>
+                <div class="ds-combo u-w-full">
+                  <button class="ds-combo-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="ds-combo-value">System</span>
+                    <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                  </button>
+                  <div class="ds-combo-menu" hidden role="listbox">
+                    <div class="ds-combo-option is-selected" data-value="system">System<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="light">Light<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="dark">Dark<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-combo</b> is the select — a fully themed popup (no native <code>&lt;select&gt;</code>). <b>.ds-combo-btn</b> + <b>.ds-combo-menu</b> › <b>.ds-combo-option</b> (<b>.is-selected</b>). <b>.is-up</b> opens the menu upward when space below is tight.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Dropdown menu</h2>
+          <p class="desc">A custom popover for actions or richer choices (icons, sections, destructive items).</p>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-dropdown" id="dd">
+                <button class="ds-btn" id="ddBtn">Recent files <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>
+                <div class="ds-menu" id="ddMenu" hidden>
+                  <div class="ds-menu-label">Documents</div>
+                  <div class="ds-menu-item is-active"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g></svg>Quarterly report.pdf</div>
+                  <div class="ds-menu-item"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g></svg>Meeting notes.txt</div>
+                  <div class="ds-menu-sep"></div>
+                  <div class="ds-menu-item"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>Browse…</div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-dropdown</b> › <b>.ds-menu</b> › <b>.ds-menu-item</b> (toggle <code class="chip">hidden</code>)</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Toggles &amp; choices</h2>
+          <div class="example">
+            <div class="example-preview" style="gap:34px">
+              <label class="ds-switch"><input type="checkbox" checked /><span class="ds-track"></span></label>
+              <label class="ds-check"><input type="checkbox" checked /> Remember window size</label>
+              <div class="u-flex u-gap-7">
+                <label class="ds-radio"><input type="radio" name="rt" checked /> Light</label>
+                <label class="ds-radio"><input type="radio" name="rt" /> Dark</label>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-switch</b> · <b>.ds-check</b> · <b>.ds-radio</b></div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Slider</h2>
+          <div class="example">
+            <div class="example-preview col">
+              <div class="ds-field w-320">
+                <label class="ds-field-label u-flex u-justify-between">Opacity <span class="ds-value" id="sv">0.35</span></label>
+                <input class="ds-slider" id="sl" type="range" min="0" max="1" step="0.01" value="0.35" />
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-slider</b> — range 0.00–1.00</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Settings rows</h2>
+          <p class="desc">The default layout for settings pages: description on the left, control on the right.</p>
+          <div class="example">
+            <div class="example-preview col" style="padding:6px 18px">
+              <div class="ds-row">
+                <div class="ds-row-text"><b>Export format</b><span>Default format for saved files</span></div>
+                <div class="ds-row-control">
+                  <div class="ds-combo" style="width:150px">
+                    <button class="ds-combo-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                      <span class="ds-combo-value">PNG</span>
+                      <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                    </button>
+                    <div class="ds-combo-menu is-right" hidden role="listbox">
+                      <div class="ds-combo-option is-selected" data-value="png">PNG<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                      <div class="ds-combo-option" data-value="jpeg">JPEG<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                      <div class="ds-combo-option" data-value="webp">WebP<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ds-row">
+                <div class="ds-row-text"><b>Auto-save</b><span>Save changes automatically</span></div>
+                <div class="ds-row-control"><label class="ds-switch"><input type="checkbox" checked /><span class="ds-track"></span></label></div>
+              </div>
+              <div class="ds-row">
+                <div class="ds-row-text"><b>Cache size</b><span>Maximum disk cache in MB</span></div>
+                <div class="ds-row-control">
+                  <div class="ds-number"><input type="text" value="512" /><div class="ds-step"><button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></svg></button><button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ds-row</b> › <b>.ds-row-text</b> + <b>.ds-row-control</b></div>
+          </div>
+        </section>
+        <section class="doc-section">
+          <h2>Filterable &amp; multi-select combobox</h2>
+          <p class="desc">Three combo modes: filterable single-select, multi-select with chips, and multi-select checklist.</p>
+          <div class="example">
+            <div class="example-preview u-items-start" style="gap:var(--space-7)">
+
+              <div class="ds-field w-260">
+                <label class="ds-field-label">Country (filterable)</label>
+                <div class="ds-combo is-filterable u-w-full">
+                  <button class="ds-combo-btn" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="ds-combo-value is-placeholder">Choose a country…</span>
+                    <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                  </button>
+                  <div class="ds-combo-menu" hidden role="listbox">
+                    <input class="ds-combo-filter" type="text" placeholder="Filter…" aria-label="Filter options">
+                    <div class="ds-combo-option" data-value="ca" role="option">Canada</div>
+                    <div class="ds-combo-option" data-value="fr" role="option">France</div>
+                    <div class="ds-combo-option" data-value="de" role="option">Germany</div>
+                    <div class="ds-combo-option" data-value="jp" role="option">Japan</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ds-field w-260">
+                <label class="ds-field-label">Tags (multi-select chips)</label>
+                <div class="ds-combo is-multi u-w-full">
+                  <button class="ds-combo-btn" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                  </button>
+                  <div class="ds-combo-menu" hidden role="listbox" aria-multiselectable="true">
+                    <div class="ds-combo-option" data-value="design" data-label="Design" role="option">Design<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="frontend" data-label="Frontend" role="option">Frontend<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="backend" data-label="Backend" role="option">Backend<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="devops" data-label="DevOps" role="option">DevOps<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ds-field w-260">
+                <label class="ds-field-label">Permissions (checklist)</label>
+                <div class="ds-combo is-multi is-checklist u-w-full">
+                  <button class="ds-combo-btn" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="ds-combo-value" data-placeholder="Select…">Select…</span>
+                    <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                  </button>
+                  <div class="ds-combo-menu" hidden role="listbox" aria-multiselectable="true">
+                    <div class="ds-combo-option" data-value="read" role="option">Read<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="write" role="option">Write<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="admin" role="option">Admin<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                    <div class="ds-combo-option" data-value="delete" role="option">Delete<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="example-caption"><b>.is-filterable</b> — adds a filter <code>&lt;input&gt;</code> as first child of <b>.ds-combo-menu</b>; typing narrows options. <b>.is-multi</b> — multiple options can be selected; selected values render as removable <b>.ds-chip</b> elements inside the button. <b>.is-multi.is-checklist</b> — options show a checkmark when selected; the button shows "N selected" count instead of chips. All three modes keep the menu open while toggling; click outside or press Esc to close.</div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  // dropdown
+  const dd=document.getElementById('dd'),ddBtn=document.getElementById('ddBtn'),ddMenu=document.getElementById('ddMenu');
+  ddBtn.onclick=(e)=>{e.stopPropagation();ddMenu.hidden=!ddMenu.hidden};
+  document.addEventListener('click',()=>ddMenu.hidden=true);
+  ddMenu.querySelectorAll('.ds-menu-item').forEach(it=>it.onclick=()=>{ddMenu.querySelectorAll('.ds-menu-item').forEach(x=>x.classList.remove('is-active'));it.classList.add('is-active')});
+  // number steppers (demo: first one)
+  document.querySelectorAll('.ds-number').forEach(n=>{
+    const inp=n.querySelector('input'),btns=n.querySelectorAll('.ds-step button');
+    btns[0].addEventListener('click',()=>inp.value=(+inp.value||0)+1);
+    btns[1].addEventListener('click',()=>inp.value=(+inp.value||0)-1);
+  });
+  // slider value
+  const sl=document.getElementById('sl'),sv=document.getElementById('sv');
+  sl.addEventListener('input',()=>sv.textContent=(+sl.value).toFixed(2));
+
+</script>
+<script defer src="../js/ds.js"></script>
+</body>
+</html>

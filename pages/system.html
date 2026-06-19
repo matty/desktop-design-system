@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>try{if(localStorage.getItem('ds-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<title>System &amp; Theming — Desktop Design Language</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/tokens.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/utilities.css" />
+<link rel="stylesheet" href="../css/patterns.css" />
+<link rel="stylesheet" href="../css/docs.css" />
+</head>
+<body>
+<div class="doc">
+  <div class="ds-titlebar">
+    <div class="ds-titlebar-title">Desktop Design Language</div>
+    <div class="ds-winbtns">
+      <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+      <button><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+      <button class="is-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="doc-body">
+    <nav class="ds-rail doc-nav">
+      <div class="doc-nav-brand"><b>Desktop</b><span>Design Language</span></div>
+      <a class="ds-navi" href="../index.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></g></svg>Overview</a>
+      <a class="ds-navi" href="foundations.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></svg>Foundations</a>
+      <a class="ds-navi" href="utilities.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>Utilities</a>
+      <a class="ds-navi" href="patterns.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg>Patterns</a>
+      <a class="ds-navi" href="buttons.html"><svg viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>Buttons</a>
+      <a class="ds-navi" href="forms.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01M17 12h.01M7 12h.01"/></g></svg>Forms &amp; Inputs</a>
+      <a class="ds-navi" href="data-display.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>Data Display</a>
+      <a class="ds-navi" href="feedback.html"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>Feedback</a>
+      <a class="ds-navi" href="navigation.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></g></svg>Navigation</a>
+      <a class="ds-navi is-active" href="system.html"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></svg>System &amp; Theming</a>
+      <div class="ds-rail-spacer"></div>
+      <div class="doc-theme-toggle">
+        <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <label class="ds-switch"><input type="checkbox" id="themeToggle" aria-label="Toggle light theme" /><span class="ds-track"></span></label>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </div>
+    </nav>
+
+    <main class="doc-main">
+      <div class="doc-main-inner">
+        <div class="doc-header">
+          <h1>System &amp; Theming</h1>
+          <p>What makes this reusable for any desktop app: themes, density, the OS system accent, and the broader design-language set. Every control below is token-driven — flip a switch and watch it adapt.</p>
+        </div>
+
+        <!-- live theming -->
+        <section class="doc-section">
+          <h2>Theme, density &amp; accent</h2>
+          <p class="desc">Set <code class="chip">data-theme</code>, <code class="chip">data-density</code> on <code class="chip">&lt;html&gt;</code>. The default accent follows the OS system accent; override <code class="chip">--accent</code> to brand it. Try them on this preview:</p>
+
+          <div class="row-wrap" style="margin-bottom:14px; gap:20px">
+            <div class="u-flex u-items-center u-gap-3"><span class="ds-label">Theme</span>
+              <div class="ds-segmented" id="segTheme"><button class="is-active" data-v="dark">Dark</button><button data-v="light">Light</button></div></div>
+            <div class="u-flex u-items-center u-gap-3"><span class="ds-label">Density</span>
+              <div class="ds-segmented" id="segDensity"><button class="is-active" data-v="comfortable">Comfort</button><button data-v="compact">Compact</button></div></div>
+            <div class="u-flex u-items-center u-gap-3"><span class="ds-label">Accent</span>
+              <div class="u-flex u-gap-2" id="accents">
+                <button class="acc-dot" data-a="system" title="System" style="--d:AccentColor"></button>
+                <button class="acc-dot" data-a="blue"  title="Blue"   style="--d:#4f8ff0"></button>
+                <button class="acc-dot" data-a="green" title="Green"  style="--d:#46c08a"></button>
+                <button class="acc-dot" data-a="violet" title="Violet" style="--d:#9a7bf0"></button>
+                <button class="acc-dot" data-a="amber" title="Amber"  style="--d:#e0a23b"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="example">
+            <div id="preview" class="example-preview col" style="padding:0; overflow:hidden; background:var(--bg)">
+              <div style="display:grid; grid-template-rows:var(--titlebar-h) 1fr; height:340px">
+                <div class="ds-titlebar"><div class="ds-titlebar-title">Demo App</div>
+                  <div class="ds-winbtns"><button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button><button><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button><button class="is-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button></div></div>
+                <div style="display:grid; grid-template-columns:var(--rail-w) 1fr; min-height:0">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></svg>Home</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 3v18m-9-9h18"/><rect width="18" height="18" x="3" y="3" rx="2"/></g></svg>Library</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></g></svg>Settings</a>
+                  </nav>
+                  <div style="padding:18px 20px; overflow:auto">
+                    <div class="u-flex u-items-center u-justify-between u-mb-4">
+                      <h2 class="ds-h2">Account</h2>
+                      <button class="ds-btn is-primary is-sm">Save changes</button>
+                    </div>
+                    <div class="ds-card" style="padding:4px 16px">
+                      <div class="ds-row"><div class="ds-row-text"><b>Enable sync</b><span>Keep settings across devices</span></div><div class="ds-row-control"><label class="ds-switch"><input type="checkbox" checked /><span class="ds-track"></span></label></div></div>
+                      <div class="ds-row"><div class="ds-row-text"><b>Plan</b><span>Your subscription tier</span></div><div class="ds-row-control"><div class="ds-combo" style="width:140px">
+                        <button class="ds-combo-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Plan">
+                          <span class="ds-combo-value">Pro</span>
+                          <span class="ds-combo-chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></span>
+                        </button>
+                        <div class="ds-combo-menu" hidden role="listbox">
+                          <div class="ds-combo-option is-selected" data-value="pro">Pro<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                          <div class="ds-combo-option" data-value="free">Free<span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span></div>
+                        </div>
+                      </div></div></div>
+                    </div>
+                    <div class="u-flex u-gap-2 u-mt-4">
+                      <span class="ds-badge is-success">Active</span>
+                      <span class="ds-badge is-info">Beta</span>
+                      <span class="ds-badge">v2.4.0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption">Same markup, system accent plus four overrides × two themes × two densities — all from tokens</div>
+          </div>
+        </section>
+
+        <!-- semantic colors -->
+        <section class="doc-section">
+          <h2>Semantic colors</h2>
+          <p class="desc">Status hues are reserved for explicit meaning. Variants exist on badge, alert, status &amp; toast.</p>
+          <div class="example">
+            <div class="example-preview">
+              <span class="ds-badge is-success">Success</span>
+              <span class="ds-badge is-warning">Warning</span>
+              <span class="ds-badge is-info">Info</span>
+              <span class="ds-badge is-danger">Danger</span>
+              <span class="ds-status is-success"><span class="ds-dot"></span>Online</span>
+              <span class="ds-status is-warning"><span class="ds-dot"></span>Degraded</span>
+            </div>
+            <div class="example-caption"><b>.is-success</b> · <b>.is-warning</b> · <b>.is-info</b> · <b>.is-danger</b></div>
+          </div>
+        </section>
+
+        <!-- new components -->
+        <section class="doc-section">
+          <h2>Desktop components</h2>
+
+          <div class="doc-section-sub">Toolbar &amp; breadcrumb</div>
+          <div class="example"><div class="example-preview col" style="padding:0; overflow:hidden">
+            <div class="ds-toolbar u-w-full">
+              <nav class="ds-breadcrumb"><a href="#">Library</a><span class="sep">/</span><a href="#">Games</a><span class="sep">/</span><span class="current">Elden Ring</span></nav>
+              <div class="ds-toolbar-spacer"></div>
+              <button class="ds-btn is-sm is-ghost is-icon"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></svg></button>
+              <button class="ds-btn is-sm">Filter</button>
+            </div>
+          </div><div class="example-caption"><b>.ds-toolbar</b> · <b>.ds-breadcrumb</b></div></div>
+
+          <div class="doc-section-sub">Status bar</div>
+          <div class="example"><div class="example-preview col" style="padding:0; overflow:hidden">
+            <div class="ds-statusbar u-w-full">
+              <div class="seg"><span class="ds-status is-on"><span class="ds-dot"></span></span>Connected</div>
+              <div class="seg mono">api.example.com</div>
+              <div class="ds-statusbar-spacer"></div>
+              <div class="seg mono">UTF-8</div>
+              <div class="seg mono">v2.4.0</div>
+            </div>
+          </div><div class="example-caption"><b>.ds-statusbar</b> › <b>.seg</b> · <b>.ds-statusbar-spacer</b></div></div>
+
+          <div class="doc-section-sub">Avatar · spinner · skeleton</div>
+          <div class="example"><div class="example-preview">
+            <div class="ds-avatar is-lg">M</div>
+            <div class="ds-avatar">VR</div>
+            <div class="ds-avatar is-sm">ab</div>
+            <span class="ds-spinner"></span>
+            <span class="ds-spinner is-lg"></span>
+            <div class="u-flex u-col u-gap-2" style="width:200px">
+              <div class="ds-skeleton text" style="width:70%"></div>
+              <div class="ds-skeleton text" style="width:100%"></div>
+              <div class="ds-skeleton text" style="width:45%"></div>
+            </div>
+          </div><div class="example-caption"><b>.ds-avatar</b> · <b>.ds-spinner</b> · <b>.ds-skeleton</b></div></div>
+
+          <div class="doc-section-sub">Toasts</div>
+          <div class="example"><div class="example-preview col">
+            <div class="ds-toast is-success" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span>
+              <div class="ds-toast-body"><b>Changes saved</b>Your settings have been updated.</div>
+              <button class="ds-toast-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+            </div>
+            <div class="ds-toast is-danger" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"/></svg></span>
+              <div class="ds-toast-body"><b>Connection lost</b>Reconnecting…</div>
+              <button class="ds-toast-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+            </div>
+          </div><div class="example-caption"><b>.ds-toast</b> (+ <b>.is-success</b>/<b>.is-danger</b>); stack in <b>.ds-toast-stack</b> (fixed)</div></div>
+
+          <div class="doc-section-sub">Accordion</div>
+          <div class="example"><div class="example-preview col">
+            <div class="ds-accordion u-w-full">
+              <details class="ds-acc" open><summary>General<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span></summary><div class="ds-acc-body">Language, startup behaviour and default folders.</div></details>
+              <details class="ds-acc"><summary>Appearance<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span></summary><div class="ds-acc-body">Theme, accent color and density.</div></details>
+              <details class="ds-acc"><summary>Advanced<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span></summary><div class="ds-acc-body">Cache, logging and developer options.</div></details>
+            </div>
+          </div><div class="example-caption"><b>&lt;details class="ds-acc"&gt;</b> inside <b>.ds-accordion</b></div></div>
+
+          <div class="doc-section-sub">List &amp; banner</div>
+          <div class="example"><div class="example-preview col">
+            <div class="ds-banner is-warning u-w-full">
+              <span class="ds-banner-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"/></svg></span>
+              <span>Offline mode — check your network connection.</span>
+              <span class="ds-banner-spacer"></span>
+              <button class="ds-btn is-sm is-ghost">Retry</button>
+            </div>
+            <div class="ds-list u-w-full">
+              <div class="ds-list-item is-selected"><span class="ds-list-ico"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g></svg></span>Quarterly report.pdf<span class="ds-list-meta">pdf · 2.4 MB</span></div>
+              <div class="ds-list-item"><span class="ds-list-ico"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></g></svg></span>Cover photo.jpg<span class="ds-list-meta">image · 5.1 MB</span></div>
+              <div class="ds-list-item"><span class="ds-list-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>Backup.zip<span class="ds-list-meta">archive · 18 MB</span></div>
+            </div>
+          </div><div class="example-caption"><b>.ds-banner</b> · <b>.ds-list</b> › <b>.ds-list-item</b> (<b>.is-selected</b>)</div></div>
+
+          <div class="doc-section-sub">Divider</div>
+          <div class="example"><div class="example-preview col">
+            <div class="u-w-full"><hr class="ds-divider" /></div>
+            <div class="ds-divider-label u-w-full">or</div>
+          </div><div class="example-caption"><b>.ds-divider</b> · <b>.ds-divider-label</b></div></div>
+        </section>
+
+        <!-- reuse -->
+        <section class="doc-section">
+          <h2>Reusing this in another app</h2>
+          <div class="ds-card" style="padding:16px 18px">
+            <ol class="u-text-2" style="margin:0; padding-left:18px; line-height:1.9; font-size:var(--fz-sm)">
+              <li>Copy the <code class="chip">css/</code> folder. Link <code class="chip">tokens → base → components → utilities</code>; treat patterns as optional recipe-level CSS.</li>
+              <li>Pick a theme: <code class="chip">&lt;html data-theme="light"&gt;</code> or leave default dark.</li>
+              <li>Use the system accent by default, or brand it by overriding <code class="chip">--accent</code> and <code class="chip">--accent-ink</code> in your own stylesheet.</li>
+              <li>Use the <code class="chip">u-app</code> scaffold for the titlebar / sidebar / status-bar shell.</li>
+              <li>Compose screens from <code class="chip">ds-*</code> components. Nothing is app-specific.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<style>
+  .acc-dot { width:22px; height:22px; border-radius:50%; border:2px solid var(--border-strong); background:var(--d); cursor:default; padding:0; }
+  .acc-dot.is-active { box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--text); }
+</style>
+<script>
+  const preview=document.getElementById('preview');
+  // theme
+  document.querySelectorAll('#segTheme button').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('#segTheme button').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');
+    if(b.dataset.v==='light') preview.setAttribute('data-theme','light'); else preview.removeAttribute('data-theme');
+  });
+  // density
+  document.querySelectorAll('#segDensity button').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('#segDensity button').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');
+    if(b.dataset.v==='compact') preview.setAttribute('data-density','compact'); else preview.removeAttribute('data-density');
+  });
+  // accent
+  const ACC={
+    system:['',''],
+    blue:  ['#4f8ff0','#ffffff'],
+    green: ['#46c08a','#06231a'],
+    violet:['#9a7bf0','#1a1233'],
+    amber: ['#e0a23b','#241803'],
+  };
+  document.querySelectorAll('#accents .acc-dot').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('#accents .acc-dot').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');
+    const [a,ink]=ACC[b.dataset.a];
+    if(a){ preview.style.setProperty('--accent',a); preview.style.setProperty('--accent-hover',a); preview.style.setProperty('--accent-ink',ink); preview.style.setProperty('--accent-soft',a+'24'); }
+    else { preview.style.removeProperty('--accent'); preview.style.removeProperty('--accent-hover'); preview.style.removeProperty('--accent-ink'); preview.style.removeProperty('--accent-soft'); }
+  });
+  document.querySelector('#accents .acc-dot').classList.add('is-active');
+</script>
+<script defer src="../js/ds.js"></script>
+</body>
+</html>

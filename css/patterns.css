@@ -1,0 +1,26 @@
+/* ============================================================
+   Desktop Design Language — Patterns
+   Screen-level recipe helpers composed from tokens.
+   ============================================================ */
+
+.ptn-workspace {
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  min-height:0;
+  height:100%;
+}
+
+.ptn-inspector {
+  display:grid;
+  grid-template-columns:minmax(220px,.32fr) minmax(0,1fr);
+  min-height:0;
+}
+
+.ptn-command {
+  width:min(640px, calc(100vw - 32px));
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-dialog);
+  overflow:hidden;
+}
