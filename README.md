@@ -1,13 +1,13 @@
-# Desktop Design Language
+# Desktop Design System
 
-A dependency-light desktop design language and CSS grammar for desktop applications. The core is plain HTML and CSS: tokens, primitives, utilities, states, and full-screen recipes that humans and LLMs can compose without adopting a framework.
+A dependency-light desktop design system and CSS grammar for desktop applications. The core is plain HTML and CSS: tokens, primitives, utilities, states, and full-screen recipes that humans and LLMs can compose without adopting a framework.
 
 Open `index.html` in any browser for the static docs. Use the optional Vite adapter when a desktop app needs a dev server, asset pipeline, or production build.
 
 ## Project Layers
 
 ```
-design-language/
+desktop-design-system/
 ├─ index.html              ← start here (live gallery + the composed shell)
 ├─ css/
 │  ├─ tokens.css           ← design tokens + light theme + density (the foundation)
@@ -84,11 +84,11 @@ The `system.html` page lets you flip theme / density / accent live.
 ## Using It
 
 ```html
-<link rel="stylesheet" href="design-language/css/tokens.css" />
-<link rel="stylesheet" href="design-language/css/base.css" />
-<link rel="stylesheet" href="design-language/css/components.css" />
-<link rel="stylesheet" href="design-language/css/utilities.css" />
-<link rel="stylesheet" href="design-language/css/patterns.css" />
+<link rel="stylesheet" href="desktop-design-system/css/tokens.css" />
+<link rel="stylesheet" href="desktop-design-system/css/base.css" />
+<link rel="stylesheet" href="desktop-design-system/css/components.css" />
+<link rel="stylesheet" href="desktop-design-system/css/utilities.css" />
+<link rel="stylesheet" href="desktop-design-system/css/patterns.css" />
 
 <button class="ds-btn is-primary">Start</button>
 <span class="ds-status is-on"><span class="ds-dot"></span>Running</span>
@@ -120,7 +120,7 @@ The config uses `base: "./"` so assets work with desktop app protocols and file-
 Apps that already use Vite can import the CSS entrypoint:
 
 ```js
-import "desktop-design-language/css";
+import "desktop-design-system/css";
 ```
 
 ## Recipes And Patterns

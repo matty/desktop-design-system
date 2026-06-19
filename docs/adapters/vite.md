@@ -23,7 +23,7 @@ The Vite config uses `base: "./"` so built assets work from custom desktop proto
 Use the bundled CSS entry when a desktop app already has Vite:
 
 ```js
-import "desktop-design-language/css";
+import "desktop-design-system/css";
 ```
 
 For static HTML, keep linking files directly:

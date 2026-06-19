@@ -1,5 +1,5 @@
 {
-  "name": "desktop-design-language",
+  "name": "desktop-design-system",
   "private": true,
   "type": "module",
   "style": "./src/design-language.css",

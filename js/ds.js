@@ -1,4 +1,4 @@
-/* Desktop Design Language — shared docs behaviour.
+/* Desktop Design System — shared docs behaviour.
    Loaded with `defer` on every page. No dependencies. */
 (function () {
   // ---- Theme toggle (persisted under localStorage 'ds-theme') ----
