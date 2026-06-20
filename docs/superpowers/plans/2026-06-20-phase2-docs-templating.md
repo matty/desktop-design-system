@@ -398,17 +398,24 @@ Expected: completes; emits `dist/index.html` and all 10 `dist/pages/*.html`. Onl
 
 - [ ] **Step 2: Every page has the full 11-item nav including Keyboard (drift fixed)**
 
-Run:
+NOTE: a plain `grep -c "ds-navi"` is misleading on `index.html` because its body contains a
+"live shell" DEMO with its own `ds-navi`/`is-active` markup. Scope the count to the actual
+`<nav class="ds-rail doc-nav">…</nav>` rail with this node check:
+
 ```bash
-echo "nav link counts (expect 11 each):"; grep -c "ds-navi" dist/index.html dist/pages/*.html
-echo "Keyboard present on every page (expect 11):"; grep -l "Keyboard" dist/index.html dist/pages/*.html | wc -l
+node --input-type=module -e "
+import {readFileSync} from 'node:fs';
+const files=['dist/index.html',...['buttons','data-display','feedback','forms','foundations','keyboard','navigation','patterns','system','utilities'].map(s=>'dist/pages/'+s+'.html')];
+let ok=true;
+for(const f of files){const h=readFileSync(f,'utf8');const m=h.match(/<nav class=\"ds-rail doc-nav\">[\s\S]*?<\/nav>/);const rail=m?m[0]:'';const links=(rail.match(/ds-navi/g)||[]).length;const kbd=/href=\"[^\"]*keyboard\.html\"/.test(rail);const active=(rail.match(/is-active/g)||[]).length;if(links!==11||!kbd||active!==1){ok=false;console.log('BAD',f,'links',links,'keyboard',kbd,'active',active);}}
+console.log(ok?'ALL 11 PAGES: 11 rail links, Keyboard present, exactly 1 active':'FAILURES ABOVE');
+"
 ```
-Expected: every file reports `11` nav links; `11` files contain the Keyboard link (the original drift bug is gone).
+Expected: `ALL 11 PAGES: 11 rail links, Keyboard present, exactly 1 active` (the original drift bug is gone). This single check also covers Step 3 (active-state uniqueness within the rail).
 
-- [ ] **Step 3: Active state is unique and correct per page**
+- [ ] **Step 3: (covered by Step 2's rail-scoped check — exactly 1 `is-active` per rail)**
 
-Run: `for f in dist/index.html dist/pages/*.html; do echo "$f: $(grep -o 'is-active' "$f" | wc -l)"; done`
-Expected: every page reports exactly `1` active nav item.
+No separate command needed; Step 2 already asserts exactly one active nav item per page's rail.
 
 - [ ] **Step 4: Fully offline — no CDN refs, local CSS/JS/fonts present**
 
