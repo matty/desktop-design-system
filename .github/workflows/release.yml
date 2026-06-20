@@ -20,15 +20,15 @@ jobs:
       - run: npm run build
       - name: Package bundle + checksum
         run: |
-          cd dist
-          VERSION="$(cat bundle/VERSION)"
+          VERSION="$(cat dist/bundle/VERSION)"
           ZIP="design-language-${VERSION}.zip"
-          zip -r "$ZIP" bundle
-          sha256sum "$ZIP" > "$ZIP.sha256"
-          ls -l "$ZIP" "$ZIP.sha256"
+          ( cd dist/bundle && zip -r "../${ZIP}" . )
+          ( cd dist && sha256sum "${ZIP}" > "${ZIP}.sha256" )
+          ls -l "dist/${ZIP}" "dist/${ZIP}.sha256"
       - name: Attach to release
         uses: softprops/action-gh-release@v2
         with:
+          fail_on_unmatched_files: true
           files: |
             dist/design-language-*.zip
             dist/design-language-*.zip.sha256

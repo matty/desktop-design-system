@@ -59,6 +59,9 @@ element.innerHTML = iconSvg("home", registry);
 
 ### Add more Lucide icons (offline)
 
-1. Add a name to `icons/approved.json`, e.g. `"rocket": "lucide:rocket"`.
+1. Add a name **inside the `"icons"` object** of `icons/approved.json` (not at the top level, or it is ignored), e.g.:
+   ```json
+   { "source": { ... }, "icons": { "home": "lucide:house", "rocket": "lucide:rocket" } }
+   ```
 2. Run `node icons/extend-icons.mjs` (uses the bundled `lucide-catalog.json` — no network).
 3. `icons/registry.json` now includes your icon.

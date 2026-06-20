@@ -2,7 +2,7 @@
 
 A dependency-light desktop design system and CSS grammar for desktop applications. The core is plain HTML and CSS: tokens, primitives, utilities, states, and full-screen recipes that humans and LLMs can compose without adopting a framework.
 
-Open `index.html` in any browser for the static docs. Use the optional Vite adapter when a desktop app needs a dev server, asset pipeline, or production build.
+Run `npm install` then `npm run dev` to view the docs (pages are assembled at build time from `docs/nav.mjs` + per-page bodies, so opening the raw `.html` files no longer renders the nav/head). `npm run build` outputs the static docs site and the offline release bundle to `dist/`.
 
 ## Project Layers
 

@@ -32,12 +32,13 @@ function injectChrome() {
             if (!inPages) href = p.file;
             else if (p.file === "index.html") href = "../index.html";
             else href = p.file.replace("pages/", "");
-            return `      <a class="ds-navi${active}" href="${href}">${p.icon}${p.navLabel}</a>`;
+            const current = active ? ' aria-current="page"' : "";
+            return `      <a class="ds-navi${active}"${current} href="${href}">${p.icon}${p.navLabel}</a>`;
           })
           .join("\n");
 
         const nav =
-`<nav class="ds-rail doc-nav">
+`<nav class="ds-rail doc-nav" aria-label="Documentation">
       <div class="doc-nav-brand"><b>Desktop</b><span>Design System</span></div>
 ${links}
       <div class="ds-rail-spacer"></div>
@@ -53,10 +54,24 @@ ${links}
 <script defer src="${prefix}js/ds.js"></script>
 <script defer src="${prefix}js/docs.js"></script>`;
 
+        const titlebar =
+`<div class="ds-titlebar">
+    <div class="ds-titlebar-title">Desktop Design System</div>
+    <div class="ds-winbtns">
+      <button title="Minimize"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+      <button title="Maximize"><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+      <button class="is-close" title="Close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>`;
+
+        for (const ph of ["<!--#head-->", "<!--#nav-->", "<!--#scripts-->", "<!--#titlebar-->"]) {
+          if (!html.includes(ph)) throw new Error(`inject-chrome: missing ${ph} in ${ctx.path}`);
+        }
         return html
           .replace("<!--#head-->", head)
           .replace("<!--#nav-->", nav)
-          .replace("<!--#scripts-->", scripts);
+          .replace("<!--#scripts-->", scripts)
+          .replace("<!--#titlebar-->", titlebar);
       }
     }
   };
@@ -71,6 +86,7 @@ function copyStaticJs() {
     apply: "build",
     closeBundle() {
       cpSync(resolve("js"), resolve("dist/js"), { recursive: true });
+      cpSync(resolve("LLM_GUIDE.md"), resolve("dist/LLM_GUIDE.md"));
     }
   };
 }

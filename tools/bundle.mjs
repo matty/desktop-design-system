@@ -34,11 +34,14 @@ await copyFile(resolve(root, "icons/registry.json"), resolve(out, "icons/registr
 await copyFile(resolve(root, "icons/approved.json"), resolve(out, "icons/approved.json"));
 await copyFile(resolve(root, "node_modules/@iconify-json/lucide/icons.json"), resolve(out, "icons/lucide-catalog.json"));
 await copyFile(resolve(root, "tools/extend-icons.mjs"), resolve(out, "icons/extend-icons.mjs"));
+await copyFile(resolve(root, "tools/icon-core.mjs"), resolve(out, "icons/icon-core.mjs"));
 await copyFile(resolve(root, "icons/icons.js"), resolve(out, "icons/icons.js"));
 
 // 4. Docs, licenses, version.
 await copyFile(resolve(root, "tools/bundle-readme.md"), resolve(out, "README.md"));
-await copyFile(resolve(root, "THIRD_PARTY_LICENSES.md"), resolve(out, "THIRD_PARTY_LICENSES.md"));
+const licenses = (await readFile(resolve(root, "THIRD_PARTY_LICENSES.md"), "utf8"))
+  .replaceAll("assets/fonts/", "fonts/");
+await writeFile(resolve(out, "THIRD_PARTY_LICENSES.md"), licenses);
 await copyFile(resolve(root, "assets/fonts/Sora-OFL.txt"), resolve(out, "fonts/Sora-OFL.txt"));
 await copyFile(resolve(root, "assets/fonts/JetBrainsMono-OFL.txt"), resolve(out, "fonts/JetBrainsMono-OFL.txt"));
 await writeFile(resolve(out, "VERSION"), `${pkg.version}\n`);
