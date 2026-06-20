@@ -14,3 +14,5 @@ export { default as DsSortable } from "./components/DsSortable.vue";
 export { default as DsDropdownMenu } from "./components/DsDropdownMenu.vue";
 export { default as DsTabs } from "./components/DsTabs.vue";
 export { default as DsTabPanel } from "./components/DsTabPanel.vue";
+export { default as DsAccordion } from "./components/DsAccordion.vue";
+export { default as DsAccordionItem } from "./components/DsAccordionItem.vue";
