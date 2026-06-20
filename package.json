@@ -1,5 +1,6 @@
 {
   "name": "desktop-design-system",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "style": "./src/design-language.css",
@@ -14,12 +15,14 @@
     "build": "npm run icons:check && vite build",
     "preview": "vite preview",
     "icons:build": "node tools/build-icons.mjs",
-    "icons:check": "node tools/build-icons.mjs --check"
+    "icons:check": "node tools/build-icons.mjs --check",
+    "bundle": "node tools/bundle.mjs"
   },
   "devDependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/sora": "^5.2.8",
     "@iconify-json/lucide": "^1.2.66",
+    "esbuild": "^0.28.1",
     "vite": "^8.0.16"
   }
 }
