@@ -34,6 +34,7 @@ await copyFile(resolve(root, "icons/registry.json"), resolve(out, "icons/registr
 await copyFile(resolve(root, "icons/approved.json"), resolve(out, "icons/approved.json"));
 await copyFile(resolve(root, "node_modules/@iconify-json/lucide/icons.json"), resolve(out, "icons/lucide-catalog.json"));
 await copyFile(resolve(root, "tools/extend-icons.mjs"), resolve(out, "icons/extend-icons.mjs"));
+await copyFile(resolve(root, "tools/icon-core.mjs"), resolve(out, "icons/icon-core.mjs"));
 await copyFile(resolve(root, "icons/icons.js"), resolve(out, "icons/icons.js"));
 
 // 4. Docs, licenses, version.

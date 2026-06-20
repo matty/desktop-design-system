@@ -4,7 +4,8 @@
     "collection": "lucide",
     "license": "ISC",
     "runtimeNetwork": false,
-    "generated": true
+    "generated": true,
+    "lucideLastModified": 1781584929
   },
   "style": {
     "viewBox": "0 0 24 24",
