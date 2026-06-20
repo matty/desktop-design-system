@@ -24,6 +24,7 @@ Useful local commands:
 - `npm install`: install optional build/icon tooling.
 - `npm run dev`: start the Vite dev server and open the docs (pages are assembled from `docs/nav.mjs` + per-page bodies; opening the raw `.html` files directly no longer renders the nav/head).
 - `npm run build`: verify the icon registry and build the multi-page docs to `dist/`.
+- `npm run bundle`: assemble the offline release bundle to `dist/bundle/` (also run by `npm run build`).
 - `npm run preview`: preview the built `dist/` output.
 - `npm run icons:build`: regenerate offline Lucide/Iconify SVG data.
 - `rg "ds-btn"` or `rg "--accent"`: search primitive classes or token usage.
