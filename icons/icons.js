@@ -16,9 +16,14 @@ export function iconSvg(name, registry, attrs = {}) {
     "stroke-width": s.strokeWidth,
     ...attrs
   };
+  const esc = (v) => String(v)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
   const attrStr = Object.entries(merged)
     .filter(([, v]) => v != null)
-    .map(([k, v]) => `${k}="${v}"`)
+    .map(([k, v]) => `${k}="${esc(v)}"`)
     .join(" ");
   return `<svg ${attrStr}>${entry.body}</svg>`;
 }
