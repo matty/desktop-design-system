@@ -19,3 +19,11 @@ Icons are bundled as static local SVG data. Runtime use must not fetch icons fro
 - Vendored at: js/vendor/sortable.min.js
 
 SortableJS is vendored as a static file so the design language works on raw `file://` without a network request. Do not modify `sortable.min.js`.
+
+## Fonts
+
+- **Sora** — SIL Open Font License 1.1. Full text: `assets/fonts/Sora-OFL.txt`.
+- **JetBrains Mono** — SIL Open Font License 1.1. Full text: `assets/fonts/JetBrainsMono-OFL.txt`.
+
+Self-hosted as variable woff2 in `assets/fonts/`. Subsetting is permitted under the OFL;
+Reserved Font Names are not reused.
