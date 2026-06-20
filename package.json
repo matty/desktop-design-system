@@ -17,6 +17,8 @@
     "icons:check": "node tools/build-icons.mjs --check"
   },
   "devDependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@fontsource-variable/sora": "^5.2.8",
     "@iconify-json/lucide": "^1.2.66",
     "vite": "^8.0.16"
   }
