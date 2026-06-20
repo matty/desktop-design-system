@@ -9,3 +9,4 @@ export { useToast } from "./composables/useToast";
 export { default as DsCombobox } from "./components/DsCombobox.vue";
 export { default as DsTree } from "./components/DsTree.vue";
 export { default as DsContextMenu } from "./components/DsContextMenu.vue";
+export { default as DsSplitter } from "./components/DsSplitter.vue";
