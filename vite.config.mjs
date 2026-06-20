@@ -3,6 +3,64 @@ import { cpSync } from "node:fs";
 import { defineConfig } from "vite";
 import { pages } from "./docs/nav.mjs";
 
+// Generate shared chrome from docs/nav.mjs into each page's placeholders.
+// order:"pre" so injected <link>/<script> refs are seen by Vite's asset
+// pipeline (bundled/hashed CSS; ds.js copied by copyStaticJs).
+function injectChrome() {
+  return {
+    name: "inject-chrome",
+    transformIndexHtml: {
+      order: "pre",
+      handler(html, ctx) {
+        const baseName = ctx.path.split("?")[0].split("/").pop() || "index.html";
+        const entry = pages.find((p) => p.file.split("/").pop() === baseName);
+        if (!entry) throw new Error(`inject-chrome: no docs/nav.mjs entry for ${ctx.path}`);
+        const inPages = entry.file.startsWith("pages/");
+        const prefix = inPages ? "../" : "";
+
+        const head =
+`<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>try{if(localStorage.getItem('ds-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<title>${entry.title}</title>
+<link rel="stylesheet" href="${prefix}src/design-language.docs.css" />`;
+
+        const links = pages
+          .map((p) => {
+            const active = p.file === entry.file ? " is-active" : "";
+            let href;
+            if (!inPages) href = p.file;
+            else if (p.file === "index.html") href = "../index.html";
+            else href = p.file.replace("pages/", "");
+            return `      <a class="ds-navi${active}" href="${href}">${p.icon}${p.navLabel}</a>`;
+          })
+          .join("\n");
+
+        const nav =
+`<nav class="ds-rail doc-nav">
+      <div class="doc-nav-brand"><b>Desktop</b><span>Design System</span></div>
+${links}
+      <div class="ds-rail-spacer"></div>
+      <div class="doc-theme-toggle">
+        <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <label class="ds-switch"><input type="checkbox" id="themeToggle" aria-label="Toggle light theme" /><span class="ds-track"></span></label>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </div>
+    </nav>`;
+
+        const scripts =
+`<script defer src="${prefix}js/vendor/sortable.min.js"></script>
+<script defer src="${prefix}js/ds.js"></script>`;
+
+        return html
+          .replace("<!--#head-->", head)
+          .replace("<!--#nav-->", nav)
+          .replace("<!--#scripts-->", scripts);
+      }
+    }
+  };
+}
+
 // Copy global (non-module) JS — ds.js, docs.js, vendored sortable — into the
 // build output. Vite can't bundle IIFE scripts, and js/ isn't in publicDir,
 // so without this they 404 in dist. Source js/ is untouched (dev + file:// keep working).
@@ -18,7 +76,7 @@ function copyStaticJs() {
 
 export default defineConfig({
   base: "./",
-  plugins: [copyStaticJs()],
+  plugins: [injectChrome(), copyStaticJs()],
   server: {
     host: "127.0.0.1",
     port: 5173,
