@@ -1,4 +1,4 @@
-import { onBeforeUnmount, watch, type Ref } from "vue";
+import { onBeforeUnmount, watch, nextTick, type Ref } from "vue";
 
 export interface RovingOptions {
   selector?: string;
@@ -56,14 +56,16 @@ export function useRovingTabindex(
 
   watch(
     active,
-    (v) => {
-      const el = container.value;
-      if (!el) return;
+    async (v) => {
       if (v) {
+        await nextTick();
+        const el = container.value;
+        if (!el) return;
         el.addEventListener("keydown", onKey);
         init();
       } else {
-        el.removeEventListener("keydown", onKey);
+        const el = container.value;
+        if (el) el.removeEventListener("keydown", onKey);
       }
     },
     { immediate: true }

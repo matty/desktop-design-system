@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "vitest";
-import { mount } from "@vue/test-utils";
+import { mount, flushPromises } from "@vue/test-utils";
 import { defineComponent, ref, h, nextTick } from "vue";
 import { useRovingTabindex } from "./useRovingTabindex";
 
@@ -42,7 +42,7 @@ describe("useRovingTabindex", () => {
   it("makes only the first item tabbable initially", async () => {
     const w = mount(Harness, { attachTo: document.body });
     w.vm.active = true;
-    await nextTick();
+    await flushPromises();
     const items = document.querySelectorAll('[role="menuitem"]');
     expect((items[0] as HTMLElement).tabIndex).toBe(0);
     expect((items[1] as HTMLElement).tabIndex).toBe(-1);
@@ -51,7 +51,7 @@ describe("useRovingTabindex", () => {
   it("ArrowDown moves focus to the next item", async () => {
     const w = mount(Harness, { attachTo: document.body });
     w.vm.active = true;
-    await nextTick();
+    await flushPromises();
     const items = document.querySelectorAll('[role="menuitem"]');
     (items[0] as HTMLElement).focus();
     items[0].dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }));
