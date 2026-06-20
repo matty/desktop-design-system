@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { mount } from "@vue/test-utils";
 
 const onEndHandlers: Array<(e: { oldIndex: number; newIndex: number }) => void> = [];
@@ -14,6 +14,7 @@ vi.mock("sortablejs", () => ({
 import DsSortable from "./DsSortable.vue";
 
 describe("DsSortable", () => {
+  beforeEach(() => { onEndHandlers.length = 0; });
   it("renders one element per item via the item slot", () => {
     const w = mount(DsSortable, {
       props: { modelValue: ["a", "b", "c"] },

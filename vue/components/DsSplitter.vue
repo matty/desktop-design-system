@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onBeforeUnmount } from "vue";
 
 const props = withDefaults(
   defineProps<{ size: number; horizontal?: boolean; min?: number; max?: number; step?: number }>(),
@@ -35,6 +35,8 @@ function onDown(e: MouseEvent) {
   document.addEventListener("mousemove", onMove);
   document.addEventListener("mouseup", onUp);
 }
+onBeforeUnmount(onUp);
+
 function onKeydown(e: KeyboardEvent) {
   const dec = props.horizontal ? "ArrowUp" : "ArrowLeft";
   const inc = props.horizontal ? "ArrowDown" : "ArrowRight";

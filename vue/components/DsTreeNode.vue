@@ -17,6 +17,7 @@ const emit = defineEmits<{ select: [TreeNode]; toggle: [TreeNode] }>();
       'is-expanded': expandedSet.has(node.id),
       'is-selected': selected === node.id
     }"
+    :data-node-id="node.id"
   >
     <div
       class="ds-tree-row"
@@ -31,7 +32,7 @@ const emit = defineEmits<{ select: [TreeNode]; toggle: [TreeNode] }>();
         class="ds-tree-twisty"
         aria-hidden="true"
         @click.stop="emit('toggle', node)"
-      >▸</span>
+      ><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span>
       <span class="ds-tree-label">{{ node.label }}</span>
     </div>
     <ul v-if="node.children && node.children.length && expandedSet.has(node.id)">

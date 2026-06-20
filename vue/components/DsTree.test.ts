@@ -1,6 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeAll } from "vitest";
 import { mount } from "@vue/test-utils";
 import DsTree from "./DsTree.vue";
+
+// happy-dom has no layout engine — shim offsetParent so rows() filter passes.
+beforeAll(() => {
+  Object.defineProperty(HTMLElement.prototype, "offsetParent", {
+    configurable: true,
+    get() { return document.body; },
+  });
+});
 
 const nodes = [
   { id: "1", label: "Root", children: [{ id: "1a", label: "Child A" }, { id: "1b", label: "Child B" }] },
@@ -28,5 +36,33 @@ describe("DsTree", () => {
     const w = mount(DsTree, { props: { nodes, selected: null, expanded: [] } });
     await w.findAll(".ds-tree-row")[1].trigger("click");
     expect(w.emitted("update:selected")![0]).toEqual(["2"]);
+  });
+
+  it("ArrowRight on a collapsed parent emits update:expanded adding its id", async () => {
+    const w = mount(DsTree, {
+      props: { nodes, selected: null, expanded: [] },
+      attachTo: document.body
+    });
+    // Row 0 is the root "1" node which is collapsed
+    const rootRow = w.findAll(".ds-tree-row")[0].element as HTMLElement;
+    rootRow.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }));
+    await w.vm.$nextTick();
+    expect(w.emitted("update:expanded")).toBeTruthy();
+    expect(w.emitted("update:expanded")![0]).toEqual([["1"]]);
+    w.unmount();
+  });
+
+  it("ArrowLeft on an expanded parent emits update:expanded removing its id", async () => {
+    const w = mount(DsTree, {
+      props: { nodes, selected: null, expanded: ["1"] },
+      attachTo: document.body
+    });
+    // Row 0 is the root "1" node which is expanded
+    const rootRow = w.findAll(".ds-tree-row")[0].element as HTMLElement;
+    rootRow.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowLeft", bubbles: true }));
+    await w.vm.$nextTick();
+    expect(w.emitted("update:expanded")).toBeTruthy();
+    expect(w.emitted("update:expanded")![0]).toEqual([[]]); // "1" removed
+    w.unmount();
   });
 });

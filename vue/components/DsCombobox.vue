@@ -83,26 +83,30 @@ function isSelected(opt: ComboOption) {
       <span v-else class="ds-combo-value" :class="{ 'is-placeholder': isPlaceholder }">{{ buttonLabel }}</span>
       <span class="ds-combo-chev" aria-hidden="true">▾</span>
     </button>
-    <div class="ds-combo-menu" :hidden="!open" role="listbox">
+    <div class="ds-combo-menu" :hidden="!open">
       <input
         v-if="filterable"
         class="ds-combo-filter"
         :value="query"
         placeholder="Filter…"
+        aria-label="Filter options"
         @click.stop
         @input="query = ($event.target as HTMLInputElement).value"
       />
-      <div
-        v-for="opt in visibleOptions"
-        :key="opt.value"
-        class="ds-combo-option"
-        :class="{ 'is-selected': isSelected(opt) }"
-        role="option"
-        :aria-selected="isSelected(opt)"
-        :aria-disabled="opt.disabled || undefined"
-        @click.stop="pick(opt)"
-      >
-        {{ opt.label }}
+      <div role="listbox">
+        <div
+          v-for="opt in visibleOptions"
+          :key="opt.value"
+          class="ds-combo-option"
+          :class="{ 'is-selected': isSelected(opt) }"
+          role="option"
+          :aria-selected="isSelected(opt)"
+          :aria-disabled="opt.disabled || undefined"
+          @click.stop="pick(opt)"
+        >
+          {{ opt.label }}
+          <span class="ds-combo-check"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg></span>
+        </div>
       </div>
     </div>
   </div>
