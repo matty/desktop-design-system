@@ -8,6 +8,7 @@ const pages = [
   "pages/feedback.html",
   "pages/forms.html",
   "pages/foundations.html",
+  "pages/keyboard.html",
   "pages/navigation.html",
   "pages/patterns.html",
   "pages/system.html",
