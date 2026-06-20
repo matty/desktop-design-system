@@ -126,10 +126,29 @@
             <div class="ds-indicator is-on"><div class="ds-core"></div></div>
           </div>
         </section>
+
+        <section class="doc-section">
+          <h2>Icons</h2>
+          <p class="desc">Approved icons, rendered at build time from the offline registry via <code>iconSvg()</code> (the same helper shipped in the bundle).</p>
+          <div id="iconGallery" class="u-flex" style="flex-wrap:wrap; gap:14px; margin-top:14px"></div>
+        </section>
       </div>
     </main>
   </div>
 </div>
+<script type="module">
+  import { iconSvg } from "../icons/icons.js";
+  import registry from "../icons/registry.json";
+  const host = document.getElementById("iconGallery");
+  if (host) {
+    host.innerHTML = Object.keys(registry.icons).sort().map((name) =>
+      `<figure class="u-flex" style="flex-direction:column; align-items:center; gap:6px; width:84px; margin:0">
+         <span style="width:24px; height:24px; color:var(--ink)">${iconSvg(name, registry, { width: 24, height: 24 })}</span>
+         <figcaption class="ds-sub" style="font-size:11px; text-align:center; word-break:break-word">${name}</figcaption>
+       </figure>`
+    ).join("");
+  }
+</script>
 <!--#scripts-->
 </body>
 </html>
