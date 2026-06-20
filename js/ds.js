@@ -1,22 +1,6 @@
-/* Desktop Design System — shared docs behaviour.
-   Loaded with `defer` on every page. No dependencies. */
+/* Desktop Design System — component runtime (combobox, context menu, tree, splitter,
+   sortable, focus-trap, roving-tabindex, dsAnnounce). Loaded with `defer`. */
 (function () {
-  // ---- Theme toggle (persisted under localStorage 'ds-theme') ----
-  var root = document.documentElement;
-  var toggle = document.getElementById('themeToggle');
-  if (toggle) {
-    toggle.checked = root.getAttribute('data-theme') === 'light';
-    toggle.addEventListener('change', function () {
-      if (toggle.checked) {
-        root.setAttribute('data-theme', 'light');
-        try { localStorage.setItem('ds-theme', 'light'); } catch (e) {}
-      } else {
-        root.removeAttribute('data-theme');
-        try { localStorage.setItem('ds-theme', 'dark'); } catch (e) {}
-      }
-    });
-  }
-
   // ---- Combobox / styled select ----
   function closeCombos() {
     document.querySelectorAll('.ds-combo.is-open').forEach(function (c) {

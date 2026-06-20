@@ -50,7 +50,8 @@ ${links}
 
         const scripts =
 `<script defer src="${prefix}js/vendor/sortable.min.js"></script>
-<script defer src="${prefix}js/ds.js"></script>`;
+<script defer src="${prefix}js/ds.js"></script>
+<script defer src="${prefix}js/docs.js"></script>`;
 
         return html
           .replace("<!--#head-->", head)
