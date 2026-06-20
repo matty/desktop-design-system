@@ -32,12 +32,13 @@ function injectChrome() {
             if (!inPages) href = p.file;
             else if (p.file === "index.html") href = "../index.html";
             else href = p.file.replace("pages/", "");
-            return `      <a class="ds-navi${active}" href="${href}">${p.icon}${p.navLabel}</a>`;
+            const current = active ? ' aria-current="page"' : "";
+            return `      <a class="ds-navi${active}"${current} href="${href}">${p.icon}${p.navLabel}</a>`;
           })
           .join("\n");
 
         const nav =
-`<nav class="ds-rail doc-nav">
+`<nav class="ds-rail doc-nav" aria-label="Documentation">
       <div class="doc-nav-brand"><b>Desktop</b><span>Design System</span></div>
 ${links}
       <div class="ds-rail-spacer"></div>
@@ -53,6 +54,9 @@ ${links}
 <script defer src="${prefix}js/ds.js"></script>
 <script defer src="${prefix}js/docs.js"></script>`;
 
+        for (const ph of ["<!--#head-->", "<!--#nav-->", "<!--#scripts-->"]) {
+          if (!html.includes(ph)) throw new Error(`inject-chrome: missing ${ph} in ${ctx.path}`);
+        }
         return html
           .replace("<!--#head-->", head)
           .replace("<!--#nav-->", nav)
