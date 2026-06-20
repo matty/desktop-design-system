@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 import { h } from "vue";
+import { nextTick } from "vue";
 import DsContextMenu from "./DsContextMenu.vue";
 
 const items = [
@@ -44,6 +45,7 @@ describe("DsContextMenu", () => {
     await w.find(".target").trigger("contextmenu", { clientX: 5, clientY: 5 });
     (document.querySelectorAll(".ds-menu-item")[0] as HTMLElement).click();
     expect(w.emitted("select")![0]).toEqual(["cut"]);
+    await nextTick();
     expect(document.querySelector(".ds-context-menu")).toBeNull();
     w.unmount();
   });

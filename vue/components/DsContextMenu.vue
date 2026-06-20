@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, nextTick } from "vue";
+import { ref, nextTick } from "vue";
 import type { MenuItem } from "../types";
 import { useFocusTrap } from "../composables/useFocusTrap";
 import { useRovingTabindex } from "../composables/useRovingTabindex";
@@ -13,7 +13,6 @@ const x = ref(0);
 const y = ref(0);
 const menu = ref<HTMLElement | null>(null);
 
-const renderItems = computed(() => props.items);
 
 useFocusTrap(menu, open);
 useRovingTabindex(menu, open, {
@@ -40,7 +39,6 @@ function choose(item: MenuItem) {
   item.onSelect?.();
   emit("select", item.id);
   open.value = false;
-  menu.value?.remove();
 }
 </script>
 
@@ -56,7 +54,7 @@ function choose(item: MenuItem) {
       role="menu"
       :style="{ position: 'fixed', left: x + 'px', top: y + 'px' }"
     >
-      <template v-for="item in renderItems" :key="item.id">
+      <template v-for="item in items" :key="item.id">
         <div v-if="item.separator" class="ds-menu-sep"></div>
         <div
           v-else
