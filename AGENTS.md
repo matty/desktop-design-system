@@ -17,7 +17,7 @@ Icons are defined under `icons/`. `approved.json` maps semantic names to Iconify
 
 ## Build, Test, and Development Commands
 
-The core HTML/CSS can still be opened directly via `index.html`. The optional Vite adapter provides a reusable desktop-app build path.
+The docs are assembled at build time from `docs/nav.mjs` + per-page bodies, so use `npm run dev` (raw `.html` files no longer render standalone). The Vite adapter also provides a reusable desktop-app build path.
 
 Useful local commands:
 
