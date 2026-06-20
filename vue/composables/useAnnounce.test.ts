@@ -1,10 +1,14 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { useAnnounce } from "./useAnnounce";
 
 describe("useAnnounce", () => {
   beforeEach(() => {
     document.body.innerHTML = "";
     vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   it("creates a polite live region and sets the message", () => {

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { useToast } from "./useToast";
 
 describe("useToast", () => {
@@ -7,6 +7,10 @@ describe("useToast", () => {
     vi.useFakeTimers();
     const { toasts, dismiss } = useToast();
     [...toasts].forEach((t) => dismiss(t.id));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   it("adds a toast and returns its id", () => {

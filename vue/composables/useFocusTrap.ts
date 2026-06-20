@@ -33,6 +33,13 @@ export function useFocusTrap(container: Ref<HTMLElement | null>, active: Ref<boo
     }
   }
 
+  function deactivate() {
+    const el = container.value;
+    if (el) el.removeEventListener("keydown", onKey);
+    if (prev && prev.focus) prev.focus();
+    prev = null;
+  }
+
   watch(
     active,
     async (v) => {
@@ -45,17 +52,13 @@ export function useFocusTrap(container: Ref<HTMLElement | null>, active: Ref<boo
         const list = focusable(el);
         if (list[0]) list[0].focus();
       } else {
-        const el = container.value;
-        if (el) el.removeEventListener("keydown", onKey);
-        if (prev && prev.focus) prev.focus();
-        prev = null;
+        deactivate();
       }
     },
     { immediate: true }
   );
 
   onBeforeUnmount(() => {
-    const el = container.value;
-    if (el) el.removeEventListener("keydown", onKey);
+    deactivate();
   });
 }

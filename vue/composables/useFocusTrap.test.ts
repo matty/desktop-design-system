@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from "vitest";
+import { describe, it, expect, beforeAll, afterEach } from "vitest";
 import { mount } from "@vue/test-utils";
 import { defineComponent, ref, h, nextTick } from "vue";
 import { useFocusTrap } from "./useFocusTrap";
@@ -43,5 +43,29 @@ describe("useFocusTrap", () => {
     (buttons[1] as HTMLElement).focus();
     buttons[1].dispatchEvent(new KeyboardEvent("keydown", { key: "Tab", bubbles: true }));
     expect(document.activeElement?.textContent).toBe("first");
+  });
+
+  it("restores focus to trigger element when unmounted while active", async () => {
+    // Create an outside button that acts as the trigger
+    const trigger = document.createElement("button");
+    trigger.textContent = "trigger";
+    document.body.appendChild(trigger);
+    trigger.focus();
+    expect(document.activeElement).toBe(trigger);
+
+    const w = mount(Harness, { attachTo: document.body });
+    // Activate the trap (prev is set to trigger via document.activeElement)
+    w.vm.active = true;
+    await nextTick();
+    await nextTick();
+    // Focus should now be inside the trap
+    expect(document.activeElement?.textContent).toBe("first");
+
+    // Unmount while still active — deactivate() should restore focus to trigger
+    w.unmount();
+    expect(document.activeElement).toBe(trigger);
+
+    // Cleanup
+    trigger.remove();
   });
 });
