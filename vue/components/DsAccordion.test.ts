@@ -17,30 +17,28 @@ function wrap(modelValue: string | string[], multiple = false) {
 }
 
 describe("DsAccordion", () => {
-  it("opens the item matching modelValue and hides its body otherwise", () => {
+  it("opens matching item / hides others", () => {
     const w = wrap("one");
-    const items = w.findAll(".ds-acc");
-    expect(items[0].classes()).toContain("is-open");
-    expect(items[1].classes()).not.toContain("is-open");
-    expect(items[0].find(".ds-acc-body").exists()).toBe(true);
-    expect(items[1].find(".ds-acc-body").exists()).toBe(false);
+    const items = w.findAll("details.ds-acc");
+    expect(items[0].attributes("open")).toBeDefined();
+    expect(items[1].attributes("open")).toBeUndefined();
   });
 
-  it("single mode emits the new id when another header is clicked", async () => {
+  it("single mode emits new id when another header clicked", async () => {
     const w = wrap("one");
-    await w.findAll(".ds-acc-head")[1].trigger("click");
+    await w.findAll("summary")[1].trigger("click");
     expect(w.emitted("update:modelValue")![0]).toEqual(["two"]);
   });
 
-  it("single mode toggling the open item emits empty string", async () => {
+  it("single mode toggling open item emits empty string", async () => {
     const w = wrap("one");
-    await w.findAll(".ds-acc-head")[0].trigger("click");
+    await w.findAll("summary")[0].trigger("click");
     expect(w.emitted("update:modelValue")![0]).toEqual([""]);
   });
 
   it("multiple mode accumulates ids", async () => {
     const w = wrap(["one"], true);
-    await w.findAll(".ds-acc-head")[1].trigger("click");
+    await w.findAll("summary")[1].trigger("click");
     expect(w.emitted("update:modelValue")![0]).toEqual([["one", "two"]]);
   });
 });

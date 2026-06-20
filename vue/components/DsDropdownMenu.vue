@@ -30,7 +30,7 @@ function choose(item: MenuItem) {
 
 <template>
   <div ref="root" class="ds-dropdown" :class="{ 'is-open': open }">
-    <button type="button" class="ds-dropdown-btn" :aria-expanded="open" @click.stop="toggle">
+    <button type="button" class="ds-dropdown-btn ds-btn" :aria-expanded="open" @click.stop="toggle">
       <slot name="trigger" />
     </button>
     <div v-if="open" ref="menu" class="ds-menu" role="menu">

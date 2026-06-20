@@ -13,7 +13,7 @@ const { toasts, dismiss } = useToast();
       :class="`is-${t.tone ?? 'info'}`"
       role="status"
     >
-      <span class="ds-toast-msg">{{ t.message }}</span>
+      <div class="ds-toast-body">{{ t.message }}</div>
       <button type="button" class="ds-toast-close" aria-label="Dismiss" @click="dismiss(t.id)">×</button>
     </div>
   </div>

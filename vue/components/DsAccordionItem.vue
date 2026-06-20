@@ -12,17 +12,15 @@ const open = computed(() => api?.isOpen(props.id) ?? false);
 </script>
 
 <template>
-  <div class="ds-acc" :class="{ 'is-open': open }">
-    <button
-      type="button"
-      class="ds-acc-head"
+  <details class="ds-acc" :open="open">
+    <summary
       :aria-expanded="open"
-      @click="api?.toggle(id)"
+      @click.prevent="api?.toggle(id)"
     >
-      {{ title }}
-    </button>
-    <div v-if="open" class="ds-acc-body">
+      {{ title }}<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span>
+    </summary>
+    <div class="ds-acc-body">
       <slot />
     </div>
-  </div>
+  </details>
 </template>

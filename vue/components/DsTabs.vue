@@ -15,11 +15,19 @@ function select(tab: TabItem) {
 function onKeydown(e: KeyboardEvent) {
   const idx = props.tabs.findIndex((t) => t.id === props.modelValue);
   if (idx < 0) return;
-  let next = idx;
-  if (e.key === "ArrowRight") next = (idx + 1) % props.tabs.length;
-  else if (e.key === "ArrowLeft") next = (idx - 1 + props.tabs.length) % props.tabs.length;
+  let dir = 0;
+  if (e.key === "ArrowRight") dir = 1;
+  else if (e.key === "ArrowLeft") dir = -1;
   else return;
   e.preventDefault();
+  const len = props.tabs.length;
+  let next = (idx + dir + len) % len;
+  let steps = 0;
+  while (props.tabs[next].disabled && steps < len) {
+    next = (next + dir + len) % len;
+    steps++;
+  }
+  if (props.tabs[next].disabled) return;
   emit("update:modelValue", props.tabs[next].id);
 }
 </script>
