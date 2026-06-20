@@ -11,3 +11,4 @@ export { default as DsTree } from "./components/DsTree.vue";
 export { default as DsContextMenu } from "./components/DsContextMenu.vue";
 export { default as DsSplitter } from "./components/DsSplitter.vue";
 export { default as DsSortable } from "./components/DsSortable.vue";
+export { default as DsDropdownMenu } from "./components/DsDropdownMenu.vue";
