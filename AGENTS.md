@@ -17,17 +17,17 @@ Icons are defined under `icons/`. `approved.json` maps semantic names to Iconify
 
 ## Build, Test, and Development Commands
 
-The core HTML/CSS can still be opened directly via `index.html`. The optional Vite adapter provides a reusable desktop-app build path.
+The docs are assembled at build time from `docs/nav.mjs` + per-page bodies, so use `npm run dev` (raw `.html` files no longer render standalone). The Vite adapter also provides a reusable desktop-app build path.
 
 Useful local commands:
 
-- `start index.html` from PowerShell: open the overview in the default browser.
 - `npm install`: install optional build/icon tooling.
-- `npm run dev`: start the Vite docs/dev server.
+- `npm run dev`: start the Vite dev server and open the docs (pages are assembled from `docs/nav.mjs` + per-page bodies; opening the raw `.html` files directly no longer renders the nav/head).
 - `npm run build`: verify the icon registry and build the multi-page docs to `dist/`.
 - `npm run preview`: preview the built `dist/` output.
 - `npm run icons:build`: regenerate offline Lucide/Iconify SVG data.
 - `rg "ds-btn"` or `rg "--accent"`: search primitive classes or token usage.
+- To add or reorder a docs page, edit `docs/nav.mjs` — it drives both the left-nav rail and the Vite build inputs.
 
 ## Coding Style & Naming Conventions
 
