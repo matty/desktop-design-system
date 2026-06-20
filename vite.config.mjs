@@ -71,6 +71,7 @@ function copyStaticJs() {
     apply: "build",
     closeBundle() {
       cpSync(resolve("js"), resolve("dist/js"), { recursive: true });
+      cpSync(resolve("LLM_GUIDE.md"), resolve("dist/LLM_GUIDE.md"));
     }
   };
 }
