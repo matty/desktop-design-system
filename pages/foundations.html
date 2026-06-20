@@ -143,7 +143,7 @@
   if (host) {
     host.innerHTML = Object.keys(registry.icons).sort().map((name) =>
       `<figure class="u-flex" style="flex-direction:column; align-items:center; gap:6px; width:84px; margin:0">
-         <span style="width:24px; height:24px; color:var(--ink)">${iconSvg(name, registry, { width: 24, height: 24 })}</span>
+         <span style="width:24px; height:24px; color:var(--text)">${iconSvg(name, registry, { width: 24, height: 24 })}</span>
          <figcaption class="ds-sub" style="font-size:11px; text-align:center; word-break:break-word">${name}</figcaption>
        </figure>`
     ).join("");
