@@ -1,20 +1,7 @@
 import { resolve } from "node:path";
 import { cpSync } from "node:fs";
 import { defineConfig } from "vite";
-
-const pages = [
-  "index.html",
-  "pages/buttons.html",
-  "pages/data-display.html",
-  "pages/feedback.html",
-  "pages/forms.html",
-  "pages/foundations.html",
-  "pages/keyboard.html",
-  "pages/navigation.html",
-  "pages/patterns.html",
-  "pages/system.html",
-  "pages/utilities.html"
-];
+import { pages } from "./docs/nav.mjs";
 
 // Copy global (non-module) JS — ds.js, docs.js, vendored sortable — into the
 // build output. Vite can't bundle IIFE scripts, and js/ isn't in publicDir,
@@ -50,8 +37,8 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         pages.map((page) => [
-          page.replace(/\.html$/, "").replace(/[/-]/g, "_") || "index",
-          resolve(page)
+          page.file.replace(/\.html$/, "").replace(/[/-]/g, "_") || "index",
+          resolve(page.file)
         ])
       )
     }
