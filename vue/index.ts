@@ -16,3 +16,4 @@ export { default as DsTabs } from "./components/DsTabs.vue";
 export { default as DsTabPanel } from "./components/DsTabPanel.vue";
 export { default as DsAccordion } from "./components/DsAccordion.vue";
 export { default as DsAccordionItem } from "./components/DsAccordionItem.vue";
+export { default as DsDialog } from "./components/DsDialog.vue";
