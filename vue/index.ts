@@ -6,3 +6,4 @@ export { useFocusTrap } from "./composables/useFocusTrap";
 export { useRovingTabindex } from "./composables/useRovingTabindex";
 export { useAnnounce } from "./composables/useAnnounce";
 export { useToast } from "./composables/useToast";
+export { default as DsCombobox } from "./components/DsCombobox.vue";
