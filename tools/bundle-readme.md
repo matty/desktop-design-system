@@ -87,5 +87,10 @@ To use them in a Vue 3 + Vite + TypeScript app:
 5. For toasts, mount `<DsToastHost />` once near your app root and call
    `useToast().toast({ message: "Saved", tone: "success" })` from anywhere.
 
+**Sizing:** form controls like `.ds-combo` are `display:inline-block` with no intrinsic
+width, so they shrink to their content (and their popup menu follows). Give them a width
+the way the docs do — `class="u-w-full"` inside a sized field, or an explicit width — e.g.
+`<DsCombobox class="u-w-full" … />`. Bare, an empty/short combo collapses to the chevron.
+
 The components are shipped as raw `.vue` / `.ts` source; your app's own Vite/Vue build
 compiles them.
