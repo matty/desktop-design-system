@@ -65,3 +65,27 @@ element.innerHTML = iconSvg("home", registry);
    ```
 2. Run `node icons/extend-icons.mjs` (uses the bundled `lucide-catalog.json` — no network).
 3. `icons/registry.json` now includes your icon.
+
+## Vue 3 components (optional)
+
+The `vue/` folder contains optional Vue 3 components for the interactive primitives
+(combobox, tree, context menu, dropdown, tabs, accordion, dialog, toast, splitter,
+sortable). They render the same `.ds-*` classes — the CSS in this bundle is still the
+source of truth, so no component ships its own styles.
+
+To use them in a Vue 3 + Vite + TypeScript app:
+
+1. Copy the `vue/` folder into your app (e.g. `src/design-language/`).
+2. Make sure the design-language CSS is imported once in your app, e.g.
+   `import "./design-language/design-language.css"` (or the individual
+   `tokens.css` + `base.css` + `components.css`).
+3. Only if you use `DsSortable`, install its peer dependency: `npm i sortablejs`.
+4. Import components from the barrel:
+   ```ts
+   import { DsCombobox, DsDialog, useToast } from "./design-language/vue";
+   ```
+5. For toasts, mount `<DsToastHost />` once near your app root and call
+   `useToast().toast({ message: "Saved", tone: "success" })` from anywhere.
+
+The components are shipped as raw `.vue` / `.ts` source; your app's own Vite/Vue build
+compiles them.

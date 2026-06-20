@@ -1,7 +1,7 @@
 // Build the offline release bundle into dist/bundle/.
 // Run after `vite build`. CI zips dist/bundle + publishes a SHA-256.
 import { build } from "esbuild";
-import { rm, mkdir, readFile, writeFile, readdir, copyFile } from "node:fs/promises";
+import { rm, mkdir, readFile, writeFile, readdir, copyFile, cp } from "node:fs/promises";
 import { dirname, resolve, relative, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -36,6 +36,13 @@ await copyFile(resolve(root, "node_modules/@iconify-json/lucide/icons.json"), re
 await copyFile(resolve(root, "tools/extend-icons.mjs"), resolve(out, "icons/extend-icons.mjs"));
 await copyFile(resolve(root, "tools/icon-core.mjs"), resolve(out, "icons/icon-core.mjs"));
 await copyFile(resolve(root, "icons/icons.js"), resolve(out, "icons/icons.js"));
+
+// 3b. Vue component layer — source only (no tests / type-shims).
+await cp(resolve(root, "vue"), resolve(out, "vue"), {
+  recursive: true,
+  filter: (src) =>
+    !src.endsWith(".test.ts") && !src.endsWith("env.d.ts") && !src.includes("__")
+});
 
 // 4. Docs, licenses, version.
 await copyFile(resolve(root, "tools/bundle-readme.md"), resolve(out, "README.md"));
