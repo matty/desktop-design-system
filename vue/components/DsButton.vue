@@ -9,8 +9,9 @@ const props = withDefaults(
     icon?: boolean;
     loading?: boolean;
     disabled?: boolean;
+    type?: "button" | "submit" | "reset";
   }>(),
-  { icon: false, loading: false, disabled: false }
+  { icon: false, loading: false, disabled: false, type: "button" }
 );
 
 const classes = computed(() => ({
@@ -24,7 +25,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-  <button class="ds-btn" :class="classes" :disabled="disabled || loading || undefined">
+  <button class="ds-btn" :class="classes" :type="type" :disabled="disabled || loading || undefined">
     <span v-if="loading" class="ds-spinner" aria-hidden="true"></span>
     <slot />
   </button>

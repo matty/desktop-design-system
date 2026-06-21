@@ -35,4 +35,9 @@ describe("DsButton", () => {
     const w = mount(DsButton, { props: { disabled: true } });
     expect(w.find("button").attributes("disabled")).toBeDefined();
   });
+
+  it("defaults type=button and accepts submit/reset", () => {
+    expect(mount(DsButton).find("button").attributes("type")).toBe("button");
+    expect(mount(DsButton, { props: { type: "submit" } }).find("button").attributes("type")).toBe("submit");
+  });
 });
