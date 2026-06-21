@@ -40,3 +40,6 @@ export { default as DsAvatar } from "./components/DsAvatar.vue";
 export { default as DsAlert } from "./components/DsAlert.vue";
 export { default as DsBanner } from "./components/DsBanner.vue";
 export { default as DsEmpty } from "./components/DsEmpty.vue";
+export { default as DsDivider } from "./components/DsDivider.vue";
+export { default as DsSkeleton } from "./components/DsSkeleton.vue";
+export { default as DsSpinner } from "./components/DsSpinner.vue";
