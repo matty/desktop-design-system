@@ -103,6 +103,24 @@ Independently shippable, like the first Vue phases:
 - **D — App-shell/layout.**
 Each phase: TDD per component, whole-phase review, merge to `main`.
 
+## Multi-framework (deferred — recorded decision)
+
+Svelte/other-framework support is intentionally **not** built here. Rationale and the
+path forward, so this choice is explicit and non-blocking:
+
+- Svelte (and plain HTML) can already consume the design system **today** via the
+  `.ds-*` / `.u-*` classes; only framework-native components are absent. So no framework
+  is blocked by shipping Vue-only components.
+- The interactive components keep their behavior in the `vue/composables/*` layer,
+  cleanly separated from SFC markup — the cheap hedge that makes a future
+  framework-agnostic extraction or web-components move easier, without rewriting working
+  code now.
+- **Decision rule for when Svelte becomes real:** (a) real Svelte apps + want
+  plain-HTML/more frameworks → light-DOM Web Components (Lit); (b) heavy Vue **and**
+  Svelte wanting native feel → headless behavior core + thin per-framework sets; (c)
+  still mostly Vue → keep serving Svelte via CSS + ported behaviors. Do **not** build a
+  speculative half Svelte set in the meantime.
+
 ## Non-goals
 
 - Storybook (separate spec next), built to be Storybook-ready but not set up here.
