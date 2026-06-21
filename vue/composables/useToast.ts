@@ -9,6 +9,7 @@ export interface ActiveToast extends ToastOptions {
 const state = reactive<{ toasts: ActiveToast[] }>({ toasts: [] });
 let seq = 0;
 const { announce } = useAnnounce();
+const timers = new Map<string, ReturnType<typeof setTimeout>>();
 
 export function useToast() {
   function toast(opts: ToastOptions): string {
@@ -17,11 +18,14 @@ export function useToast() {
     state.toasts.push(item);
     announce(item.message, { assertive: item.assertive });
     if (item.timeout && item.timeout > 0) {
-      setTimeout(() => dismiss(id), item.timeout);
+      if (timers.has(id)) clearTimeout(timers.get(id));
+      timers.set(id, setTimeout(() => dismiss(id), item.timeout));
     }
     return id;
   }
   function dismiss(id: string): void {
+    const t = timers.get(id);
+    if (t) { clearTimeout(t); timers.delete(id); }
     const i = state.toasts.findIndex((t) => t.id === id);
     if (i >= 0) state.toasts.splice(i, 1);
   }

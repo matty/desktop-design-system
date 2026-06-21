@@ -66,7 +66,7 @@ function onKeydown(e: KeyboardEvent) {
       @mousedown="onDown"
       @keydown="onKeydown"
     ></div>
-    <div class="ds-pane-second">
+    <div class="ds-pane-rest">
       <slot name="second" />
     </div>
   </div>

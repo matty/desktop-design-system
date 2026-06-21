@@ -18,4 +18,8 @@ describe("DsMeter", () => {
     expect(cssHas("name")).toBe(true);
     expect(cssHas("val")).toBe(true);
   });
+  it("renders 0% width when max is 0 (no NaN)", () => {
+    const w = mount(DsMeter, { props: { value: 50, max: 0 } });
+    expect((w.find(".fill").element as HTMLElement).style.width).toBe("0%");
+  });
 });

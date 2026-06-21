@@ -35,4 +35,21 @@ describe("useToast", () => {
     dismiss(id);
     expect(toasts.length).toBe(0);
   });
+
+  it("reused id: stale timer from first toast does not remove second toast", () => {
+    const { toast, dismiss, toasts } = useToast();
+    // raise first toast with explicit id and 1000ms timeout
+    toast({ message: "First", id: "my-toast", timeout: 1000 });
+    expect(toasts.length).toBe(1);
+    // manually dismiss it (cancels the timer)
+    dismiss("my-toast");
+    expect(toasts.length).toBe(0);
+    // raise a new toast with the same id and a longer timeout
+    toast({ message: "Second", id: "my-toast", timeout: 5000 });
+    expect(toasts.length).toBe(1);
+    // advance past the FIRST toast's original timeout — should NOT remove the second
+    vi.advanceTimersByTime(1000);
+    expect(toasts.length).toBe(1);
+    expect(toasts[0].message).toBe("Second");
+  });
 });

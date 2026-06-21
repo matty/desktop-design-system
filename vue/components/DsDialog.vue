@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref, watch, onBeforeUnmount } from "vue";
+import { ref, watch, onBeforeUnmount, useId } from "vue";
 import { useFocusTrap } from "../composables/useFocusTrap";
 import { useDismiss } from "../composables/useDismiss";
 
 const props = defineProps<{ open: boolean; title: string }>();
 const emit = defineEmits<{ "update:open": [boolean] }>();
 
+const titleId = useId();
 const dialog = ref<HTMLElement | null>(null);
 const openRef = ref(props.open);
 watch(
@@ -35,9 +36,9 @@ onBeforeUnmount(() => {
 <template>
   <Teleport to="body">
     <div v-if="open" class="ds-overlay">
-      <div ref="dialog" class="ds-dialog" role="dialog" aria-modal="true" aria-labelledby="ds-dialog-title">
+      <div ref="dialog" class="ds-dialog" role="dialog" aria-modal="true" :aria-labelledby="titleId">
         <div class="ds-dialog-head">
-          <h3 id="ds-dialog-title">{{ title }}</h3>
+          <h3 :id="titleId">{{ title }}</h3>
         </div>
         <div class="ds-dialog-body">
           <slot />
