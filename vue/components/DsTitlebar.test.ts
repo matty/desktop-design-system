@@ -19,4 +19,10 @@ describe("DsTitlebar", () => {
     expect(w.emitted("maximize")).toBeTruthy();
     expect(w.emitted("close")).toBeTruthy();
   });
+  it("labels the window buttons", () => {
+    const btns = mount(DsTitlebar, { props: { title: "App" } }).findAll(".ds-winbtns button");
+    expect(btns[0].attributes("aria-label")).toBe("Minimize");
+    expect(btns[1].attributes("aria-label")).toBe("Maximize");
+    expect(btns[2].attributes("aria-label")).toBe("Close");
+  });
 });

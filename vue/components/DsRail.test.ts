@@ -10,4 +10,8 @@ describe("DsRail", () => {
     expect(w.find(".ds-rail-spacer").exists()).toBe(true);
     expect(w.text()).toContain("About");
   });
+  it("labels the nav landmark (default + custom)", () => {
+    expect(mount(DsRail).find("nav.ds-rail").attributes("aria-label")).toBe("Navigation");
+    expect(mount(DsRail, { props: { label: "Primary" } }).find("nav").attributes("aria-label")).toBe("Primary");
+  });
 });

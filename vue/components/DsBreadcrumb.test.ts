@@ -9,4 +9,10 @@ describe("DsBreadcrumb", () => {
     expect(w.findAll(".sep")).toHaveLength(2);
     expect(w.find(".current").text()).toBe("Elden Ring");
   });
+  it("labels the nav, marks current, hides separators", () => {
+    const w = mount(DsBreadcrumb, { props: { items: [{ label: "A", href: "#" }, { label: "B" }] } });
+    expect(w.find("nav.ds-breadcrumb").attributes("aria-label")).toBe("Breadcrumb");
+    expect(w.find(".current").attributes("aria-current")).toBe("page");
+    expect(w.find(".sep").attributes("aria-hidden")).toBe("true");
+  });
 });
