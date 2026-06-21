@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import type { Size } from "../types";
 
 const props = withDefaults(
   defineProps<{
     variant?: "primary" | "ghost" | "danger";
-    size?: "sm" | "lg";
+    size?: Exclude<Size, "md">;
     icon?: boolean;
     loading?: boolean;
     disabled?: boolean;

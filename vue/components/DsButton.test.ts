@@ -19,6 +19,8 @@ describe("DsButton", () => {
     }
     expect(cssHas("is-sm")).toBe(true);
     expect(mount(DsButton, { props: { size: "sm" } }).find("button").classes()).toContain("is-sm");
+    expect(cssHas("is-lg")).toBe(true);
+    expect(mount(DsButton, { props: { size: "lg" } }).find("button").classes()).toContain("is-lg");
     expect(cssHas("is-icon")).toBe(true);
     expect(mount(DsButton, { props: { icon: true } }).find("button").classes()).toContain("is-icon");
   });
@@ -27,5 +29,10 @@ describe("DsButton", () => {
     const w = mount(DsButton, { props: { loading: true } });
     expect(w.find("button").attributes("disabled")).toBeDefined();
     expect(w.find(".ds-spinner").exists()).toBe(true);
+  });
+
+  it("sets disabled attribute when disabled prop is true", () => {
+    const w = mount(DsButton, { props: { disabled: true } });
+    expect(w.find("button").attributes("disabled")).toBeDefined();
   });
 });
