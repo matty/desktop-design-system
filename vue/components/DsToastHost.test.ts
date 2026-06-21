@@ -3,6 +3,7 @@ import { mount } from "@vue/test-utils";
 import { nextTick } from "vue";
 import DsToastHost from "./DsToastHost.vue";
 import { useToast } from "../composables/useToast";
+import { cssHas } from "../__support__/css";
 
 describe("DsToastHost", () => {
   beforeEach(() => {
@@ -27,5 +28,10 @@ describe("DsToastHost", () => {
     await nextTick();
     await w.find(".ds-toast-close").trigger("click");
     expect(w.findAll(".ds-toast")).toHaveLength(0);
+  });
+  it("sub-element classes are backed by components.css", () => {
+    expect(cssHas("ds-toast-body")).toBe(true);
+    expect(cssHas("ds-toast-stack")).toBe(true);
+    expect(cssHas("ds-toast-close")).toBe(true);
   });
 });

@@ -17,6 +17,8 @@ describe("DsMeter", () => {
   it("sub-element classes are backed by components.css", () => {
     expect(cssHas("name")).toBe(true);
     expect(cssHas("val")).toBe(true);
+    expect(cssHas("track")).toBe(true);
+    expect(cssHas("fill")).toBe(true);
   });
   it("renders 0% width when max is 0 (no NaN)", () => {
     const w = mount(DsMeter, { props: { value: 50, max: 0 } });
