@@ -29,3 +29,5 @@ export { default as DsRadioGroup } from "./components/DsRadioGroup.vue";
 export { default as DsSlider } from "./components/DsSlider.vue";
 export { default as DsSegmented } from "./components/DsSegmented.vue";
 export { default as DsNumber } from "./components/DsNumber.vue";
+export { default as DsCard } from "./components/DsCard.vue";
+export { default as DsPanel } from "./components/DsPanel.vue";
