@@ -52,3 +52,6 @@ export { default as DsFact } from "./components/DsFact.vue";
 export { default as DsList } from "./components/DsList.vue";
 export { default as DsListItem } from "./components/DsListItem.vue";
 export { default as DsRow } from "./components/DsRow.vue";
+export { default as DsTitlebar } from "./components/DsTitlebar.vue";
+export { default as DsRail } from "./components/DsRail.vue";
+export { default as DsNavItem } from "./components/DsNavItem.vue";
