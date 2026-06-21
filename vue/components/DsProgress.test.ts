@@ -6,4 +6,8 @@ describe("DsProgress", () => {
     const w = mount(DsProgress, { props: { value: 64 } });
     expect((w.find(".bar").element as HTMLElement).style.width).toBe("64%");
   });
+  it("renders 0% width when max is 0 (no NaN)", () => {
+    const w = mount(DsProgress, { props: { value: 50, max: 0 } });
+    expect((w.find(".bar").element as HTMLElement).style.width).toBe("0%");
+  });
 });
