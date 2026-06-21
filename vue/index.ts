@@ -18,3 +18,4 @@ export { default as DsAccordion } from "./components/DsAccordion.vue";
 export { default as DsAccordionItem } from "./components/DsAccordionItem.vue";
 export { default as DsDialog } from "./components/DsDialog.vue";
 export { default as DsToastHost } from "./components/DsToastHost.vue";
+export { default as DsIcon } from "./components/DsIcon.vue";
