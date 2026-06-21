@@ -5,8 +5,8 @@ const pct = computed(() => Math.max(0, Math.min(100, (props.value / props.max) *
 </script>
 <template>
   <div class="ds-meter">
-    <span>{{ label }}</span>
+    <span class="name">{{ label }}</span>
     <div class="track"><div class="fill" :style="{ width: pct + '%' }"></div></div>
-    <span>{{ display ?? Math.round(pct) + '%' }}</span>
+    <span class="val">{{ display ?? Math.round(pct) + '%' }}</span>
   </div>
 </template>
