@@ -4,7 +4,7 @@ const props = withDefaults(defineProps<{ value: number; max?: number; label?: st
 const pct = computed(() => (props.max > 0 ? Math.max(0, Math.min(100, (props.value / props.max) * 100)) : 0));
 </script>
 <template>
-  <div class="ds-meter">
+  <div class="ds-meter" role="meter" :aria-valuenow="value" aria-valuemin="0" :aria-valuemax="max" :aria-label="label">
     <span class="name">{{ label }}</span>
     <div class="track"><div class="fill" :style="{ width: pct + '%' }"></div></div>
     <span class="val">{{ display ?? Math.round(pct) + '%' }}</span>
