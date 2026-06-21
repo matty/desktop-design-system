@@ -55,3 +55,6 @@ export { default as DsRow } from "./components/DsRow.vue";
 export { default as DsTitlebar } from "./components/DsTitlebar.vue";
 export { default as DsRail } from "./components/DsRail.vue";
 export { default as DsNavItem } from "./components/DsNavItem.vue";
+export { default as DsToolbar } from "./components/DsToolbar.vue";
+export { default as DsStatusbar } from "./components/DsStatusbar.vue";
+export { default as DsBreadcrumb } from "./components/DsBreadcrumb.vue";
