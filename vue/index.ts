@@ -31,3 +31,6 @@ export { default as DsSegmented } from "./components/DsSegmented.vue";
 export { default as DsNumber } from "./components/DsNumber.vue";
 export { default as DsCard } from "./components/DsCard.vue";
 export { default as DsPanel } from "./components/DsPanel.vue";
+export { default as DsBadge } from "./components/DsBadge.vue";
+export { default as DsPill } from "./components/DsPill.vue";
+export { default as DsKbd } from "./components/DsKbd.vue";
