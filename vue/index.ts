@@ -25,3 +25,4 @@ export { default as DsInput } from "./components/DsInput.vue";
 export { default as DsTextarea } from "./components/DsTextarea.vue";
 export { default as DsSwitch } from "./components/DsSwitch.vue";
 export { default as DsCheckbox } from "./components/DsCheckbox.vue";
+export { default as DsRadioGroup } from "./components/DsRadioGroup.vue";
