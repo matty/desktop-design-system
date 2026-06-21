@@ -35,3 +35,6 @@ export interface ToastOptions {
   timeout?: number;
   assertive?: boolean;
 }
+
+export type Tone = "info" | "success" | "warning" | "danger";
+export type Size = "sm" | "md" | "lg";
