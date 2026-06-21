@@ -37,3 +37,6 @@ export { default as DsKbd } from "./components/DsKbd.vue";
 export { default as DsChip } from "./components/DsChip.vue";
 export { default as DsStatus } from "./components/DsStatus.vue";
 export { default as DsAvatar } from "./components/DsAvatar.vue";
+export { default as DsAlert } from "./components/DsAlert.vue";
+export { default as DsBanner } from "./components/DsBanner.vue";
+export { default as DsEmpty } from "./components/DsEmpty.vue";
