@@ -28,3 +28,4 @@ export { default as DsCheckbox } from "./components/DsCheckbox.vue";
 export { default as DsRadioGroup } from "./components/DsRadioGroup.vue";
 export { default as DsSlider } from "./components/DsSlider.vue";
 export { default as DsSegmented } from "./components/DsSegmented.vue";
+export { default as DsNumber } from "./components/DsNumber.vue";
