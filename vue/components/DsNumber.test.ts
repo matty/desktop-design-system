@@ -14,6 +14,7 @@ describe("DsNumber", () => {
     const [up, down] = w.findAll(".ds-step button");
     await up.trigger("click");
     expect(w.emitted("update:modelValue")!.at(-1)).toEqual([10]); // clamped at max
+    await w.setProps({ modelValue: 10 });
     await up.trigger("click");
     expect(w.emitted("update:modelValue")!.at(-1)).toEqual([10]); // stays at max
     await down.trigger("click");
