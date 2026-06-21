@@ -5,7 +5,7 @@ import { useFocusTrap } from "../composables/useFocusTrap";
 import { useRovingTabindex } from "../composables/useRovingTabindex";
 import { useDismiss } from "../composables/useDismiss";
 
-const props = defineProps<{ items: MenuItem[] }>();
+const props = defineProps<{ items: MenuItem[]; ariaLabel?: string }>();
 const emit = defineEmits<{ select: [string] }>();
 
 const open = ref(false);
@@ -52,6 +52,7 @@ function choose(item: MenuItem) {
       ref="menu"
       class="ds-menu ds-context-menu"
       role="menu"
+      :aria-label="ariaLabel"
       :style="{ position: 'fixed', left: x + 'px', top: y + 'px' }"
     >
       <template v-for="item in items" :key="item.id">

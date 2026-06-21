@@ -8,4 +8,9 @@ describe("DsSpinner", () => {
     expect(mount(DsSpinner).find(".ds-spinner").exists()).toBe(true);
     expect(mount(DsSpinner, { props: { large: true } }).find(".ds-spinner").classes()).toContain("is-lg");
   });
+  it("exposes status role + accessible name", () => {
+    const w = mount(DsSpinner);
+    expect(w.find(".ds-spinner").attributes("role")).toBe("status");
+    expect(w.find(".ds-spinner").attributes("aria-label")).toBe("Loading");
+  });
 });

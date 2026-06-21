@@ -14,4 +14,8 @@ describe("DsFacts", () => {
   it("cols-2 class is backed by components.css", () => {
     expect(cssHas("cols-2")).toBe(true);
   });
+  it("sub-element classes are backed by components.css", () => {
+    expect(cssHas("k")).toBe(true);
+    expect(cssHas("v")).toBe(true);
+  });
 });

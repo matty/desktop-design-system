@@ -77,7 +77,7 @@ function isSelected(opt: ComboOption) {
       <template v-if="multiple && !checklist">
         <span v-for="opt in selectedOptions" :key="opt.value" class="ds-chip">
           {{ opt.label }}
-          <span class="ds-chip-x" @click.stop="removeChip(opt.value)">×</span>
+          <button type="button" class="ds-chip-x" aria-label="Remove" @click.stop="removeChip(opt.value)">×</button>
         </span>
       </template>
       <span v-else class="ds-combo-value" :class="{ 'is-placeholder': isPlaceholder }">{{ buttonLabel }}</span>

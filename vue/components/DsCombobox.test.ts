@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 import DsCombobox from "./DsCombobox.vue";
+import { cssHas } from "../__support__/css";
 
 const options = [
   { value: "a", label: "Apple" },
@@ -37,5 +38,10 @@ describe("DsCombobox", () => {
     await w.find(".ds-combo-filter").setValue("ban");
     expect(w.findAll(".ds-combo-option")).toHaveLength(1);
     expect(w.find(".ds-combo-option").text()).toBe("Banana");
+  });
+  it("sub-element classes are backed by components.css", () => {
+    expect(cssHas("ds-combo-check")).toBe(true);
+    expect(cssHas("ds-combo-chev")).toBe(true);
+    expect(cssHas("ds-combo-menu")).toBe(true);
   });
 });

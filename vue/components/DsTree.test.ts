@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "vitest";
 import { mount } from "@vue/test-utils";
 import DsTree from "./DsTree.vue";
+import { cssHas } from "../__support__/css";
 
 // happy-dom has no layout engine — shim offsetParent so rows() filter passes.
 beforeAll(() => {
@@ -64,5 +65,10 @@ describe("DsTree", () => {
     expect(w.emitted("update:expanded")).toBeTruthy();
     expect(w.emitted("update:expanded")![0]).toEqual([[]]); // "1" removed
     w.unmount();
+  });
+  it("sub-element classes are backed by components.css", () => {
+    expect(cssHas("ds-tree-label")).toBe(true);
+    expect(cssHas("ds-tree-row")).toBe(true);
+    expect(cssHas("ds-tree-twisty")).toBe(true);
   });
 });

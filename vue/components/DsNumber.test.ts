@@ -27,4 +27,9 @@ describe("DsNumber", () => {
     await el.trigger("input");
     expect(w.emitted("update:modelValue")!.at(-1)).toEqual([42]);
   });
+  it("labels the step buttons", () => {
+    const btns = mount(DsNumber, { props: { modelValue: 1 } }).findAll(".ds-step button");
+    expect(btns[0].attributes("aria-label")).toBe("Increment");
+    expect(btns[1].attributes("aria-label")).toBe("Decrement");
+  });
 });

@@ -68,6 +68,17 @@ describe("DsContextMenu", () => {
     w.unmount();
   });
 
+  it("applies ariaLabel to the context menu", async () => {
+    const w = mount(DsContextMenu, {
+      props: { items: [{ id: "cut", label: "Cut" }], ariaLabel: "Edit actions" },
+      slots: { default: () => h("div", { class: "target" }, "Right click me") },
+      attachTo: document.body
+    });
+    await w.find(".target").trigger("contextmenu", { clientX: 10, clientY: 20 });
+    expect(document.querySelector(".ds-context-menu")!.getAttribute("aria-label")).toBe("Edit actions");
+    w.unmount();
+  });
+
   it("v-if rendered container: roving tabindex attaches after nextTick and ArrowDown moves focus", async () => {
     // Regression for: useRovingTabindex must await nextTick before reading container ref.
     // Harness mirrors DsContextMenu's pattern: ref is null while active=false (v-if hidden),

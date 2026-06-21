@@ -21,11 +21,11 @@ function onInput(e: Event) {
   <div class="ds-number">
     <input type="text" :value="modelValue" :disabled="disabled || undefined" @input="onInput" />
     <div class="ds-step">
-      <button type="button" :disabled="disabled || undefined" @click="bump(1)">
-        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></svg>
+      <button type="button" aria-label="Increment" :disabled="disabled || undefined" @click="bump(1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 15l-6-6l-6 6"/></svg>
       </button>
-      <button type="button" :disabled="disabled || undefined" @click="bump(-1)">
-        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg>
+      <button type="button" aria-label="Decrement" :disabled="disabled || undefined" @click="bump(-1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg>
       </button>
     </div>
   </div>

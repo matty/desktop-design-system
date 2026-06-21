@@ -12,6 +12,10 @@ describe("DsRadioGroup", () => {
     const inputs = w.findAll("input[type=radio]");
     expect((inputs[1].element as HTMLInputElement).checked).toBe(true);
   });
+  it("applies ariaLabel to the radiogroup", () => {
+    const w = mount(DsRadioGroup, { props: { modelValue: "light", options, ariaLabel: "Theme" } });
+    expect(w.find("[role=radiogroup]").attributes("aria-label")).toBe("Theme");
+  });
   it("emits the value when an option is chosen", async () => {
     const w = mount(DsRadioGroup, { props: { modelValue: "light", options } });
     await w.findAll("input[type=radio]")[1].setValue(true);
