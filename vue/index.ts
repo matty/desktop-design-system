@@ -43,3 +43,6 @@ export { default as DsEmpty } from "./components/DsEmpty.vue";
 export { default as DsDivider } from "./components/DsDivider.vue";
 export { default as DsSkeleton } from "./components/DsSkeleton.vue";
 export { default as DsSpinner } from "./components/DsSpinner.vue";
+export { default as DsMeter } from "./components/DsMeter.vue";
+export { default as DsProgress } from "./components/DsProgress.vue";
+export { default as DsTable } from "./components/DsTable.vue";
