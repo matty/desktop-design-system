@@ -34,3 +34,6 @@ export { default as DsPanel } from "./components/DsPanel.vue";
 export { default as DsBadge } from "./components/DsBadge.vue";
 export { default as DsPill } from "./components/DsPill.vue";
 export { default as DsKbd } from "./components/DsKbd.vue";
+export { default as DsChip } from "./components/DsChip.vue";
+export { default as DsStatus } from "./components/DsStatus.vue";
+export { default as DsAvatar } from "./components/DsAvatar.vue";
