@@ -5,9 +5,12 @@ describe("DsChip", () => {
   it("renders .ds-chip with slot; no x unless removable", () => {
     expect(mount(DsChip, { slots: { default: () => "Tag" } }).find(".ds-chip-x").exists()).toBe(false);
   });
-  it("emits remove when x clicked", async () => {
+  it("remove control is a labelled button that emits remove", async () => {
     const w = mount(DsChip, { props: { removable: true }, slots: { default: () => "Tag" } });
-    await w.find(".ds-chip-x").trigger("click");
+    const btn = w.find("button.ds-chip-x");
+    expect(btn.exists()).toBe(true);
+    expect(btn.attributes("aria-label")).toBe("Remove");
+    await btn.trigger("click");
     expect(w.emitted("remove")).toBeTruthy();
   });
 });

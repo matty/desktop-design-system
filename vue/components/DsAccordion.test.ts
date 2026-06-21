@@ -41,4 +41,9 @@ describe("DsAccordion", () => {
     await w.findAll("summary")[1].trigger("click");
     expect(w.emitted("update:modelValue")![0]).toEqual([["one", "two"]]);
   });
+
+  it("summary has no redundant aria-expanded", () => {
+    const w = mount(DsAccordion, { props: { modelValue: "one" }, slots: { default: () => h(DsAccordionItem, { id: "one", title: "One" }, () => "B") } });
+    expect(w.find("summary").attributes("aria-expanded")).toBeUndefined();
+  });
 });

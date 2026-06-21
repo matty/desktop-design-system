@@ -30,6 +30,12 @@ describe("DsDropdownMenu", () => {
     expect(w.find(".ds-menu-sep").exists()).toBe(true);
   });
 
+  it("applies ariaLabel to the menu", async () => {
+    const w = mount(DsDropdownMenu, { props: { items: [{ id: "a", label: "A" }], ariaLabel: "Actions" }, slots: { trigger: () => "M" } });
+    await w.find(".ds-dropdown-btn").trigger("click");
+    expect(w.find(".ds-menu").attributes("aria-label")).toBe("Actions");
+  });
+
   it("selecting a leaf emits select and closes", async () => {
     const w = mount(DsDropdownMenu, {
       props: { items },

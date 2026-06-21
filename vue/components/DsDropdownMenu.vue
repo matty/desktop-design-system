@@ -4,7 +4,7 @@ import type { MenuItem } from "../types";
 import { useDismiss } from "../composables/useDismiss";
 import { useRovingTabindex } from "../composables/useRovingTabindex";
 
-const props = defineProps<{ items: MenuItem[] }>();
+const props = defineProps<{ items: MenuItem[]; ariaLabel?: string }>();
 const emit = defineEmits<{ select: [string] }>();
 
 const root = ref<HTMLElement | null>(null);
@@ -33,7 +33,7 @@ function choose(item: MenuItem) {
     <button type="button" class="ds-dropdown-btn ds-btn" :aria-expanded="open" @click.stop="toggle">
       <slot name="trigger" />
     </button>
-    <div v-if="open" ref="menu" class="ds-menu" role="menu">
+    <div v-if="open" ref="menu" class="ds-menu" role="menu" :aria-label="ariaLabel">
       <template v-for="item in items" :key="item.id">
         <div v-if="item.separator" class="ds-menu-sep"></div>
         <div

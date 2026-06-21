@@ -14,6 +14,10 @@ describe("DsSegmented", () => {
     expect(btns[1].classes()).toContain("is-active");
     expect(btns[0].classes()).not.toContain("is-active");
   });
+  it("applies ariaLabel to the segmented group", () => {
+    const w = mount(DsSegmented, { props: { modelValue: "dark", options, ariaLabel: "View mode" } });
+    expect(w.find(".ds-segmented").attributes("aria-label")).toBe("View mode");
+  });
   it("emits the value on click", async () => {
     const w = mount(DsSegmented, { props: { modelValue: "dark", options } });
     await w.findAll(".ds-segmented button")[1].trigger("click");
