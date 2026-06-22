@@ -9,10 +9,8 @@ const config: StorybookConfig = {
   ],
   "addons": [
     "@chromatic-com/storybook",
-    "@storybook/addon-vitest",
     "@storybook/addon-a11y",
-    "@storybook/addon-docs",
-    "@storybook/addon-onboarding"
+    "@storybook/addon-docs"
   ],
   "framework": "@storybook/vue3-vite",
   async viteFinal(config: UserConfig) {
