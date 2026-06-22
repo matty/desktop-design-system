@@ -14,7 +14,8 @@ function injectChrome() {
       handler(html, ctx) {
         const baseName = ctx.path.split("?")[0].split("/").pop() || "index.html";
         const entry = pages.find((p) => p.file.split("/").pop() === baseName);
-        if (!entry) throw new Error(`inject-chrome: no docs/nav.mjs entry for ${ctx.path}`);
+        // Not a docs page (e.g. Storybook's iframe.html) — leave untouched.
+        if (!entry) return html;
         const inPages = entry.file.startsWith("pages/");
         const prefix = inPages ? "../" : "";
 
