@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3-vite";
 import DsNavItem from "./DsNavItem.vue";
 
 const meta: Meta<typeof DsNavItem> = {
-  title: "Navigation/DsNavItem",
+  title: "Shell/DsNavItem",
   component: DsNavItem,
   tags: ["autodocs"],
   argTypes: {

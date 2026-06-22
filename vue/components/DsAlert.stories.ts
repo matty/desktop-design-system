@@ -62,6 +62,6 @@ export const WithIcon: Story = {
   render: (args) => ({
     components: { DsAlert, DsIcon },
     setup: () => ({ args }),
-    template: `<DsAlert v-bind="args"><template #icon><DsIcon name="triangle-alert" /></template>Warning with an icon slot.</DsAlert>`
+    template: `<DsAlert v-bind="args"><template #icon><DsIcon name="alert" /></template>Warning with an icon slot.</DsAlert>`
   })
 };
