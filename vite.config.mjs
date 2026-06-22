@@ -14,7 +14,11 @@ function injectChrome() {
       handler(html, ctx) {
         const baseName = ctx.path.split("?")[0].split("/").pop() || "index.html";
         const entry = pages.find((p) => p.file.split("/").pop() === baseName);
-        if (!entry) throw new Error(`inject-chrome: no docs/nav.mjs entry for ${ctx.path}`);
+        if (!entry) {
+          // Real docs pages carry the chrome placeholders; if one is missing its nav entry, fail loudly.
+          if (html.includes("<!--#head-->")) throw new Error(`inject-chrome: no docs/nav.mjs entry for ${ctx.path}`);
+          return html; // not a docs page (e.g. Storybook's iframe.html) — leave untouched
+        }
         const inPages = entry.file.startsWith("pages/");
         const prefix = inPages ? "../" : "";
 
