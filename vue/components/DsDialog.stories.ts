@@ -41,6 +41,6 @@ export const Default: Story = {
     await expect(body.getByRole("dialog")).toBeInTheDocument();
     // Press Escape to close
     await userEvent.keyboard("{Escape}");
-    await expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+    await expect(body.queryByRole("dialog")).toBeNull();
   }
 };

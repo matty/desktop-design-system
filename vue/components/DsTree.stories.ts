@@ -46,7 +46,8 @@ export const Default: Story = {
     // Click the twisty/row for "components" to expand it.
     const componentsRow = await c.findByRole("treeitem", { name: /components/ });
     // Click the twisty span inside the row to toggle expand
-    const twisty = componentsRow.querySelector(".ds-tree-twisty") as HTMLElement;
+    const twisty = componentsRow.querySelector(".ds-tree-twisty") as HTMLElement | null;
+    if (!twisty) throw new Error("DsTree play: .ds-tree-twisty not found on the row");
     await userEvent.click(twisty);
     // After expanding, children "DsButton.vue" and "DsInput.vue" should appear
     await expect(c.getByRole("treeitem", { name: /DsButton\.vue/ })).toBeInTheDocument();
