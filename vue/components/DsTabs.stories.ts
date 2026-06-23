@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import { ref } from "vue";
 import DsTabs from "./DsTabs.vue";
 import DsTabPanel from "./DsTabPanel.vue";
@@ -37,5 +38,14 @@ export const Default: Story = {
         </DsTabPanel>
       </DsTabs>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Click the "Details" tab
+    await userEvent.click(c.getByRole("tab", { name: "Details" }));
+    // That tab should now be selected
+    await expect(c.getByRole("tab", { name: "Details" })).toHaveAttribute("aria-selected", "true");
+    // And its panel content should be visible
+    await expect(c.getByText("Details content goes here.")).toBeInTheDocument();
+  }
 };

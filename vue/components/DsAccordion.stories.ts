@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import { ref } from "vue";
 import DsAccordion from "./DsAccordion.vue";
 import DsAccordionItem from "./DsAccordionItem.vue";
@@ -31,7 +32,16 @@ export const Single: Story = {
         </DsAccordionItem>
       </DsAccordion>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // item1 starts open; click "Section Two" summary to open it
+    // (single mode closes item1 and opens item2)
+    await userEvent.click(c.getByText("Section Two"));
+    // The <details> for item2 should now have the open attribute
+    const item2Details = canvasElement.querySelectorAll("details")[1];
+    await expect(item2Details).toHaveAttribute("open");
+  }
 };
 
 export const Multiple: Story = {

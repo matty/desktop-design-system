@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import { ref } from "vue";
 import DsCombobox from "./DsCombobox.vue";
 
@@ -26,7 +27,17 @@ export const Single: Story = {
       return { value, options };
     },
     template: `<DsCombobox v-model="value" :options="options" style="width:240px" />`
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Open the combobox
+    await userEvent.click(c.getByRole("button"));
+    // Click the "Banana" option (role="option" inside the listbox)
+    const option = await c.findByRole("option", { name: "Banana" });
+    await userEvent.click(option);
+    // The button label should now read "Banana"
+    await expect(c.getByRole("button")).toHaveTextContent("Banana");
+  }
 };
 
 export const Multiple: Story = {

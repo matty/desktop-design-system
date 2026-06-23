@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import DsContextMenu from "./DsContextMenu.vue";
 
 const meta: Meta<typeof DsContextMenu> = {
@@ -32,5 +33,14 @@ export const Default: Story = {
         </div>
       </DsContextMenu>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Right-click the target to open the context menu
+    const target = c.getByText("Right-click here");
+    await userEvent.pointer({ keys: "[MouseRight]", target });
+    // The menu is teleported to body — query there
+    const body = within(document.body);
+    await expect(body.getByRole("menuitem", { name: "Open" })).toBeInTheDocument();
+  }
 };
