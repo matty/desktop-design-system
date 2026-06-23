@@ -1048,6 +1048,19 @@ _(no description yet)_
 - category: App shell pieces
 - states: `is-close`
 
+```html
+<div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+```
+
 ### ds-number
 
 _(no description yet)_
@@ -1101,11 +1114,37 @@ _(no description yet)_
 - category: Resizable split panes
 - states: `is-dragging`, `is-horizontal`
 
+```html
+<div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+```
+
 ### ds-pane-rest
 
 _(no description yet)_
 - category: Resizable split panes
 - states: `is-dragging`, `is-horizontal`
+
+```html
+<div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+```
 
 ### ds-panel
 
@@ -1182,11 +1221,56 @@ _(no description yet)_
 - sub-parts: `ds-rail-spacer`
 - states: `is-close`
 
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
+
 ### ds-resizable
 
 _(no description yet)_
 - category: Resizable split panes
 - states: `is-dragging`, `is-horizontal`
+
+```html
+<div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+```
 
 ### ds-row
 
@@ -1285,6 +1369,19 @@ _(no description yet)_
 - category: Resizable split panes
 - states: `is-dragging`, `is-horizontal`
 
+```html
+<div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+```
+
 ### ds-status
 
 _(no description yet)_
@@ -1309,6 +1406,38 @@ _(no description yet)_
 - category: App shell pieces
 - sub-parts: `ds-statusbar-spacer`
 - states: `is-close`
+
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
 
 ### ds-step
 
@@ -1509,6 +1638,38 @@ _(no description yet)_
 - sub-parts: `ds-titlebar-title`
 - states: `is-close`
 
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
+
 ### ds-toast
 
 _(no description yet)_
@@ -1534,6 +1695,38 @@ _(no description yet)_
 - category: App shell pieces
 - sub-parts: `ds-toolbar-spacer`, `ds-toolbar-title`
 - states: `is-close`
+
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
 
 ### ds-track
 
@@ -1609,6 +1802,38 @@ _(no description yet)_
 _(no description yet)_
 - category: App shell pieces
 - states: `is-close`
+
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
 
 ## Utilities
 
@@ -2082,6 +2307,38 @@ _(no description yet)_
 ### is-close
 
 _(no description yet)_
+
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
 
 ### is-danger
 

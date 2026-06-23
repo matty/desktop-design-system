@@ -180,6 +180,46 @@
           </div><div class="example-caption"><b>.ds-divider</b> · <b>.ds-divider-label</b></div></div>
         </section>
 
+        <!-- app-shell composite example -->
+        <section class="doc-section">
+          <h2>App-shell composite</h2>
+          <p class="desc">A compact static composite showing the full chrome: titlebar, window buttons, navigation rail, toolbar, content, and statusbar.</p>
+          <div class="example">
+            <div class="example-preview">
+              <div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg></button>
+                    <button><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg></button>
+                    <button class="is-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></svg>Home</a>
+                    <a class="ds-navi"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></g></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption">App-shell chrome: <code>.ds-titlebar</code>, <code>.ds-winbtns</code>, <code>.ds-rail</code>, <code>.ds-navi</code>, <code>.ds-toolbar</code>, <code>.ds-statusbar</code>.</div>
+          </div>
+        </section>
+
         <!-- reuse -->
         <section class="doc-section">
           <h2>Reusing this in another app</h2>
