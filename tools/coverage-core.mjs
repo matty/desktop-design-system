@@ -6,6 +6,13 @@
 // placeholder. Excluded from the example-coverage assertion by design.
 export const EXAMPLE_EXEMPT = new Set(["ds-live", "ds-drop-placeholder"]);
 
+// Components that warrant a Vue code tab in the docs (the interactive tier).
+// docsCoverage flags any of these lacking a <template data-vue> snippet.
+export const DATA_VUE_EXPECTED = new Set([
+  "DsCombobox", "DsTree", "DsContextMenu", "DsDropdownMenu", "DsTabs",
+  "DsAccordion", "DsDialog", "DsToastHost", "DsSplitter", "DsSortable"
+]);
+
 // Sub-components that are intentionally documented inside a parent component's
 // story file rather than getting their own <Name>.stories.ts.
 export const STORY_ALIASES = {
@@ -76,7 +83,7 @@ export function rendersCoverage({ components, primitives }) {
   return violations;
 }
 
-export function docsCoverage({ components, pageSources }) {
+export function docsCoverage({ components, pageSources, expected = DATA_VUE_EXPECTED }) {
   const joined = pageSources.join("\n");
   if (!/data-vue/.test(joined)) {
     return {
@@ -90,7 +97,7 @@ export function docsCoverage({ components, pageSources }) {
     for (const tag of block[1].matchAll(/<(Ds[A-Za-z0-9]+)/g)) used.add(tag[1]);
   }
   const violations = components
-    .filter((c) => !used.has(c.name))
+    .filter((c) => expected.has(c.name) && !used.has(c.name))
     .map((c) => ({
       rule: "docs",
       entity: c.name,
