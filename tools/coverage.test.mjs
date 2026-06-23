@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage, docsCoverage } from "./coverage-core.mjs";
+import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage, docsCoverage, EXAMPLE_EXEMPT } from "./coverage-core.mjs";
 
 describe("storyCoverage", () => {
   it("passes when a component has a same-named story", () => {
@@ -68,6 +68,24 @@ describe("exampleCoverage", () => {
     expect(v).toEqual([
       { rule: "example", entity: "ds-spinner", detail: "no docs example in pages/*.html" }
     ]);
+  });
+});
+
+describe("exampleCoverage exemptions", () => {
+  it("does not flag an exempt non-visual primitive", () => {
+    const v = exampleCoverage({ primitives: [{ name: "ds-live", examples: [] }] });
+    expect(v).toEqual([]);
+  });
+
+  it("still flags a non-exempt primitive with no examples", () => {
+    const v = exampleCoverage({ primitives: [{ name: "ds-card", examples: [] }] });
+    expect(v).toEqual([
+      { rule: "example", entity: "ds-card", detail: "no docs example in pages/*.html" }
+    ]);
+  });
+
+  it("exempts exactly the two documented infrastructure classes", () => {
+    expect([...EXAMPLE_EXEMPT].sort()).toEqual(["ds-drop-placeholder", "ds-live"]);
   });
 });
 

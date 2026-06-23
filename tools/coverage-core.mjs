@@ -1,6 +1,11 @@
 // Pure cross-layer coverage assertions. No IO, no process side-effects.
 // Each function returns an array of { rule, entity, detail } violations.
 
+// Non-visual infrastructure primitives that legitimately have no standalone
+// docs example: a visually-hidden ARIA live region and a transient drag-state
+// placeholder. Excluded from the example-coverage assertion by design.
+export const EXAMPLE_EXEMPT = new Set(["ds-live", "ds-drop-placeholder"]);
+
 // Sub-components that are intentionally documented inside a parent component's
 // story file rather than getting their own <Name>.stories.ts.
 export const STORY_ALIASES = {
@@ -35,9 +40,9 @@ export function storyCoverage({ components, storyNames, aliases = STORY_ALIASES 
   return violations;
 }
 
-export function exampleCoverage({ primitives }) {
+export function exampleCoverage({ primitives, exempt = EXAMPLE_EXEMPT }) {
   return primitives
-    .filter((p) => !p.examples || p.examples.length === 0)
+    .filter((p) => !exempt.has(p.name) && (!p.examples || p.examples.length === 0))
     .map((p) => ({
       rule: "example",
       entity: p.name,
