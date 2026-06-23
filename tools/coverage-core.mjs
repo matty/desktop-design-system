@@ -34,3 +34,13 @@ export function storyCoverage({ components, storyNames, aliases = STORY_ALIASES 
   }
   return violations;
 }
+
+export function exampleCoverage({ primitives }) {
+  return primitives
+    .filter((p) => !p.examples || p.examples.length === 0)
+    .map((p) => ({
+      rule: "example",
+      entity: p.name,
+      detail: "no docs example in pages/*.html"
+    }));
+}

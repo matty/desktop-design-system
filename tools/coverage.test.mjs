@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { storyCoverage, STORY_ALIASES } from "./coverage-core.mjs";
+import { storyCoverage, STORY_ALIASES, exampleCoverage } from "./coverage-core.mjs";
 
 describe("storyCoverage", () => {
   it("passes when a component has a same-named story", () => {
@@ -47,5 +47,26 @@ describe("storyCoverage", () => {
       DsListItem: "DsList",
       DsTabPanel: "DsTabs"
     });
+  });
+});
+
+describe("exampleCoverage", () => {
+  it("passes a primitive that has examples", () => {
+    const v = exampleCoverage({ primitives: [{ name: "ds-btn", examples: ["<button class=\"ds-btn\">x</button>"] }] });
+    expect(v).toEqual([]);
+  });
+
+  it("flags a primitive with an empty examples array", () => {
+    const v = exampleCoverage({ primitives: [{ name: "ds-meter", examples: [] }] });
+    expect(v).toEqual([
+      { rule: "example", entity: "ds-meter", detail: "no docs example in pages/*.html" }
+    ]);
+  });
+
+  it("flags a primitive with no examples key at all", () => {
+    const v = exampleCoverage({ primitives: [{ name: "ds-spinner" }] });
+    expect(v).toEqual([
+      { rule: "example", entity: "ds-spinner", detail: "no docs example in pages/*.html" }
+    ]);
   });
 });
