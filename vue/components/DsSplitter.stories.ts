@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import { ref } from "vue";
 import DsSplitter from "./DsSplitter.vue";
 
@@ -35,5 +36,16 @@ export const Default: Story = {
         </DsSplitter>
       </div>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Focus the separator and press ArrowRight to grow Panel A by one step (16px).
+    // Uses tab-focus then keyboard to avoid click-vs-keydown ordering issues.
+    const separator = c.getByRole("separator");
+    const initialValue = Number(separator.getAttribute("aria-valuenow"));
+    separator.focus();
+    await userEvent.keyboard("{ArrowRight}");
+    // The separator emits update:size; the story v-model updates aria-valuenow.
+    await expect(separator).toHaveAttribute("aria-valuenow", String(initialValue + 16));
+  }
 };

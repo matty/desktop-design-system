@@ -100,6 +100,26 @@ titlebar / sidebar / status-bar window shell.
 
 Agents and code generators should read [LLM_GUIDE.md](LLM_GUIDE.md) before producing UI with this language.
 
+## Storybook
+
+The Vue component library ships a Storybook workbench for interactive development and automated testing.
+
+```bash
+npm run storybook          # dev workbench (live reload, http://localhost:6006)
+npm run build-storybook    # static build to storybook-static/
+npm run test-storybook     # interaction + smoke tests (headless Chromium via Playwright)
+```
+
+`test-storybook` requires Storybook to be served. Either run it against the dev server (`npm run storybook` in one terminal, then `npm run test-storybook`) or against a static build:
+
+```bash
+npm run build-storybook -- -o storybook-static
+npx http-server storybook-static -p 6099 --silent &
+npx test-storybook --url http://127.0.0.1:6099
+```
+
+Axe accessibility checks run in the test-runner after each story and print violations to the console, but the run does **not** fail on them. This is intentional: a11y fixes are tracked in a separate workstream. When that workstream lands, flip the hook in `.storybook/test-runner.ts` from report-only to asserting.
+
 ## Optional Vite Build
 
 Vite is the reusable build adapter for Electron, Tauri, WebView, and browser previews. It is not required by the CSS language.

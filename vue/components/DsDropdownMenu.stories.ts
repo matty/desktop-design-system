@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import DsDropdownMenu from "./DsDropdownMenu.vue";
 
 const meta: Meta<typeof DsDropdownMenu> = {
@@ -30,5 +31,16 @@ export const Default: Story = {
         <template #trigger>Actions ▾</template>
       </DsDropdownMenu>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Click the trigger button to open the menu
+    await userEvent.click(c.getByRole("button"));
+    // Menu renders in-canvas (no teleport); assert a menuitem is visible
+    const saveItem = await c.findByRole("menuitem", { name: "Save" });
+    await expect(saveItem).toBeInTheDocument();
+    // Click the "Save" item — closes the menu
+    await userEvent.click(saveItem);
+    await expect(c.queryByRole("menuitem", { name: "Save" })).not.toBeInTheDocument();
+  }
 };

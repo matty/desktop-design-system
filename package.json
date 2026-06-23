@@ -21,7 +21,8 @@
     "test:watch": "vitest",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "devDependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
@@ -29,11 +30,13 @@
     "@iconify-json/lucide": "^1.2.66",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
+    "@storybook/test-runner": "^0.24.4",
     "@storybook/vue3-vite": "^10.4.6",
     "@types/node": "^26.0.0",
     "@types/sortablejs": "^1.15.8",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/test-utils": "^2.4.6",
+    "axe-playwright": "^2.2.2",
     "esbuild": "^0.28.1",
     "happy-dom": "^16.7.0",
     "sortablejs": "^1.15.6",

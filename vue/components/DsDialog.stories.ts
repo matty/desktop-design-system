@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
+import { expect, userEvent, within } from "storybook/test";
 import { ref } from "vue";
 import DsDialog from "./DsDialog.vue";
 import DsButton from "./DsButton.vue";
@@ -30,5 +31,16 @@ export const Default: Story = {
         </DsDialog>
       </div>
     `
-  })
+  }),
+  play: async ({ canvasElement }) => {
+    const c = within(canvasElement);
+    // Click the trigger button
+    await userEvent.click(c.getByRole("button", { name: /open dialog/i }));
+    // Dialog is teleported to body — query via document.body
+    const body = within(document.body);
+    await expect(body.getByRole("dialog")).toBeInTheDocument();
+    // Press Escape to close
+    await userEvent.keyboard("{Escape}");
+    await expect(body.queryByRole("dialog")).toBeNull();
+  }
 };
