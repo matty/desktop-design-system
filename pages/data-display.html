@@ -17,6 +17,20 @@
         </div>
 
         <section class="doc-section">
+          <h2>Card</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-card" style="padding:16px; min-width:160px">
+                <div class="ds-label">Storage</div>
+                <div class="ds-h1">68%</div>
+                <div class="ds-muted">of 512 GB used</div>
+              </div>
+            </div>
+            <div class="example-caption">Surface container with <code>.ds-card</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Panel</h2>
           <div class="example">
             <div class="example-preview col">
@@ -98,17 +112,36 @@
           <p class="desc">For dashboards — streaming live values (resource usage, signal levels, …).</p>
           <div class="example">
             <div class="example-preview col">
+              <div class="ds-meter"><div class="name">CPU</div><div class="track"><div class="fill" style="width:42%"></div></div><div class="val">0.42</div></div>
+              <div class="ds-meter"><div class="name">Memory</div><div class="track"><div class="fill" style="width:67%"></div></div><div class="val">0.67</div></div>
+            </div>
+            <div class="example-caption">Labeled progress with <code>.ds-meter</code> › <code>.name</code> / <code>.track</code>+<code>.fill</code> / <code>.val</code>.</div>
+          </div>
+          <div class="example">
+            <div class="example-preview col">
               <div class="ds-panel u-w-full">
                 <div class="ds-panel-head"><h3>Resource usage</h3><span class="ds-value" style="color:var(--text-3)">5 channels</span></div>
                 <div class="ds-panel-body" id="meters"></div>
               </div>
             </div>
-            <div class="example-caption"><b>.ds-meter</b> › name / <b>.track</b>+<b>.fill</b> / value</div>
+            <div class="example-caption"><b>.ds-meter</b> — live-updating values injected by script (see source).</div>
           </div>
         </section>
 
         <section class="doc-section">
           <h2>Table</h2>
+          <div class="example">
+            <div class="example-preview">
+              <table class="ds-table">
+                <thead><tr><th>Name</th><th>Size</th></tr></thead>
+                <tbody>
+                  <tr><td>report.pdf</td><td>2.4 MB</td></tr>
+                  <tr><td>data.csv</td><td>880 KB</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="example-caption">Tabular data with <code>.ds-table</code>.</div>
+          </div>
           <div class="example">
             <div class="example-preview col" style="padding:0; overflow:hidden">
               <table class="ds-table">

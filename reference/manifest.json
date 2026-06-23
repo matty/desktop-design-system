@@ -522,7 +522,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<nav class=\"ds-breadcrumb\" aria-label=\"Breadcrumb\">\n                <a href=\"#\">Home</a><span class=\"sep\">/</span><a href=\"#\">Projects</a><span class=\"sep\">/</span><span class=\"current\">Atlas</span>\n              </nav>"
+      ]
     },
     {
       "name": "ds-btn",
@@ -546,8 +548,11 @@
         "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
         "<div class=\"ds-btn-group\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Start</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Stop</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Restart</button>\n              </div>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
+        "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>",
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
       ]
     },
@@ -558,7 +563,9 @@
       "description": "Bordered surface container for grouped content.",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+      ]
     },
     {
       "name": "ds-check",
@@ -582,7 +589,9 @@
       "states": [
         "is-multi"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-chip\">Design <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>\n              <div class=\"ds-chip\">Engineering <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>\n              <div class=\"ds-chip\">Research <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>"
+      ]
     },
     {
       "name": "ds-combo",
@@ -617,7 +626,9 @@
       "states": [
         "is-flip"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-core",
@@ -646,7 +657,9 @@
         "ds-dialog-head"
       ],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-divider",
@@ -778,7 +791,8 @@
         "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
         "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
-        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Release notes</label>\n                <textarea class=\"ds-textarea\" rows=\"3\">Describe what changed…</textarea>\n              </div>"
       ]
     },
     {
@@ -788,7 +802,10 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+      ]
     },
     {
       "name": "ds-h2",
@@ -858,7 +875,10 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+      ]
     },
     {
       "name": "ds-list",
@@ -902,7 +922,8 @@
         "is-right"
       ],
       "examples": [
-        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>"
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
     {
@@ -912,7 +933,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-meter\"><div class=\"name\">CPU</div><div class=\"track\"><div class=\"fill\" style=\"width:42%\"></div></div><div class=\"val\">0.42</div></div>\n              <div class=\"ds-meter\"><div class=\"name\">Memory</div><div class=\"track\"><div class=\"fill\" style=\"width:67%\"></div></div><div class=\"val\">0.67</div></div>"
+      ]
     },
     {
       "name": "ds-muted",
@@ -921,7 +944,12 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>",
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-navi",
@@ -932,7 +960,10 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-number",
@@ -956,7 +987,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-pane-first",
@@ -968,7 +1001,9 @@
         "is-dragging",
         "is-horizontal"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-pane-rest",
@@ -980,7 +1015,9 @@
         "is-dragging",
         "is-horizontal"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-panel",
@@ -1020,7 +1057,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-popover\">Saved automatically a few seconds ago.</div>"
+      ]
     },
     {
       "name": "ds-progress",
@@ -1038,9 +1077,13 @@
       "type": "primitive",
       "category": "Radio",
       "description": "",
-      "subParts": [],
+      "subParts": [
+        "ds-radio-group"
+      ],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-radio-group\" role=\"radiogroup\" aria-label=\"Density\">\n                <label class=\"ds-radio\"><input type=\"radio\" name=\"density\" checked /> Comfortable</label>\n                <label class=\"ds-radio\"><input type=\"radio\" name=\"density\" /> Compact</label>\n              </div>"
+      ]
     },
     {
       "name": "ds-rail",
@@ -1053,7 +1096,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-resizable",
@@ -1065,7 +1110,9 @@
         "is-dragging",
         "is-horizontal"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-row",
@@ -1135,7 +1182,9 @@
         "is-dragging",
         "is-horizontal"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-status",
@@ -1165,7 +1214,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-step",
@@ -1189,7 +1240,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+      ]
     },
     {
       "name": "ds-submenu-chev",
@@ -1200,7 +1253,9 @@
       "states": [
         "is-flip"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-suffix",
@@ -1247,7 +1302,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<table class=\"ds-table\">\n                <thead><tr><th>Name</th><th>Size</th></tr></thead>\n                <tbody>\n                  <tr><td>report.pdf</td><td>2.4 MB</td></tr>\n                  <tr><td>data.csv</td><td>880 KB</td></tr>\n                </tbody>\n              </table>"
+      ]
     },
     {
       "name": "ds-tabs",
@@ -1271,7 +1328,9 @@
         "is-mono",
         "is-valid"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Release notes</label>\n                <textarea class=\"ds-textarea\" rows=\"3\">Describe what changed…</textarea>\n              </div>"
+      ]
     },
     {
       "name": "ds-tip",
@@ -1280,7 +1339,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>"
+      ]
     },
     {
       "name": "ds-titlebar",
@@ -1293,7 +1354,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-toast",
@@ -1323,7 +1386,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-track",
@@ -1377,7 +1442,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     }
   ],
   "utilities": [
@@ -1454,7 +1521,8 @@
       "examples": [
         "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>",
         "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>",
-        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1463,7 +1531,8 @@
       "category": "",
       "description": "",
       "examples": [
-        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>"
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1973,7 +2042,9 @@
       "examples": [
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>",
-        "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>"
+        "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>",
+        "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1992,7 +2063,9 @@
       "name": "is-close",
       "type": "state",
       "description": "",
-      "examples": []
+      "examples": [
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "is-danger",
@@ -2002,6 +2075,7 @@
         "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
         "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>",
         "<div class=\"ds-alert\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Working offline</b><p>Changes are saved locally and will sync when you reconnect.</p></div>\n              </div>\n              <div class=\"ds-alert is-danger\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Couldn’t save file</b><p>You don’t have permission to write to this folder. Choose another location.</p></div>\n              </div>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
         "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
         "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
       ]
@@ -2057,6 +2131,7 @@
       "examples": [
         "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
         "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
       ]
     },
@@ -2156,6 +2231,7 @@
         "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
         "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
       ]
     },
@@ -2194,6 +2270,7 @@
         "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
         "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
+        "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
       ]
     },

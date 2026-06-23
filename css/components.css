@@ -184,6 +184,7 @@
 .ds-check input:focus-visible { box-shadow:var(--focus-ring); }
 
 /* ---------- Radio ---------- */
+.ds-radio-group { display:flex; flex-direction:column; gap:8px; }
 .ds-radio { display:inline-flex; align-items:center; gap:9px; cursor:default; font-size:var(--fz-base); }
 .ds-radio input { appearance:none; -webkit-appearance:none; width:17px; height:17px; flex:none; border:1px solid var(--border-strong); border-radius:50%; background:var(--inset); display:grid; place-items:center; cursor:default; transition:border-color var(--dur); }
 .ds-radio input::after { content:""; width:8px; height:8px; border-radius:50%; background:var(--accent); transform:scale(0); transition:transform var(--dur) var(--ease); }

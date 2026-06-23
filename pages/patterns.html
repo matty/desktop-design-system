@@ -280,6 +280,26 @@
         </section>
 
         <section class="doc-section">
+          <h2>Split Pane</h2>
+          <p class="desc">A focused static example of the resizable split primitives.</p>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-resizable" style="height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)">
+                <div class="ds-pane-first" style="flex-basis:160px; padding:var(--space-4)">
+                  <a class="ds-navi is-active">Inbox</a>
+                  <a class="ds-navi">Drafts</a>
+                </div>
+                <div class="ds-splitter" data-ds-splitter aria-label="Resize pane"></div>
+                <div class="ds-pane-rest" style="padding:var(--space-4)">
+                  <p class="ds-muted">Message body</p>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption">Resizable split: <code>.ds-resizable</code>, <code>.ds-pane-first</code>, <code>.ds-splitter</code>, <code>.ds-pane-rest</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Command Palette</h2>
           <p class="desc"><code class="chip">.ds-overlay</code>, <code class="chip">.ptn-command</code>, <code class="chip">.ds-input</code>, and <code class="chip">.ds-list</code> form the command surface.</p>
           <div class="example">
