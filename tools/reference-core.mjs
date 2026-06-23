@@ -131,7 +131,6 @@ function collapseSvgs(markup) {
 // Uses div-depth counting so nested divs are handled correctly.
 function extractPreviewBlocks(html) {
   const blocks = [];
-  const openRe = /<div\b/g;
   const previewRe = /<div class="example-preview[^"]*">/g;
 
   let m;
