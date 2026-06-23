@@ -37,6 +37,21 @@ async function buildOutputs() {
   const rawMeta = collectComponentMeta();
   const components = core.assembleComponents(rawMeta, sfcSource);
 
+  // Also extract is-* states from dynamic :class bindings in Vue SFC templates.
+  // These are real states that drive JS/Vue behavior but don't appear in CSS as
+  // standalone rules (e.g. is-filterable), so the CSS extractor misses them.
+  const vueStates = new Set(cssSurface.states.map((s) => s.name));
+  const IS_CLASS_RE = /['"](\bis-[a-z][a-z0-9-]*\b)['"]/g;
+  for (const src of Object.values(sfcSource)) {
+    for (const m of src.matchAll(IS_CLASS_RE)) {
+      if (!vueStates.has(m[1])) {
+        vueStates.add(m[1]);
+        cssSurface.states.push({ name: m[1], type: "state", description: "", examples: [] });
+      }
+    }
+  }
+  cssSurface.states.sort((a, b) => a.name.localeCompare(b.name));
+
   const registry = JSON.parse(await readFile(r("icons/registry.json"), "utf8"));
   const icons = {
     count: Object.keys(registry.icons || {}).length,

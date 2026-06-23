@@ -1981,7 +1981,19 @@ _(no description yet)_
               </ul>
 ```
 
+### is-filterable
+
+_(no description yet)_
+
+### is-fixed-rail
+
+_(no description yet)_
+
 ### is-flip
+
+_(no description yet)_
+
+### is-flush
 
 _(no description yet)_
 
@@ -2151,6 +2163,10 @@ Marks the single primary action on a .ds-btn.
               <button class="ds-btn is-danger"><svg><!-- icon --></svg>Delete</button>
               <button class="ds-btn" disabled>Disabled</button>
 ```
+
+### is-rail-icons
+
+_(no description yet)_
 
 ### is-right
 

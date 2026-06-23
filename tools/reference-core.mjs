@@ -97,12 +97,16 @@ export function extractCssSurface({ components, utilities, patterns }) {
   })).sort((a, b) => a.name.localeCompare(b.name));
 
   const utilCats = categoryByClass(utilities);
-  const utilitiesOut = extractClassNames(utilities)
+  const utilClasses = extractClassNames(utilities);
+  const utilitiesOut = utilClasses
     .filter((c) => c.startsWith("u-"))
     .map((name) => ({ name, type: "utility", category: utilCats.get(name) || "", description: "", examples: [] }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  const statesOut = states
+  // Collect is-* states from both components.css and utilities.css (de-duped).
+  const utilStates = utilClasses.filter((c) => c.startsWith("is-"));
+  const allStates = [...new Set([...states, ...utilStates])];
+  const statesOut = allStates
     .map((name) => ({ name, type: "state", description: "", examples: [] }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
