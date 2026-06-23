@@ -37,6 +37,12 @@ await copyFile(resolve(root, "tools/extend-icons.mjs"), resolve(out, "icons/exte
 await copyFile(resolve(root, "tools/icon-core.mjs"), resolve(out, "icons/icon-core.mjs"));
 await copyFile(resolve(root, "icons/icons.js"), resolve(out, "icons/icons.js"));
 
+// 3c. Design-system reference + validator (offline catalog for humans + LLMs).
+await copyFile(resolve(root, "reference/manifest.json"), resolve(out, "reference-manifest.json"));
+await copyFile(resolve(root, "REFERENCE.md"), resolve(out, "REFERENCE.md"));
+await copyFile(resolve(root, "llms.txt"), resolve(out, "llms.txt"));
+await copyFile(resolve(root, "tools/lint-usage.mjs"), resolve(out, "lint-usage.mjs"));
+
 // 3b. Vue component layer — source only (no tests / type-shims).
 await cp(resolve(root, "vue"), resolve(out, "vue"), {
   recursive: true,

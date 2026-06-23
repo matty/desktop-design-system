@@ -27,6 +27,7 @@ Useful local commands:
 - `npm run bundle`: assemble the offline release bundle to `dist/bundle/` (also run by `npm run build`).
 - `npm run preview`: preview the built `dist/` output.
 - `npm run icons:build`: regenerate offline Lucide/Iconify SVG data.
+- `npm run reference:build`: regenerate `reference/manifest.json`, `REFERENCE.md`, and `llms.txt` from the CSS + Vue source. See `llms.txt` for the catalog AI tools should read.
 - `rg "ds-btn"` or `rg "--accent"`: search primitive classes or token usage.
 - To add or reorder a docs page, edit `docs/nav.mjs` — it drives both the left-nav rail and the Vite build inputs.
 

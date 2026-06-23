@@ -1,0 +1,37 @@
+# Design Language
+
+A monochrome-first, desktop-density design system: 74 primitives, 79 utilities, 37 states, 52 Vue components, 83 tokens.
+Prefer existing tokens, utilities, primitives, states, and patterns over custom CSS.
+
+## Class Rules
+
+- Use `.ds-*` for semantic UI objects.
+- Use `.u-*` for layout, spacing, sizing, overflow, and text helpers.
+- Use `.is-*` only to modify an existing object.
+- Use `data-theme` and `data-density` for global modes.
+- Do not invent new class names until the existing grammar cannot express the screen.
+
+## Layout Rules
+
+- Start with app structure: titlebar, rail, content, statusbar, panes.
+- Use utility classes instead of inline styles for flex, grid, gaps, width, scrolling, and alignment.
+- Keep desktop density: compact spacing, aligned labels, predictable rows, restrained surfaces.
+- Avoid nested cards, decorative backgrounds, marketing hero sections, and arbitrary gradients.
+
+## Token Rules
+
+- Do not hard-code colors, radius, font sizes, or shadows in app CSS.
+- Use CSS custom properties from `tokens.css` when a custom rule is unavoidable.
+- Keep semantic color opt-in. Use danger for destructive actions and errors.
+
+## Icon Rules
+
+- Use local semantic icon names from `icons/approved.json`.
+- Treat Iconify ids as source references, for example `refresh -> lucide:refresh-cw`.
+- Render committed inline SVG from `icons/registry.json`; do not use remote Iconify API calls.
+- Keep icons line-based: 24px viewBox, `fill="none"`, `stroke="currentColor"`, round caps and joins.
+
+## Reference
+- Full catalog (human-readable): REFERENCE.md
+- Machine-readable manifest: reference/manifest.json
+- Validate your usage: `node tools/lint-usage.mjs "src/**/*.{vue,html}"`

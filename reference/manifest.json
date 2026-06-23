@@ -1,0 +1,4148 @@
+{
+  "generated": "design-system reference",
+  "version": "0.1.0",
+  "tokens": [
+    {
+      "name": "--accent",
+      "value": "AccentColor",
+      "description": ""
+    },
+    {
+      "name": "--accent-border",
+      "value": "color-mix(in srgb, AccentColor 45%, transparent)",
+      "description": ""
+    },
+    {
+      "name": "--accent-hover",
+      "value": "AccentColor",
+      "description": ""
+    },
+    {
+      "name": "--accent-ink",
+      "value": "AccentColorText",
+      "description": ""
+    },
+    {
+      "name": "--accent-soft",
+      "value": "color-mix(in srgb, AccentColor 22%, transparent)",
+      "description": ""
+    },
+    {
+      "name": "--bg",
+      "value": "#0c0d0e",
+      "description": ""
+    },
+    {
+      "name": "--border",
+      "value": "rgba(255,255,255,.08)",
+      "description": ""
+    },
+    {
+      "name": "--border-soft",
+      "value": "rgba(255,255,255,.05)",
+      "description": ""
+    },
+    {
+      "name": "--border-strong",
+      "value": "rgba(255,255,255,.16)",
+      "description": ""
+    },
+    {
+      "name": "--control-h",
+      "value": "34px",
+      "description": ""
+    },
+    {
+      "name": "--control-h-lg",
+      "value": "40px",
+      "description": ""
+    },
+    {
+      "name": "--control-h-sm",
+      "value": "28px",
+      "description": ""
+    },
+    {
+      "name": "--danger",
+      "value": "#d6534e",
+      "description": ""
+    },
+    {
+      "name": "--danger-contrast",
+      "value": "#ffffff",
+      "description": ""
+    },
+    {
+      "name": "--danger-ink",
+      "value": "#f0bcb9",
+      "description": ""
+    },
+    {
+      "name": "--danger-soft",
+      "value": "rgba(214,83,78,.15)",
+      "description": ""
+    },
+    {
+      "name": "--danger-strong",
+      "value": "#b32b27",
+      "description": ""
+    },
+    {
+      "name": "--ds-pane-max",
+      "value": "60%",
+      "description": ""
+    },
+    {
+      "name": "--ds-pane-min",
+      "value": "160px",
+      "description": ""
+    },
+    {
+      "name": "--ds-tree-indent",
+      "value": "18px",
+      "description": ""
+    },
+    {
+      "name": "--dur",
+      "value": ".14s",
+      "description": ""
+    },
+    {
+      "name": "--ease",
+      "value": "cubic-bezier(.2,.6,.2,1)",
+      "description": ""
+    },
+    {
+      "name": "--fill",
+      "value": "rgba(255,255,255,.07)",
+      "description": ""
+    },
+    {
+      "name": "--fill-hover",
+      "value": "rgba(255,255,255,.12)",
+      "description": ""
+    },
+    {
+      "name": "--focus",
+      "value": "rgba(255,255,255,.55)",
+      "description": ""
+    },
+    {
+      "name": "--focus-ring",
+      "value": "0 0 0 2px var(--bg), 0 0 0 3.5px var(--focus)",
+      "description": ""
+    },
+    {
+      "name": "--font-mono",
+      "value": "\"JetBrains Mono\", ui-monospace, \"Cascadia Code\", \"Consolas\", monospace",
+      "description": ""
+    },
+    {
+      "name": "--font-sans",
+      "value": "\"Sora\", ui-sans-serif, system-ui, \"Segoe UI\", sans-serif",
+      "description": ""
+    },
+    {
+      "name": "--fw-bold",
+      "value": "700",
+      "description": ""
+    },
+    {
+      "name": "--fw-medium",
+      "value": "500",
+      "description": ""
+    },
+    {
+      "name": "--fw-regular",
+      "value": "400",
+      "description": ""
+    },
+    {
+      "name": "--fw-semibold",
+      "value": "600",
+      "description": ""
+    },
+    {
+      "name": "--fz-2xs",
+      "value": "10px",
+      "description": ""
+    },
+    {
+      "name": "--fz-base",
+      "value": "13px",
+      "description": ""
+    },
+    {
+      "name": "--fz-lg",
+      "value": "18px",
+      "description": ""
+    },
+    {
+      "name": "--fz-md",
+      "value": "15px",
+      "description": ""
+    },
+    {
+      "name": "--fz-sm",
+      "value": "12.5px",
+      "description": ""
+    },
+    {
+      "name": "--fz-xl",
+      "value": "23px",
+      "description": ""
+    },
+    {
+      "name": "--fz-xs",
+      "value": "11px",
+      "description": ""
+    },
+    {
+      "name": "--hover",
+      "value": "rgba(255,255,255,.05)",
+      "description": ""
+    },
+    {
+      "name": "--info",
+      "value": "#6aa6e8",
+      "description": ""
+    },
+    {
+      "name": "--info-ink",
+      "value": "#bcd8f5",
+      "description": ""
+    },
+    {
+      "name": "--info-soft",
+      "value": "rgba(106,166,232,.14)",
+      "description": ""
+    },
+    {
+      "name": "--inset",
+      "value": "#090a0a",
+      "description": ""
+    },
+    {
+      "name": "--label-ls",
+      "value": ".05em",
+      "description": ""
+    },
+    {
+      "name": "--lh-base",
+      "value": "1.5",
+      "description": ""
+    },
+    {
+      "name": "--lh-tight",
+      "value": "1.2",
+      "description": ""
+    },
+    {
+      "name": "--overlay-bg",
+      "value": "rgba(0,0,0,.55)",
+      "description": ""
+    },
+    {
+      "name": "--radius",
+      "value": "8px",
+      "description": ""
+    },
+    {
+      "name": "--radius-lg",
+      "value": "12px",
+      "description": ""
+    },
+    {
+      "name": "--radius-pill",
+      "value": "999px",
+      "description": ""
+    },
+    {
+      "name": "--radius-sm",
+      "value": "6px",
+      "description": ""
+    },
+    {
+      "name": "--rail",
+      "value": "#141516",
+      "description": ""
+    },
+    {
+      "name": "--rail-w",
+      "value": "198px",
+      "description": ""
+    },
+    {
+      "name": "--selected",
+      "value": "var(--fill-hover)",
+      "description": ""
+    },
+    {
+      "name": "--shadow-dialog",
+      "value": "0 30px 70px -24px rgba(0,0,0,.85)",
+      "description": ""
+    },
+    {
+      "name": "--shadow-popover",
+      "value": "0 8px 20px -8px rgba(0,0,0,.7)",
+      "description": ""
+    },
+    {
+      "name": "--space-1",
+      "value": "4px",
+      "description": ""
+    },
+    {
+      "name": "--space-10",
+      "value": "30px",
+      "description": ""
+    },
+    {
+      "name": "--space-2",
+      "value": "6px",
+      "description": ""
+    },
+    {
+      "name": "--space-3",
+      "value": "8px",
+      "description": ""
+    },
+    {
+      "name": "--space-4",
+      "value": "10px",
+      "description": ""
+    },
+    {
+      "name": "--space-5",
+      "value": "12px",
+      "description": ""
+    },
+    {
+      "name": "--space-6",
+      "value": "14px",
+      "description": ""
+    },
+    {
+      "name": "--space-7",
+      "value": "16px",
+      "description": ""
+    },
+    {
+      "name": "--space-8",
+      "value": "20px",
+      "description": ""
+    },
+    {
+      "name": "--space-9",
+      "value": "24px",
+      "description": ""
+    },
+    {
+      "name": "--success",
+      "value": "#5ec98c",
+      "description": ""
+    },
+    {
+      "name": "--success-ink",
+      "value": "#bdeccf",
+      "description": ""
+    },
+    {
+      "name": "--success-soft",
+      "value": "rgba(94,201,140,.14)",
+      "description": ""
+    },
+    {
+      "name": "--surface",
+      "value": "#171819",
+      "description": ""
+    },
+    {
+      "name": "--surface-2",
+      "value": "#1d1e1f",
+      "description": ""
+    },
+    {
+      "name": "--text",
+      "value": "#f3f3f4",
+      "description": ""
+    },
+    {
+      "name": "--text-2",
+      "value": "#9c9ea1",
+      "description": ""
+    },
+    {
+      "name": "--text-3",
+      "value": "#616264",
+      "description": ""
+    },
+    {
+      "name": "--text-invert",
+      "value": "#0c0d0e",
+      "description": ""
+    },
+    {
+      "name": "--titlebar-bg",
+      "value": "#000000",
+      "description": ""
+    },
+    {
+      "name": "--titlebar-h",
+      "value": "36px",
+      "description": ""
+    },
+    {
+      "name": "--tooltip-bg",
+      "value": "#000000",
+      "description": ""
+    },
+    {
+      "name": "--tooltip-ink",
+      "value": "#ffffff",
+      "description": ""
+    },
+    {
+      "name": "--warning",
+      "value": "#e6b450",
+      "description": ""
+    },
+    {
+      "name": "--warning-ink",
+      "value": "#f0d7a0",
+      "description": ""
+    },
+    {
+      "name": "--warning-soft",
+      "value": "rgba(230,180,80,.14)",
+      "description": ""
+    }
+  ],
+  "primitives": [
+    {
+      "name": "ds-acc",
+      "type": "primitive",
+      "category": "Accordion (use <details class=\"ds-acc\">)",
+      "description": "",
+      "subParts": [
+        "ds-acc-body"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-accordion u-w-full\">\n              <details class=\"ds-acc\" open><summary>General<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Language, startup behaviour and default folders.</div></details>\n              <details class=\"ds-acc\"><summary>Appearance<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Theme, accent color and density.</div></details>\n              <details class=\"ds-acc\"><summary>Advanced<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Cache, logging and developer options.</div></details>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-accordion",
+      "type": "primitive",
+      "category": "Accordion (use <details class=\"ds-acc\">)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-accordion u-w-full\">\n              <details class=\"ds-acc\" open><summary>General<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Language, startup behaviour and default folders.</div></details>\n              <details class=\"ds-acc\"><summary>Appearance<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Theme, accent color and density.</div></details>\n              <details class=\"ds-acc\"><summary>Advanced<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Cache, logging and developer options.</div></details>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-adorn",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-alert",
+      "type": "primitive",
+      "category": "Alert",
+      "description": "",
+      "subParts": [
+        "ds-alert-ico"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-alert\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Working offline</b><p>Changes are saved locally and will sync when you reconnect.</p></div>\n              </div>\n              <div class=\"ds-alert is-danger\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Couldn’t save file</b><p>You don’t have permission to write to this folder. Choose another location.</p></div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-avatar",
+      "type": "primitive",
+      "category": "Avatar",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-badge",
+      "type": "primitive",
+      "category": "Badges & pills",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-info",
+        "is-solid",
+        "is-success",
+        "is-warning"
+      ],
+      "examples": [
+        "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>",
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>"
+      ]
+    },
+    {
+      "name": "ds-banner",
+      "type": "primitive",
+      "category": "Banner (page-level inline notice)",
+      "description": "",
+      "subParts": [
+        "ds-banner-ico",
+        "ds-banner-spacer"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-breadcrumb",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-btn",
+      "type": "primitive",
+      "category": "Buttons",
+      "description": "Button. Add .is-primary for the single main action, .is-ghost for low-emphasis, .is-danger for destructive.",
+      "subParts": [
+        "ds-btn-group"
+      ],
+      "states": [
+        "is-danger",
+        "is-ghost",
+        "is-icon",
+        "is-lg",
+        "is-primary",
+        "is-sm"
+      ],
+      "examples": [
+        "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
+        "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
+        "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
+        "<div class=\"ds-btn-group\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Start</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Stop</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Restart</button>\n              </div>",
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-card",
+      "type": "primitive",
+      "category": "Card / Panel",
+      "description": "Bordered surface container for grouped content.",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-check",
+      "type": "primitive",
+      "category": "Checkbox",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-chip",
+      "type": "primitive",
+      "category": "Combo: multi-select chips",
+      "description": "",
+      "subParts": [
+        "ds-chip-x"
+      ],
+      "states": [
+        "is-multi"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-combo",
+      "type": "primitive",
+      "category": "Combobox / styled select (themed popup)",
+      "description": "",
+      "subParts": [
+        "ds-combo-btn",
+        "ds-combo-check",
+        "ds-combo-chev",
+        "ds-combo-filter",
+        "ds-combo-menu",
+        "ds-combo-option",
+        "ds-combo-value"
+      ],
+      "states": [
+        "is-open",
+        "is-placeholder",
+        "is-selected",
+        "is-up"
+      ],
+      "examples": [
+        "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-context-menu",
+      "type": "primitive",
+      "category": "Context menu (cursor-positioned .ds-menu)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-flip"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-core",
+      "type": "primitive",
+      "category": "Status indicator (dot + label)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-busy",
+        "is-error",
+        "is-off",
+        "is-on"
+      ],
+      "examples": [
+        "<div class=\"ds-indicator is-on\"><div class=\"ds-core\"></div></div>"
+      ]
+    },
+    {
+      "name": "ds-dialog",
+      "type": "primitive",
+      "category": "Dialog / modal",
+      "description": "",
+      "subParts": [
+        "ds-dialog-body",
+        "ds-dialog-foot",
+        "ds-dialog-head"
+      ],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-divider",
+      "type": "primitive",
+      "category": "Divider",
+      "description": "",
+      "subParts": [
+        "ds-divider-label"
+      ],
+      "states": [
+        "is-vertical"
+      ],
+      "examples": [
+        "<div class=\"u-w-full\"><hr class=\"ds-divider\" /></div>\n            <div class=\"ds-divider-label u-w-full\">or</div>"
+      ]
+    },
+    {
+      "name": "ds-dl",
+      "type": "primitive",
+      "category": "Definition list / facts grid",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<dl class=\"ds-dl w-320\">\n                <div><dt>Version</dt><dd>2.4.0</dd></div>\n                <div><dt>Channel</dt><dd>Stable</dd></div>\n                <div><dt>License</dt><dd>Pro</dd></div>\n                <div><dt>Server</dt><dd>api.example.com</dd></div>\n              </dl>"
+      ]
+    },
+    {
+      "name": "ds-dot",
+      "type": "primitive",
+      "category": "Status indicator (dot + label)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-busy",
+        "is-error",
+        "is-off",
+        "is-on"
+      ],
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>",
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>"
+      ]
+    },
+    {
+      "name": "ds-drag-handle",
+      "type": "primitive",
+      "category": "Drag-and-drop reordering",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<ul class=\"ds-list\" data-ds-sortable data-ds-sortable-handle=\".ds-drag-handle\" style=\"max-width:360px\">\n                <li class=\"ds-list-item\">\n                  <span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>\n                  First item\n                </li>\n                <li class=\"ds-list-item\"><span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>Second item</li>\n                <li class=\"ds-list-item\"><span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>Third item</li>\n              </ul>"
+      ]
+    },
+    {
+      "name": "ds-drop-placeholder",
+      "type": "primitive",
+      "category": "Drag-and-drop reordering",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-dropdown",
+      "type": "primitive",
+      "category": "Dropdown / menu (custom popover)",
+      "description": "",
+      "subParts": [
+        "ds-dropdown-btn"
+      ],
+      "states": [
+        "is-active",
+        "is-right"
+      ],
+      "examples": [
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-empty",
+      "type": "primitive",
+      "category": "Empty state",
+      "description": "",
+      "subParts": [
+        "ds-empty-ico"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-empty u-w-full\">\n                <div class=\"ds-empty-ico\"><svg><!-- icon --></svg></div>\n                <b>No items yet</b>\n                <p>Items you create or import will appear here.</p>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-fact",
+      "type": "primitive",
+      "category": "Definition list / facts grid",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-facts",
+      "type": "primitive",
+      "category": "Definition list / facts grid",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-field",
+      "type": "primitive",
+      "category": "Fields (label + control layout)",
+      "description": "",
+      "subParts": [
+        "ds-field-error",
+        "ds-field-hint",
+        "ds-field-label"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
+        "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-h1",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-h2",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-indicator",
+      "type": "primitive",
+      "category": "Status indicator (dot + label)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-busy",
+        "is-error",
+        "is-off",
+        "is-on"
+      ],
+      "examples": [
+        "<div class=\"ds-indicator is-on\"><div class=\"ds-core\"></div></div>"
+      ]
+    },
+    {
+      "name": "ds-input",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [
+        "ds-input-wrap"
+      ],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-kbd",
+      "type": "primitive",
+      "category": "Badges & pills",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-info",
+        "is-solid",
+        "is-success",
+        "is-warning"
+      ],
+      "examples": [
+        "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>"
+      ]
+    },
+    {
+      "name": "ds-label",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-list",
+      "type": "primitive",
+      "category": "List (selectable rows)",
+      "description": "",
+      "subParts": [
+        "ds-list-ico",
+        "ds-list-item",
+        "ds-list-meta"
+      ],
+      "states": [
+        "is-seamless"
+      ],
+      "examples": [
+        "<ul class=\"ds-list\" data-ds-sortable data-ds-sortable-handle=\".ds-drag-handle\" style=\"max-width:360px\">\n                <li class=\"ds-list-item\">\n                  <span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>\n                  First item\n                </li>\n                <li class=\"ds-list-item\"><span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>Second item</li>\n                <li class=\"ds-list-item\"><span class=\"ds-drag-handle\"><svg><!-- icon --></svg></span>Third item</li>\n              </ul>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-live",
+      "type": "primitive",
+      "category": "Live region (mount once per app; drive via dsAnnounce)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-menu",
+      "type": "primitive",
+      "category": "Dropdown / menu (custom popover)",
+      "description": "",
+      "subParts": [
+        "ds-menu-item",
+        "ds-menu-label",
+        "ds-menu-sep"
+      ],
+      "states": [
+        "is-active",
+        "is-right"
+      ],
+      "examples": [
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-meter",
+      "type": "primitive",
+      "category": "Meter / progress",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-muted",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-navi",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-number",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": [
+        "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-overlay",
+      "type": "primitive",
+      "category": "Dialog / modal",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-pane-first",
+      "type": "primitive",
+      "category": "Resizable split panes",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-dragging",
+        "is-horizontal"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-pane-rest",
+      "type": "primitive",
+      "category": "Resizable split panes",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-dragging",
+        "is-horizontal"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-panel",
+      "type": "primitive",
+      "category": "Card / Panel",
+      "description": "Titled content region with a .ds-panel-head and body.",
+      "subParts": [
+        "ds-panel-body",
+        "ds-panel-head"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>",
+        "<div class=\"ds-panel u-w-full\">\n                <div class=\"ds-panel-head\"><h3>Resource usage</h3><span class=\"ds-value\" style=\"color:var(--text-3)\">5 channels</span></div>\n                <div class=\"ds-panel-body\" id=\"meters\"></div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-pill",
+      "type": "primitive",
+      "category": "Badges & pills",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-info",
+        "is-solid",
+        "is-success",
+        "is-warning"
+      ],
+      "examples": [
+        "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>"
+      ]
+    },
+    {
+      "name": "ds-popover",
+      "type": "primitive",
+      "category": "Popover (generic floating surface)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-progress",
+      "type": "primitive",
+      "category": "Meter / progress",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-radio",
+      "type": "primitive",
+      "category": "Radio",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-rail",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [
+        "ds-rail-spacer"
+      ],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-resizable",
+      "type": "primitive",
+      "category": "Resizable split panes",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-dragging",
+        "is-horizontal"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-row",
+      "type": "primitive",
+      "category": "Fields (label + control layout)",
+      "description": "",
+      "subParts": [
+        "ds-row-control",
+        "ds-row-text"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-segmented",
+      "type": "primitive",
+      "category": "Segmented control",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-skeleton",
+      "type": "primitive",
+      "category": "Skeleton loader",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-slider",
+      "type": "primitive",
+      "category": "Slider (range)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-spinner",
+      "type": "primitive",
+      "category": "Spinner",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-splitter",
+      "type": "primitive",
+      "category": "Resizable split panes",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-dragging",
+        "is-horizontal"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-status",
+      "type": "primitive",
+      "category": "Status indicator (dot + label)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-busy",
+        "is-error",
+        "is-off",
+        "is-on"
+      ],
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>",
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>"
+      ]
+    },
+    {
+      "name": "ds-statusbar",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [
+        "ds-statusbar-spacer"
+      ],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-step",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": [
+        "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-sub",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-submenu-chev",
+      "type": "primitive",
+      "category": "Context menu (cursor-positioned .ds-menu)",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-flip"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-suffix",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-switch",
+      "type": "primitive",
+      "category": "Switch / toggle",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-tab",
+      "type": "primitive",
+      "category": "Tabs (underline)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-table",
+      "type": "primitive",
+      "category": "Table",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-tabs",
+      "type": "primitive",
+      "category": "Tabs (underline)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-textarea",
+      "type": "primitive",
+      "category": "Text input / textarea",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-invalid",
+        "is-mono",
+        "is-valid"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-tip",
+      "type": "primitive",
+      "category": "Tooltip (CSS hover)",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": []
+    },
+    {
+      "name": "ds-titlebar",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [
+        "ds-titlebar-title"
+      ],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-toast",
+      "type": "primitive",
+      "category": "Toast / notification",
+      "description": "",
+      "subParts": [
+        "ds-toast-body",
+        "ds-toast-close",
+        "ds-toast-ico",
+        "ds-toast-stack"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
+      ]
+    },
+    {
+      "name": "ds-toolbar",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [
+        "ds-toolbar-spacer",
+        "ds-toolbar-title"
+      ],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    },
+    {
+      "name": "ds-track",
+      "type": "primitive",
+      "category": "Switch / toggle",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-tree",
+      "type": "primitive",
+      "category": "Tree view",
+      "description": "",
+      "subParts": [
+        "ds-tree-item",
+        "ds-tree-label",
+        "ds-tree-row",
+        "ds-tree-twisty"
+      ],
+      "states": [
+        "is-expanded",
+        "is-leaf"
+      ],
+      "examples": [
+        "<ul class=\"ds-tree\">\n                <li class=\"ds-tree-item is-expanded\">\n                  <div class=\"ds-tree-row\">\n                    <span class=\"ds-tree-twisty\"><svg><!-- icon --></svg></span>\n                    <span class=\"ds-tree-label\">src</span>\n                  </div>\n                  <ul>\n                    <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">index.html</span></div></li>\n                    <li class=\"ds-tree-item is-expanded\">\n                      <div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"><svg><!-- icon --></svg></span><span class=\"ds-tree-label\">css</span></div>\n                      <ul>\n                        <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">tokens.css</span></div></li>\n                        <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">components.css</span></div></li>\n                      </ul>\n                    </li>\n                  </ul>\n                </li>\n              </ul>"
+      ]
+    },
+    {
+      "name": "ds-value",
+      "type": "primitive",
+      "category": "Typography helpers",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-panel u-w-full\">\n                <div class=\"ds-panel-head\"><h3>Resource usage</h3><span class=\"ds-value\" style=\"color:var(--text-3)\">5 channels</span></div>\n                <div class=\"ds-panel-body\" id=\"meters\"></div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-winbtns",
+      "type": "primitive",
+      "category": "App shell pieces",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-close"
+      ],
+      "examples": []
+    }
+  ],
+  "utilities": [
+    {
+      "name": "u-app",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-app-body",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-block",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-bordered",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-center",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-cluster",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-col",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "u-content",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-divide-r",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-flex",
+      "type": "utility",
+      "category": "",
+      "description": "display:flex container.",
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>",
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "u-flex-1",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-flex-none",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-form-grid",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-fz-sm",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-fz-xs",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-1",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-2",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "u-gap-3",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-4",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-5",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-6",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-7",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-gap-8",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-grid",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-grow",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-h-full",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-hidden",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-iflex",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-inset",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-items-center",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-items-end",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-items-start",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-items-stretch",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-justify-between",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Uploading <span class=\"ds-value\" id=\"pv\">64%</span></label>\n                <div class=\"ds-progress\"><div class=\"bar\" id=\"pb\" style=\"width:64%\"></div></div>\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+      ]
+    },
+    {
+      "name": "u-justify-center",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-justify-end",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-m-0",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-max-readable",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-max-wide",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mb-2",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mb-4",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mb-6",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mb-8",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-min-0",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mono",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mt-2",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mt-4",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mt-6",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-mt-8",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-p-4",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-p-6",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-p-7",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-p-8",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-pane",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-pane-inset",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-rounded",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-scroll",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-scroll-x",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-scroll-y",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-semibold",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-settings-list",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-split",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-sr-only",
+      "type": "utility",
+      "category": "Screen-reader-only",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-sr-only-focusable",
+      "type": "utility",
+      "category": "Screen-reader-only",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-stack",
+      "type": "utility",
+      "category": "",
+      "description": "Vertical flex stack; pair with .u-gap-* for spacing.",
+      "examples": []
+    },
+    {
+      "name": "u-text-1",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-text-2",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-text-3",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-text-center",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-text-right",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-three-pane",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-toolbar-row",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-truncate",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-two-pane",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-w-control",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-w-full",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-panel u-w-full\">\n                <div class=\"ds-panel-head\"><h3>Resource usage</h3><span class=\"ds-value\" style=\"color:var(--text-3)\">5 channels</span></div>\n                <div class=\"ds-panel-body\" id=\"meters\"></div>\n              </div>",
+        "<div class=\"ds-empty u-w-full\">\n                <div class=\"ds-empty-ico\"><svg><!-- icon --></svg></div>\n                <b>No items yet</b>\n                <p>Items you create or import will appear here.</p>\n              </div>",
+        "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-accordion u-w-full\">\n              <details class=\"ds-acc\" open><summary>General<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Language, startup behaviour and default folders.</div></details>\n              <details class=\"ds-acc\"><summary>Appearance<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Theme, accent color and density.</div></details>\n              <details class=\"ds-acc\"><summary>Advanced<span class=\"chev\"><svg><!-- icon --></svg></span></summary><div class=\"ds-acc-body\">Cache, logging and developer options.</div></details>\n            </div>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
+        "<div class=\"u-w-full\"><hr class=\"ds-divider\" /></div>\n            <div class=\"ds-divider-label u-w-full\">or</div>",
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>",
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "u-w-panel",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-w-sidebar",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "u-wrap",
+      "type": "utility",
+      "category": "",
+      "description": "",
+      "examples": []
+    }
+  ],
+  "states": [
+    {
+      "name": "is-active",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
+        "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>",
+        "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-busy",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-checklist",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-close",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-danger",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
+        "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>",
+        "<div class=\"ds-alert\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Working offline</b><p>Changes are saved locally and will sync when you reconnect.</p></div>\n              </div>\n              <div class=\"ds-alert is-danger\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Couldn’t save file</b><p>You don’t have permission to write to this folder. Choose another location.</p></div>\n              </div>",
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
+        "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-dragging",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-error",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-expanded",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<ul class=\"ds-tree\">\n                <li class=\"ds-tree-item is-expanded\">\n                  <div class=\"ds-tree-row\">\n                    <span class=\"ds-tree-twisty\"><svg><!-- icon --></svg></span>\n                    <span class=\"ds-tree-label\">src</span>\n                  </div>\n                  <ul>\n                    <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">index.html</span></div></li>\n                    <li class=\"ds-tree-item is-expanded\">\n                      <div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"><svg><!-- icon --></svg></span><span class=\"ds-tree-label\">css</span></div>\n                      <ul>\n                        <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">tokens.css</span></div></li>\n                        <li class=\"ds-tree-item\"><div class=\"ds-tree-row\"><span class=\"ds-tree-twisty\"></span><span class=\"ds-tree-label\">components.css</span></div></li>\n                      </ul>\n                    </li>\n                  </ul>\n                </li>\n              </ul>"
+      ]
+    },
+    {
+      "name": "is-filterable",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-fixed-rail",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-flip",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-flush",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-ghost",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
+        "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-horizontal",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-icon",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-info",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>"
+      ]
+    },
+    {
+      "name": "is-invalid",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-leaf",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-lg",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-mono",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
+        "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-multi",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-off",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-on",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>",
+        "<div class=\"ds-indicator is-on\"><div class=\"ds-core\"></div></div>"
+      ]
+    },
+    {
+      "name": "is-open",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-placeholder",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-primary",
+      "type": "state",
+      "description": "Marks the single primary action on a .ds-btn.",
+      "examples": [
+        "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
+        "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
+        "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-rail-icons",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-right",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-seamless",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-selected",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-sm",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
+        "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
+        "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-solid",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>"
+      ]
+    },
+    {
+      "name": "is-success",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
+        "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-up",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-valid",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-vertical",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "is-warning",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
+        "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
+      ]
+    }
+  ],
+  "modes": [
+    {
+      "name": "data-density",
+      "type": "mode",
+      "values": [
+        "comfortable",
+        "compact"
+      ],
+      "description": "Global comfortable/compact spacing mode."
+    },
+    {
+      "name": "data-theme",
+      "type": "mode",
+      "values": [
+        "dark",
+        "light"
+      ],
+      "description": "Global light/dark mode set on a root element."
+    }
+  ],
+  "patterns": [
+    {
+      "name": "ptn-command",
+      "type": "pattern",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "ptn-inspector",
+      "type": "pattern",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "ptn-workspace",
+      "type": "pattern",
+      "category": "",
+      "description": "",
+      "examples": []
+    }
+  ],
+  "components": [
+    {
+      "name": "DsAccordion",
+      "type": "component",
+      "import": "import { DsAccordion } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-accordion"
+      ],
+      "props": [
+        {
+          "name": "modelValue",
+          "type": "string | string[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string | string[]]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsAccordionItem",
+      "type": "component",
+      "import": "import { DsAccordionItem } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-acc",
+        "ds-acc-body"
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsAlert",
+      "type": "component",
+      "import": "import { DsAlert } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-alert",
+        "ds-alert-ico"
+      ],
+      "props": [
+        {
+          "name": "dismissible",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "tone",
+          "type": "Tone | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "close",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsAvatar",
+      "type": "component",
+      "import": "import { DsAvatar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-avatar"
+      ],
+      "props": [
+        {
+          "name": "alt",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "\"sm\" | \"lg\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "src",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsBadge",
+      "type": "component",
+      "import": "import { DsBadge } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-badge"
+      ],
+      "props": [
+        {
+          "name": "solid",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "tone",
+          "type": "Tone | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsBanner",
+      "type": "component",
+      "import": "import { DsBanner } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-banner",
+        "ds-banner-ico",
+        "ds-banner-spacer"
+      ],
+      "props": [
+        {
+          "name": "tone",
+          "type": "\"warning\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "actions",
+          "description": ""
+        },
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsBreadcrumb",
+      "type": "component",
+      "import": "import { DsBreadcrumb } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-breadcrumb"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{ label: string; href?: string | undefined; }[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsButton",
+      "type": "component",
+      "import": "import { DsButton } from 'design-language/vue'",
+      "description": "Button primitive as a Vue component; maps variant/size props to .is-* classes.",
+      "renders": [
+        "ds-btn",
+        "ds-spinner"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "\"sm\" | \"lg\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "\"button\" | \"submit\" | \"reset\" | undefined",
+          "default": "\"button\"",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "variant",
+          "type": "\"danger\" | \"primary\" | \"ghost\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsCard",
+      "type": "component",
+      "import": "import { DsCard } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-card"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsCheckbox",
+      "type": "component",
+      "import": "import { DsCheckbox } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-check"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[boolean]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsChip",
+      "type": "component",
+      "import": "import { DsChip } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-chip",
+        "ds-chip-x"
+      ],
+      "props": [
+        {
+          "name": "removable",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "remove",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsCombobox",
+      "type": "component",
+      "import": "import { DsCombobox } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-chip",
+        "ds-chip-x",
+        "ds-combo",
+        "ds-combo-btn"
+      ],
+      "props": [
+        {
+          "name": "checklist",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "filterable",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | string[] | null",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "options",
+          "type": "ComboOption[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string | undefined",
+          "default": "\"Select\\u2026\"",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string | string[] | null]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsContextMenu",
+      "type": "component",
+      "import": "import { DsContextMenu } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-context-menu",
+        "ds-menu",
+        "ds-menu-item",
+        "ds-menu-sep"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "items",
+          "type": "MenuItem[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsDescriptionList",
+      "type": "component",
+      "import": "import { DsDescriptionList } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-dl"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsDialog",
+      "type": "component",
+      "import": "import { DsDialog } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-dialog",
+        "ds-dialog-body",
+        "ds-dialog-foot",
+        "ds-dialog-head",
+        "ds-overlay"
+      ],
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:open",
+          "type": "[boolean]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "foot",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsDivider",
+      "type": "component",
+      "import": "import { DsDivider } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-divider",
+        "ds-divider-label"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "vertical",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsDropdownMenu",
+      "type": "component",
+      "import": "import { DsDropdownMenu } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-btn",
+        "ds-dropdown",
+        "ds-dropdown-btn",
+        "ds-menu",
+        "ds-menu-item",
+        "ds-menu-sep"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "items",
+          "type": "MenuItem[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "trigger",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsEmpty",
+      "type": "component",
+      "import": "import { DsEmpty } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-empty",
+        "ds-empty-ico"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsFact",
+      "type": "component",
+      "import": "import { DsFact } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-fact"
+      ],
+      "props": [
+        {
+          "name": "term",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsFacts",
+      "type": "component",
+      "import": "import { DsFacts } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-facts"
+      ],
+      "props": [
+        {
+          "name": "cols",
+          "type": "2 | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsField",
+      "type": "component",
+      "import": "import { DsField } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-field",
+        "ds-field-error",
+        "ds-field-hint",
+        "ds-field-label"
+      ],
+      "props": [
+        {
+          "name": "error",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "hint",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsIcon",
+      "type": "component",
+      "import": "import { DsIcon } from 'design-language/vue'",
+      "description": "",
+      "renders": [],
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "number | undefined",
+          "default": "16",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsInput",
+      "type": "component",
+      "import": "import { DsInput } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-input"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "invalid",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "mono",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "type",
+          "type": "string | undefined",
+          "default": "\"text\"",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "valid",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsKbd",
+      "type": "component",
+      "import": "import { DsKbd } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-kbd"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsList",
+      "type": "component",
+      "import": "import { DsList } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-list"
+      ],
+      "props": [
+        {
+          "name": "seamless",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsListItem",
+      "type": "component",
+      "import": "import { DsListItem } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-list-item"
+      ],
+      "props": [
+        {
+          "name": "selected",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsMeter",
+      "type": "component",
+      "import": "import { DsMeter } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-meter"
+      ],
+      "props": [
+        {
+          "name": "display",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "max",
+          "type": "number | undefined",
+          "default": "100",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsNavItem",
+      "type": "component",
+      "import": "import { DsNavItem } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-navi"
+      ],
+      "props": [
+        {
+          "name": "active",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "href",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "label",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsNumber",
+      "type": "component",
+      "import": "import { DsNumber } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-number",
+        "ds-step"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "max",
+          "type": "number | undefined",
+          "default": "Number.POSITIVE_INFINITY",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "min",
+          "type": "number | undefined",
+          "default": "Number.NEGATIVE_INFINITY",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "number | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "step",
+          "type": "number | undefined",
+          "default": "1",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[number]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsPanel",
+      "type": "component",
+      "import": "import { DsPanel } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-panel",
+        "ds-panel-body",
+        "ds-panel-head"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "actions",
+          "description": ""
+        },
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "header",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsPill",
+      "type": "component",
+      "import": "import { DsPill } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-pill"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsProgress",
+      "type": "component",
+      "import": "import { DsProgress } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-progress"
+      ],
+      "props": [
+        {
+          "name": "max",
+          "type": "number | undefined",
+          "default": "100",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsRadioGroup",
+      "type": "component",
+      "import": "import { DsRadioGroup } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-radio",
+        "ds-radio-group"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "options",
+          "type": "{ value: string; label: string; }[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsRail",
+      "type": "component",
+      "import": "import { DsRail } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-rail",
+        "ds-rail-spacer"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "bottom",
+          "description": ""
+        },
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsRow",
+      "type": "component",
+      "import": "import { DsRow } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-row",
+        "ds-row-control",
+        "ds-row-text"
+      ],
+      "props": [
+        {
+          "name": "description",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "title",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsSegmented",
+      "type": "component",
+      "import": "import { DsSegmented } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-segmented"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "options",
+          "type": "{ value: string; label: string; }[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsSkeleton",
+      "type": "component",
+      "import": "import { DsSkeleton } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-skeleton"
+      ],
+      "props": [],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsSlider",
+      "type": "component",
+      "import": "import { DsSlider } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-slider"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "max",
+          "type": "number | undefined",
+          "default": "100",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "min",
+          "type": "number | undefined",
+          "default": "0",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "number | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "step",
+          "type": "number | undefined",
+          "default": "1",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[number]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsSortable",
+      "type": "component",
+      "import": "import { DsSortable } from 'design-language/vue'",
+      "description": "",
+      "renders": [],
+      "props": [
+        {
+          "name": "animation",
+          "type": "number | undefined",
+          "default": "150",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "handle",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "unknown[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[unknown[]]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsSpinner",
+      "type": "component",
+      "import": "import { DsSpinner } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-spinner"
+      ],
+      "props": [
+        {
+          "name": "large",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsSplitter",
+      "type": "component",
+      "import": "import { DsSplitter } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-pane-first",
+        "ds-pane-rest",
+        "ds-resizable"
+      ],
+      "props": [
+        {
+          "name": "horizontal",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "max",
+          "type": "number | undefined",
+          "default": "Number.POSITIVE_INFINITY",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "min",
+          "type": "number | undefined",
+          "default": "0",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "step",
+          "type": "number | undefined",
+          "default": "16",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:size",
+          "type": "[number]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "first",
+          "description": ""
+        },
+        {
+          "name": "second",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsStatus",
+      "type": "component",
+      "import": "import { DsStatus } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-dot",
+        "ds-status"
+      ],
+      "props": [
+        {
+          "name": "state",
+          "type": "\"info\" | \"success\" | \"warning\" | \"error\" | \"on\" | \"off\" | \"busy\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsStatusbar",
+      "type": "component",
+      "import": "import { DsStatusbar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-statusbar",
+        "ds-statusbar-spacer"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "end",
+          "description": ""
+        },
+        {
+          "name": "start",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsSwitch",
+      "type": "component",
+      "import": "import { DsSwitch } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-switch",
+        "ds-track"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[boolean]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsTable",
+      "type": "component",
+      "import": "import { DsTable } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-table"
+      ],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsTabPanel",
+      "type": "component",
+      "import": "import { DsTabPanel } from 'design-language/vue'",
+      "description": "",
+      "renders": [],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsTabs",
+      "type": "component",
+      "import": "import { DsTabs } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-tab",
+        "ds-tabs"
+      ],
+      "props": [
+        {
+          "name": "modelValue",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "tabs",
+          "type": "TabItem[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsTextarea",
+      "type": "component",
+      "import": "import { DsTextarea } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-textarea"
+      ],
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "id",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "invalid",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "rows",
+          "type": "number | undefined",
+          "default": "3",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "valid",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsTitlebar",
+      "type": "component",
+      "import": "import { DsTitlebar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-titlebar",
+        "ds-titlebar-title",
+        "ds-winbtns"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "close",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "maximize",
+          "type": "[]",
+          "description": ""
+        },
+        {
+          "name": "minimize",
+          "type": "[]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsToastHost",
+      "type": "component",
+      "import": "import { DsToastHost } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-toast",
+        "ds-toast-body",
+        "ds-toast-close",
+        "ds-toast-stack"
+      ],
+      "props": [],
+      "events": [],
+      "slots": []
+    },
+    {
+      "name": "DsToolbar",
+      "type": "component",
+      "import": "import { DsToolbar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-toolbar",
+        "ds-toolbar-spacer",
+        "ds-toolbar-title"
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "start",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsTree",
+      "type": "component",
+      "import": "import { DsTree } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-tree"
+      ],
+      "props": [
+        {
+          "name": "expanded",
+          "type": "string[] | undefined",
+          "default": "[]",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "nodes",
+          "type": "TreeNode[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "selected",
+          "type": "string | null | undefined",
+          "default": "null",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:expanded",
+          "type": "[string[]]",
+          "description": ""
+        },
+        {
+          "name": "update:selected",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    }
+  ],
+  "icons": {
+    "count": 38,
+    "source": "icons/registry.json",
+    "approved": "icons/approved.json"
+  }
+}

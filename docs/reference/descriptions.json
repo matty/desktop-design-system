@@ -1,0 +1,11 @@
+{
+  "ds-btn": { "description": "Button. Add .is-primary for the single main action, .is-ghost for low-emphasis, .is-danger for destructive." },
+  "ds-card": { "description": "Bordered surface container for grouped content." },
+  "ds-panel": { "description": "Titled content region with a .ds-panel-head and body." },
+  "u-flex": { "description": "display:flex container." },
+  "u-stack": { "description": "Vertical flex stack; pair with .u-gap-* for spacing." },
+  "is-primary": { "description": "Marks the single primary action on a .ds-btn." },
+  "data-theme": { "description": "Global light/dark mode set on a root element." },
+  "data-density": { "description": "Global comfortable/compact spacing mode." },
+  "DsButton": { "description": "Button primitive as a Vue component; maps variant/size props to .is-* classes." }
+}
