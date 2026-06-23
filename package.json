@@ -17,6 +17,8 @@
     "icons:build": "node tools/build-icons.mjs",
     "icons:check": "node tools/build-icons.mjs --check",
     "bundle": "node tools/bundle.mjs",
+    "reference:build": "node tools/build-reference.mjs",
+    "reference:check": "node tools/build-reference.mjs --check",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",

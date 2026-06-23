@@ -4,12 +4,13 @@ import { extractClassNames } from "./css-extract.mjs";
 const TOKEN_RE = /(--[a-z][a-z0-9-]*)\s*:\s*([^;]+);/g;
 
 export function extractTokens(tokensCss) {
-  const out = [];
+  const seen = new Map();
   for (const m of tokensCss.matchAll(TOKEN_RE)) {
-    out.push({ name: m[1], value: m[2].trim(), description: "" });
+    const name = m[1];
+    // De-duplicate: first definition wins (base theme values take precedence over theme overrides).
+    if (!seen.has(name)) seen.set(name, { name, value: m[2].trim(), description: "" });
   }
-  out.sort((a, b) => a.name.localeCompare(b.name));
-  return out;
+  return [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 // --- css surface --------------------------------------------------------
