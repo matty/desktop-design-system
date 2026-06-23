@@ -63,7 +63,9 @@ export function lint({ files, manifest }) {
             raw.startsWith("v-") ||
             raw.startsWith("@") ||
             raw.startsWith(":") ||
-            /^(key|ref|class|style|is)$/.test(raw)
+            raw.startsWith("data-") ||
+            raw.startsWith("aria-") ||
+            /^(key|ref|class|style|is|id|role|title|tabindex|slot)$/.test(raw)
           ) continue;
           // If it's a bound prop like :attr or v-bind:attr, the raw has that prefix — strip it.
           const attr = raw.replace(/^(?:v-bind:|:)/, "");

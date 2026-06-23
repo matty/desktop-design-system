@@ -22,6 +22,11 @@ describe("lint", () => {
     expect(errs).toContainEqual({ file: "c.vue", kind: "unknown-component", name: "DsNope" });
     expect(errs).toContainEqual({ file: "c.vue", kind: "unknown-prop", name: "DsButton.bogus" });
   });
+  it("ignores data-/aria-/global HTML attributes passed through to a component", () => {
+    const vue = `<template><DsButton aria-label="Close" data-testid="x" role="button" title="t" id="b" tabindex="0" variant="primary" /></template>`;
+    const errs = lint({ manifest, files: [{ name: "c.vue", kind: "vue", source: vue }] });
+    expect(errs).toEqual([]);
+  });
   it("ignores non-ds classes and HTML attributes", () => {
     const errs = lint({ manifest, files: [{ name: "a.html", kind: "html", source: `<div class="my-app grid">x</div>` }] });
     expect(errs).toEqual([]);
