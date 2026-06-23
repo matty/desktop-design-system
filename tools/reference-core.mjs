@@ -52,8 +52,8 @@ function detectPatternPrefix(classes) {
     counts.set(prefix, (counts.get(prefix) || 0) + 1);
   }
   if (counts.size === 0) return "p-";
-  // Return the most-frequent prefix
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0][0];
+  // Return the most-frequent prefix; alphabetical secondary key keeps ties deterministic.
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
 }
 
 export function extractCssSurface({ components, utilities, patterns }) {
