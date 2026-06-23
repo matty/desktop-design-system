@@ -1,7 +1,7 @@
 # Cross-layer alignment coverage gate
 
 **Date:** 2026-06-23
-**Status:** Approved (design) — pending implementation plan
+**Status:** IMPLEMENTED (warn-only). Gate + assertions 1-3 merged earlier; assertion 4 (docs/data-vue) activated with the dual-mode docs feature (2026-06-23). Backlog burned down — all four assertions report `ok`. Promotion to `--strict` remains deferred follow-on.
 **Depends on:** `2026-06-21-dual-mode-docs-design.md` (supplies the docs↔Vue `data-vue` signal)
 
 ## Problem

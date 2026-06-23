@@ -1,6 +1,7 @@
 # Dual-Mode (Vanilla / Vue) Generated Docs — Design Spec
 
-> Status: approved design, pre-implementation. Date: 2026-06-21.
+> Status: IMPLEMENTED (merged 2026-06-23, commit ef344b8). Date: 2026-06-21.
+> Plan: docs/superpowers/plans/2026-06-23-dual-mode-docs.md.
 
 ## Goal
 
