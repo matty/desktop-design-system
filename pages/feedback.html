@@ -93,6 +93,15 @@
                 </div>
               </div>
             </div>
+            <template data-vue>
+<DsDialog v-model:open="open" title="Delete this file?">
+  This action cannot be undone.
+  <template #foot>
+    <button class="ds-btn is-ghost" @click="open = false">Cancel</button>
+    <button class="ds-btn is-danger" @click="open = false">Delete</button>
+  </template>
+</DsDialog>
+</template>
             <div class="example-caption">Modal shell: <code>.ds-overlay</code> wrapping <code>.ds-dialog</code> with head / body / foot.</div>
           </div>
         </section>

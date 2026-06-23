@@ -16,4 +16,31 @@
       }
     });
   }
+
+  // ---- Example code tabs + copy (progressive enhancement) ----
+  document.addEventListener("click", function (e) {
+    var tab = e.target.closest && e.target.closest(".example-tab");
+    if (tab) {
+      var ex = tab.closest(".example");
+      if (!ex) return;
+      var panel = tab.getAttribute("data-panel");
+      ex.querySelectorAll(".example-tab").forEach(function (t) {
+        t.classList.toggle("is-active", t === tab);
+      });
+      ex.querySelectorAll(".example-panel").forEach(function (p) {
+        p.classList.toggle("is-active", p.getAttribute("data-panel") === panel);
+      });
+      return;
+    }
+    var copy = e.target.closest && e.target.closest(".example-copy");
+    if (copy) {
+      var pre = copy.parentElement.querySelector("code");
+      if (!pre || !navigator.clipboard) return;
+      navigator.clipboard.writeText(pre.textContent).then(function () {
+        var prev = copy.textContent;
+        copy.textContent = "Copied";
+        setTimeout(function () { copy.textContent = prev; }, 1200);
+      }).catch(function () {});
+    }
+  });
 })();

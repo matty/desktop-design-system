@@ -2,6 +2,7 @@ import { resolve } from "node:path";
 import { cpSync } from "node:fs";
 import { defineConfig } from "vite";
 import { pages } from "./docs/nav.mjs";
+import { transformExamples } from "./tools/inject-examples.mjs";
 
 // Generate shared chrome from docs/nav.mjs into each page's placeholders.
 // order:"pre" so injected <link>/<script> refs are seen by Vite's asset
@@ -81,6 +82,20 @@ ${links}
   };
 }
 
+// Rewrap every .example into Preview/HTML[/Vue] code tabs. Runs in dev and
+// build. Operates on the body; independent of injectChrome's head/nav work.
+function injectExamples() {
+  return {
+    name: "inject-examples",
+    transformIndexHtml: {
+      order: "pre",
+      handler(html) {
+        return transformExamples(html);
+      }
+    }
+  };
+}
+
 // Copy global (non-module) JS — ds.js, docs.js, vendored sortable — into the
 // build output. Vite can't bundle IIFE scripts, and js/ isn't in publicDir,
 // so without this they 404 in dist. Source js/ is untouched (dev + file:// keep working).
@@ -97,7 +112,7 @@ function copyStaticJs() {
 
 export default defineConfig({
   base: "./",
-  plugins: [injectChrome(), copyStaticJs()],
+  plugins: [injectChrome(), injectExamples(), copyStaticJs()],
   server: {
     host: "127.0.0.1",
     port: 5173,

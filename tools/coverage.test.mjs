@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage, docsCoverage, EXAMPLE_EXEMPT } from "./coverage-core.mjs";
+import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage, docsCoverage, EXAMPLE_EXEMPT, DATA_VUE_EXPECTED } from "./coverage-core.mjs";
 
 describe("storyCoverage", () => {
   it("passes when a component has a same-named story", () => {
@@ -139,5 +139,36 @@ describe("docsCoverage", () => {
     expect(r.violations).toEqual([
       { rule: "docs", entity: "DsTree", detail: "no data-vue snippet in any page references this component" }
     ]);
+  });
+});
+
+describe("docsCoverage scoped to interactive set", () => {
+  const components = [{ name: "DsCombobox" }, { name: "DsButton" }];
+  const expected = new Set(["DsCombobox"]); // DsButton is NOT expected to have a Vue tab
+
+  it("flags an expected interactive component with no snippet", () => {
+    const page = `<template data-vue>\n<DsTree />\n</template>`; // some data-vue exists, but not DsCombobox
+    const r = docsCoverage({ components, pageSources: [page], expected });
+    expect(r.skipped).toBe(false);
+    expect(r.violations).toEqual([
+      { rule: "docs", entity: "DsCombobox", detail: "no data-vue snippet in any page references this component" }
+    ]);
+  });
+
+  it("does NOT flag a non-interactive component lacking a snippet", () => {
+    const page = `<template data-vue>\n<DsCombobox />\n</template>`;
+    const r = docsCoverage({ components, pageSources: [page], expected });
+    expect(r.violations).toEqual([]); // DsButton not in expected, DsCombobox present
+  });
+
+  it("still skips entirely when no data-vue exists anywhere", () => {
+    const r = docsCoverage({ components, pageSources: ["<div>x</div>"], expected });
+    expect(r.skipped).toBe(true);
+  });
+
+  it("DATA_VUE_EXPECTED contains the ten interactive components", () => {
+    expect([...DATA_VUE_EXPECTED].sort()).toEqual(
+      ["DsAccordion","DsCombobox","DsContextMenu","DsDialog","DsDropdownMenu","DsSortable","DsSplitter","DsTabs","DsToastHost","DsTree"]
+    );
   });
 });
