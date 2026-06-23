@@ -10,6 +10,10 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
 
 // Names exported from vue/index.ts that look like components (Ds*).
+// ASSUMPTION: every component is re-exported as `export { default as DsX } from ...`.
+// If the index ever adds a component via `export *` or a non-default named export,
+// it would be silently skipped here (and thus missing from the manifest + validator).
+// Keep vue/index.ts to the `default as DsX` form, or widen this matcher to match.
 export function componentNames(indexSrc) {
   return [...indexSrc.matchAll(/export \{ default as (Ds[A-Za-z0-9]+) \}/g)]
     .map((m) => m[1])

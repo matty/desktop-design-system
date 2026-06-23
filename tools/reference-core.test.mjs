@@ -107,5 +107,6 @@ describe("assembleComponents", () => {
     });
     expect(out[0].props[0]).toMatchObject({ name: "variant", default: "undefined", required: false, description: "" });
     expect(out[0].events[0]).toMatchObject({ name: "click", description: "" });
+    expect(out[0].slots[0]).toMatchObject({ name: "default", description: "" });
   });
 });
