@@ -70,6 +70,17 @@ code.chip { font-family:var(--font-mono); font-size:var(--fz-xs); background:var
 .stack { display:grid; gap:14px; }
 .w-260 { width:260px; } .w-180 { width:180px; } .w-320 { width:320px; }
 
+/* example code tabs + copy */
+.example-tabs { display:flex; gap:2px; margin-bottom:8px; border-bottom:1px solid var(--border); }
+.example-tab { appearance:none; background:none; border:none; padding:6px 12px; font:inherit; font-size:var(--fz-sm); color:var(--text-3); cursor:default; border-bottom:2px solid transparent; }
+.example-tab.is-active { color:var(--text); border-bottom-color:var(--accent); }
+.example-tab:focus-visible { box-shadow:var(--focus-ring); outline:none; }
+.example-panel { display:none; position:relative; }
+.example-panel.is-active { display:block; }
+.example-panel pre { margin:0; overflow:auto; background:var(--inset); border:1px solid var(--border); border-radius:var(--radius); padding:12px; font-family:var(--font-mono); font-size:var(--fz-xs); }
+.example-copy { position:absolute; top:8px; right:8px; appearance:none; background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius); padding:2px 8px; font:inherit; font-size:var(--fz-xs); color:var(--text-2); cursor:default; }
+.example-copy:focus-visible { box-shadow:var(--focus-ring); outline:none; }
+
 /* theme toggle pinned to the bottom of the docs rail */
 .doc-theme-toggle { display:flex; align-items:center; gap:10px; padding:10px 11px 6px; }
 .doc-theme-toggle svg { width:15px; height:15px; color:var(--text-3); flex:none; stroke:currentColor; stroke-width:2; fill:none; }
