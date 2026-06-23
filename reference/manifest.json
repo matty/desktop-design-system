@@ -522,7 +522,9 @@
       "states": [
         "is-close"
       ],
-      "examples": []
+      "examples": [
+        "<nav class=\"ds-breadcrumb\" aria-label=\"Breadcrumb\">\n                <a href=\"#\">Home</a><span class=\"sep\">/</span><a href=\"#\">Projects</a><span class=\"sep\">/</span><span class=\"current\">Atlas</span>\n              </nav>"
+      ]
     },
     {
       "name": "ds-btn",
@@ -546,6 +548,8 @@
         "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
         "<div class=\"ds-btn-group\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Start</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Stop</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Restart</button>\n              </div>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
+        "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>",
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
@@ -621,7 +625,9 @@
       "states": [
         "is-flip"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-core",
@@ -650,7 +656,9 @@
         "ds-dialog-head"
       ],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-divider",
@@ -794,7 +802,8 @@
       "subParts": [],
       "states": [],
       "examples": [
-        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
       ]
     },
     {
@@ -866,7 +875,8 @@
       "subParts": [],
       "states": [],
       "examples": [
-        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
       ]
     },
     {
@@ -911,7 +921,8 @@
         "is-right"
       ],
       "examples": [
-        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>"
+        "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
     {
@@ -933,7 +944,8 @@
       "subParts": [],
       "states": [],
       "examples": [
-        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
       ]
     },
     {
@@ -969,7 +981,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-pane-first",
@@ -1033,7 +1047,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-popover\">Saved automatically a few seconds ago.</div>"
+      ]
     },
     {
       "name": "ds-progress",
@@ -1206,7 +1222,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+      ]
     },
     {
       "name": "ds-submenu-chev",
@@ -1217,7 +1235,9 @@
       "states": [
         "is-flip"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "ds-suffix",
@@ -1301,7 +1321,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>"
+      ]
     },
     {
       "name": "ds-titlebar",
@@ -2023,6 +2045,7 @@
         "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
         "<span class=\"ds-badge\"><svg><!-- icon --></svg>Verified</span>\n              <span class=\"ds-badge is-solid\">24 items</span>\n              <span class=\"ds-badge is-danger\">Error</span>\n              <span class=\"ds-pill\">v2.4.0</span>\n              <span class=\"ds-pill\">Stable</span>\n              <span class=\"ds-pill\">Pro</span>\n              <span class=\"ds-kbd\">Ctrl</span><span class=\"ds-kbd\">S</span>",
         "<div class=\"ds-alert\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Working offline</b><p>Changes are saved locally and will sync when you reconnect.</p></div>\n              </div>\n              <div class=\"ds-alert is-danger\">\n                <span class=\"ds-alert-ico\"><svg><!-- icon --></svg></span>\n                <div><b>Couldn’t save file</b><p>You don’t have permission to write to this folder. Choose another location.</p></div>\n              </div>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
         "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
         "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
       ]
@@ -2078,6 +2101,7 @@
       "examples": [
         "<button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Start</button>\n              <button class=\"ds-btn\">Secondary</button>\n              <button class=\"ds-btn is-ghost\">Ghost</button>\n              <button class=\"ds-btn is-danger\"><svg><!-- icon --></svg>Delete</button>\n              <button class=\"ds-btn\" disabled>Disabled</button>",
         "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
+        "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
       ]
     },

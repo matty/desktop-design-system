@@ -562,6 +562,12 @@ _(no description yet)_
 - category: App shell pieces
 - states: `is-close`
 
+```html
+<nav class="ds-breadcrumb" aria-label="Breadcrumb">
+                <a href="#">Home</a><span class="sep">/</span><a href="#">Projects</a><span class="sep">/</span><span class="current">Atlas</span>
+              </nav>
+```
+
 ### ds-btn
 
 Button. Add .is-primary for the single main action, .is-ghost for low-emphasis, .is-danger for destructive.
@@ -677,6 +683,22 @@ _(no description yet)_
 - category: Context menu (cursor-positioned .ds-menu)
 - states: `is-flip`
 
+```html
+<div class="ds-context-menu" style="position:relative">
+                <div class="ds-menu" style="position:relative; top:0; box-shadow:none">
+                  <div class="ds-menu-item">Cut</div>
+                  <div class="ds-menu-item">Copy</div>
+                  <div class="ds-menu-item has-submenu">Share
+                    <span class="ds-submenu-chev"><svg><!-- icon --></svg></span>
+                    <div class="ds-menu">
+                      <div class="ds-menu-item">Email</div>
+                      <div class="ds-menu-item">Copy link</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
+
 ### ds-core
 
 _(no description yet)_
@@ -692,6 +714,19 @@ _(no description yet)_
 _(no description yet)_
 - category: Dialog / modal
 - sub-parts: `ds-dialog-body`, `ds-dialog-foot`, `ds-dialog-head`
+
+```html
+<div class="ds-overlay" style="position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;">
+                <div class="ds-dialog">
+                  <div class="ds-dialog-head"><h3>Delete this file?</h3></div>
+                  <div class="ds-dialog-body">This action cannot be undone.</div>
+                  <div class="ds-dialog-foot">
+                    <button class="ds-btn is-ghost">Cancel</button>
+                    <button class="ds-btn is-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+```
 
 ### ds-divider
 
@@ -1047,6 +1082,19 @@ _(no description yet)_
 _(no description yet)_
 - category: Dialog / modal
 
+```html
+<div class="ds-overlay" style="position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;">
+                <div class="ds-dialog">
+                  <div class="ds-dialog-head"><h3>Delete this file?</h3></div>
+                  <div class="ds-dialog-body">This action cannot be undone.</div>
+                  <div class="ds-dialog-foot">
+                    <button class="ds-btn is-ghost">Cancel</button>
+                    <button class="ds-btn is-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+```
+
 ### ds-pane-first
 
 _(no description yet)_
@@ -1097,6 +1145,10 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Popover (generic floating surface)
+
+```html
+<div class="ds-popover">Saved automatically a few seconds ago.</div>
+```
 
 ### ds-progress
 
@@ -1292,11 +1344,34 @@ _(no description yet)_
 _(no description yet)_
 - category: Typography helpers
 
+```html
+<div class="ds-h1">Heading one</div>
+              <div class="ds-sub">Secondary subtitle text</div>
+              <div class="ds-label">Section label</div>
+              <div class="ds-muted">Muted helper text</div>
+```
+
 ### ds-submenu-chev
 
 _(no description yet)_
 - category: Context menu (cursor-positioned .ds-menu)
 - states: `is-flip`
+
+```html
+<div class="ds-context-menu" style="position:relative">
+                <div class="ds-menu" style="position:relative; top:0; box-shadow:none">
+                  <div class="ds-menu-item">Cut</div>
+                  <div class="ds-menu-item">Copy</div>
+                  <div class="ds-menu-item has-submenu">Share
+                    <span class="ds-submenu-chev"><svg><!-- icon --></svg></span>
+                    <div class="ds-menu">
+                      <div class="ds-menu-item">Email</div>
+                      <div class="ds-menu-item">Copy link</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
 
 ### ds-suffix
 
@@ -1422,6 +1497,10 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Tooltip (CSS hover)
+
+```html
+<button class="ds-btn ds-tip" data-tip="Saves to the cloud">Hover me</button>
+```
 
 ### ds-titlebar
 

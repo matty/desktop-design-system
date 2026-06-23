@@ -79,6 +79,45 @@
         </section>
 
         <section class="doc-section">
+          <h2>Modal dialog</h2>
+          <div class="example">
+            <div class="example-preview col">
+              <div class="ds-overlay" style="position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;">
+                <div class="ds-dialog">
+                  <div class="ds-dialog-head"><h3>Delete this file?</h3></div>
+                  <div class="ds-dialog-body">This action cannot be undone.</div>
+                  <div class="ds-dialog-foot">
+                    <button class="ds-btn is-ghost">Cancel</button>
+                    <button class="ds-btn is-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption">Modal shell: <code>.ds-overlay</code> wrapping <code>.ds-dialog</code> with head / body / foot.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Popover</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-popover">Saved automatically a few seconds ago.</div>
+            </div>
+            <div class="example-caption">Floating surface with <code>.ds-popover</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Tooltip (static)</h2>
+          <div class="example">
+            <div class="example-preview">
+              <button class="ds-btn ds-tip" data-tip="Saves to the cloud">Hover me</button>
+            </div>
+            <div class="example-caption">CSS tooltip via <code>.ds-tip</code> + <code>data-tip</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Progress</h2>
           <div class="example">
             <div class="example-preview col">
