@@ -17,10 +17,25 @@ function rawOuter(html, node) {
   return html.slice(start, end);
 }
 
+// Find the end of an opening tag in a raw HTML string, skipping over any
+// ">" characters that appear inside quoted attribute values.
+function findOpenTagEnd(outer) {
+  let inSingle = false;
+  let inDouble = false;
+  for (let i = 0; i < outer.length; i++) {
+    const ch = outer[i];
+    if (ch === '"' && !inSingle) { inDouble = !inDouble; continue; }
+    if (ch === "'" && !inDouble) { inSingle = !inSingle; continue; }
+    if (ch === ">" && !inSingle && !inDouble) return i + 1;
+  }
+  return -1; // malformed — no tag end found
+}
+
 // Extract the raw inner HTML of a node (content between open and close tags).
 function rawInner(html, node) {
   const outer = rawOuter(html, node);
-  const tagEnd = outer.indexOf(">") + 1;
+  const tagEnd = findOpenTagEnd(outer);
+  if (tagEnd === -1) return "";
   const closeTag = `</${node.rawTagName}>`;
   const closeIdx = outer.lastIndexOf(closeTag);
   if (closeIdx === -1) return "";
@@ -40,6 +55,17 @@ export function transformExamples(html) {
 
   for (const ex of root.querySelectorAll(".example")) {
     if (ex.classList.contains("has-code")) continue;
+    // Skip nested .example nodes — only process top-level ones.
+    let ancestor = ex.parentNode;
+    let isNested = false;
+    while (ancestor) {
+      if (ancestor.classList && ancestor.classList.contains("example")) {
+        isNested = true;
+        break;
+      }
+      ancestor = ancestor.parentNode;
+    }
+    if (isNested) continue;
     const preview = ex.querySelector(".example-preview");
     if (!preview) continue;
 
