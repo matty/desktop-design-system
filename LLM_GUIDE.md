@@ -61,3 +61,12 @@ Generate desktop application interfaces using the design language in this reposi
 ```
 
 The bad example bypasses tokens, invents selectors, uses arbitrary spacing, and creates a marketing-style surface.
+
+## Generated Reference
+
+This guide states the rules; the full, always-accurate catalog is generated:
+
+- `llms.txt` — orientation + rules + links (start here).
+- `REFERENCE.md` — every token, class, state, mode, pattern, and Vue component with descriptions and examples.
+- `reference/manifest.json` — machine-readable manifest.
+- Validate usage: `node tools/lint-usage.mjs "src/**/*.{vue,html}"` (flags unknown classes/components/props).

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run icons:check && vite build && npm run bundle",
+    "build": "npm run icons:check && npm run reference:check && npm run reference:lint && vite build && npm run bundle",
     "preview": "vite preview",
     "icons:build": "node tools/build-icons.mjs",
     "icons:check": "node tools/build-icons.mjs --check",
