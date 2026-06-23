@@ -558,7 +558,9 @@
       "description": "Bordered surface container for grouped content.",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+      ]
     },
     {
       "name": "ds-check",
@@ -582,7 +584,9 @@
       "states": [
         "is-multi"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-chip\">Design <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>\n              <div class=\"ds-chip\">Engineering <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>\n              <div class=\"ds-chip\">Research <button class=\"ds-chip-x\" aria-label=\"Remove\">×</button></div>"
+      ]
     },
     {
       "name": "ds-combo",
@@ -778,7 +782,8 @@
         "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
         "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
-        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>"
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label u-flex u-justify-between\">Opacity <span class=\"ds-value\" id=\"sv\">0.35</span></label>\n                <input class=\"ds-slider\" id=\"sl\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.35\" />\n              </div>",
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Release notes</label>\n                <textarea class=\"ds-textarea\" rows=\"3\">Describe what changed…</textarea>\n              </div>"
       ]
     },
     {
@@ -788,7 +793,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+      ]
     },
     {
       "name": "ds-h2",
@@ -858,7 +865,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+      ]
     },
     {
       "name": "ds-list",
@@ -912,7 +921,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-meter\"><div class=\"name\">CPU</div><div class=\"track\"><div class=\"fill\" style=\"width:42%\"></div></div><div class=\"val\">0.42</div></div>\n              <div class=\"ds-meter\"><div class=\"name\">Memory</div><div class=\"track\"><div class=\"fill\" style=\"width:67%\"></div></div><div class=\"val\">0.67</div></div>"
+      ]
     },
     {
       "name": "ds-muted",
@@ -921,7 +932,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>"
+      ]
     },
     {
       "name": "ds-navi",
@@ -1042,7 +1055,9 @@
         "ds-radio-group"
       ],
       "states": [],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-radio-group\" role=\"radiogroup\" aria-label=\"Density\">\n                <label class=\"ds-radio\"><input type=\"radio\" name=\"density\" checked /> Comfortable</label>\n                <label class=\"ds-radio\"><input type=\"radio\" name=\"density\" /> Compact</label>\n              </div>"
+      ]
     },
     {
       "name": "ds-rail",
@@ -1249,7 +1264,9 @@
       "description": "",
       "subParts": [],
       "states": [],
-      "examples": []
+      "examples": [
+        "<table class=\"ds-table\">\n                <thead><tr><th>Name</th><th>Size</th></tr></thead>\n                <tbody>\n                  <tr><td>report.pdf</td><td>2.4 MB</td></tr>\n                  <tr><td>data.csv</td><td>880 KB</td></tr>\n                </tbody>\n              </table>"
+      ]
     },
     {
       "name": "ds-tabs",
@@ -1273,7 +1290,9 @@
         "is-mono",
         "is-valid"
       ],
-      "examples": []
+      "examples": [
+        "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Release notes</label>\n                <textarea class=\"ds-textarea\" rows=\"3\">Describe what changed…</textarea>\n              </div>"
+      ]
     },
     {
       "name": "ds-tip",

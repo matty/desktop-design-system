@@ -582,6 +582,14 @@ Button. Add .is-primary for the single main action, .is-ghost for low-emphasis, 
 Bordered surface container for grouped content.
 - category: Card / Panel
 
+```html
+<div class="ds-card" style="padding:16px; min-width:160px">
+                <div class="ds-label">Storage</div>
+                <div class="ds-h1">68%</div>
+                <div class="ds-muted">of 512 GB used</div>
+              </div>
+```
+
 ### ds-check
 
 _(no description yet)_
@@ -617,6 +625,12 @@ _(no description yet)_
 - category: Combo: multi-select chips
 - sub-parts: `ds-chip-x`
 - states: `is-multi`
+
+```html
+<div class="ds-chip">Design <button class="ds-chip-x" aria-label="Remove">×</button></div>
+              <div class="ds-chip">Engineering <button class="ds-chip-x" aria-label="Remove">×</button></div>
+              <div class="ds-chip">Research <button class="ds-chip-x" aria-label="Remove">×</button></div>
+```
 
 ### ds-combo
 
@@ -830,6 +844,14 @@ _(no description yet)_
 _(no description yet)_
 - category: Typography helpers
 
+```html
+<div class="ds-card" style="padding:16px; min-width:160px">
+                <div class="ds-label">Storage</div>
+                <div class="ds-h1">68%</div>
+                <div class="ds-muted">of 512 GB used</div>
+              </div>
+```
+
 ### ds-h2
 
 _(no description yet)_
@@ -911,6 +933,14 @@ _(no description yet)_
 _(no description yet)_
 - category: Typography helpers
 
+```html
+<div class="ds-card" style="padding:16px; min-width:160px">
+                <div class="ds-label">Storage</div>
+                <div class="ds-h1">68%</div>
+                <div class="ds-muted">of 512 GB used</div>
+              </div>
+```
+
 ### ds-list
 
 _(no description yet)_
@@ -959,10 +989,23 @@ _(no description yet)_
 _(no description yet)_
 - category: Meter / progress
 
+```html
+<div class="ds-meter"><div class="name">CPU</div><div class="track"><div class="fill" style="width:42%"></div></div><div class="val">0.42</div></div>
+              <div class="ds-meter"><div class="name">Memory</div><div class="track"><div class="fill" style="width:67%"></div></div><div class="val">0.67</div></div>
+```
+
 ### ds-muted
 
 _(no description yet)_
 - category: Typography helpers
+
+```html
+<div class="ds-card" style="padding:16px; min-width:160px">
+                <div class="ds-label">Storage</div>
+                <div class="ds-h1">68%</div>
+                <div class="ds-muted">of 512 GB used</div>
+              </div>
+```
 
 ### ds-navi
 
@@ -1072,6 +1115,13 @@ _(no description yet)_
 _(no description yet)_
 - category: Radio
 - sub-parts: `ds-radio-group`
+
+```html
+<div class="ds-radio-group" role="radiogroup" aria-label="Density">
+                <label class="ds-radio"><input type="radio" name="density" checked /> Comfortable</label>
+                <label class="ds-radio"><input type="radio" name="density" /> Compact</label>
+              </div>
+```
 
 ### ds-rail
 
@@ -1332,6 +1382,16 @@ _(no description yet)_
 _(no description yet)_
 - category: Table
 
+```html
+<table class="ds-table">
+                <thead><tr><th>Name</th><th>Size</th></tr></thead>
+                <tbody>
+                  <tr><td>report.pdf</td><td>2.4 MB</td></tr>
+                  <tr><td>data.csv</td><td>880 KB</td></tr>
+                </tbody>
+              </table>
+```
+
 ### ds-tabs
 
 _(no description yet)_
@@ -1350,6 +1410,13 @@ _(no description yet)_
 _(no description yet)_
 - category: Text input / textarea
 - states: `is-invalid`, `is-mono`, `is-valid`
+
+```html
+<div class="ds-field w-320">
+                <label class="ds-field-label">Release notes</label>
+                <textarea class="ds-textarea" rows="3">Describe what changed…</textarea>
+              </div>
+```
 
 ### ds-tip
 
