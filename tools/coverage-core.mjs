@@ -44,3 +44,29 @@ export function exampleCoverage({ primitives }) {
       detail: "no docs example in pages/*.html"
     }));
 }
+
+export function knownPrimitiveClasses(primitives) {
+  const s = new Set();
+  for (const p of primitives) {
+    s.add(p.name);
+    for (const sp of p.subParts || []) s.add(sp);
+  }
+  return s;
+}
+
+export function rendersCoverage({ components, primitives }) {
+  const known = knownPrimitiveClasses(primitives);
+  const violations = [];
+  for (const c of components) {
+    for (const cls of c.renders || []) {
+      if (!known.has(cls)) {
+        violations.push({
+          rule: "renders",
+          entity: `${c.name} → ${cls}`,
+          detail: `rendered class '${cls}' is not a known primitive/subPart`
+        });
+      }
+    }
+  }
+  return violations;
+}

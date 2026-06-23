@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { storyCoverage, STORY_ALIASES, exampleCoverage } from "./coverage-core.mjs";
+import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage } from "./coverage-core.mjs";
 
 describe("storyCoverage", () => {
   it("passes when a component has a same-named story", () => {
@@ -68,5 +68,32 @@ describe("exampleCoverage", () => {
     expect(v).toEqual([
       { rule: "example", entity: "ds-spinner", detail: "no docs example in pages/*.html" }
     ]);
+  });
+});
+
+describe("rendersCoverage", () => {
+  const primitives = [{ name: "ds-combo", subParts: ["ds-combo-btn"] }, { name: "ds-chip" }];
+
+  it("passes when every rendered class is a known primitive or subPart", () => {
+    const v = rendersCoverage({
+      components: [{ name: "DsCombobox", renders: ["ds-combo", "ds-combo-btn", "ds-chip"] }],
+      primitives
+    });
+    expect(v).toEqual([]);
+  });
+
+  it("flags a rendered class that is not a known primitive", () => {
+    const v = rendersCoverage({
+      components: [{ name: "DsRadioGroup", renders: ["ds-radio-group"] }],
+      primitives
+    });
+    expect(v).toEqual([
+      { rule: "renders", entity: "DsRadioGroup → ds-radio-group", detail: "rendered class 'ds-radio-group' is not a known primitive/subPart" }
+    ]);
+  });
+
+  it("ignores components with no renders list", () => {
+    const v = rendersCoverage({ components: [{ name: "DsBare" }], primitives });
+    expect(v).toEqual([]);
   });
 });
