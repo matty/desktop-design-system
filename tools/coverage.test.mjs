@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage } from "./coverage-core.mjs";
+import { storyCoverage, STORY_ALIASES, exampleCoverage, rendersCoverage, docsCoverage } from "./coverage-core.mjs";
 
 describe("storyCoverage", () => {
   it("passes when a component has a same-named story", () => {
@@ -95,5 +95,31 @@ describe("rendersCoverage", () => {
   it("ignores components with no renders list", () => {
     const v = rendersCoverage({ components: [{ name: "DsBare" }], primitives });
     expect(v).toEqual([]);
+  });
+});
+
+describe("docsCoverage", () => {
+  const components = [{ name: "DsCombobox" }, { name: "DsTree" }];
+
+  it("skips when no page contains a data-vue snippet", () => {
+    const r = docsCoverage({ components, pageSources: ["<div class=\"ds-btn\">x</div>"] });
+    expect(r.skipped).toBe(true);
+    expect(r.violations).toEqual([]);
+  });
+
+  it("passes a component referenced in a data-vue template", () => {
+    const page = `<template data-vue>\n<DsCombobox v-model="x" />\n<DsTree :nodes="n" />\n</template>`;
+    const r = docsCoverage({ components, pageSources: [page] });
+    expect(r.skipped).toBe(false);
+    expect(r.violations).toEqual([]);
+  });
+
+  it("flags a component absent from all data-vue snippets", () => {
+    const page = `<template data-vue>\n<DsCombobox v-model="x" />\n</template>`;
+    const r = docsCoverage({ components, pageSources: [page] });
+    expect(r.skipped).toBe(false);
+    expect(r.violations).toEqual([
+      { rule: "docs", entity: "DsTree", detail: "no data-vue snippet in any page references this component" }
+    ]);
   });
 });

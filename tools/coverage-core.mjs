@@ -70,3 +70,26 @@ export function rendersCoverage({ components, primitives }) {
   }
   return violations;
 }
+
+export function docsCoverage({ components, pageSources }) {
+  const joined = pageSources.join("\n");
+  if (!/data-vue/.test(joined)) {
+    return {
+      skipped: true,
+      reason: "no data-vue snippets present (dual-mode docs not yet implemented)",
+      violations: []
+    };
+  }
+  const used = new Set();
+  for (const block of joined.matchAll(/<template\s+data-vue[^>]*>([\s\S]*?)<\/template>/g)) {
+    for (const tag of block[1].matchAll(/<(Ds[A-Za-z0-9]+)/g)) used.add(tag[1]);
+  }
+  const violations = components
+    .filter((c) => !used.has(c.name))
+    .map((c) => ({
+      rule: "docs",
+      entity: c.name,
+      detail: "no data-vue snippet in any page references this component"
+    }));
+  return { skipped: false, violations };
+}
