@@ -147,7 +147,12 @@
               <div class="ds-toast-body"><b>Connection lost</b>Reconnecting…</div>
               <button class="ds-toast-close"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
             </div>
-          </div><div class="example-caption"><b>.ds-toast</b> (+ <b>.is-success</b>/<b>.is-danger</b>); stack in <b>.ds-toast-stack</b> (fixed)</div></div>
+          </div><template data-vue>
+<DsToastHost />
+<!-- elsewhere in the app: -->
+<!-- const { push } = useToast(); -->
+<!-- push({ message: 'Changes saved', variant: 'success' }) -->
+</template><div class="example-caption"><b>.ds-toast</b> (+ <b>.is-success</b>/<b>.is-danger</b>); stack in <b>.ds-toast-stack</b> (fixed)</div></div>
 
           <div class="doc-section-sub">Accordion</div>
           <div class="example"><div class="example-preview col">
@@ -156,7 +161,13 @@
               <details class="ds-acc"><summary>Appearance<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span></summary><div class="ds-acc-body">Theme, accent color and density.</div></details>
               <details class="ds-acc"><summary>Advanced<span class="chev"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg></span></summary><div class="ds-acc-body">Cache, logging and developer options.</div></details>
             </div>
-          </div><div class="example-caption"><b>&lt;details class="ds-acc"&gt;</b> inside <b>.ds-accordion</b></div></div>
+          </div><template data-vue>
+<DsAccordion v-model="open">
+  <DsAccordionItem id="general" title="General">Language, startup behaviour and default folders.</DsAccordionItem>
+  <DsAccordionItem id="appearance" title="Appearance">Theme, accent color and density.</DsAccordionItem>
+  <DsAccordionItem id="advanced" title="Advanced">Cache, logging and developer options.</DsAccordionItem>
+</DsAccordion>
+</template><div class="example-caption"><b>&lt;details class="ds-acc"&gt;</b> inside <b>.ds-accordion</b></div></div>
 
           <div class="doc-section-sub">List &amp; banner</div>
           <div class="example"><div class="example-preview col">

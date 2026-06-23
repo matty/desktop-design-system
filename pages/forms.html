@@ -117,6 +117,14 @@
                 </div>
               </div>
             </div>
+            <template data-vue>
+<DsCombobox v-model="format" :options="[
+  { value: 'png', label: 'PNG' },
+  { value: 'jpeg', label: 'JPEG' },
+  { value: 'webp', label: 'WebP' },
+  { value: 'svg', label: 'SVG' }
+]" />
+</template>
             <div class="example-caption"><b>.ds-combo</b> is the select — a fully themed popup (no native <code>&lt;select&gt;</code>). <b>.ds-combo-btn</b> + <b>.ds-combo-menu</b> › <b>.ds-combo-option</b> (<b>.is-selected</b>). <b>.is-up</b> opens the menu upward when space below is tight.</div>
           </div>
         </section>
@@ -137,6 +145,18 @@
                 </div>
               </div>
             </div>
+            <template data-vue>
+<DsDropdownMenu :items="[
+  { label: 'Quarterly report.pdf', value: 'report' },
+  { label: 'Meeting notes.txt', value: 'notes' },
+  { separator: true },
+  { label: 'Browse…', value: 'browse' }
+]" @select="onSelect">
+  <template #trigger>
+    <button class="ds-btn">Recent files</button>
+  </template>
+</DsDropdownMenu>
+</template>
             <div class="example-caption"><b>.ds-dropdown</b> › <b>.ds-menu</b> › <b>.ds-menu-item</b> (toggle <code class="chip">hidden</code>)</div>
           </div>
         </section>

@@ -295,6 +295,17 @@
                 </div>
               </div>
             </div>
+            <template data-vue>
+<DsSplitter v-model:size="sidebarSize" :min="120" :max="320">
+  <template #first>
+    <a class="ds-navi is-active">Inbox</a>
+    <a class="ds-navi">Drafts</a>
+  </template>
+  <template #second>
+    <p class="ds-muted">Message body</p>
+  </template>
+</DsSplitter>
+</template>
             <div class="example-caption">Resizable split: <code>.ds-resizable</code>, <code>.ds-pane-first</code>, <code>.ds-splitter</code>, <code>.ds-pane-rest</code>.</div>
           </div>
         </section>

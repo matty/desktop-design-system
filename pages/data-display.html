@@ -170,6 +170,13 @@
                 <li class="ds-list-item"><span class="ds-drag-handle"><svg viewBox="0 0 24 24"><circle cx="9" cy="6" r="1" fill="currentColor"/><circle cx="9" cy="12" r="1" fill="currentColor"/><circle cx="9" cy="18" r="1" fill="currentColor"/><circle cx="15" cy="6" r="1" fill="currentColor"/><circle cx="15" cy="12" r="1" fill="currentColor"/><circle cx="15" cy="18" r="1" fill="currentColor"/></svg></span>Third item</li>
               </ul>
             </div>
+            <template data-vue>
+<DsSortable v-model="items" handle=".ds-drag-handle">
+  <template #item="{ item }">
+    <span class="ds-drag-handle">⠿</span>{{ item.label }}
+  </template>
+</DsSortable>
+</template>
             <div class="example-caption"><b>[data-ds-sortable]</b> on any list enables drag reordering via SortableJS (vendored). <b>data-ds-sortable-handle=".ds-drag-handle"</b> restricts dragging to the grip icon — text is not draggable. The drop target shows <b>.ds-drop-placeholder</b> (dashed <code>var(--accent)</code> border + <code>var(--accent-soft)</code> fill). The item being moved gets <b>.is-dragging</b> (raised shadow). Animation is zeroed when <code>prefers-reduced-motion: reduce</code> is active.</div>
           </div>
         </section>
@@ -197,6 +204,9 @@
                 </li>
               </ul>
             </div>
+            <template data-vue>
+<DsTree :nodes="nodes" v-model:expanded="expanded" v-model:selected="selected" />
+</template>
             <div class="example-caption"><b>.ds-tree</b> › <b>.ds-tree-item</b> › <b>.ds-tree-row</b> + <b>.ds-tree-twisty</b> + <b>.ds-tree-label</b>. Nest children in a <code>&lt;ul&gt;</code> inside <b>.ds-tree-item</b>. Leaf nodes (no child <code>&lt;ul&gt;</code>) are auto-detected and get <b>.is-leaf</b>; their twisty is hidden. Add <b>.is-expanded</b> to pre-open a node. Keyboard: Tab into the tree, Up/Down to move, Right to expand then descend, Left to collapse then move to parent, Home/End to jump, Enter/Space to select.</div>
           </div>
         </section>

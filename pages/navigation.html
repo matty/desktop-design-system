@@ -78,6 +78,17 @@
                 <button class="ds-tab">Advanced</button>
               </div>
             </div>
+            <template data-vue>
+<DsTabs v-model="activeTab" :tabs="[
+  { id: 'general', label: 'General' },
+  { id: 'appearance', label: 'Appearance' },
+  { id: 'advanced', label: 'Advanced' }
+]">
+  <DsTabPanel id="general">General settings</DsTabPanel>
+  <DsTabPanel id="appearance">Appearance settings</DsTabPanel>
+  <DsTabPanel id="advanced">Advanced settings</DsTabPanel>
+</DsTabs>
+</template>
             <div class="example-caption"><b>.ds-tabs</b> › <b>.ds-tab</b></div>
           </div>
         </section>
@@ -112,6 +123,18 @@
                 </div>
               </div>
             </div>
+            <template data-vue>
+<DsContextMenu :items="[
+  { label: 'Cut', value: 'cut' },
+  { label: 'Copy', value: 'copy' },
+  { label: 'Share', value: 'share', children: [
+    { label: 'Email', value: 'email' },
+    { label: 'Copy link', value: 'copy-link' }
+  ]}
+]" @select="onSelect">
+  <div class="ds-card" style="padding:var(--space-9);text-align:center">Right-click me</div>
+</DsContextMenu>
+</template>
             <div class="example-caption">Right-click surface with <code>.ds-context-menu</code>, <code>.ds-menu</code>/<code>.ds-menu-item</code>, and <code>.ds-submenu-chev</code>.</div>
           </div>
         </section>
