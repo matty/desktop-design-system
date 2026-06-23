@@ -92,5 +92,8 @@ async function main() {
 const selfPath = fileURLToPath(import.meta.url);
 const argPath = process.argv[1] ? resolve(process.argv[1]) : "";
 if (selfPath === argPath) {
-  main();
+  main().catch((err) => {
+    console.error(`coverage: ${err.message}`);
+    process.exit(2);
+  });
 }
