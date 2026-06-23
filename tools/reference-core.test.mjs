@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { extractTokens, extractCssSurface, extractModes, extractExamples, assembleComponents } from "./reference-core.mjs";
+import { extractTokens, extractCssSurface, extractModes, extractExamples, assembleComponents, buildManifest, coverageGaps, renderReferenceMd, renderLlmsTxt } from "./reference-core.mjs";
 
 describe("extractTokens", () => {
   it("parses --name: value with descriptions empty", () => {
@@ -108,5 +108,59 @@ describe("assembleComponents", () => {
     expect(out[0].props[0]).toMatchObject({ name: "variant", default: "undefined", required: false, description: "" });
     expect(out[0].events[0]).toMatchObject({ name: "click", description: "" });
     expect(out[0].slots[0]).toMatchObject({ name: "default", description: "" });
+  });
+});
+
+const parts = () => ({
+  version: "1.2.3",
+  tokens: [{ name: "--bg", value: "#000", description: "" }],
+  cssSurface: {
+    primitives: [{ name: "ds-btn", type: "primitive", category: "Buttons", description: "", subParts: [], states: ["is-primary"], examples: [] }],
+    utilities: [{ name: "u-flex", type: "utility", category: "Display", description: "", examples: [] }],
+    states: [{ name: "is-primary", type: "state", description: "", examples: [] }],
+    patterns: []
+  },
+  modes: [{ name: "data-theme", type: "mode", values: ["dark", "light"], description: "" }],
+  components: [{ name: "DsButton", type: "component", import: "import { DsButton } from 'design-language/vue'", description: "", renders: ["ds-btn"], props: [], events: [], slots: [] }],
+  examples: { byClass: { "ds-btn": ["<button class=\"ds-btn\">x</button>"] }, patterns: [] },
+  descriptions: { "ds-btn": { description: "Primary action button." }, "DsButton": { description: "Button component." } },
+  icons: { count: 5, source: "icons/registry.json", approved: "icons/approved.json" }
+});
+
+describe("buildManifest", () => {
+  const m = buildManifest(parts());
+  it("merges descriptions and attaches examples by name", () => {
+    expect(m.primitives[0].description).toBe("Primary action button.");
+    expect(m.primitives[0].examples).toEqual(["<button class=\"ds-btn\">x</button>"]);
+    expect(m.components[0].description).toBe("Button component.");
+    expect(m.version).toBe("1.2.3");
+    expect(m.generated).toBe("design-system reference");
+  });
+});
+
+describe("coverageGaps", () => {
+  it("lists only items still missing a description", () => {
+    const gaps = coverageGaps(buildManifest(parts()));
+    expect(gaps).toContain("--bg");
+    expect(gaps).toContain("u-flex");
+    expect(gaps).toContain("is-primary");
+    expect(gaps).not.toContain("ds-btn");
+    expect(gaps).not.toContain("DsButton");
+  });
+});
+
+describe("renderers", () => {
+  it("REFERENCE.md is deterministic and contains entries", () => {
+    const a = renderReferenceMd(buildManifest(parts()));
+    const b = renderReferenceMd(buildManifest(parts()));
+    expect(a).toBe(b);
+    expect(a).toContain("ds-btn");
+    expect(a).toContain("DsButton");
+  });
+  it("llms.txt embeds the guide text and links the artifacts", () => {
+    const out = renderLlmsTxt(buildManifest(parts()), "## Class Rules\nUse .ds-*");
+    expect(out).toContain("Use .ds-*");
+    expect(out).toContain("REFERENCE.md");
+    expect(out).toContain("manifest.json");
   });
 });
