@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   test: {
     environment: "happy-dom",
-    include: ["vue/**/*.test.ts"],
+    include: ["vue/**/*.test.ts", "tools/**/*.test.mjs"],
     globals: true
   }
 });
