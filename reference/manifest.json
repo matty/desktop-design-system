@@ -1038,7 +1038,9 @@
       "type": "primitive",
       "category": "Radio",
       "description": "",
-      "subParts": [],
+      "subParts": [
+        "ds-radio-group"
+      ],
       "states": [],
       "examples": []
     },

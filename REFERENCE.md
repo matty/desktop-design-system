@@ -1071,6 +1071,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Radio
+- sub-parts: `ds-radio-group`
 
 ### ds-rail
 
