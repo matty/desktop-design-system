@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { extractTokens, extractCssSurface, extractModes, extractExamples } from "./reference-core.mjs";
+import { extractTokens, extractCssSurface, extractModes, extractExamples, assembleComponents } from "./reference-core.mjs";
 
 describe("extractTokens", () => {
   it("parses --name: value with descriptions empty", () => {
@@ -84,5 +84,28 @@ describe("extractExamples", () => {
     const { byClass: bc } = extractExamples([{ name: "buttons", html: nestedHtml }]);
     expect(bc["ds-btn-group"]).toBeDefined();
     expect(bc["ds-btn"]).toBeDefined();
+  });
+});
+
+describe("assembleComponents", () => {
+  const raw = [{
+    name: "DsButton", file: "DsButton.vue",
+    props: [{ name: "variant", type: "'primary' | 'ghost'", default: "undefined", required: false }],
+    events: [{ name: "click", type: "[e: MouseEvent]" }],
+    slots: [{ name: "default" }]
+  }];
+  const sfc = { DsButton: `<template><button class="ds-btn" :class="cls"><slot/></button></template>` };
+  const out = assembleComponents(raw, sfc);
+
+  it("shapes a component item with import + renders + description fields", () => {
+    expect(out[0]).toMatchObject({
+      name: "DsButton",
+      type: "component",
+      import: "import { DsButton } from 'design-language/vue'",
+      renders: ["ds-btn"],
+      description: ""
+    });
+    expect(out[0].props[0]).toMatchObject({ name: "variant", default: "undefined", required: false, description: "" });
+    expect(out[0].events[0]).toMatchObject({ name: "click", description: "" });
   });
 });

@@ -183,6 +183,36 @@ export function extractExamples(htmlDocs) {
   return { byClass, patterns };
 }
 
+// Extract ds-* class names from SFC template HTML (class="..." attribute values).
+function templateDsClasses(tpl) {
+  const set = new Set();
+  for (const m of tpl.matchAll(/class="([^"]*)"/g)) {
+    for (const c of m[1].split(/\s+/)) {
+      if (c.startsWith("ds-")) set.add(c);
+    }
+  }
+  return [...set].sort();
+}
+
+// --- component assembly -------------------------------------------------
+export function assembleComponents(rawMeta, sfcSource) {
+  return rawMeta.map((c) => {
+    const src = sfcSource[c.name] || "";
+    const tpl = (src.match(/<template>([\s\S]*?)<\/template>/) || [, ""])[1];
+    const renders = templateDsClasses(tpl);
+    return {
+      name: c.name,
+      type: "component",
+      import: `import { ${c.name} } from 'design-language/vue'`,
+      description: "",
+      renders,
+      props: (c.props || []).map((p) => ({ ...p, description: "" })).sort((a, b) => a.name.localeCompare(b.name)),
+      events: (c.events || []).map((e) => ({ ...e, description: "" })).sort((a, b) => a.name.localeCompare(b.name)),
+      slots: (c.slots || []).map((s) => ({ ...s, description: "" })).sort((a, b) => a.name.localeCompare(b.name))
+    };
+  }).sort((a, b) => a.name.localeCompare(b.name));
+}
+
 // --- modes --------------------------------------------------------------
 export function extractModes() {
   return [
