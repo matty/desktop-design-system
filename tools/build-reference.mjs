@@ -1,6 +1,6 @@
 import { readFile, writeFile, readdir, mkdir } from "node:fs/promises";
-import { readFileSync, existsSync } from "node:fs";
-import { resolve, dirname, join } from "node:path";
+import { readFileSync } from "node:fs";
+import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as core from "./reference-core.mjs";
 import { collectComponentMeta, componentNames } from "./component-meta.mjs";
