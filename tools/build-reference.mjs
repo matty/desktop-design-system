@@ -39,7 +39,7 @@ async function buildOutputs() {
 
   const registry = JSON.parse(await readFile(r("icons/registry.json"), "utf8"));
   const icons = {
-    count: Object.keys(registry).length,
+    count: Object.keys(registry.icons || {}).length,
     source: "icons/registry.json",
     approved: "icons/approved.json"
   };
