@@ -716,7 +716,7 @@ _(no description yet)_
 - sub-parts: `ds-dialog-body`, `ds-dialog-foot`, `ds-dialog-head`
 
 ```html
-<div class="ds-overlay" style="position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;">
+<div class="ds-overlay" style="position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;">
                 <div class="ds-dialog">
                   <div class="ds-dialog-head"><h3>Delete this file?</h3></div>
                   <div class="ds-dialog-body">This action cannot be undone.</div>
@@ -1096,7 +1096,7 @@ _(no description yet)_
 - category: Dialog / modal
 
 ```html
-<div class="ds-overlay" style="position:relative; inset:auto; background:rgba(0,0,0,.5); padding:24px; display:grid; place-items:center;">
+<div class="ds-overlay" style="position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;">
                 <div class="ds-dialog">
                   <div class="ds-dialog-head"><h3>Delete this file?</h3></div>
                   <div class="ds-dialog-body">This action cannot be undone.</div>
