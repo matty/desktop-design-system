@@ -118,6 +118,72 @@ export function extractCssSurface({ components, utilities, patterns }) {
   return { primitives, utilities: utilitiesOut, states: statesOut, patterns: patternsOut };
 }
 
+// --- example extraction -------------------------------------------------
+
+// Collapse <svg ...>...</svg> (including self-closing) to a stable placeholder.
+function collapseSvgs(markup) {
+  return markup
+    .replace(/<svg\b[\s\S]*?<\/svg>/g, "<svg><!-- icon --></svg>")
+    .replace(/<svg\b[^>]*\/>/g, "<svg><!-- icon --></svg>");
+}
+
+// Extract the inner content of every <div class="example-preview..."> block.
+// Uses div-depth counting so nested divs are handled correctly.
+function extractPreviewBlocks(html) {
+  const blocks = [];
+  const openRe = /<div\b/g;
+  const previewRe = /<div class="example-preview[^"]*">/g;
+
+  let m;
+  previewRe.lastIndex = 0;
+  while ((m = previewRe.exec(html)) !== null) {
+    // position after the opening tag
+    const contentStart = m.index + m[0].length;
+    let depth = 1;
+    let pos = contentStart;
+    while (depth > 0 && pos < html.length) {
+      const nextOpen = html.indexOf("<div", pos);
+      const nextClose = html.indexOf("</div>", pos);
+      const oIdx = nextOpen === -1 ? Infinity : nextOpen;
+      const cIdx = nextClose === -1 ? Infinity : nextClose;
+      if (oIdx < cIdx) {
+        depth++;
+        pos = oIdx + 4;
+      } else if (cIdx < Infinity) {
+        depth--;
+        pos = cIdx + 6;
+      } else {
+        break;
+      }
+    }
+    // pos now points to just after the closing </div>; content ends before last </div>
+    const contentEnd = pos - 6; // subtract len("</div>")
+    blocks.push(html.slice(contentStart, contentEnd));
+  }
+  return blocks;
+}
+
+export function extractExamples(htmlDocs) {
+  const byClass = {};
+  const patterns = [];
+  for (const { html } of htmlDocs) {
+    for (const inner of extractPreviewBlocks(html)) {
+      const markup = collapseSvgs(inner.trim()).replace(/\s+\n/g, "\n").trim();
+      const classes = new Set();
+      for (const cm of markup.matchAll(/class="([^"]*)"/g)) {
+        for (const c of cm[1].split(/\s+/)) {
+          if (/^(ds|u|is|p)-/.test(c)) classes.add(c);
+        }
+      }
+      for (const c of classes) {
+        if (!byClass[c]) byClass[c] = [];
+        if (!byClass[c].includes(markup)) byClass[c].push(markup);
+      }
+    }
+  }
+  return { byClass, patterns };
+}
+
 // --- modes --------------------------------------------------------------
 export function extractModes() {
   return [

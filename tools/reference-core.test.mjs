@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { extractTokens, extractCssSurface, extractModes } from "./reference-core.mjs";
+import { extractTokens, extractCssSurface, extractModes, extractExamples } from "./reference-core.mjs";
 
 describe("extractTokens", () => {
   it("parses --name: value with descriptions empty", () => {
@@ -46,5 +46,43 @@ describe("extractModes", () => {
       { name: "data-density", type: "mode", values: ["comfortable", "compact"], description: "" },
       { name: "data-theme", type: "mode", values: ["dark", "light"], description: "" }
     ]);
+  });
+});
+
+describe("extractExamples", () => {
+  const html = `
+    <section class="doc-section"><h2>Variants</h2>
+      <div class="example">
+        <div class="example-preview">
+          <button class="ds-btn is-primary"><svg viewBox="0 0 24 24"><path d="M5 5"/></svg>Start</button>
+          <button class="ds-btn">Secondary</button>
+        </div>
+      </div>
+    </section>`;
+  const { byClass } = extractExamples([{ name: "buttons", html }]);
+
+  it("indexes the example markup by class, collapsing svgs", () => {
+    expect(byClass["ds-btn"][0]).toContain('<button class="ds-btn is-primary">');
+    expect(byClass["ds-btn"][0]).toContain("<svg><!-- icon --></svg>");
+    expect(byClass["ds-btn"][0]).not.toContain("viewBox");
+    expect(byClass["is-primary"]).toBeDefined();
+  });
+  it("does not duplicate the same markup for a class", () => {
+    expect(byClass["ds-btn"].length).toBe(1); // one preview block
+  });
+  it("handles nested divs inside example-preview", () => {
+    const nestedHtml = `
+      <div class="example">
+        <div class="example-preview">
+          <div class="ds-btn-group">
+            <button class="ds-btn">A</button>
+            <button class="ds-btn">B</button>
+          </div>
+        </div>
+        <div class="example-caption">caption</div>
+      </div>`;
+    const { byClass: bc } = extractExamples([{ name: "buttons", html: nestedHtml }]);
+    expect(bc["ds-btn-group"]).toBeDefined();
+    expect(bc["ds-btn"]).toBeDefined();
   });
 });
