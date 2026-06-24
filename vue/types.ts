@@ -1,5 +1,13 @@
 export interface Step { id: string; label: string }
 
+export type ChecklistState = "pending" | "running" | "ok" | "warn" | "error";
+export interface ChecklistItem {
+  id: string;
+  title: string;
+  note?: string;
+  state: ChecklistState;
+}
+
 export interface ComboOption {
   value: string;
   label: string;
