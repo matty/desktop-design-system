@@ -64,7 +64,7 @@ describe("DsMenubar", () => {
   it("ArrowRight moves focus to the next top item", async () => {
     const w = mount(DsMenubar, { props: { menus }, attachTo: document.body });
     const tops = w.findAll(".ds-menubar-item");
-    tops[0].element.focus();
+    (tops[0].element as HTMLElement).focus();
     await w.find("[role=menubar]").trigger("keydown", { key: "ArrowRight" });
     await nextTick();
     expect(document.activeElement).toBe(tops[1].element);
@@ -74,7 +74,7 @@ describe("DsMenubar", () => {
   it("ArrowDown on a focused closed top item opens it and focuses the first menu item", async () => {
     const w = mount(DsMenubar, { props: { menus }, attachTo: document.body });
     const tops = w.findAll(".ds-menubar-item");
-    tops[0].element.focus();
+    (tops[0].element as HTMLElement).focus();
     await w.find("[role=menubar]").trigger("keydown", { key: "ArrowDown" });
     await w.vm.$nextTick();
     expect(w.find(".ds-menu").exists()).toBe(true);
@@ -86,7 +86,7 @@ describe("DsMenubar", () => {
   it("Arrow navigation within an open menu skips a disabled item", async () => {
     const w = mount(DsMenubar, { props: { menus: menusWithDisabled }, attachTo: document.body });
     const tops = w.findAll(".ds-menubar-item");
-    tops[0].element.focus();
+    (tops[0].element as HTMLElement).focus();
     // Open menu and focus first item
     await w.find("[role=menubar]").trigger("keydown", { key: "ArrowDown" });
     await w.vm.$nextTick();
@@ -104,7 +104,7 @@ describe("DsMenubar", () => {
   it("Escape closes the menu and returns focus to the active top item", async () => {
     const w = mount(DsMenubar, { props: { menus }, attachTo: document.body });
     const tops = w.findAll(".ds-menubar-item");
-    tops[0].element.focus();
+    (tops[0].element as HTMLElement).focus();
     // Open menu via ArrowDown
     await w.find("[role=menubar]").trigger("keydown", { key: "ArrowDown" });
     await w.vm.$nextTick();
