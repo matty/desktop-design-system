@@ -15,7 +15,7 @@ function toggle() {
 
 <template>
   <div ref="root" class="ds-popover-anchor" :class="{ 'is-open': open }">
-    <button type="button" class="ds-btn" :aria-expanded="open" @click.stop="toggle">
+    <button type="button" class="ds-btn" :aria-expanded="open" @click="toggle">
       <slot name="trigger" />
     </button>
     <div v-if="open" class="ds-popover" role="dialog" :aria-label="ariaLabel">
