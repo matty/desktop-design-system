@@ -623,3 +623,9 @@
 .ds-menubar-item { position:relative; padding:5px 9px; border-radius:var(--radius-sm); font-size:var(--fz-base); color:var(--text-2); cursor:default; }
 .ds-menubar-item:hover, .ds-menubar-item.is-open { background:var(--hover); color:var(--text); }
 .ds-menubar-item > .ds-menu { top:calc(100% + 4px); left:0; }
+
+/* ---------- Split button ---------- */
+.ds-split-btn { position:relative; display:inline-flex; }
+.ds-split-btn > .ds-btn:first-child { border-top-right-radius:0; border-bottom-right-radius:0; }
+.ds-split-caret { margin-left:-1px; padding:0 7px; border-top-left-radius:0; border-bottom-left-radius:0; }
+.ds-split-btn > .ds-menu { top:calc(100% + 4px); right:0; left:auto; }

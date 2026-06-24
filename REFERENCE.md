@@ -1022,14 +1022,12 @@ _(no description yet)_
 - states: `is-active`, `is-right`
 
 ```html
-<div class="ds-dropdown" id="dd">
-                <button class="ds-btn" id="ddBtn">Recent files <svg><!-- icon --></svg></button>
-                <div class="ds-menu" id="ddMenu" hidden>
-                  <div class="ds-menu-label">Documents</div>
-                  <div class="ds-menu-item is-active"><svg><!-- icon --></svg>Quarterly report.pdf</div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Meeting notes.txt</div>
-                  <div class="ds-menu-sep"></div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Browse…</div>
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
                 </div>
               </div>
 ```
@@ -1433,6 +1431,38 @@ _(no description yet)_
               <div class="ds-skeleton text" style="width:100%"></div>
               <div class="ds-skeleton text" style="width:45%"></div>
             </div>
+```
+
+### ds-split-btn
+
+_(no description yet)_
+- category: Split button
+
+```html
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
+                </div>
+              </div>
+```
+
+### ds-split-caret
+
+_(no description yet)_
+- category: Split button
+
+```html
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
+                </div>
+              </div>
 ```
 
 ### ds-splitter
@@ -3571,6 +3601,23 @@ import { DsSpinner } from 'design-language/vue'
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
 | large | `boolean \| undefined` | `undefined` | false |
+
+### DsSplitButton
+
+_(no description yet)_
+
+```ts
+import { DsSplitButton } from 'design-language/vue'
+```
+- renders: `ds-btn`, `ds-menu`, `ds-menu-item`, `ds-menu-sep`, `ds-split-btn`, `ds-split-caret`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| items | `MenuItem[]` | `undefined` | true |
+| label | `string` | `undefined` | true |
+| variant | `"danger" \| "primary" \| "ghost" \| undefined` | `undefined` | false |
+
+**Events:** `click`, `select`
 
 ### DsSplitter
 
