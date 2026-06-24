@@ -19,8 +19,8 @@ function stepClass(i: number) {
 
 <template>
   <ol class="ds-steps">
-    <li v-for="(step, i) in steps" :key="step.id" class="ds-step-item" :class="stepClass(i)">
-      <span class="ds-step-num">{{ i + 1 }}</span>{{ step.label }}
+    <li v-for="(step, i) in steps" :key="step.id" class="ds-steps-item" :class="stepClass(i)">
+      <span class="ds-steps-num">{{ i + 1 }}</span>{{ step.label }}
     </li>
   </ol>
 </template>
