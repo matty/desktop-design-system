@@ -1,3 +1,5 @@
+export interface Step { id: string; label: string }
+
 export interface ComboOption {
   value: string;
   label: string;
@@ -19,6 +21,8 @@ export interface MenuItem {
   children?: MenuItem[];
   onSelect?: () => void;
 }
+
+export interface MenubarMenu { id: string; label: string; items: MenuItem[] }
 
 export interface TabItem {
   id: string;

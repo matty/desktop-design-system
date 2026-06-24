@@ -788,6 +788,21 @@ _(no description yet)_
               </ul>
 ```
 
+### ds-drawer
+
+_(no description yet)_
+- category: Drawer
+- sub-parts: `ds-drawer-body`, `ds-drawer-foot`, `ds-drawer-head`
+- states: `is-left`
+
+```html
+<div class="ds-drawer is-right" role="dialog" aria-modal="true" style="position:static; width:320px; box-shadow:none; border:1px solid var(--border);">
+      <div class="ds-drawer-head">Filters</div>
+      <div class="ds-drawer-body">Status, owner and date range controls.</div>
+      <div class="ds-drawer-foot"><button class="ds-btn">Reset</button><button class="ds-btn is-primary">Apply</button></div>
+    </div>
+```
+
 ### ds-drop-placeholder
 
 _(no description yet)_
@@ -1019,6 +1034,27 @@ _(no description yet)_
               </div>
 ```
 
+### ds-menubar
+
+_(no description yet)_
+- category: Menubar
+- sub-parts: `ds-menubar-item`
+
+```html
+<div class="ds-menubar" role="menubar" aria-label="Main">
+      <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="menu" aria-expanded="true">File
+        <div class="ds-menu" role="menu" aria-label="File">
+          <div class="ds-menu-item" role="menuitem">New</div>
+          <div class="ds-menu-item" role="menuitem">Open…</div>
+          <div class="ds-menu-sep"></div>
+          <div class="ds-menu-item" role="menuitem">Quit</div>
+        </div>
+      </div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
+    </div>
+```
+
 ### ds-meter
 
 _(no description yet)_
@@ -1106,6 +1142,41 @@ _(no description yet)_
                   </div>
                 </div>
               </div>
+```
+
+### ds-page
+
+_(no description yet)_
+- category: Pagination
+
+```html
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
+```
+
+### ds-pagination
+
+_(no description yet)_
+- category: Pagination
+- sub-parts: `ds-pagination-ellipsis`
+
+```html
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
 ```
 
 ### ds-pane-first
@@ -1467,6 +1538,21 @@ _(no description yet)_
                   </div>
                 </div>
               </div>
+```
+
+### ds-steps
+
+_(no description yet)_
+- category: Steps
+- sub-parts: `ds-steps-item`, `ds-steps-num`
+- states: `is-complete`
+
+```html
+<ol class="ds-steps">
+      <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
+      <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
+      <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
+    </ol>
 ```
 
 ### ds-sub
@@ -2285,16 +2371,15 @@ _(no description yet)_
 _(no description yet)_
 
 ```html
-<div class="ds-dropdown" id="dd">
-                <button class="ds-btn" id="ddBtn">Recent files <svg><!-- icon --></svg></button>
-                <div class="ds-menu" id="ddMenu" hidden>
-                  <div class="ds-menu-label">Documents</div>
-                  <div class="ds-menu-item is-active"><svg><!-- icon --></svg>Quarterly report.pdf</div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Meeting notes.txt</div>
-                  <div class="ds-menu-sep"></div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Browse…</div>
-                </div>
-              </div>
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
 ```
 
 ### is-busy
@@ -2339,6 +2424,18 @@ _(no description yet)_
                   </div>
                 </div>
               </div>
+```
+
+### is-complete
+
+_(no description yet)_
+
+```html
+<ol class="ds-steps">
+      <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
+      <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
+      <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
+    </ol>
 ```
 
 ### is-danger
@@ -2480,6 +2577,10 @@ _(no description yet)_
 
 _(no description yet)_
 
+### is-left
+
+_(no description yet)_
+
 ### is-lg
 
 _(no description yet)_
@@ -2583,6 +2684,14 @@ _(no description yet)_
 ### is-right
 
 _(no description yet)_
+
+```html
+<div class="ds-drawer is-right" role="dialog" aria-modal="true" style="position:static; width:320px; box-shadow:none; border:1px solid var(--border);">
+      <div class="ds-drawer-head">Filters</div>
+      <div class="ds-drawer-body">Status, owner and date range controls.</div>
+      <div class="ds-drawer-foot"><button class="ds-btn">Reset</button><button class="ds-btn is-primary">Apply</button></div>
+    </div>
+```
 
 ### is-seamless
 
@@ -3022,6 +3131,25 @@ import { DsDivider } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsDrawer
+
+_(no description yet)_
+
+```ts
+import { DsDrawer } from 'design-language/vue'
+```
+- renders: `ds-drawer`, `ds-drawer-body`, `ds-drawer-foot`, `ds-drawer-head`, `ds-overlay`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| open | `boolean` | `undefined` | true |
+| side | `"right" \| "left" \| undefined` | `"right"` | false |
+| title | `string \| undefined` | `undefined` | false |
+
+**Events:** `update:open`
+
+**Slots:** `default`, `footer`
+
 ### DsDropdownMenu
 
 _(no description yet)_
@@ -3175,6 +3303,22 @@ import { DsListItem } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsMenubar
+
+_(no description yet)_
+
+```ts
+import { DsMenubar } from 'design-language/vue'
+```
+- renders: `ds-menu`, `ds-menu-item`, `ds-menu-sep`, `ds-menubar`, `ds-menubar-item`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| ariaLabel | `string \| undefined` | `undefined` | false |
+| menus | `MenubarMenu[]` | `undefined` | true |
+
+**Events:** `select`
+
 ### DsMeter
 
 _(no description yet)_
@@ -3226,6 +3370,24 @@ import { DsNumber } from 'design-language/vue'
 | step | `number \| undefined` | `1` | false |
 
 **Events:** `update:modelValue`
+
+### DsPagination
+
+_(no description yet)_
+
+```ts
+import { DsPagination } from 'design-language/vue'
+```
+- renders: `ds-page`, `ds-pagination`, `ds-pagination-ellipsis`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| page | `number \| undefined` | `1` | false |
+| pageSize | `number` | `undefined` | true |
+| siblingCount | `number \| undefined` | `1` | false |
+| total | `number` | `undefined` | true |
+
+**Events:** `update:page`
 
 ### DsPanel
 
@@ -3456,6 +3618,20 @@ import { DsStatusbar } from 'design-language/vue'
 - renders: `ds-statusbar`, `ds-statusbar-spacer`
 
 **Slots:** `end`, `start`
+
+### DsSteps
+
+_(no description yet)_
+
+```ts
+import { DsSteps } from 'design-language/vue'
+```
+- renders: `ds-steps`, `ds-steps-item`, `ds-steps-num`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| current | `string \| number` | `undefined` | true |
+| steps | `Step[]` | `undefined` | true |
 
 ### DsSwitch
 

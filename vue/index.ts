@@ -61,3 +61,7 @@ export { default as DsBreadcrumb } from "./components/DsBreadcrumb.vue";
 export { default as DsButtonGroup } from "./components/DsButtonGroup.vue";
 export { default as DsTooltip } from "./components/DsTooltip.vue";
 export { default as DsPopover } from "./components/DsPopover.vue";
+export { default as DsSteps } from "./components/DsSteps.vue";
+export { default as DsPagination } from "./components/DsPagination.vue";
+export { default as DsDrawer } from "./components/DsDrawer.vue";
+export { default as DsMenubar } from "./components/DsMenubar.vue";

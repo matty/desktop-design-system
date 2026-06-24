@@ -209,6 +209,23 @@
 </template>
             <div class="example-caption"><b>.ds-tree</b> › <b>.ds-tree-item</b> › <b>.ds-tree-row</b> + <b>.ds-tree-twisty</b> + <b>.ds-tree-label</b>. Nest children in a <code>&lt;ul&gt;</code> inside <b>.ds-tree-item</b>. Leaf nodes (no child <code>&lt;ul&gt;</code>) are auto-detected and get <b>.is-leaf</b>; their twisty is hidden. Add <b>.is-expanded</b> to pre-open a node. Keyboard: Tab into the tree, Up/Down to move, Right to expand then descend, Left to collapse then move to parent, Home/End to jump, Enter/Space to select.</div>
           </div>
+          <div class="example">
+  <div class="example-preview">
+    <nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
+  </div>
+  <template data-vue>
+<DsPagination :total="90" :page-size="10" v-model:page="page" />
+  </template>
+  <div class="example-caption">Page navigation with <code>.ds-pagination</code>.</div>
+</div>
         </section>
       </div>
     </main>

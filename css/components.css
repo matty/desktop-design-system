@@ -592,3 +592,34 @@
   background:var(--accent-soft);
 }
 .ds-drop-placeholder > * { visibility:hidden; }
+
+/* ---------- Steps ---------- */
+.ds-steps { display:flex; align-items:center; gap:var(--space-3); list-style:none; margin:0; padding:0; }
+.ds-steps-item { display:flex; align-items:center; gap:var(--space-3); color:var(--text-3); font-size:var(--fz-sm); }
+.ds-steps-num { width:22px; height:22px; flex:none; border:1px solid var(--border-strong); border-radius:var(--radius-pill); display:grid; place-items:center; font-size:var(--fz-xs); }
+.ds-steps-item.is-active { color:var(--text); }
+.ds-steps-item.is-active .ds-steps-num { border-color:var(--accent); color:var(--accent); }
+.ds-steps-item.is-complete .ds-steps-num { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.ds-steps-item + .ds-steps-item::before { content:""; width:24px; height:1px; background:var(--border); }
+
+/* ---------- Pagination ---------- */
+.ds-pagination { display:flex; align-items:center; gap:var(--space-1); }
+.ds-page { min-width:28px; height:28px; padding:0 var(--space-2); display:inline-grid; place-items:center; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--fill); color:var(--text-2); font-size:var(--fz-sm); cursor:default; }
+.ds-page:hover:not(:disabled) { background:var(--fill-hover); color:var(--text); }
+.ds-page.is-active { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.ds-page:disabled { opacity:.4; }
+.ds-pagination-ellipsis { padding:0 var(--space-2); color:var(--text-3); }
+
+/* ---------- Drawer ---------- */
+.ds-drawer { position:fixed; top:0; bottom:0; width:min(380px,90vw); display:flex; flex-direction:column; background:var(--surface); box-shadow:var(--shadow-dialog); z-index:101; }
+.ds-drawer.is-right { right:0; border-left:1px solid var(--border); }
+.ds-drawer.is-left { left:0; border-right:1px solid var(--border); }
+.ds-drawer-head { padding:16px 18px; border-bottom:1px solid var(--border-soft); font-size:var(--fz-md); font-weight:var(--fw-semibold); }
+.ds-drawer-body { flex:1; overflow:auto; padding:16px 18px; color:var(--text-2); font-size:var(--fz-sm); }
+.ds-drawer-foot { display:flex; justify-content:flex-end; gap:8px; padding:13px 18px; border-top:1px solid var(--border-soft); background:var(--rail); }
+
+/* ---------- Menubar ---------- */
+.ds-menubar { display:flex; align-items:center; gap:2px; }
+.ds-menubar-item { position:relative; padding:5px 9px; border-radius:var(--radius-sm); font-size:var(--fz-base); color:var(--text-2); cursor:default; }
+.ds-menubar-item:hover, .ds-menubar-item.is-open { background:var(--hover); color:var(--text); }
+.ds-menubar-item > .ds-menu { top:calc(100% + 4px); left:0; }

@@ -142,6 +142,26 @@
         </section>
 
         <section class="doc-section">
+          <h2>Drawer</h2>
+          <div class="example">
+  <div class="example-preview">
+    <div class="ds-drawer is-right" role="dialog" aria-modal="true" style="position:static; width:320px; box-shadow:none; border:1px solid var(--border);">
+      <div class="ds-drawer-head">Filters</div>
+      <div class="ds-drawer-body">Status, owner and date range controls.</div>
+      <div class="ds-drawer-foot"><button class="ds-btn">Reset</button><button class="ds-btn is-primary">Apply</button></div>
+    </div>
+  </div>
+  <template data-vue>
+<DsDrawer v-model:open="open" title="Filters">
+  Status, owner and date range controls.
+  <template #footer><button class="ds-btn is-primary">Apply</button></template>
+</DsDrawer>
+  </template>
+  <div class="example-caption">Slide-in side panel with <code>.ds-drawer</code>.</div>
+</div>
+        </section>
+
+        <section class="doc-section">
           <h2>Progress</h2>
           <div class="example">
             <div class="example-preview col">
