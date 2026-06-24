@@ -66,3 +66,4 @@ export { default as DsPagination } from "./components/DsPagination.vue";
 export { default as DsDrawer } from "./components/DsDrawer.vue";
 export { default as DsMenubar } from "./components/DsMenubar.vue";
 export { default as DsSplitButton } from "./components/DsSplitButton.vue";
+export { default as DsCommandPalette } from "./components/DsCommandPalette.vue";

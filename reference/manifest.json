@@ -622,6 +622,22 @@
       ]
     },
     {
+      "name": "ds-command",
+      "type": "primitive",
+      "category": "Command palette",
+      "description": "",
+      "subParts": [
+        "ds-command-hint",
+        "ds-command-input",
+        "ds-command-item",
+        "ds-command-list"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-command\" style=\"margin-top:0; box-shadow:none;\">\n                <input class=\"ds-command-input\" placeholder=\"Type a command…\" value=\"\" aria-label=\"Command\" />\n                <div class=\"ds-command-list\" role=\"listbox\">\n                  <div class=\"ds-command-item is-active\" role=\"option\">New File<span class=\"ds-command-hint\">Ctrl+N</span></div>\n                  <div class=\"ds-command-item\" role=\"option\">Open Folder…</div>\n                  <div class=\"ds-command-item\" role=\"option\">Save All<span class=\"ds-command-hint\">Ctrl+S</span></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
       "name": "ds-context-menu",
       "type": "primitive",
       "category": "Context menu (cursor-positioned .ds-menu)",
@@ -2147,6 +2163,7 @@
         "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>",
         "<ol class=\"ds-steps\">\n      <li class=\"ds-steps-item is-complete\"><span class=\"ds-steps-num\">1</span>Account</li>\n      <li class=\"ds-steps-item is-active\"><span class=\"ds-steps-num\">2</span>Profile</li>\n      <li class=\"ds-steps-item\"><span class=\"ds-steps-num\">3</span>Done</li>\n    </ol>",
         "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
+        "<div class=\"ds-command\" style=\"margin-top:0; box-shadow:none;\">\n                <input class=\"ds-command-input\" placeholder=\"Type a command…\" value=\"\" aria-label=\"Command\" />\n                <div class=\"ds-command-list\" role=\"listbox\">\n                  <div class=\"ds-command-item is-active\" role=\"option\">New File<span class=\"ds-command-hint\">Ctrl+N</span></div>\n                  <div class=\"ds-command-item\" role=\"option\">Open Folder…</div>\n                  <div class=\"ds-command-item\" role=\"option\">Save All<span class=\"ds-command-hint\">Ctrl+S</span></div>\n                </div>\n              </div>",
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
     },
@@ -2965,6 +2982,56 @@
         {
           "name": "update:modelValue",
           "type": "[string | string[] | null]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsCommandPalette",
+      "type": "component",
+      "import": "import { DsCommandPalette } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-command",
+        "ds-command-hint",
+        "ds-command-input",
+        "ds-command-item",
+        "ds-command-list",
+        "ds-overlay"
+      ],
+      "props": [
+        {
+          "name": "commands",
+          "type": "CommandItem[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string | undefined",
+          "default": "\"Type a command\\u2026\"",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "[string]",
+          "description": ""
+        },
+        {
+          "name": "update:open",
+          "type": "[boolean]",
           "description": ""
         }
       ],

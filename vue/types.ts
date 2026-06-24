@@ -42,3 +42,5 @@ export interface ToastOptions {
 
 export type Tone = "info" | "success" | "warning" | "danger";
 export type Size = "sm" | "md" | "lg";
+
+export interface CommandItem { id: string; label: string; hint?: string; group?: string }

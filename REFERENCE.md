@@ -677,6 +677,23 @@ _(no description yet)_
               </div>
 ```
 
+### ds-command
+
+_(no description yet)_
+- category: Command palette
+- sub-parts: `ds-command-hint`, `ds-command-input`, `ds-command-item`, `ds-command-list`
+
+```html
+<div class="ds-command" style="margin-top:0; box-shadow:none;">
+                <input class="ds-command-input" placeholder="Type a command…" value="" aria-label="Command" />
+                <div class="ds-command-list" role="listbox">
+                  <div class="ds-command-item is-active" role="option">New File<span class="ds-command-hint">Ctrl+N</span></div>
+                  <div class="ds-command-item" role="option">Open Folder…</div>
+                  <div class="ds-command-item" role="option">Save All<span class="ds-command-hint">Ctrl+S</span></div>
+                </div>
+              </div>
+```
+
 ### ds-context-menu
 
 _(no description yet)_
@@ -3097,6 +3114,23 @@ import { DsCombobox } from 'design-language/vue'
 | placeholder | `string \| undefined` | `"Select\u2026"` | false |
 
 **Events:** `update:modelValue`
+
+### DsCommandPalette
+
+_(no description yet)_
+
+```ts
+import { DsCommandPalette } from 'design-language/vue'
+```
+- renders: `ds-command`, `ds-command-hint`, `ds-command-input`, `ds-command-item`, `ds-command-list`, `ds-overlay`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| commands | `CommandItem[]` | `undefined` | true |
+| open | `boolean` | `undefined` | true |
+| placeholder | `string \| undefined` | `"Type a command\u2026"` | false |
+
+**Events:** `select`, `update:open`
 
 ### DsContextMenu
 
