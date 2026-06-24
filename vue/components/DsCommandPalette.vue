@@ -30,7 +30,8 @@ watch(
       activeIndex.value = 0;
       nextTick(() => input.value?.focus());
     }
-  }
+  },
+  { immediate: true }
 );
 watch(filtered, () => (activeIndex.value = 0));
 
@@ -63,7 +64,7 @@ function onKey(e: KeyboardEvent) {
 <template>
   <Teleport to="body">
     <div v-if="open" class="ds-overlay">
-      <div ref="panel" class="ds-command" role="dialog" aria-modal="true" @keydown="onKey">
+      <div ref="panel" class="ds-command" role="dialog" aria-modal="true" aria-label="Command Palette" @keydown="onKey">
         <input
           ref="input"
           v-model="query"
