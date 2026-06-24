@@ -3552,6 +3552,22 @@ import { DsToolbar } from 'design-language/vue'
 
 **Slots:** `default`, `start`
 
+### DsTooltip
+
+_(no description yet)_
+
+```ts
+import { DsTooltip } from 'design-language/vue'
+```
+- renders: `ds-tip`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| placement | `"top" \| undefined` | `undefined` | false |
+| text | `string` | `undefined` | true |
+
+**Slots:** `default`
+
 ### DsTree
 
 _(no description yet)_

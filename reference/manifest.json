@@ -4198,6 +4198,38 @@
       ]
     },
     {
+      "name": "DsTooltip",
+      "type": "component",
+      "import": "import { DsTooltip } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-tip"
+      ],
+      "props": [
+        {
+          "name": "placement",
+          "type": "\"top\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
       "name": "DsTree",
       "type": "component",
       "import": "import { DsTree } from 'design-language/vue'",

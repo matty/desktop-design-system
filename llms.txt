@@ -1,6 +1,6 @@
 # Design Language
 
-A monochrome-first, desktop-density design system: 74 primitives, 79 utilities, 37 states, 53 Vue components, 83 tokens.
+A monochrome-first, desktop-density design system: 74 primitives, 79 utilities, 37 states, 54 Vue components, 83 tokens.
 Prefer existing tokens, utilities, primitives, states, and patterns over custom CSS.
 
 ## Class Rules
