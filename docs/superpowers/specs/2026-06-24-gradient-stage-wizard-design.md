@@ -25,6 +25,7 @@ Both layers are token-driven and share the same class names, per repo grammar.
 From `C:\Users\coding\Desktop\src\components\StartupGuide.vue`:
 
 ```css
+/* SOURCE app — uses the source app's token vocabulary, NOT ours: */
 .startup-guide {
   height: 100vh;
   padding: 54px 18px 18px;
@@ -34,7 +35,7 @@ From `C:\Users\coding\Desktop\src\components\StartupGuide.vue`:
   overflow: auto;
   background:
     radial-gradient(circle at top left, var(--accent-soft), transparent 34%),
-    var(--bg-body);
+    var(--bg-body);   /* ← source token; in THIS repo the body bg is `--bg` */
 }
 ```
 
@@ -42,8 +43,22 @@ The original also has a 460px centered panel (`.startup-panel`), an intro block
 (eyebrow + h1 + copy), a vertical "scan rail" of two checks each with a state-driven
 status icon + title + note, an optional error line, and a right-aligned actions row.
 
-The target repo already defines `--accent-soft` and `--bg-body`, so the gradient
-ports with **zero new tokens**.
+**Token translation (critical):** the source app's token names are NOT our token
+names. The gradient ports with **zero new tokens**, but must be rewritten against
+this repo's vocabulary:
+
+| Source token       | This repo (`css/tokens.css`)        |
+|--------------------|-------------------------------------|
+| `--bg-body`        | `--bg`                              |
+| `--accent-soft`    | `--accent-soft` (same — exists)     |
+| `--text-dim`       | `--text-3` (muted), `--text-2` (secondary) |
+| `--status-success` | `--success`                         |
+| `--status-danger`  | `--danger`                          |
+| `--border-subtle`  | `--border-soft`                     |
+| radius `8px`       | `--radius`                          |
+
+So the ported background is:
+`radial-gradient(circle at top left, var(--accent-soft), transparent 34%), var(--bg)`.
 
 ## Decisions (locked)
 
@@ -67,7 +82,7 @@ user wants a Vue handle for the wizard backdrop).
 
 - Fills its container height (`min-height: 100%` / `100vh` at root), centers a single
   child both axes, scrolls on overflow.
-- Background: `radial-gradient(circle at top left, var(--accent-soft), transparent 34%), var(--bg-body)`.
+- Background: `radial-gradient(circle at top left, var(--accent-soft), transparent 34%), var(--bg)`.
 - Top padding accommodates a titlebar (matches source `54px` top), comfortable side
   padding, responsive.
 - Purely presentational — no interactivity, no ARIA role of its own.
@@ -92,17 +107,26 @@ The state-driven progress rail. A vertical list where each item shows a status i
 a title, and a note, driven by an item state.
 
 **State model:** `pending | running | ok | warn | error` (mirrors the source
-`StepState`). State drives both the icon and the icon color:
+`StepState`). State drives both the indicator and its color. **All required icons
+already exist in `icons/approved.json` (`check`, `close`, `warning`) — no new icon
+entries needed.** The `running` indicator reuses the existing spinner, not an icon.
 
-| state     | icon (semantic name)      | color token              |
-|-----------|---------------------------|--------------------------|
-| pending   | circle-outline            | `--text-dim`             |
-| running   | spinner (animated)        | `--text-dim`             |
-| ok        | check-circle              | `--status-success`       |
-| warn      | alert-circle              | `--status-danger`        |
-| error     | close-circle              | `--status-danger`        |
+| state     | indicator                              | color token   |
+|-----------|----------------------------------------|---------------|
+| pending   | hollow dot (CSS outline circle)        | `--text-3`    |
+| running   | `.ds-spinner` (existing component)     | (spinner)     |
+| ok        | `check` icon                           | `--success`   |
+| warn      | `warning` icon                         | `--danger`    |
+| error     | `close` icon                           | `--danger`    |
 
-(Exact icon ids resolved against `icons/approved.json`; add entries if missing.)
+Notes:
+- `running` uses the repo's existing spinner — `.ds-spinner` (`components.css:370`,
+  animated by `@keyframes ds-spin`) in static markup, and the `DsSpinner` component
+  in Vue. Do **not** invent a spinner icon or a new keyframes block.
+- `pending` needs no icon: a hollow outline circle drawn with CSS on
+  `.ds-checklist-ico` (border + border-radius, `--text-3`/`--border-soft`).
+- `DsIcon` renders empty for unknown names (`DsIcon.vue` returns `""`), so only use
+  the three confirmed-existing icon ids above.
 
 **Static structure** (in `components.css`):
 
@@ -119,11 +143,12 @@ a title, and a note, driven by an item state.
 </ul>
 ```
 
-- `data-state` selectors color the icon and (optionally) tint the row.
-- `running` icon spins via an existing/`@keyframes` animation; suppressed under
-  `prefers-reduced-motion: reduce`.
+- `data-state` selectors color the indicator and (optionally) tint the row.
+- `running` uses `.ds-spinner`, whose `ds-spin` animation is already globally
+  suppressed under `prefers-reduced-motion: reduce` (`base.css:45`). No extra
+  reduced-motion CSS needed for the checklist.
 - Grid layout `28px 1fr` like the source, min row height, subtle border + radius
-  using existing tokens (`--border-subtle`, `--radius`/`8px` equivalent token).
+  using existing tokens (`--border-soft`, `--radius`).
 
 **Vue API (`DsChecklist.vue`):**
 
@@ -139,20 +164,30 @@ a title, and a note, driven by an item state.
 
 - **Card:** `DsPanel` / `.ds-panel` (+ `.ds-panel-head`, `.ds-panel-body`).
 - **Actions:** `DsButton` / `.ds-btn` (`.is-primary` + default/secondary).
-- **Intro:** `.ds-h1` for title, existing eyebrow/muted text classes for eyebrow +
-  copy. If no eyebrow class exists, use a small uppercase `.ds-sub`/muted treatment
-  rather than inventing one.
-- **Error line:** existing alert/danger treatment (`.ds-alert is-danger` or the
-  status-danger background pattern) instead of a bespoke `.error-detail`.
+- **Intro:** `.ds-h1` exists (`components.css:8`) for the title. There is **no**
+  dedicated eyebrow class, so render the eyebrow as a small uppercase muted treatment
+  using `.ds-sub` (`components.css:10`) — do not invent an eyebrow class.
+- **Error line:** existing `.ds-alert.is-danger` (`components.css:298`) instead of a
+  bespoke `.error-detail`.
 
 ## Documentation
 
-- **Patterns page** (`pages/patterns.html`): add a new `doc-section`
-  **"Setup / Onboarding screen"** demonstrating the full composition —
-  `.ptn-stage` wrapping a `.ds-panel` containing intro + `.ds-checklist` + actions.
-  This is the canonical "full wizard, decomposed" example.
-- **Component docs:** add a `.ds-checklist` example to the most fitting existing
-  page (Feedback or Data Display) showing all five states.
+**Coverage gate (must satisfy `coverage:check`, run by `npm run build`):**
+`tools/coverage-core.mjs` flags any extracted primitive with zero examples in
+`pages/*.html`. Both `.ptn-stage` and `.ds-checklist` are new primitives, so **each
+needs at least one standalone example** — a composed-only demo may not register the
+inner primitive. Plan:
+
+- **Patterns page** (`pages/patterns.html`): add a `doc-section`
+  **"Gradient Stage"** with a minimal standalone `.ptn-stage` example (so the
+  pattern is covered on its own), AND a `doc-section` **"Setup / Onboarding screen"**
+  demonstrating the full composition — `.ptn-stage` wrapping a `.ds-panel` containing
+  intro + `.ds-checklist` + actions (the canonical "full wizard, decomposed"
+  example).
+- **Component docs:** add a standalone `.ds-checklist` example to the most fitting
+  existing page (Feedback) showing all five states.
+- After editing pages, re-run `coverage:check` and confirm both primitives report
+  covered before declaring done.
 - Both new components must appear in the generated catalog: run
   `npm run reference:build` to refresh `reference/manifest.json`, `REFERENCE.md`,
   and `llms.txt`.
@@ -173,9 +208,11 @@ Edited:
 - `vue/types.ts` — add `ChecklistState`, `ChecklistItem`.
 - `vue/index.ts` — export `DsStage`, `DsChecklist`.
 - `pages/patterns.html` — onboarding screen section.
-- `pages/feedback.html` (or `data-display.html`) — checklist states example.
-- `icons/approved.json` — any missing status icon ids.
+- `pages/feedback.html` — checklist states example.
 - Regenerated: `reference/manifest.json`, `REFERENCE.md`, `llms.txt`.
+
+Explicitly **not** edited: `icons/approved.json` — all required icons (`check`,
+`close`, `warning`) already exist.
 
 ## Testing & verification
 
@@ -184,9 +221,11 @@ Edited:
   slot.
 - **Stories (Storybook):** `DsStage` (panel-on-glow), `DsChecklist` (all five
   states), and a combined onboarding story.
-- **Manual:** verify in dark + light themes and compact density; confirm the glow
-  reads correctly on both `--bg-body` values; check keyboard focus on the composed
-  buttons; confirm the `running` spinner halts under reduced motion.
+- **Manual:** verify in dark + light themes; confirm the glow reads correctly on both
+  `--bg` values (near-black vs light gray); check keyboard focus on the composed
+  buttons; confirm the `running` spinner halts under reduced motion (handled globally
+  by `base.css:45`). Note: compact density only retunes control height/font tokens,
+  not the checklist's fixed `28px` grid, so density is not a meaningful axis here.
 - **Build gates:** `npm run build` (icon registry + multi-page docs) and the existing
   alignment/coverage gate must pass.
 
