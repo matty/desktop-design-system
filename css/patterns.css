@@ -33,7 +33,14 @@
   align-items:center;
   justify-content:center;
   overflow:auto;
+  /* Eased multi-stop falloff interpolated in oklab minimises 8-bit colour
+     banding in the accent glow without a noise/grain overlay. */
   background:
-    radial-gradient(circle at top left, var(--accent-soft), transparent 34%),
+    radial-gradient(circle at top left in oklab,
+      var(--accent-soft) 0%,
+      color-mix(in oklab, var(--accent-soft), transparent 30%) 7%,
+      color-mix(in oklab, var(--accent-soft), transparent 62%) 16%,
+      color-mix(in oklab, var(--accent-soft), transparent 84%) 25%,
+      transparent 34%),
     var(--bg);
 }
