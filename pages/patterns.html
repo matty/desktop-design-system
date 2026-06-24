@@ -34,6 +34,37 @@
         </section>
 
         <section class="doc-section">
+          <h2>Setup / Onboarding screen</h2>
+          <p class="desc">The full wizard, decomposed: <code class="chip">.ptn-stage</code> + <code class="chip">.ds-panel</code> + <code class="chip">.ds-checklist</code> + <code class="chip">.ds-btn</code>. No bespoke wizard component — just composition.</p>
+          <div class="example">
+            <div class="example-preview">
+              <div style="width:100%; overflow:hidden; border-radius:var(--radius)">
+                <div class="ptn-stage" style="height:480px; min-height:0; padding:24px 18px">
+                  <section class="ds-panel" style="width:min(460px,100%)">
+                    <div class="ds-panel-body u-stack u-gap-5">
+                      <div class="u-stack u-gap-1">
+                        <span class="ds-sub" style="text-transform:uppercase; font-weight:700; letter-spacing:.04em">First run</span>
+                        <h3 class="ds-h1">Getting started</h3>
+                        <p class="ds-sub">A quick scan checks Bluetooth and finds any nearby base stations.</p>
+                      </div>
+                      <ul class="ds-checklist" aria-live="polite">
+                        <li class="ds-checklist-item" data-state="ok"><span class="ds-checklist-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6 9 17l-5-5"/></svg></span><span class="ds-checklist-text"><span class="ds-checklist-title">Bluetooth adapter</span><span class="ds-checklist-note">Ready</span></span></li>
+                        <li class="ds-checklist-item" data-state="ok"><span class="ds-checklist-ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6 9 17l-5-5"/></svg></span><span class="ds-checklist-text"><span class="ds-checklist-title">Initial scan</span><span class="ds-checklist-note">Found 2 base stations</span></span></li>
+                      </ul>
+                      <div class="u-cluster u-gap-2" style="justify-content:flex-end">
+                        <button class="ds-btn">Scan again</button>
+                        <button class="ds-btn is-primary">Continue</button>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="example-caption"><b>.ptn-stage</b> · <b>.ds-panel</b> · <b>.ds-checklist</b> · <b>.ds-btn</b></div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Settings Screen</h2>
           <p class="desc"><code class="chip">.u-content</code>, <code class="chip">.u-stack</code>, <code class="chip">.ds-panel</code>, <code class="chip">.u-settings-list</code>, and <code class="chip">.ds-row</code> create dense preference screens.</p>
           <div class="example">

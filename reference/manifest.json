@@ -555,6 +555,7 @@
         "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>",
         "<div class=\"ds-drawer is-right\" role=\"dialog\" aria-modal=\"true\" style=\"position:static; width:320px; box-shadow:none; border:1px solid var(--border);\">\n      <div class=\"ds-drawer-head\">Filters</div>\n      <div class=\"ds-drawer-body\">Status, owner and date range controls.</div>\n      <div class=\"ds-drawer-foot\"><button class=\"ds-btn\">Reset</button><button class=\"ds-btn is-primary\">Apply</button></div>\n    </div>",
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
@@ -601,6 +602,24 @@
       "states": [],
       "examples": [
         "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-checklist",
+      "type": "primitive",
+      "category": "Checklist (state-driven progress rail)",
+      "description": "",
+      "subParts": [
+        "ds-checklist-ico",
+        "ds-checklist-item",
+        "ds-checklist-note",
+        "ds-checklist-text",
+        "ds-checklist-title"
+      ],
+      "states": [],
+      "examples": [
+        "<ul class=\"ds-checklist\" aria-live=\"polite\" style=\"width:min(420px,100%)\">\n                <li class=\"ds-checklist-item\" data-state=\"pending\"><span class=\"ds-checklist-ico\"></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Queued</span><span class=\"ds-checklist-note\">Waiting to start</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"running\"><span class=\"ds-checklist-ico\"><span class=\"ds-spinner\"></span></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Scanning</span><span class=\"ds-checklist-note\">Checking</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Connected</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"warn\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">No devices</span><span class=\"ds-checklist-note\">None found</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"error\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Failed</span><span class=\"ds-checklist-note\">Unavailable</span></span></li>\n              </ul>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
       ]
     },
     {
@@ -862,7 +881,8 @@
       "states": [],
       "examples": [
         "<div class=\"ds-card\" style=\"padding:16px; min-width:160px\">\n                <div class=\"ds-label\">Storage</div>\n                <div class=\"ds-h1\">68%</div>\n                <div class=\"ds-muted\">of 512 GB used</div>\n              </div>",
-        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1129,7 +1149,9 @@
       "states": [],
       "examples": [
         "<div class=\"ds-panel\">\n                <div class=\"ds-panel-head\"><h3>Service status</h3><span class=\"ds-status is-on\"><span class=\"ds-dot\"></span>Online</span></div>\n                <div class=\"ds-facts cols-2\">\n                  <div class=\"ds-fact\"><div class=\"k\">Version</div><div class=\"v\">2.4.0</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Channel</div><div class=\"v\">Stable</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Region</div><div class=\"v\">us-east-1</div></div>\n                  <div class=\"ds-fact\"><div class=\"k\">Uptime</div><div class=\"v\">4d 12:41</div></div>\n                </div>\n              </div>",
-        "<div class=\"ds-panel u-w-full\">\n                <div class=\"ds-panel-head\"><h3>Resource usage</h3><span class=\"ds-value\" style=\"color:var(--text-3)\">5 channels</span></div>\n                <div class=\"ds-panel-body\" id=\"meters\"></div>\n              </div>"
+        "<div class=\"ds-panel u-w-full\">\n                <div class=\"ds-panel-head\"><h3>Resource usage</h3><span class=\"ds-value\" style=\"color:var(--text-3)\">5 channels</span></div>\n                <div class=\"ds-panel-body\" id=\"meters\"></div>\n              </div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:320px; min-height:0\">\n                  <section class=\"ds-panel\" style=\"width:min(360px,100%)\">\n                    <div class=\"ds-panel-body\">Centered content on the gradient stage.</div>\n                  </section>\n                </div>\n              </div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1270,6 +1292,7 @@
       "subParts": [],
       "states": [],
       "examples": [
+        "<ul class=\"ds-checklist\" aria-live=\"polite\" style=\"width:min(420px,100%)\">\n                <li class=\"ds-checklist-item\" data-state=\"pending\"><span class=\"ds-checklist-ico\"></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Queued</span><span class=\"ds-checklist-note\">Waiting to start</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"running\"><span class=\"ds-checklist-ico\"><span class=\"ds-spinner\"></span></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Scanning</span><span class=\"ds-checklist-note\">Checking</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Connected</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"warn\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">No devices</span><span class=\"ds-checklist-note\">None found</span></span></li>\n                <li class=\"ds-checklist-item\" data-state=\"error\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Failed</span><span class=\"ds-checklist-note\">Unavailable</span></span></li>\n              </ul>",
         "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
       ]
     },
@@ -1380,7 +1403,8 @@
       "subParts": [],
       "states": [],
       "examples": [
-        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>"
+        "<div class=\"ds-h1\">Heading one</div>\n              <div class=\"ds-sub\">Secondary subtitle text</div>\n              <div class=\"ds-label\">Section label</div>\n              <div class=\"ds-muted\">Muted helper text</div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
       ]
     },
     {
@@ -1627,7 +1651,9 @@
       "type": "utility",
       "category": "",
       "description": "",
-      "examples": []
+      "examples": [
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "u-col",
@@ -1709,7 +1735,9 @@
       "type": "utility",
       "category": "",
       "description": "",
-      "examples": []
+      "examples": [
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "u-gap-2",
@@ -1717,6 +1745,7 @@
       "category": "",
       "description": "",
       "examples": [
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>",
         "<div class=\"ds-avatar is-lg\">M</div>\n            <div class=\"ds-avatar\">VR</div>\n            <div class=\"ds-avatar is-sm\">ab</div>\n            <span class=\"ds-spinner\"></span>\n            <span class=\"ds-spinner is-lg\"></span>\n            <div class=\"u-flex u-col u-gap-2\" style=\"width:200px\">\n              <div class=\"ds-skeleton text\" style=\"width:70%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:100%\"></div>\n              <div class=\"ds-skeleton text\" style=\"width:45%\"></div>\n            </div>"
       ]
     },
@@ -1739,7 +1768,9 @@
       "type": "utility",
       "category": "",
       "description": "",
-      "examples": []
+      "examples": [
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "u-gap-6",
@@ -2061,7 +2092,9 @@
       "type": "utility",
       "category": "",
       "description": "Vertical flex stack; pair with .u-gap-* for spacing.",
-      "examples": []
+      "examples": [
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>"
+      ]
     },
     {
       "name": "u-text-1",
@@ -2398,6 +2431,7 @@
         "<div class=\"ds-split-btn\">\n                <button class=\"ds-btn is-primary\">Save</button>\n                <button class=\"ds-btn is-primary ds-split-caret\" aria-haspopup=\"menu\" aria-label=\"More actions\">▾</button>\n                <div class=\"ds-menu\" role=\"menu\">\n                  <div class=\"ds-menu-item\" role=\"menuitem\">Save as…</div>\n                  <div class=\"ds-menu-item\" role=\"menuitem\">Save a copy</div>\n                </div>\n              </div>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
         "<div class=\"ds-drawer is-right\" role=\"dialog\" aria-modal=\"true\" style=\"position:static; width:320px; box-shadow:none; border:1px solid var(--border);\">\n      <div class=\"ds-drawer-head\">Filters</div>\n      <div class=\"ds-drawer-body\">Status, owner and date range controls.</div>\n      <div class=\"ds-drawer-foot\"><button class=\"ds-btn\">Reset</button><button class=\"ds-btn is-primary\">Apply</button></div>\n    </div>",
+        "<div style=\"width:100%; overflow:hidden; border-radius:var(--radius)\">\n                <div class=\"ptn-stage\" style=\"height:480px; min-height:0; padding:24px 18px\">\n                  <section class=\"ds-panel\" style=\"width:min(460px,100%)\">\n                    <div class=\"ds-panel-body u-stack u-gap-5\">\n                      <div class=\"u-stack u-gap-1\">\n                        <span class=\"ds-sub\" style=\"text-transform:uppercase; font-weight:700; letter-spacing:.04em\">First run</span>\n                        <h3 class=\"ds-h1\">Getting started</h3>\n                        <p class=\"ds-sub\">A quick scan checks Bluetooth and finds any nearby base stations.</p>\n                      </div>\n                      <ul class=\"ds-checklist\" aria-live=\"polite\">\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Bluetooth adapter</span><span class=\"ds-checklist-note\">Ready</span></span></li>\n                        <li class=\"ds-checklist-item\" data-state=\"ok\"><span class=\"ds-checklist-ico\"><svg><!-- icon --></svg></span><span class=\"ds-checklist-text\"><span class=\"ds-checklist-title\">Initial scan</span><span class=\"ds-checklist-note\">Found 2 base stations</span></span></li>\n                      </ul>\n                      <div class=\"u-cluster u-gap-2\" style=\"justify-content:flex-end\">\n                        <button class=\"ds-btn\">Scan again</button>\n                        <button class=\"ds-btn is-primary\">Continue</button>\n                      </div>\n                    </div>\n                  </section>\n                </div>\n              </div>",
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
         "<div class=\"u-split u-w-full\">\n                <h2 class=\"ds-h2\">Workspace</h2>\n                <button class=\"ds-btn is-primary is-sm\">Save</button>\n              </div>"
       ]
@@ -2529,6 +2563,13 @@
     },
     {
       "name": "ptn-inspector",
+      "type": "pattern",
+      "category": "",
+      "description": "",
+      "examples": []
+    },
+    {
+      "name": "ptn-stage",
       "type": "pattern",
       "category": "",
       "description": "",
@@ -2971,6 +3012,31 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "DsChecklist",
+      "type": "component",
+      "import": "import { DsChecklist } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-checklist",
+        "ds-checklist-ico",
+        "ds-checklist-item",
+        "ds-checklist-note",
+        "ds-checklist-text",
+        "ds-checklist-title"
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "ChecklistItem[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
     },
     {
       "name": "DsChip",
@@ -4421,6 +4487,21 @@
         },
         {
           "name": "second",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsStage",
+      "type": "component",
+      "import": "import { DsStage } from 'design-language/vue'",
+      "description": "",
+      "renders": [],
+      "props": [],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
           "description": ""
         }
       ]
