@@ -70,3 +70,4 @@ export { default as DsCommandPalette } from "./components/DsCommandPalette.vue";
 export { default as DsCalendar } from "./components/DsCalendar.vue";
 export { default as DsDatePicker } from "./components/DsDatePicker.vue";
 export { default as DsChecklist } from "./components/DsChecklist.vue";
+export { default as DsStage } from "./components/DsStage.vue";
