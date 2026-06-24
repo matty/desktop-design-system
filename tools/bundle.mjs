@@ -29,6 +29,10 @@ await build({ ...cssOpts, outfile: resolve(out, "design-language.min.css"), mini
 await copyFile(resolve(root, "js/ds.js"), resolve(out, "ds.js"));
 await copyFile(resolve(root, "js/vendor/sortable.min.js"), resolve(out, "sortable.min.js"));
 
+// 2b. Self-update helpers — re-download + swap this bundle to a newer release.
+await copyFile(resolve(root, "tools/bundle-update.sh"), resolve(out, "update.sh"));
+await copyFile(resolve(root, "tools/bundle-update.ps1"), resolve(out, "update.ps1"));
+
 // 3. Icons: curated registry + approved map + full offline catalog + generator + helper.
 await copyFile(resolve(root, "icons/registry.json"), resolve(out, "icons/registry.json"));
 await copyFile(resolve(root, "icons/approved.json"), resolve(out, "icons/approved.json"));

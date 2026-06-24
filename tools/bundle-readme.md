@@ -13,7 +13,27 @@ A self-contained, offline copy of the design language. No network or build step 
 - `REFERENCE.md` / `reference-manifest.json` — the full design-system catalog (every token, class, state, mode, pattern, component) in human- and machine-readable form.
 - `llms.txt` / `LLM_GUIDE.md` — orientation, rules, and examples for AI tools. Start here for automated setup (see below).
 - `lint-usage.mjs` — validator that flags off-grammar classes/components/props.
+- `update.sh` / `update.ps1` — update this bundle to a newer release (see below).
 - `manifest.json`, `VERSION`, `THIRD_PARTY_LICENSES.md`.
+
+## Updating
+
+This bundle is vendored (copied into your app), so updating means swapping it for
+a newer release. The included helper does that for you — run it from your app,
+passing the target version:
+
+```bash
+bash src/design-language/update.sh 0.2.0          # macOS/Linux/Git Bash
+pwsh src/design-language/update.ps1 0.2.0          # Windows PowerShell
+```
+
+It downloads the release, verifies the checksum, and clean-swaps this folder in
+place (no stale files). It refuses to run if the folder has uncommitted git
+changes, so commit local tweaks (e.g. extended icons) first — then review the
+update as a diff. Requires the GitHub CLI (`gh`). Override the source repo or
+target dir with the `DL_REPO` / `DL_DEST` environment variables.
+
+You're currently on the version in `VERSION`.
 
 ## Automated setup (LLMs)
 

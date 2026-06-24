@@ -16,6 +16,8 @@ const CRITICAL_FILES = [
   "design-language.min.css",
   "ds.js",
   "sortable.min.js",
+  "update.sh",
+  "update.ps1",
   "icons/registry.json",
   "icons/approved.json",
   "icons/lucide-catalog.json",
