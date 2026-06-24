@@ -67,3 +67,5 @@ export { default as DsDrawer } from "./components/DsDrawer.vue";
 export { default as DsMenubar } from "./components/DsMenubar.vue";
 export { default as DsSplitButton } from "./components/DsSplitButton.vue";
 export { default as DsCommandPalette } from "./components/DsCommandPalette.vue";
+export { default as DsCalendar } from "./components/DsCalendar.vue";
+export { default as DsDatePicker } from "./components/DsDatePicker.vue";

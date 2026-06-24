@@ -263,6 +263,46 @@
         </section>
 
         <section class="doc-section">
+          <h2>Calendar</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-calendar">
+                <div class="ds-calendar-head">
+                  <button class="ds-calendar-nav" aria-label="Previous month">‹</button>
+                  <span class="ds-calendar-title">June 2026</span>
+                  <button class="ds-calendar-nav" aria-label="Next month">›</button>
+                </div>
+                <div class="ds-calendar-grid" role="grid">
+                  <span class="ds-calendar-weekday">Mon</span><span class="ds-calendar-weekday">Tue</span><span class="ds-calendar-weekday">Wed</span><span class="ds-calendar-weekday">Thu</span><span class="ds-calendar-weekday">Fri</span><span class="ds-calendar-weekday">Sat</span><span class="ds-calendar-weekday">Sun</span>
+                  <button class="ds-calendar-day">1</button><button class="ds-calendar-day">2</button><button class="ds-calendar-day is-today">3</button><button class="ds-calendar-day">4</button><button class="ds-calendar-day">5</button><button class="ds-calendar-day">6</button><button class="ds-calendar-day">7</button>
+                  <button class="ds-calendar-day">8</button><button class="ds-calendar-day">9</button><button class="ds-calendar-day">10</button><button class="ds-calendar-day">11</button><button class="ds-calendar-day">12</button><button class="ds-calendar-day">13</button><button class="ds-calendar-day">14</button>
+                  <button class="ds-calendar-day is-selected">15</button><button class="ds-calendar-day">16</button><button class="ds-calendar-day">17</button><button class="ds-calendar-day">18</button><button class="ds-calendar-day">19</button><button class="ds-calendar-day">20</button><button class="ds-calendar-day">21</button>
+                </div>
+              </div>
+            </div>
+            <template data-vue>
+<DsCalendar v-model="date" month="2026-06" />
+            </template>
+            <div class="example-caption">Month grid with <code>.ds-calendar</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Date picker</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-popover-anchor">
+                <input class="ds-input" type="text" readonly value="2026-06-15" aria-haspopup="dialog" style="width:160px;" />
+              </div>
+            </div>
+            <template data-vue>
+<DsDatePicker v-model="date" />
+            </template>
+            <div class="example-caption">Date field opening a calendar; composes <code>.ds-input</code> + <code>.ds-popover</code> + <code>DsCalendar</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Filterable &amp; multi-select combobox</h2>
           <p class="desc">Three combo modes: filterable single-select, multi-select with chips, and multi-select checklist.</p>
           <div class="example">

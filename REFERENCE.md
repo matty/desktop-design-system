@@ -583,6 +583,29 @@ Button. Add .is-primary for the single main action, .is-ghost for low-emphasis, 
               <button class="ds-btn" disabled>Disabled</button>
 ```
 
+### ds-calendar
+
+_(no description yet)_
+- category: Calendar
+- sub-parts: `ds-calendar-day`, `ds-calendar-grid`, `ds-calendar-head`, `ds-calendar-nav`, `ds-calendar-title`, `ds-calendar-weekday`
+- states: `is-outside`, `is-today`
+
+```html
+<div class="ds-calendar">
+                <div class="ds-calendar-head">
+                  <button class="ds-calendar-nav" aria-label="Previous month">‹</button>
+                  <span class="ds-calendar-title">June 2026</span>
+                  <button class="ds-calendar-nav" aria-label="Next month">›</button>
+                </div>
+                <div class="ds-calendar-grid" role="grid">
+                  <span class="ds-calendar-weekday">Mon</span><span class="ds-calendar-weekday">Tue</span><span class="ds-calendar-weekday">Wed</span><span class="ds-calendar-weekday">Thu</span><span class="ds-calendar-weekday">Fri</span><span class="ds-calendar-weekday">Sat</span><span class="ds-calendar-weekday">Sun</span>
+                  <button class="ds-calendar-day">1</button><button class="ds-calendar-day">2</button><button class="ds-calendar-day is-today">3</button><button class="ds-calendar-day">4</button><button class="ds-calendar-day">5</button><button class="ds-calendar-day">6</button><button class="ds-calendar-day">7</button>
+                  <button class="ds-calendar-day">8</button><button class="ds-calendar-day">9</button><button class="ds-calendar-day">10</button><button class="ds-calendar-day">11</button><button class="ds-calendar-day">12</button><button class="ds-calendar-day">13</button><button class="ds-calendar-day">14</button>
+                  <button class="ds-calendar-day is-selected">15</button><button class="ds-calendar-day">16</button><button class="ds-calendar-day">17</button><button class="ds-calendar-day">18</button><button class="ds-calendar-day">19</button><button class="ds-calendar-day">20</button><button class="ds-calendar-day">21</button>
+                </div>
+              </div>
+```
+
 ### ds-card
 
 Bordered surface container for grouped content.
@@ -2708,6 +2731,10 @@ _(no description yet)_
               </div>
 ```
 
+### is-outside
+
+_(no description yet)_
+
 ### is-placeholder
 
 _(no description yet)_
@@ -2815,6 +2842,26 @@ _(no description yet)_
               <span class="ds-badge is-danger">Danger</span>
               <span class="ds-status is-success"><span class="ds-dot"></span>Online</span>
               <span class="ds-status is-warning"><span class="ds-dot"></span>Degraded</span>
+```
+
+### is-today
+
+_(no description yet)_
+
+```html
+<div class="ds-calendar">
+                <div class="ds-calendar-head">
+                  <button class="ds-calendar-nav" aria-label="Previous month">‹</button>
+                  <span class="ds-calendar-title">June 2026</span>
+                  <button class="ds-calendar-nav" aria-label="Next month">›</button>
+                </div>
+                <div class="ds-calendar-grid" role="grid">
+                  <span class="ds-calendar-weekday">Mon</span><span class="ds-calendar-weekday">Tue</span><span class="ds-calendar-weekday">Wed</span><span class="ds-calendar-weekday">Thu</span><span class="ds-calendar-weekday">Fri</span><span class="ds-calendar-weekday">Sat</span><span class="ds-calendar-weekday">Sun</span>
+                  <button class="ds-calendar-day">1</button><button class="ds-calendar-day">2</button><button class="ds-calendar-day is-today">3</button><button class="ds-calendar-day">4</button><button class="ds-calendar-day">5</button><button class="ds-calendar-day">6</button><button class="ds-calendar-day">7</button>
+                  <button class="ds-calendar-day">8</button><button class="ds-calendar-day">9</button><button class="ds-calendar-day">10</button><button class="ds-calendar-day">11</button><button class="ds-calendar-day">12</button><button class="ds-calendar-day">13</button><button class="ds-calendar-day">14</button>
+                  <button class="ds-calendar-day is-selected">15</button><button class="ds-calendar-day">16</button><button class="ds-calendar-day">17</button><button class="ds-calendar-day">18</button><button class="ds-calendar-day">19</button><button class="ds-calendar-day">20</button><button class="ds-calendar-day">21</button>
+                </div>
+              </div>
 ```
 
 ### is-up
@@ -3049,6 +3096,22 @@ import { DsButtonGroup } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsCalendar
+
+_(no description yet)_
+
+```ts
+import { DsCalendar } from 'design-language/vue'
+```
+- renders: `ds-calendar`, `ds-calendar-day`, `ds-calendar-grid`, `ds-calendar-head`, `ds-calendar-nav`, `ds-calendar-title`, `ds-calendar-weekday`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| modelValue | `string \| null \| undefined` | `null` | false |
+| month | `string \| undefined` | `undefined` | false |
+
+**Events:** `update:modelValue`, `update:month`
+
 ### DsCard
 
 _(no description yet)_
@@ -3149,6 +3212,23 @@ import { DsContextMenu } from 'design-language/vue'
 **Events:** `select`
 
 **Slots:** `default`
+
+### DsDatePicker
+
+_(no description yet)_
+
+```ts
+import { DsDatePicker } from 'design-language/vue'
+```
+- renders: `ds-input`, `ds-popover`, `ds-popover-anchor`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| format | `((iso: string) => string) \| undefined` | `undefined` | false |
+| modelValue | `string \| null \| undefined` | `null` | false |
+| placeholder | `string \| undefined` | `"YYYY-MM-DD"` | false |
+
+**Events:** `update:modelValue`
 
 ### DsDescriptionList
 

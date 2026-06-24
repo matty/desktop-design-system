@@ -637,3 +637,17 @@
 .ds-split-btn > .ds-btn:first-child { border-top-right-radius:0; border-bottom-right-radius:0; }
 .ds-split-caret { margin-left:-1px; padding:0 7px; border-top-left-radius:0; border-bottom-left-radius:0; }
 .ds-split-btn > .ds-menu { top:calc(100% + 4px); right:0; left:auto; }
+
+/* ---------- Calendar ---------- */
+.ds-calendar { width:260px; padding:10px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); }
+.ds-calendar-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.ds-calendar-title { font-size:var(--fz-sm); font-weight:var(--fw-semibold); }
+.ds-calendar-nav { width:26px; height:26px; display:grid; place-items:center; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--fill); color:var(--text-2); cursor:default; }
+.ds-calendar-nav:hover { background:var(--fill-hover); color:var(--text); }
+.ds-calendar-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:2px; }
+.ds-calendar-weekday { text-align:center; font-size:var(--fz-2xs); color:var(--text-3); padding:4px 0; text-transform:uppercase; }
+.ds-calendar-day { aspect-ratio:1; display:grid; place-items:center; border:0; background:transparent; border-radius:var(--radius-sm); font-size:var(--fz-sm); color:var(--text-2); cursor:default; }
+.ds-calendar-day:hover { background:var(--hover); color:var(--text); }
+.ds-calendar-day.is-outside { color:var(--text-3); opacity:.5; }
+.ds-calendar-day.is-today { font-weight:var(--fw-semibold); color:var(--text); }
+.ds-calendar-day.is-selected { background:var(--accent); color:var(--accent-ink); }
