@@ -80,6 +80,27 @@
         </section>
 
         <section class="doc-section">
+          <h2>Split button</h2>
+          <p class="desc">Primary action with an attached caret that opens additional choices.</p>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
+                </div>
+              </div>
+            </div>
+            <template data-vue>
+<DsSplitButton label="Save" variant="primary" :items="items" @click="onSave" @select="onPick" />
+            </template>
+            <div class="example-caption">Primary action plus a menu with <code>.ds-split-btn</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>In context — a primary action bar</h2>
           <div class="example">
             <div class="example-preview col">

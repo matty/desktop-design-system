@@ -677,6 +677,23 @@ _(no description yet)_
               </div>
 ```
 
+### ds-command
+
+_(no description yet)_
+- category: Command palette
+- sub-parts: `ds-command-hint`, `ds-command-input`, `ds-command-item`, `ds-command-list`
+
+```html
+<div class="ds-command" style="margin-top:0; box-shadow:none;">
+                <input class="ds-command-input" placeholder="Type a command…" value="" aria-label="Command" />
+                <div class="ds-command-list" role="listbox">
+                  <div class="ds-command-item is-active" role="option">New File<span class="ds-command-hint">Ctrl+N</span></div>
+                  <div class="ds-command-item" role="option">Open Folder…</div>
+                  <div class="ds-command-item" role="option">Save All<span class="ds-command-hint">Ctrl+S</span></div>
+                </div>
+              </div>
+```
+
 ### ds-context-menu
 
 _(no description yet)_
@@ -1022,14 +1039,12 @@ _(no description yet)_
 - states: `is-active`, `is-right`
 
 ```html
-<div class="ds-dropdown" id="dd">
-                <button class="ds-btn" id="ddBtn">Recent files <svg><!-- icon --></svg></button>
-                <div class="ds-menu" id="ddMenu" hidden>
-                  <div class="ds-menu-label">Documents</div>
-                  <div class="ds-menu-item is-active"><svg><!-- icon --></svg>Quarterly report.pdf</div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Meeting notes.txt</div>
-                  <div class="ds-menu-sep"></div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Browse…</div>
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
                 </div>
               </div>
 ```
@@ -1433,6 +1448,38 @@ _(no description yet)_
               <div class="ds-skeleton text" style="width:100%"></div>
               <div class="ds-skeleton text" style="width:45%"></div>
             </div>
+```
+
+### ds-split-btn
+
+_(no description yet)_
+- category: Split button
+
+```html
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
+                </div>
+              </div>
+```
+
+### ds-split-caret
+
+_(no description yet)_
+- category: Split button
+
+```html
+<div class="ds-split-btn">
+                <button class="ds-btn is-primary">Save</button>
+                <button class="ds-btn is-primary ds-split-caret" aria-haspopup="menu" aria-label="More actions">▾</button>
+                <div class="ds-menu" role="menu">
+                  <div class="ds-menu-item" role="menuitem">Save as…</div>
+                  <div class="ds-menu-item" role="menuitem">Save a copy</div>
+                </div>
+              </div>
 ```
 
 ### ds-splitter
@@ -3068,6 +3115,23 @@ import { DsCombobox } from 'design-language/vue'
 
 **Events:** `update:modelValue`
 
+### DsCommandPalette
+
+_(no description yet)_
+
+```ts
+import { DsCommandPalette } from 'design-language/vue'
+```
+- renders: `ds-command`, `ds-command-hint`, `ds-command-input`, `ds-command-item`, `ds-command-list`, `ds-overlay`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| commands | `CommandItem[]` | `undefined` | true |
+| open | `boolean` | `undefined` | true |
+| placeholder | `string \| undefined` | `"Type a command\u2026"` | false |
+
+**Events:** `select`, `update:open`
+
 ### DsContextMenu
 
 _(no description yet)_
@@ -3571,6 +3635,23 @@ import { DsSpinner } from 'design-language/vue'
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
 | large | `boolean \| undefined` | `undefined` | false |
+
+### DsSplitButton
+
+_(no description yet)_
+
+```ts
+import { DsSplitButton } from 'design-language/vue'
+```
+- renders: `ds-btn`, `ds-menu`, `ds-menu-item`, `ds-menu-sep`, `ds-split-btn`, `ds-split-caret`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| items | `MenuItem[]` | `undefined` | true |
+| label | `string` | `undefined` | true |
+| variant | `"danger" \| "primary" \| "ghost" \| undefined` | `undefined` | false |
+
+**Events:** `click`, `select`
 
 ### DsSplitter
 
