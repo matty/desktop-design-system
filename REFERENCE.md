@@ -1034,6 +1034,27 @@ _(no description yet)_
               </div>
 ```
 
+### ds-menubar
+
+_(no description yet)_
+- category: Menubar
+- sub-parts: `ds-menubar-item`
+
+```html
+<div class="ds-menubar" role="menubar" aria-label="Main">
+      <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="true">File
+        <div class="ds-menu" role="menu" aria-label="File">
+          <div class="ds-menu-item" role="menuitem">New</div>
+          <div class="ds-menu-item" role="menuitem">Open…</div>
+          <div class="ds-menu-sep"></div>
+          <div class="ds-menu-item" role="menuitem">Quit</div>
+        </div>
+      </div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
+    </div>
+```
+
 ### ds-meter
 
 _(no description yet)_
@@ -3281,6 +3302,22 @@ import { DsListItem } from 'design-language/vue'
 | selected | `boolean \| undefined` | `undefined` | false |
 
 **Slots:** `default`
+
+### DsMenubar
+
+_(no description yet)_
+
+```ts
+import { DsMenubar } from 'design-language/vue'
+```
+- renders: `ds-menu`, `ds-menu-item`, `ds-menu-sep`, `ds-menubar`, `ds-menubar-item`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| ariaLabel | `string \| undefined` | `undefined` | false |
+| menus | `MenubarMenu[]` | `undefined` | true |
+
+**Events:** `select`
 
 ### DsMeter
 

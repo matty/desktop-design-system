@@ -943,7 +943,21 @@
       ],
       "examples": [
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
-        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+        "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
+      ]
+    },
+    {
+      "name": "ds-menubar",
+      "type": "primitive",
+      "category": "Menubar",
+      "description": "",
+      "subParts": [
+        "ds-menubar-item"
+      ],
+      "states": [],
+      "examples": [
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
       ]
     },
     {
@@ -2295,7 +2309,8 @@
       "type": "state",
       "description": "",
       "examples": [
-        "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>"
+        "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>",
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
       ]
     },
     {
@@ -3450,6 +3465,43 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "DsMenubar",
+      "type": "component",
+      "import": "import { DsMenubar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-menu",
+        "ds-menu-item",
+        "ds-menu-sep",
+        "ds-menubar",
+        "ds-menubar-item"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "menus",
+          "type": "MenubarMenu[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
     },
     {
       "name": "DsMeter",

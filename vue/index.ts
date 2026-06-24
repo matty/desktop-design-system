@@ -64,3 +64,4 @@ export { default as DsPopover } from "./components/DsPopover.vue";
 export { default as DsSteps } from "./components/DsSteps.vue";
 export { default as DsPagination } from "./components/DsPagination.vue";
 export { default as DsDrawer } from "./components/DsDrawer.vue";
+export { default as DsMenubar } from "./components/DsMenubar.vue";

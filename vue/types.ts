@@ -22,6 +22,8 @@ export interface MenuItem {
   onSelect?: () => void;
 }
 
+export interface MenubarMenu { id: string; label: string; items: MenuItem[] }
+
 export interface TabItem {
   id: string;
   label: string;

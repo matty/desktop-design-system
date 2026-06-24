@@ -178,6 +178,27 @@
   <div class="example-caption">Step indicator with <code>.ds-steps</code>.</div>
 </div>
 
+          <div class="example">
+  <div class="example-preview">
+    <div class="ds-menubar" role="menubar" aria-label="Main">
+      <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="true" aria-expanded="true">File
+        <div class="ds-menu" role="menu" aria-label="File">
+          <div class="ds-menu-item" role="menuitem">New</div>
+          <div class="ds-menu-item" role="menuitem">Open…</div>
+          <div class="ds-menu-sep"></div>
+          <div class="ds-menu-item" role="menuitem">Quit</div>
+        </div>
+      </div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
+      <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
+    </div>
+  </div>
+  <template data-vue>
+<DsMenubar :menus="menus" aria-label="Main" @select="onSelect" />
+  </template>
+  <div class="example-caption">Application menu bar with <code>.ds-menubar</code> (dropdowns reuse <code>.ds-menu</code>).</div>
+</div>
+
           <div class="ds-menu" id="ctxDemo" hidden>
             <div class="ds-menu-item" role="menuitem">Cut</div>
             <div class="ds-menu-item" role="menuitem">Copy</div>
