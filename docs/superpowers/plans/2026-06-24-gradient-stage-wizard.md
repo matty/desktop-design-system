@@ -390,18 +390,20 @@ export const PanelOnGlow: Story = {
 
 - [ ] **Step 8: Add the standalone docs example (coverage gate)**
 
-In `pages/patterns.html`, add a new `<section class="doc-section">` (place it before the existing first section). The inline style overrides the full-viewport sizing so it fits a doc frame:
+In `pages/patterns.html`, add a new `<section class="doc-section">` (place it before the existing first section). NOTE: keep `class="example-preview"` with NO trailing attribute — the catalog example extractor (`tools/reference-core.mjs:139`, regex `/<div class="example-preview[^"]*">/`) skips blocks where a `style`/other attribute follows the class. Put the frame-fitting overrides on an INNER wrapper instead, so `.ptn-stage` is captured as a real example:
 
 ```html
         <section class="doc-section">
           <h2>Gradient Stage</h2>
           <p class="desc"><code class="chip">.ptn-stage</code> centers a single child on a soft top-left accent glow — the backdrop for onboarding, sign-in, and splash screens.</p>
           <div class="example">
-            <div class="example-preview" style="padding:0; overflow:hidden">
-              <div class="ptn-stage" style="height:320px; min-height:0">
-                <section class="ds-panel" style="width:min(360px,100%)">
-                  <div class="ds-panel-body">Centered content on the gradient stage.</div>
-                </section>
+            <div class="example-preview">
+              <div style="width:100%; overflow:hidden; border-radius:var(--radius)">
+                <div class="ptn-stage" style="height:320px; min-height:0">
+                  <section class="ds-panel" style="width:min(360px,100%)">
+                    <div class="ds-panel-body">Centered content on the gradient stage.</div>
+                  </section>
+                </div>
               </div>
             </div>
             <div class="example-caption"><b>.ptn-stage</b></div>
@@ -480,11 +482,13 @@ Expected: all three show changes.
 - [ ] **Step 3: Run the full build (all gates)**
 
 Run: `npm run build`
-Expected: PASS — icon registry verify, `coverage:check`, typecheck, tests, and multi-page docs build all succeed.
+Expected: PASS. This runs, in order: `icons:check`, `reference:check` (will FAIL if Step 2's regen was skipped — the committed catalog must match the CSS/Vue source), `reference:lint`, `coverage:check`, `vite build`, `bundle`. All must succeed. Note: `npm run build` does NOT run typecheck or the unit tests — those are the next two steps.
 
-- [ ] **Step 4: Run the full Vue test suite**
+- [ ] **Step 4: Run typecheck and the full Vue test suite**
 
-Run: `npx vitest run`
+Run: `npm run typecheck`
+Expected: PASS — no `vue-tsc` errors (validates the new types and components).
+Run: `npm test`
 Expected: PASS — all tests including the two new component test files.
 
 - [ ] **Step 5: Manual verification**
