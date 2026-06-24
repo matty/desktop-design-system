@@ -16,6 +16,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      # The zip name + bundle VERSION come from package.json; the release is
+      # named by the tag. Fail fast if they disagree so we never ship a bundle
+      # labelled with a different version than the tag/release.
+      - name: Verify tag matches package.json version
+        run: |
+          PKG="$(node -p "require('./package.json').version")"
+          TAG="${GITHUB_REF_NAME#v}"
+          if [ "$PKG" != "$TAG" ]; then
+            echo "::error::tag ${GITHUB_REF_NAME} != package.json version ${PKG}. Use \`npm version\` to bump + tag together."
+            exit 1
+          fi
+          echo "tag matches package.json version: ${PKG}"
       - run: npm ci
       - run: npm run typecheck
       - run: npm run build
