@@ -9,7 +9,27 @@ A self-contained, offline copy of the design language. No network or build step 
 - `ds.js` — component runtime (combobox, context menu, tree, splitter, sortable, focus-trap, roving-tabindex). Plain global script.
 - `sortable.min.js` — dependency of the sortable behaviour.
 - `icons/` — `registry.json` (offline SVG data), `approved.json` (name → Lucide id), `lucide-catalog.json` (full Lucide source for offline extension), `extend-icons.mjs` (generator), `icons.js` (render helper).
+- `vue/` — optional Vue 3 component layer (63 components), shipped as raw `.vue`/`.ts` source.
+- `REFERENCE.md` / `reference-manifest.json` — the full design-system catalog (every token, class, state, mode, pattern, component) in human- and machine-readable form.
+- `llms.txt` / `LLM_GUIDE.md` — orientation, rules, and examples for AI tools. Start here for automated setup (see below).
+- `lint-usage.mjs` — validator that flags off-grammar classes/components/props.
 - `manifest.json`, `VERSION`, `THIRD_PARTY_LICENSES.md`.
+
+## Automated setup (LLMs)
+
+To have an AI tool wire this up for you, point it at the docs in this order:
+
+1. `llms.txt` — orientation, class grammar, and rules (the entry point).
+2. `REFERENCE.md` — the full catalog of tokens, classes, states, patterns, and components.
+3. `reference-manifest.json` — the same catalog, machine-readable.
+
+Then have it validate its output against the grammar:
+
+```
+node lint-usage.mjs "src/**/*.{vue,html}"
+```
+
+All paths in these docs are relative to this bundle's root, so the links resolve as shipped.
 
 ## Use the CSS
 
@@ -68,10 +88,12 @@ element.innerHTML = iconSvg("home", registry);
 
 ## Vue 3 components (optional)
 
-The `vue/` folder contains optional Vue 3 components for the interactive primitives
-(combobox, tree, context menu, dropdown, tabs, accordion, dialog, toast, splitter,
-sortable). They render the same `.ds-*` classes — the CSS in this bundle is still the
-source of truth, so no component ships its own styles.
+The `vue/` folder contains 63 optional Vue 3 components spanning the full language —
+form controls, layout/app chrome, data display, feedback, and the interactive
+primitives (combobox, tree, context menu, dropdown, tabs, accordion, dialog, toast,
+splitter, sortable, date picker, command palette). They render the same `.ds-*`
+classes — the CSS in this bundle is still the source of truth, so no component ships
+its own styles. See `REFERENCE.md` for the complete list with props.
 
 To use them in a Vue 3 + Vite + TypeScript app:
 

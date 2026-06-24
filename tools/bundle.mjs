@@ -38,9 +38,20 @@ await copyFile(resolve(root, "tools/icon-core.mjs"), resolve(out, "icons/icon-co
 await copyFile(resolve(root, "icons/icons.js"), resolve(out, "icons/icons.js"));
 
 // 3c. Design-system reference + validator (offline catalog for humans + LLMs).
+// The guides link to files by their REPO path; the bundle flattens those two
+// (reference/manifest.json → reference-manifest.json, tools/lint-usage.mjs →
+// lint-usage.mjs), so rewrite the links or an LLM following them hits 404s.
+const toBundlePaths = (text) =>
+  text
+    .replaceAll("reference/manifest.json", "reference-manifest.json")
+    .replaceAll("tools/lint-usage.mjs", "lint-usage.mjs");
+async function copyDoc(srcRel, destName) {
+  await writeFile(resolve(out, destName), toBundlePaths(await readFile(resolve(root, srcRel), "utf8")));
+}
 await copyFile(resolve(root, "reference/manifest.json"), resolve(out, "reference-manifest.json"));
 await copyFile(resolve(root, "REFERENCE.md"), resolve(out, "REFERENCE.md"));
-await copyFile(resolve(root, "llms.txt"), resolve(out, "llms.txt"));
+await copyDoc("llms.txt", "llms.txt");
+await copyDoc("LLM_GUIDE.md", "LLM_GUIDE.md");
 await copyFile(resolve(root, "tools/lint-usage.mjs"), resolve(out, "lint-usage.mjs"));
 
 // 3b. Vue component layer — source only (no tests / type-shims).

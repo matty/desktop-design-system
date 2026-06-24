@@ -31,6 +31,9 @@ Prefer existing tokens, utilities, primitives, states, and patterns over custom 
 - Render committed inline SVG from `icons/registry.json`; do not use remote Iconify API calls.
 - Keep icons line-based: 24px viewBox, `fill="none"`, `stroke="currentColor"`, round caps and joins.
 
+## Vue Components
+- Optional Vue 3 layer (`vue/`): in a Vue app, prefer a `Ds*` component for interactive primitives (combobox, dropdown, tree, tabs, dialog, toast, date picker); it wraps the same `.ds-*` classes. See REFERENCE.md.
+
 ## Reference
 - Full catalog (human-readable): REFERENCE.md
 - Machine-readable manifest: reference/manifest.json
