@@ -1512,6 +1512,8 @@
       "category": "App shell pieces",
       "description": "",
       "subParts": [
+        "ds-titlebar-actions",
+        "ds-titlebar-leading",
         "ds-titlebar-title"
       ],
       "states": [
@@ -4771,10 +4773,26 @@
       "description": "",
       "renders": [
         "ds-titlebar",
+        "ds-titlebar-actions",
+        "ds-titlebar-leading",
         "ds-titlebar-title",
         "ds-winbtns"
       ],
       "props": [
+        {
+          "name": "controls",
+          "type": "WindowControl[] | undefined",
+          "default": "[\"minimize\", \"maximize\", \"close\"]",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "maximized",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
         {
           "name": "title",
           "type": "string | undefined",
@@ -4798,11 +4816,28 @@
           "name": "minimize",
           "type": "[]",
           "description": ""
+        },
+        {
+          "name": "restore",
+          "type": "[]",
+          "description": ""
         }
       ],
       "slots": [
         {
+          "name": "actions",
+          "description": ""
+        },
+        {
+          "name": "controls",
+          "description": ""
+        },
+        {
           "name": "default",
+          "description": ""
+        },
+        {
+          "name": "leading",
           "description": ""
         }
       ]

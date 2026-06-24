@@ -1805,7 +1805,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: App shell pieces
-- sub-parts: `ds-titlebar-title`
+- sub-parts: `ds-titlebar-actions`, `ds-titlebar-leading`, `ds-titlebar-title`
 - states: `is-close`
 
 ```html
@@ -4028,15 +4028,17 @@ _(no description yet)_
 ```ts
 import { DsTitlebar } from 'design-language/vue'
 ```
-- renders: `ds-titlebar`, `ds-titlebar-title`, `ds-winbtns`
+- renders: `ds-titlebar`, `ds-titlebar-actions`, `ds-titlebar-leading`, `ds-titlebar-title`, `ds-winbtns`
 
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
+| controls | `WindowControl[] \| undefined` | `["minimize", "maximize", "close"]` | false |
+| maximized | `boolean \| undefined` | `false` | false |
 | title | `string \| undefined` | `undefined` | false |
 
-**Events:** `close`, `maximize`, `minimize`
+**Events:** `close`, `maximize`, `minimize`, `restore`
 
-**Slots:** `default`
+**Slots:** `actions`, `controls`, `default`, `leading`
 
 ### DsToastHost
 
