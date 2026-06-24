@@ -944,7 +944,7 @@
       "examples": [
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-context-menu\" style=\"position:relative\">\n                <div class=\"ds-menu\" style=\"position:relative; top:0; box-shadow:none\">\n                  <div class=\"ds-menu-item\">Cut</div>\n                  <div class=\"ds-menu-item\">Copy</div>\n                  <div class=\"ds-menu-item has-submenu\">Share\n                    <span class=\"ds-submenu-chev\"><svg><!-- icon --></svg></span>\n                    <div class=\"ds-menu\">\n                      <div class=\"ds-menu-item\">Email</div>\n                      <div class=\"ds-menu-item\">Copy link</div>\n                    </div>\n                  </div>\n                </div>\n              </div>",
-        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"menu\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
       ]
     },
     {
@@ -957,7 +957,7 @@
       ],
       "states": [],
       "examples": [
-        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"menu\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
       ]
     },
     {
@@ -1284,10 +1284,7 @@
       "type": "primitive",
       "category": "Text input / textarea",
       "description": "",
-      "subParts": [
-        "ds-step-item",
-        "ds-step-num"
-      ],
+      "subParts": [],
       "states": [
         "is-invalid",
         "is-mono",
@@ -1302,12 +1299,15 @@
       "type": "primitive",
       "category": "Steps",
       "description": "",
-      "subParts": [],
+      "subParts": [
+        "ds-steps-item",
+        "ds-steps-num"
+      ],
       "states": [
         "is-complete"
       ],
       "examples": [
-        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>"
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-steps-item is-complete\"><span class=\"ds-steps-num\">1</span>Account</li>\n      <li class=\"ds-steps-item is-active\"><span class=\"ds-steps-num\">2</span>Profile</li>\n      <li class=\"ds-steps-item\"><span class=\"ds-steps-num\">3</span>Done</li>\n    </ol>"
       ]
     },
     {
@@ -2121,7 +2121,7 @@
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>",
         "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>",
-        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>",
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-steps-item is-complete\"><span class=\"ds-steps-num\">1</span>Account</li>\n      <li class=\"ds-steps-item is-active\"><span class=\"ds-steps-num\">2</span>Profile</li>\n      <li class=\"ds-steps-item\"><span class=\"ds-steps-num\">3</span>Done</li>\n    </ol>",
         "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
@@ -2151,7 +2151,7 @@
       "type": "state",
       "description": "",
       "examples": [
-        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>"
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-steps-item is-complete\"><span class=\"ds-steps-num\">1</span>Account</li>\n      <li class=\"ds-steps-item is-active\"><span class=\"ds-steps-num\">2</span>Profile</li>\n      <li class=\"ds-steps-item\"><span class=\"ds-steps-num\">3</span>Done</li>\n    </ol>"
       ]
     },
     {
@@ -2310,7 +2310,7 @@
       "description": "",
       "examples": [
         "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>",
-        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"true\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
+        "<div class=\"ds-menubar\" role=\"menubar\" aria-label=\"Main\">\n      <div class=\"ds-menubar-item is-open\" role=\"menuitem\" tabindex=\"0\" aria-haspopup=\"menu\" aria-expanded=\"true\">File\n        <div class=\"ds-menu\" role=\"menu\" aria-label=\"File\">\n          <div class=\"ds-menu-item\" role=\"menuitem\">New</div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Open…</div>\n          <div class=\"ds-menu-sep\"></div>\n          <div class=\"ds-menu-item\" role=\"menuitem\">Quit</div>\n        </div>\n      </div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">Edit</div>\n      <div class=\"ds-menubar-item\" role=\"menuitem\" tabindex=\"0\">View</div>\n    </div>"
       ]
     },
     {
@@ -4214,9 +4214,9 @@
       "import": "import { DsSteps } from 'design-language/vue'",
       "description": "",
       "renders": [
-        "ds-step-item",
-        "ds-step-num",
-        "ds-steps"
+        "ds-steps",
+        "ds-steps-item",
+        "ds-steps-num"
       ],
       "props": [
         {
