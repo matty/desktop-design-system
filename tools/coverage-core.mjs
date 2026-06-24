@@ -10,7 +10,8 @@ export const EXAMPLE_EXEMPT = new Set(["ds-live", "ds-drop-placeholder"]);
 // docsCoverage flags any of these lacking a <template data-vue> snippet.
 export const DATA_VUE_EXPECTED = new Set([
   "DsCombobox", "DsTree", "DsContextMenu", "DsDropdownMenu", "DsTabs",
-  "DsAccordion", "DsDialog", "DsToastHost", "DsSplitter", "DsSortable"
+  "DsAccordion", "DsDialog", "DsToastHost", "DsSplitter", "DsSortable",
+  "DsPopover"
 ]);
 
 // Sub-components that are intentionally documented inside a parent component's

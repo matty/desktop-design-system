@@ -114,6 +114,21 @@
             </div>
             <div class="example-caption">Floating surface with <code>.ds-popover</code>.</div>
           </div>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-popover-anchor is-open">
+                <button class="ds-btn" aria-expanded="true">Options</button>
+                <div class="ds-popover" role="dialog" aria-label="Options">Quitting saves your work automatically.</div>
+              </div>
+            </div>
+            <template data-vue>
+<DsPopover aria-label="Options">
+  <template #trigger>Options</template>
+  <div>Quitting saves your work automatically.</div>
+</DsPopover>
+            </template>
+            <div class="example-caption">Trigger + floating surface with <code>.ds-popover-anchor</code> / <code>.ds-popover</code>.</div>
+          </div>
         </section>
 
         <section class="doc-section">

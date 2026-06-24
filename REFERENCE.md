@@ -1184,6 +1184,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Popover (generic floating surface)
+- sub-parts: `ds-popover-anchor`
 
 ```html
 <div class="ds-popover">Saved automatically a few seconds ago.</div>
@@ -2552,6 +2553,13 @@ _(no description yet)_
 
 _(no description yet)_
 
+```html
+<div class="ds-popover-anchor is-open">
+                <button class="ds-btn" aria-expanded="true">Options</button>
+                <div class="ds-popover" role="dialog" aria-label="Options">Quitting saves your work automatically.</div>
+              </div>
+```
+
 ### is-placeholder
 
 _(no description yet)_
@@ -2867,6 +2875,21 @@ import { DsButton } from 'design-language/vue'
 | size | `"sm" \| "lg" \| undefined` | `undefined` | false |
 | type | `"button" \| "submit" \| "reset" \| undefined` | `"button"` | false |
 | variant | `"danger" \| "primary" \| "ghost" \| undefined` | `undefined` | false |
+
+**Slots:** `default`
+
+### DsButtonGroup
+
+_(no description yet)_
+
+```ts
+import { DsButtonGroup } from 'design-language/vue'
+```
+- renders: `ds-btn-group`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| ariaLabel | `string \| undefined` | `undefined` | false |
 
 **Slots:** `default`
 
@@ -3230,6 +3253,24 @@ import { DsPill } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsPopover
+
+_(no description yet)_
+
+```ts
+import { DsPopover } from 'design-language/vue'
+```
+- renders: `ds-btn`, `ds-popover`, `ds-popover-anchor`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| ariaLabel | `string \| undefined` | `undefined` | false |
+| open | `boolean \| undefined` | `false` | false |
+
+**Events:** `update:open`
+
+**Slots:** `default`, `trigger`
+
 ### DsProgress
 
 _(no description yet)_
@@ -3536,6 +3577,22 @@ import { DsToolbar } from 'design-language/vue'
 | title | `string \| undefined` | `undefined` | false |
 
 **Slots:** `default`, `start`
+
+### DsTooltip
+
+_(no description yet)_
+
+```ts
+import { DsTooltip } from 'design-language/vue'
+```
+- renders: `ds-tip`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| placement | `"top" \| undefined` | `undefined` | false |
+| text | `string` | `undefined` | true |
+
+**Slots:** `default`
 
 ### DsTree
 
