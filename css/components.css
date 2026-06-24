@@ -326,6 +326,8 @@
 .ds-winbtns button svg { width:11px; height:11px; stroke:currentColor; stroke-width:1.3; fill:none; }
 .ds-winbtns button:hover { background:var(--hover); color:var(--text); }
 .ds-winbtns button.is-close:hover { background:var(--danger-strong); color:var(--danger-contrast); }
+.ds-titlebar-leading { display:flex; align-items:center; margin-right:auto; }
+.ds-titlebar-actions { display:flex; align-items:center; }
 
 .ds-rail { width:var(--rail-w); background:var(--rail); border-right:1px solid var(--border-soft); display:flex; flex-direction:column; padding:8px; }
 .ds-navi { display:flex; align-items:center; gap:11px; height:36px; padding:0 11px; border-radius:var(--radius-sm); color:var(--text-3); cursor:default; font-size:var(--fz-base); font-weight:var(--fw-medium); text-decoration:none; }

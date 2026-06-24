@@ -1,5 +1,7 @@
 export interface Step { id: string; label: string }
 
+export type WindowControl = "minimize" | "maximize" | "close";
+
 export type ChecklistState = "pending" | "running" | "ok" | "warn" | "error";
 export interface ChecklistItem {
   id: string;
