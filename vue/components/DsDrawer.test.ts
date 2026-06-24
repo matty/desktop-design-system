@@ -29,4 +29,20 @@ describe("DsDrawer", () => {
     expect(document.querySelector(".ds-drawer")!.classList.contains("is-left")).toBe(true);
     w.unmount();
   });
+
+  it("locks body overflow while open and restores on close and unmount", async () => {
+    // Open: overflow should be hidden
+    const w = mount(DsDrawer, { props: { open: true }, attachTo: document.body });
+    expect(document.body.style.overflow).toBe("hidden");
+
+    // Close via prop: overflow should be restored
+    await w.setProps({ open: false });
+    expect(document.body.style.overflow).toBe("");
+
+    // Re-open and then unmount while open: overflow should be restored
+    await w.setProps({ open: true });
+    expect(document.body.style.overflow).toBe("hidden");
+    w.unmount();
+    expect(document.body.style.overflow).toBe("");
+  });
 });
