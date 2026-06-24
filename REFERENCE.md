@@ -2870,6 +2870,21 @@ import { DsButton } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsButtonGroup
+
+_(no description yet)_
+
+```ts
+import { DsButtonGroup } from 'design-language/vue'
+```
+- renders: `ds-btn-group`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| ariaLabel | `string \| undefined` | `undefined` | false |
+
+**Slots:** `default`
+
 ### DsCard
 
 _(no description yet)_

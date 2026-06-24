@@ -58,3 +58,4 @@ export { default as DsNavItem } from "./components/DsNavItem.vue";
 export { default as DsToolbar } from "./components/DsToolbar.vue";
 export { default as DsStatusbar } from "./components/DsStatusbar.vue";
 export { default as DsBreadcrumb } from "./components/DsBreadcrumb.vue";
+export { default as DsButtonGroup } from "./components/DsButtonGroup.vue";

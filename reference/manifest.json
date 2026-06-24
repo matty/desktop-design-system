@@ -547,6 +547,7 @@
         "<button class=\"ds-btn is-primary is-sm\">Small</button>\n              <button class=\"ds-btn is-primary\">Default</button>\n              <button class=\"ds-btn is-primary is-lg\">Large</button>",
         "<button class=\"ds-btn is-icon\" title=\"Restart\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-icon\" title=\"Reconnect\"><svg><!-- icon --></svg></button>\n              <button class=\"ds-btn is-ghost is-icon\" title=\"More\"><svg><!-- icon --></svg></button>",
         "<div class=\"ds-btn-group\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Start</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Stop</button>\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>Restart</button>\n              </div>",
+        "<div class=\"ds-btn-group\" role=\"group\" aria-label=\"Alignment\">\n                <button class=\"ds-btn\">Left</button>\n                <button class=\"ds-btn\">Center</button>\n                <button class=\"ds-btn\">Right</button>\n              </div>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
         "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
         "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>",
@@ -2657,6 +2658,31 @@
         {
           "name": "variant",
           "type": "\"danger\" | \"primary\" | \"ghost\" | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsButtonGroup",
+      "type": "component",
+      "import": "import { DsButtonGroup } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-btn-group"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
           "default": "undefined",
           "required": false,
           "description": ""
