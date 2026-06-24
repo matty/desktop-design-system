@@ -1444,6 +1444,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Text input / textarea
+- sub-parts: `ds-step-item`, `ds-step-num`
 - states: `is-invalid`, `is-mono`, `is-valid`
 
 ```html
@@ -1467,6 +1468,20 @@ _(no description yet)_
                   </div>
                 </div>
               </div>
+```
+
+### ds-steps
+
+_(no description yet)_
+- category: Steps
+- states: `is-complete`
+
+```html
+<ol class="ds-steps">
+      <li class="ds-step-item is-complete"><span class="ds-step-num">1</span>Account</li>
+      <li class="ds-step-item is-active"><span class="ds-step-num">2</span>Profile</li>
+      <li class="ds-step-item"><span class="ds-step-num">3</span>Done</li>
+    </ol>
 ```
 
 ### ds-sub
@@ -2339,6 +2354,18 @@ _(no description yet)_
                   </div>
                 </div>
               </div>
+```
+
+### is-complete
+
+_(no description yet)_
+
+```html
+<ol class="ds-steps">
+      <li class="ds-step-item is-complete"><span class="ds-step-num">1</span>Account</li>
+      <li class="ds-step-item is-active"><span class="ds-step-num">2</span>Profile</li>
+      <li class="ds-step-item"><span class="ds-step-num">3</span>Done</li>
+    </ol>
 ```
 
 ### is-danger
@@ -3456,6 +3483,20 @@ import { DsStatusbar } from 'design-language/vue'
 - renders: `ds-statusbar`, `ds-statusbar-spacer`
 
 **Slots:** `end`, `start`
+
+### DsSteps
+
+_(no description yet)_
+
+```ts
+import { DsSteps } from 'design-language/vue'
+```
+- renders: `ds-step-item`, `ds-step-num`, `ds-steps`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| current | `string \| number` | `undefined` | true |
+| steps | `Step[]` | `undefined` | true |
 
 ### DsSwitch
 

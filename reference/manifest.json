@@ -1228,7 +1228,10 @@
       "type": "primitive",
       "category": "Text input / textarea",
       "description": "",
-      "subParts": [],
+      "subParts": [
+        "ds-step-item",
+        "ds-step-num"
+      ],
       "states": [
         "is-invalid",
         "is-mono",
@@ -1236,6 +1239,19 @@
       ],
       "examples": [
         "<div class=\"ds-field\">\n                <label class=\"ds-field-label\">Port</label>\n                <div class=\"ds-number\">\n                  <input id=\"num\" type=\"text\" value=\"8080\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button data-step=\"1\"><svg><!-- icon --></svg></button>\n                    <button data-step=\"-1\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field\">\n                <label class=\"ds-field-label\">Max threads</label>\n                <div class=\"ds-number\">\n                  <input type=\"text\" value=\"8\" inputmode=\"numeric\" />\n                  <div class=\"ds-step\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "ds-steps",
+      "type": "primitive",
+      "category": "Steps",
+      "description": "",
+      "subParts": [],
+      "states": [
+        "is-complete"
+      ],
+      "examples": [
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>"
       ]
     },
     {
@@ -2048,6 +2064,7 @@
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>",
         "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>",
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>",
         "<div class=\"ds-resizable\" style=\"height:160px; width:100%; border:1px solid var(--border); border-radius:var(--radius)\">\n                <div class=\"ds-pane-first\" style=\"flex-basis:160px; padding:var(--space-4)\">\n                  <a class=\"ds-navi is-active\">Inbox</a>\n                  <a class=\"ds-navi\">Drafts</a>\n                </div>\n                <div class=\"ds-splitter\" data-ds-splitter aria-label=\"Resize pane\"></div>\n                <div class=\"ds-pane-rest\" style=\"padding:var(--space-4)\">\n                  <p class=\"ds-muted\">Message body</p>\n                </div>\n              </div>",
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
       ]
@@ -2070,6 +2087,14 @@
       "description": "",
       "examples": [
         "<div style=\"border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%\">\n                <div class=\"ds-titlebar\">\n                  <div class=\"ds-titlebar-title\">Atlas</div>\n                  <div class=\"ds-winbtns\">\n                    <button><svg><!-- icon --></svg></button>\n                    <button><svg><!-- icon --></svg></button>\n                    <button class=\"is-close\"><svg><!-- icon --></svg></button>\n                  </div>\n                </div>\n                <div class=\"u-flex\">\n                  <nav class=\"ds-rail\">\n                    <a class=\"ds-navi is-active\"><svg><!-- icon --></svg>Home</a>\n                    <a class=\"ds-navi\"><svg><!-- icon --></svg>Files</a>\n                  </nav>\n                  <div class=\"u-flex-1\">\n                    <div class=\"ds-toolbar\">\n                      <div class=\"ds-toolbar-title\">Documents</div>\n                      <div class=\"ds-toolbar-spacer\"></div>\n                      <button class=\"ds-btn is-sm is-primary\">New</button>\n                    </div>\n                    <div style=\"padding:12px; min-height:48px;\" class=\"ds-muted\">Content area</div>\n                    <div class=\"ds-statusbar\">\n                      <div class=\"seg\">Ready</div>\n                      <div class=\"ds-statusbar-spacer\"></div>\n                      <div class=\"seg mono\">v2.4.0</div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+      ]
+    },
+    {
+      "name": "is-complete",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<ol class=\"ds-steps\">\n      <li class=\"ds-step-item is-complete\"><span class=\"ds-step-num\">1</span>Account</li>\n      <li class=\"ds-step-item is-active\"><span class=\"ds-step-num\">2</span>Profile</li>\n      <li class=\"ds-step-item\"><span class=\"ds-step-num\">3</span>Done</li>\n    </ol>"
       ]
     },
     {
@@ -3976,6 +4001,35 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "DsSteps",
+      "type": "component",
+      "import": "import { DsSteps } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-step-item",
+        "ds-step-num",
+        "ds-steps"
+      ],
+      "props": [
+        {
+          "name": "current",
+          "type": "string | number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "steps",
+          "type": "Step[]",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [],
+      "slots": []
     },
     {
       "name": "DsSwitch",

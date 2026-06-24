@@ -1,3 +1,5 @@
+export interface Step { id: string; label: string }
+
 export interface ComboOption {
   value: string;
   label: string;

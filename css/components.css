@@ -592,3 +592,12 @@
   background:var(--accent-soft);
 }
 .ds-drop-placeholder > * { visibility:hidden; }
+
+/* ---------- Steps ---------- */
+.ds-steps { display:flex; align-items:center; gap:var(--space-3); list-style:none; margin:0; padding:0; }
+.ds-step-item { display:flex; align-items:center; gap:var(--space-3); color:var(--text-3); font-size:var(--fz-sm); }
+.ds-step-num { width:22px; height:22px; flex:none; border:1px solid var(--border-strong); border-radius:var(--radius-pill); display:grid; place-items:center; font-size:var(--fz-xs); }
+.ds-step-item.is-active { color:var(--text); }
+.ds-step-item.is-active .ds-step-num { border-color:var(--accent); color:var(--accent); }
+.ds-step-item.is-complete .ds-step-num { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.ds-step-item + .ds-step-item::before { content:""; width:24px; height:1px; background:var(--border); }
