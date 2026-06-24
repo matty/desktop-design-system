@@ -288,6 +288,21 @@
         </section>
 
         <section class="doc-section">
+          <h2>Date picker</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-popover-anchor">
+                <input class="ds-input" type="text" readonly value="2026-06-15" aria-haspopup="dialog" style="width:160px;" />
+              </div>
+            </div>
+            <template data-vue>
+<DsDatePicker v-model="date" />
+            </template>
+            <div class="example-caption">Date field opening a calendar; composes <code>.ds-input</code> + <code>.ds-popover</code> + <code>DsCalendar</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
           <h2>Filterable &amp; multi-select combobox</h2>
           <p class="desc">Three combo modes: filterable single-select, multi-select with chips, and multi-select checklist.</p>
           <div class="example">

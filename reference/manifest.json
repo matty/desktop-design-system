@@ -907,6 +907,7 @@
       ],
       "examples": [
         "<div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Display name</label>\n                <input class=\"ds-input\" value=\"Jordan Rivera\" />\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">With leading icon</label>\n                <div class=\"ds-input-wrap\">\n                  <span class=\"ds-adorn\"><svg><!-- icon --></svg></span>\n                  <input class=\"ds-input\" placeholder=\"Search…\" />\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\" for=\"widthErr\">Error state</label>\n                <div class=\"ds-input-wrap\">\n                  <input id=\"widthErr\" class=\"ds-input is-mono is-invalid\" value=\"70000\"\n                         aria-invalid=\"true\" aria-describedby=\"widthErrMsg\" />\n                  <span class=\"ds-suffix\">px</span>\n                </div>\n                <div class=\"ds-field-error\" id=\"widthErrMsg\">\n                  <svg><!-- icon --></svg>\n                  Width must be between 1 and 4096.\n                </div>\n              </div>\n              <div class=\"ds-field w-320\">\n                <label class=\"ds-field-label\">Success state</label>\n                <input class=\"ds-input is-valid\" value=\"jordan@example.com\" />\n                <span class=\"ds-field-hint\" style=\"color:var(--success)\">Address is available.</span>\n              </div>",
+        "<div class=\"ds-popover-anchor\">\n                <input class=\"ds-input\" type=\"text\" readonly value=\"2026-06-15\" aria-haspopup=\"dialog\" style=\"width:160px;\" />\n              </div>",
         "<div class=\"u-form-grid u-w-full\">\n                <label class=\"ds-field-label\" for=\"utility-name\">Name</label>\n                <input class=\"ds-input\" id=\"utility-name\" value=\"Workspace\" />\n                <label class=\"ds-field-label\" for=\"utility-path\">Path</label>\n                <div class=\"ds-input-wrap\">\n                  <input class=\"ds-input is-mono\" id=\"utility-path\" value=\"C:\\Projects\\design\" />\n                  <span class=\"ds-suffix\">dir</span>\n                </div>\n                <span></span>\n                <label class=\"ds-check\"><input type=\"checkbox\" checked /> Remember this workspace</label>\n              </div>\n              <div class=\"u-settings-list u-w-full\">\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Sync settings</b><span>Keep preferences aligned across workspaces</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-switch\"><input type=\"checkbox\" checked /><span class=\"ds-track\"></span></label></div>\n                </div>\n                <div class=\"ds-row\">\n                  <div class=\"ds-row-text\"><b>Local history</b><span>Retain recent changes on this device</span></div>\n                  <div class=\"ds-row-control\"><label class=\"ds-check\"><input type=\"checkbox\" /> Enabled</label></div>\n                </div>\n              </div>"
       ]
     },
@@ -3157,6 +3158,48 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "DsDatePicker",
+      "type": "component",
+      "import": "import { DsDatePicker } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-input",
+        "ds-popover",
+        "ds-popover-anchor"
+      ],
+      "props": [
+        {
+          "name": "format",
+          "type": "((iso: string) => string) | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "modelValue",
+          "type": "string | null | undefined",
+          "default": "null",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "type": "string | undefined",
+          "default": "\"YYYY-MM-DD\"",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string | null]",
+          "description": ""
+        }
+      ],
+      "slots": []
     },
     {
       "name": "DsDescriptionList",

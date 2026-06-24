@@ -3213,6 +3213,23 @@ import { DsContextMenu } from 'design-language/vue'
 
 **Slots:** `default`
 
+### DsDatePicker
+
+_(no description yet)_
+
+```ts
+import { DsDatePicker } from 'design-language/vue'
+```
+- renders: `ds-input`, `ds-popover`, `ds-popover-anchor`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| format | `((iso: string) => string) \| undefined` | `undefined` | false |
+| modelValue | `string \| null \| undefined` | `null` | false |
+| placeholder | `string \| undefined` | `"YYYY-MM-DD"` | false |
+
+**Events:** `update:modelValue`
+
 ### DsDescriptionList
 
 _(no description yet)_
