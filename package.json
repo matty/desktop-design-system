@@ -24,6 +24,7 @@
     "reference:check": "node tools/build-reference.mjs --check",
     "reference:lint": "node tools/lint-usage.mjs \"index.html\" \"pages/*.html\"",
     "coverage:check": "node tools/coverage.mjs",
+    "version": "npm run reference:build && git add reference/manifest.json REFERENCE.md llms.txt",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",
