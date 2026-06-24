@@ -561,6 +561,27 @@
       ]
     },
     {
+      "name": "ds-calendar",
+      "type": "primitive",
+      "category": "Calendar",
+      "description": "",
+      "subParts": [
+        "ds-calendar-day",
+        "ds-calendar-grid",
+        "ds-calendar-head",
+        "ds-calendar-nav",
+        "ds-calendar-title",
+        "ds-calendar-weekday"
+      ],
+      "states": [
+        "is-outside",
+        "is-today"
+      ],
+      "examples": [
+        "<div class=\"ds-calendar\">\n                <div class=\"ds-calendar-head\">\n                  <button class=\"ds-calendar-nav\" aria-label=\"Previous month\">‹</button>\n                  <span class=\"ds-calendar-title\">June 2026</span>\n                  <button class=\"ds-calendar-nav\" aria-label=\"Next month\">›</button>\n                </div>\n                <div class=\"ds-calendar-grid\" role=\"grid\">\n                  <span class=\"ds-calendar-weekday\">Mon</span><span class=\"ds-calendar-weekday\">Tue</span><span class=\"ds-calendar-weekday\">Wed</span><span class=\"ds-calendar-weekday\">Thu</span><span class=\"ds-calendar-weekday\">Fri</span><span class=\"ds-calendar-weekday\">Sat</span><span class=\"ds-calendar-weekday\">Sun</span>\n                  <button class=\"ds-calendar-day\">1</button><button class=\"ds-calendar-day\">2</button><button class=\"ds-calendar-day is-today\">3</button><button class=\"ds-calendar-day\">4</button><button class=\"ds-calendar-day\">5</button><button class=\"ds-calendar-day\">6</button><button class=\"ds-calendar-day\">7</button>\n                  <button class=\"ds-calendar-day\">8</button><button class=\"ds-calendar-day\">9</button><button class=\"ds-calendar-day\">10</button><button class=\"ds-calendar-day\">11</button><button class=\"ds-calendar-day\">12</button><button class=\"ds-calendar-day\">13</button><button class=\"ds-calendar-day\">14</button>\n                  <button class=\"ds-calendar-day is-selected\">15</button><button class=\"ds-calendar-day\">16</button><button class=\"ds-calendar-day\">17</button><button class=\"ds-calendar-day\">18</button><button class=\"ds-calendar-day\">19</button><button class=\"ds-calendar-day\">20</button><button class=\"ds-calendar-day\">21</button>\n                </div>\n              </div>"
+      ]
+    },
+    {
       "name": "ds-card",
       "type": "primitive",
       "category": "Card / Panel",
@@ -2355,6 +2376,12 @@
       ]
     },
     {
+      "name": "is-outside",
+      "type": "state",
+      "description": "",
+      "examples": []
+    },
+    {
       "name": "is-placeholder",
       "type": "state",
       "description": "",
@@ -2400,6 +2427,7 @@
       "description": "",
       "examples": [
         "<div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Export format</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">PNG</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"png\">PNG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"jpeg\">JPEG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"webp\">WebP<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"svg\">SVG<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"ds-field w-260\">\n                <label class=\"ds-field-label\">Theme</label>\n                <div class=\"ds-combo u-w-full\">\n                  <button class=\"ds-combo-btn\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"false\">\n                    <span class=\"ds-combo-value\">System</span>\n                    <span class=\"ds-combo-chev\"><svg><!-- icon --></svg></span>\n                  </button>\n                  <div class=\"ds-combo-menu\" hidden role=\"listbox\">\n                    <div class=\"ds-combo-option is-selected\" data-value=\"system\">System<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"light\">Light<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                    <div class=\"ds-combo-option\" data-value=\"dark\">Dark<span class=\"ds-combo-check\"><svg><!-- icon --></svg></span></div>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-calendar\">\n                <div class=\"ds-calendar-head\">\n                  <button class=\"ds-calendar-nav\" aria-label=\"Previous month\">‹</button>\n                  <span class=\"ds-calendar-title\">June 2026</span>\n                  <button class=\"ds-calendar-nav\" aria-label=\"Next month\">›</button>\n                </div>\n                <div class=\"ds-calendar-grid\" role=\"grid\">\n                  <span class=\"ds-calendar-weekday\">Mon</span><span class=\"ds-calendar-weekday\">Tue</span><span class=\"ds-calendar-weekday\">Wed</span><span class=\"ds-calendar-weekday\">Thu</span><span class=\"ds-calendar-weekday\">Fri</span><span class=\"ds-calendar-weekday\">Sat</span><span class=\"ds-calendar-weekday\">Sun</span>\n                  <button class=\"ds-calendar-day\">1</button><button class=\"ds-calendar-day\">2</button><button class=\"ds-calendar-day is-today\">3</button><button class=\"ds-calendar-day\">4</button><button class=\"ds-calendar-day\">5</button><button class=\"ds-calendar-day\">6</button><button class=\"ds-calendar-day\">7</button>\n                  <button class=\"ds-calendar-day\">8</button><button class=\"ds-calendar-day\">9</button><button class=\"ds-calendar-day\">10</button><button class=\"ds-calendar-day\">11</button><button class=\"ds-calendar-day\">12</button><button class=\"ds-calendar-day\">13</button><button class=\"ds-calendar-day\">14</button>\n                  <button class=\"ds-calendar-day is-selected\">15</button><button class=\"ds-calendar-day\">16</button><button class=\"ds-calendar-day\">17</button><button class=\"ds-calendar-day\">18</button><button class=\"ds-calendar-day\">19</button><button class=\"ds-calendar-day\">20</button><button class=\"ds-calendar-day\">21</button>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>"
       ]
     },
@@ -2430,6 +2458,14 @@
       "examples": [
         "<span class=\"ds-badge is-success\">Success</span>\n              <span class=\"ds-badge is-warning\">Warning</span>\n              <span class=\"ds-badge is-info\">Info</span>\n              <span class=\"ds-badge is-danger\">Danger</span>\n              <span class=\"ds-status is-success\"><span class=\"ds-dot\"></span>Online</span>\n              <span class=\"ds-status is-warning\"><span class=\"ds-dot\"></span>Degraded</span>",
         "<div class=\"ds-toast is-success\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Changes saved</b>Your settings have been updated.</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>\n            <div class=\"ds-toast is-danger\" style=\"width:100%; max-width:none\">\n              <span class=\"ds-toast-ico\"><svg><!-- icon --></svg></span>\n              <div class=\"ds-toast-body\"><b>Connection lost</b>Reconnecting…</div>\n              <button class=\"ds-toast-close\"><svg><!-- icon --></svg></button>\n            </div>"
+      ]
+    },
+    {
+      "name": "is-today",
+      "type": "state",
+      "description": "",
+      "examples": [
+        "<div class=\"ds-calendar\">\n                <div class=\"ds-calendar-head\">\n                  <button class=\"ds-calendar-nav\" aria-label=\"Previous month\">‹</button>\n                  <span class=\"ds-calendar-title\">June 2026</span>\n                  <button class=\"ds-calendar-nav\" aria-label=\"Next month\">›</button>\n                </div>\n                <div class=\"ds-calendar-grid\" role=\"grid\">\n                  <span class=\"ds-calendar-weekday\">Mon</span><span class=\"ds-calendar-weekday\">Tue</span><span class=\"ds-calendar-weekday\">Wed</span><span class=\"ds-calendar-weekday\">Thu</span><span class=\"ds-calendar-weekday\">Fri</span><span class=\"ds-calendar-weekday\">Sat</span><span class=\"ds-calendar-weekday\">Sun</span>\n                  <button class=\"ds-calendar-day\">1</button><button class=\"ds-calendar-day\">2</button><button class=\"ds-calendar-day is-today\">3</button><button class=\"ds-calendar-day\">4</button><button class=\"ds-calendar-day\">5</button><button class=\"ds-calendar-day\">6</button><button class=\"ds-calendar-day\">7</button>\n                  <button class=\"ds-calendar-day\">8</button><button class=\"ds-calendar-day\">9</button><button class=\"ds-calendar-day\">10</button><button class=\"ds-calendar-day\">11</button><button class=\"ds-calendar-day\">12</button><button class=\"ds-calendar-day\">13</button><button class=\"ds-calendar-day\">14</button>\n                  <button class=\"ds-calendar-day is-selected\">15</button><button class=\"ds-calendar-day\">16</button><button class=\"ds-calendar-day\">17</button><button class=\"ds-calendar-day\">18</button><button class=\"ds-calendar-day\">19</button><button class=\"ds-calendar-day\">20</button><button class=\"ds-calendar-day\">21</button>\n                </div>\n              </div>"
       ]
     },
     {
@@ -2835,6 +2871,50 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "DsCalendar",
+      "type": "component",
+      "import": "import { DsCalendar } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-calendar",
+        "ds-calendar-day",
+        "ds-calendar-grid",
+        "ds-calendar-head",
+        "ds-calendar-nav",
+        "ds-calendar-title",
+        "ds-calendar-weekday"
+      ],
+      "props": [
+        {
+          "name": "modelValue",
+          "type": "string | null | undefined",
+          "default": "null",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "month",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:modelValue",
+          "type": "[string]",
+          "description": ""
+        },
+        {
+          "name": "update:month",
+          "type": "[string]",
+          "description": ""
+        }
+      ],
+      "slots": []
     },
     {
       "name": "DsCard",
