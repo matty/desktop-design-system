@@ -788,6 +788,21 @@ _(no description yet)_
               </ul>
 ```
 
+### ds-drawer
+
+_(no description yet)_
+- category: Drawer
+- sub-parts: `ds-drawer-body`, `ds-drawer-foot`, `ds-drawer-head`
+- states: `is-left`
+
+```html
+<div class="ds-drawer is-right" role="dialog" aria-modal="true" style="position:static; width:320px; box-shadow:none; border:1px solid var(--border);">
+      <div class="ds-drawer-head">Filters</div>
+      <div class="ds-drawer-body">Status, owner and date range controls.</div>
+      <div class="ds-drawer-foot"><button class="ds-btn">Reset</button><button class="ds-btn is-primary">Apply</button></div>
+    </div>
+```
+
 ### ds-drop-placeholder
 
 _(no description yet)_
@@ -2541,6 +2556,10 @@ _(no description yet)_
 
 _(no description yet)_
 
+### is-left
+
+_(no description yet)_
+
 ### is-lg
 
 _(no description yet)_
@@ -2644,6 +2663,14 @@ _(no description yet)_
 ### is-right
 
 _(no description yet)_
+
+```html
+<div class="ds-drawer is-right" role="dialog" aria-modal="true" style="position:static; width:320px; box-shadow:none; border:1px solid var(--border);">
+      <div class="ds-drawer-head">Filters</div>
+      <div class="ds-drawer-body">Status, owner and date range controls.</div>
+      <div class="ds-drawer-foot"><button class="ds-btn">Reset</button><button class="ds-btn is-primary">Apply</button></div>
+    </div>
+```
 
 ### is-seamless
 
@@ -3082,6 +3109,25 @@ import { DsDivider } from 'design-language/vue'
 | vertical | `boolean \| undefined` | `undefined` | false |
 
 **Slots:** `default`
+
+### DsDrawer
+
+_(no description yet)_
+
+```ts
+import { DsDrawer } from 'design-language/vue'
+```
+- renders: `ds-drawer`, `ds-drawer-body`, `ds-drawer-foot`, `ds-drawer-head`, `ds-overlay`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| open | `boolean` | `undefined` | true |
+| side | `"right" \| "left" \| undefined` | `"right"` | false |
+| title | `string \| undefined` | `undefined` | false |
+
+**Events:** `update:open`
+
+**Slots:** `default`, `footer`
 
 ### DsDropdownMenu
 

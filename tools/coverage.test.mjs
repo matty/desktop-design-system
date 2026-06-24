@@ -166,9 +166,9 @@ describe("docsCoverage scoped to interactive set", () => {
     expect(r.skipped).toBe(true);
   });
 
-  it("DATA_VUE_EXPECTED contains the twelve interactive components", () => {
+  it("DATA_VUE_EXPECTED contains the thirteen interactive components", () => {
     expect([...DATA_VUE_EXPECTED].sort()).toEqual(
-      ["DsAccordion","DsCombobox","DsContextMenu","DsDialog","DsDropdownMenu","DsPagination","DsPopover","DsSortable","DsSplitter","DsTabs","DsToastHost","DsTree"]
+      ["DsAccordion","DsCombobox","DsContextMenu","DsDialog","DsDrawer","DsDropdownMenu","DsPagination","DsPopover","DsSortable","DsSplitter","DsTabs","DsToastHost","DsTree"]
     );
   });
 });

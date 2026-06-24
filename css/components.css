@@ -609,3 +609,11 @@
 .ds-page.is-active { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
 .ds-page:disabled { opacity:.4; }
 .ds-pagination-ellipsis { padding:0 var(--space-2); color:var(--text-3); }
+
+/* ---------- Drawer ---------- */
+.ds-drawer { position:fixed; top:0; bottom:0; width:min(380px,90vw); display:flex; flex-direction:column; background:var(--surface); box-shadow:var(--shadow-dialog); z-index:101; }
+.ds-drawer.is-right { right:0; border-left:1px solid var(--border); }
+.ds-drawer.is-left { left:0; border-right:1px solid var(--border); }
+.ds-drawer-head { padding:16px 18px; border-bottom:1px solid var(--border-soft); font-size:var(--fz-md); font-weight:var(--fw-semibold); }
+.ds-drawer-body { flex:1; overflow:auto; padding:16px 18px; color:var(--text-2); font-size:var(--fz-sm); }
+.ds-drawer-foot { display:flex; justify-content:flex-end; gap:8px; padding:13px 18px; border-top:1px solid var(--border-soft); background:var(--rail); }
