@@ -550,6 +550,7 @@
         "<div class=\"ds-btn-group\" role=\"group\" aria-label=\"Alignment\">\n                <button class=\"ds-btn\">Left</button>\n                <button class=\"ds-btn\">Center</button>\n                <button class=\"ds-btn\">Right</button>\n              </div>",
         "<div class=\"u-toolbar-row\">\n                <button class=\"ds-btn\"><svg><!-- icon --></svg>New</button>\n                <button class=\"ds-btn is-primary\"><svg><!-- icon --></svg>Save</button>\n                <div class=\"u-flex-1\"></div>\n                <button class=\"ds-btn is-icon\" title=\"Refresh\"><svg><!-- icon --></svg></button>\n                <button class=\"ds-btn is-icon\" title=\"More\"><svg><!-- icon --></svg></button>\n              </div>",
         "<div class=\"ds-overlay\" style=\"position:relative; inset:auto; background:var(--overlay-bg); padding:24px; display:grid; place-items:center;\">\n                <div class=\"ds-dialog\">\n                  <div class=\"ds-dialog-head\"><h3>Delete this file?</h3></div>\n                  <div class=\"ds-dialog-body\">This action cannot be undone.</div>\n                  <div class=\"ds-dialog-foot\">\n                    <button class=\"ds-btn is-ghost\">Cancel</button>\n                    <button class=\"ds-btn is-danger\">Delete</button>\n                  </div>\n                </div>\n              </div>",
+        "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>",
         "<button class=\"ds-btn ds-tip\" data-tip=\"Saves to the cloud\">Hover me</button>",
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-banner is-warning u-w-full\">\n              <span class=\"ds-banner-ico\"><svg><!-- icon --></svg></span>\n              <span>Offline mode — check your network connection.</span>\n              <span class=\"ds-banner-spacer\"></span>\n              <button class=\"ds-btn is-sm is-ghost\">Retry</button>\n            </div>\n            <div class=\"ds-list u-w-full\">\n              <div class=\"ds-list-item is-selected\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Quarterly report.pdf<span class=\"ds-list-meta\">pdf · 2.4 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Cover photo.jpg<span class=\"ds-list-meta\">image · 5.1 MB</span></div>\n              <div class=\"ds-list-item\"><span class=\"ds-list-ico\"><svg><!-- icon --></svg></span>Backup.zip<span class=\"ds-list-meta\">archive · 18 MB</span></div>\n            </div>",
@@ -1056,10 +1057,13 @@
       "type": "primitive",
       "category": "Popover (generic floating surface)",
       "description": "",
-      "subParts": [],
+      "subParts": [
+        "ds-popover-anchor"
+      ],
       "states": [],
       "examples": [
-        "<div class=\"ds-popover\">Saved automatically a few seconds ago.</div>"
+        "<div class=\"ds-popover\">Saved automatically a few seconds ago.</div>",
+        "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>"
       ]
     },
     {
@@ -2216,7 +2220,9 @@
       "name": "is-open",
       "type": "state",
       "description": "",
-      "examples": []
+      "examples": [
+        "<div class=\"ds-popover-anchor is-open\">\n                <button class=\"ds-btn\" aria-expanded=\"true\">Options</button>\n                <div class=\"ds-popover\" role=\"dialog\" aria-label=\"Options\">Quitting saves your work automatically.</div>\n              </div>"
+      ]
     },
     {
       "name": "is-placeholder",
@@ -3502,6 +3508,50 @@
       "slots": [
         {
           "name": "default",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DsPopover",
+      "type": "component",
+      "import": "import { DsPopover } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-btn",
+        "ds-popover",
+        "ds-popover-anchor"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "open",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:open",
+          "type": "[value: boolean]",
+          "description": ""
+        }
+      ],
+      "slots": [
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "trigger",
           "description": ""
         }
       ]
