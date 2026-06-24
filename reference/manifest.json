@@ -994,6 +994,30 @@
       ]
     },
     {
+      "name": "ds-page",
+      "type": "primitive",
+      "category": "Pagination",
+      "description": "",
+      "subParts": [],
+      "states": [],
+      "examples": [
+        "<nav class=\"ds-pagination\" aria-label=\"Pagination\">\n      <button class=\"ds-page\" aria-label=\"Previous page\">‹</button>\n      <button class=\"ds-page\">1</button>\n      <button class=\"ds-page is-active\" aria-current=\"page\">2</button>\n      <button class=\"ds-page\">3</button>\n      <span class=\"ds-pagination-ellipsis\">…</span>\n      <button class=\"ds-page\">9</button>\n      <button class=\"ds-page\" aria-label=\"Next page\">›</button>\n    </nav>"
+      ]
+    },
+    {
+      "name": "ds-pagination",
+      "type": "primitive",
+      "category": "Pagination",
+      "description": "",
+      "subParts": [
+        "ds-pagination-ellipsis"
+      ],
+      "states": [],
+      "examples": [
+        "<nav class=\"ds-pagination\" aria-label=\"Pagination\">\n      <button class=\"ds-page\" aria-label=\"Previous page\">‹</button>\n      <button class=\"ds-page\">1</button>\n      <button class=\"ds-page is-active\" aria-current=\"page\">2</button>\n      <button class=\"ds-page\">3</button>\n      <span class=\"ds-pagination-ellipsis\">…</span>\n      <button class=\"ds-page\">9</button>\n      <button class=\"ds-page\" aria-label=\"Next page\">›</button>\n    </nav>"
+      ]
+    },
+    {
       "name": "ds-pane-first",
       "type": "primitive",
       "category": "Resizable split panes",
@@ -2061,6 +2085,7 @@
       "type": "state",
       "description": "",
       "examples": [
+        "<nav class=\"ds-pagination\" aria-label=\"Pagination\">\n      <button class=\"ds-page\" aria-label=\"Previous page\">‹</button>\n      <button class=\"ds-page\">1</button>\n      <button class=\"ds-page is-active\" aria-current=\"page\">2</button>\n      <button class=\"ds-page\">3</button>\n      <span class=\"ds-pagination-ellipsis\">…</span>\n      <button class=\"ds-page\">9</button>\n      <button class=\"ds-page\" aria-label=\"Next page\">›</button>\n    </nav>",
         "<div class=\"ds-dropdown\" id=\"dd\">\n                <button class=\"ds-btn\" id=\"ddBtn\">Recent files <svg><!-- icon --></svg></button>\n                <div class=\"ds-menu\" id=\"ddMenu\" hidden>\n                  <div class=\"ds-menu-label\">Documents</div>\n                  <div class=\"ds-menu-item is-active\"><svg><!-- icon --></svg>Quarterly report.pdf</div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Meeting notes.txt</div>\n                  <div class=\"ds-menu-sep\"></div>\n                  <div class=\"ds-menu-item\"><svg><!-- icon --></svg>Browse…</div>\n                </div>\n              </div>",
         "<div class=\"ds-segmented\" id=\"seg\">\n                <button class=\"is-active\">Day</button>\n                <button>Week</button>\n                <button>Month</button>\n              </div>",
         "<div class=\"ds-tabs\" id=\"tabs\">\n                <button class=\"ds-tab is-active\">General</button>\n                <button class=\"ds-tab\">Appearance</button>\n                <button class=\"ds-tab\">Advanced</button>\n              </div>",
@@ -3480,6 +3505,55 @@
         {
           "name": "update:modelValue",
           "type": "[number]",
+          "description": ""
+        }
+      ],
+      "slots": []
+    },
+    {
+      "name": "DsPagination",
+      "type": "component",
+      "import": "import { DsPagination } from 'design-language/vue'",
+      "description": "",
+      "renders": [
+        "ds-page",
+        "ds-pagination",
+        "ds-pagination-ellipsis"
+      ],
+      "props": [
+        {
+          "name": "page",
+          "type": "number | undefined",
+          "default": "1",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "pageSize",
+          "type": "number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        },
+        {
+          "name": "siblingCount",
+          "type": "number | undefined",
+          "default": "1",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "total",
+          "type": "number",
+          "default": "undefined",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "events": [
+        {
+          "name": "update:page",
+          "type": "[value: number]",
           "description": ""
         }
       ],

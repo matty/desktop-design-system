@@ -601,3 +601,11 @@
 .ds-step-item.is-active .ds-step-num { border-color:var(--accent); color:var(--accent); }
 .ds-step-item.is-complete .ds-step-num { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
 .ds-step-item + .ds-step-item::before { content:""; width:24px; height:1px; background:var(--border); }
+
+/* ---------- Pagination ---------- */
+.ds-pagination { display:flex; align-items:center; gap:var(--space-1); }
+.ds-page { min-width:28px; height:28px; padding:0 var(--space-2); display:inline-grid; place-items:center; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--fill); color:var(--text-2); font-size:var(--fz-sm); cursor:default; }
+.ds-page:hover:not(:disabled) { background:var(--fill-hover); color:var(--text); }
+.ds-page.is-active { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.ds-page:disabled { opacity:.4; }
+.ds-pagination-ellipsis { padding:0 var(--space-2); color:var(--text-3); }

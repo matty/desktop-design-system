@@ -11,7 +11,7 @@ export const EXAMPLE_EXEMPT = new Set(["ds-live", "ds-drop-placeholder"]);
 export const DATA_VUE_EXPECTED = new Set([
   "DsCombobox", "DsTree", "DsContextMenu", "DsDropdownMenu", "DsTabs",
   "DsAccordion", "DsDialog", "DsToastHost", "DsSplitter", "DsSortable",
-  "DsPopover"
+  "DsPopover", "DsPagination"
 ]);
 
 // Sub-components that are intentionally documented inside a parent component's

@@ -1108,6 +1108,41 @@ _(no description yet)_
               </div>
 ```
 
+### ds-page
+
+_(no description yet)_
+- category: Pagination
+
+```html
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
+```
+
+### ds-pagination
+
+_(no description yet)_
+- category: Pagination
+- sub-parts: `ds-pagination-ellipsis`
+
+```html
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
+```
+
 ### ds-pane-first
 
 _(no description yet)_
@@ -2300,16 +2335,15 @@ _(no description yet)_
 _(no description yet)_
 
 ```html
-<div class="ds-dropdown" id="dd">
-                <button class="ds-btn" id="ddBtn">Recent files <svg><!-- icon --></svg></button>
-                <div class="ds-menu" id="ddMenu" hidden>
-                  <div class="ds-menu-label">Documents</div>
-                  <div class="ds-menu-item is-active"><svg><!-- icon --></svg>Quarterly report.pdf</div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Meeting notes.txt</div>
-                  <div class="ds-menu-sep"></div>
-                  <div class="ds-menu-item"><svg><!-- icon --></svg>Browse…</div>
-                </div>
-              </div>
+<nav class="ds-pagination" aria-label="Pagination">
+      <button class="ds-page" aria-label="Previous page">‹</button>
+      <button class="ds-page">1</button>
+      <button class="ds-page is-active" aria-current="page">2</button>
+      <button class="ds-page">3</button>
+      <span class="ds-pagination-ellipsis">…</span>
+      <button class="ds-page">9</button>
+      <button class="ds-page" aria-label="Next page">›</button>
+    </nav>
 ```
 
 ### is-busy
@@ -3253,6 +3287,24 @@ import { DsNumber } from 'design-language/vue'
 | step | `number \| undefined` | `1` | false |
 
 **Events:** `update:modelValue`
+
+### DsPagination
+
+_(no description yet)_
+
+```ts
+import { DsPagination } from 'design-language/vue'
+```
+- renders: `ds-page`, `ds-pagination`, `ds-pagination-ellipsis`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| page | `number \| undefined` | `1` | false |
+| pageSize | `number` | `undefined` | true |
+| siblingCount | `number \| undefined` | `1` | false |
+| total | `number` | `undefined` | true |
+
+**Events:** `update:page`
 
 ### DsPanel
 
