@@ -18,4 +18,13 @@ describe("DsSwitch", () => {
   it("sub-element classes are backed by components.css", () => {
     expect(cssHas("ds-track")).toBe(true);
   });
+  it("passes name through DsSwitch", () => {
+    const w = mount(DsSwitch, { props: { modelValue: false, name: "notify" } });
+    expect(w.find("input").attributes("name")).toBe("notify");
+  });
+  it("DsSwitch still round-trips v-model", async () => {
+    const w = mount(DsSwitch, { props: { modelValue: false } });
+    await w.find("input").setValue(true);
+    expect(w.emitted("update:modelValue")!.at(-1)).toEqual([true]);
+  });
 });

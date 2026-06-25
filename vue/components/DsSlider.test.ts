@@ -16,4 +16,8 @@ describe("DsSlider", () => {
     await el.trigger("input");
     expect(w.emitted("update:modelValue")![0]).toEqual([7]);
   });
+  it("passes name through DsSlider", () => {
+    const w = mount(DsSlider, { props: { modelValue: 50, name: "volume" } });
+    expect(w.find("input").attributes("name")).toBe("volume");
+  });
 });
