@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import type { ComboOption } from "../types";
 import { useDismiss } from "../composables/useDismiss";
 
@@ -10,15 +10,17 @@ const props = withDefaults(
     multiple?: boolean;
     checklist?: boolean;
     filterable?: boolean;
+    disabled?: boolean;
     placeholder?: string;
   }>(),
-  { multiple: false, checklist: false, filterable: false, placeholder: "Select…" }
+  { multiple: false, checklist: false, filterable: false, disabled: false, placeholder: "Select…" }
 );
 const emit = defineEmits<{ "update:modelValue": [string | string[] | null] }>();
 
 const root = ref<HTMLElement | null>(null);
 const open = ref(false);
 const query = ref("");
+const activeIndex = ref(-1);
 
 const isMulti = computed(() => props.multiple || props.checklist);
 const selected = computed<string[]>(() =>
@@ -38,6 +40,11 @@ const buttonLabel = computed(() => {
 const isPlaceholder = computed(() => selected.value.length === 0 && !isMulti.value);
 
 useDismiss({ active: open, root, onDismiss: () => (open.value = false) });
+
+// Reset the active option whenever the menu opens.
+watch(open, (v) => {
+  if (v) activeIndex.value = -1;
+});
 
 function toggleOpen() {
   open.value = !open.value;
@@ -60,6 +67,65 @@ function removeChip(value: string) {
 function isSelected(opt: ComboOption) {
   return selected.value.includes(opt.value);
 }
+
+function nextEnabled(from: number, dir: 1 | -1): number {
+  const opts = visibleOptions.value;
+  for (let i = from; i >= 0 && i < opts.length; i += dir) {
+    if (!opts[i].disabled) return i;
+  }
+  return -1;
+}
+function firstEnabled(): number {
+  return nextEnabled(0, 1);
+}
+function lastEnabled(): number {
+  return nextEnabled(visibleOptions.value.length - 1, -1);
+}
+function move(dir: 1 | -1) {
+  if (!open.value) {
+    open.value = true;
+    return;
+  }
+  const start = activeIndex.value < 0 ? (dir === 1 ? 0 : visibleOptions.value.length - 1) : activeIndex.value + dir;
+  const found = nextEnabled(start, dir);
+  if (found >= 0) activeIndex.value = found;
+}
+function onKeydown(e: KeyboardEvent) {
+  switch (e.key) {
+    case "ArrowDown":
+      e.preventDefault();
+      move(1);
+      break;
+    case "ArrowUp":
+      e.preventDefault();
+      move(-1);
+      break;
+    case "Home":
+      if (open.value) {
+        e.preventDefault();
+        activeIndex.value = firstEnabled();
+      }
+      break;
+    case "End":
+      if (open.value) {
+        e.preventDefault();
+        activeIndex.value = lastEnabled();
+      }
+      break;
+    case "Enter":
+      if (open.value && activeIndex.value >= 0) {
+        e.preventDefault();
+        pick(visibleOptions.value[activeIndex.value]);
+      }
+      break;
+    case "Escape":
+      if (open.value) {
+        e.preventDefault();
+        open.value = false;
+      }
+      break;
+  }
+}
 </script>
 
 <template>
@@ -73,7 +139,14 @@ function isSelected(opt: ComboOption) {
       'is-filterable': filterable
     }"
   >
-    <button type="button" class="ds-combo-btn" :aria-expanded="open" @click.stop="toggleOpen">
+    <button
+      type="button"
+      class="ds-combo-btn"
+      :aria-expanded="open"
+      :disabled="disabled || undefined"
+      @click.stop="toggleOpen"
+      @keydown="onKeydown"
+    >
       <template v-if="multiple && !checklist">
         <span v-for="opt in selectedOptions" :key="opt.value" class="ds-chip">
           {{ opt.label }}
@@ -91,14 +164,15 @@ function isSelected(opt: ComboOption) {
         placeholder="Filter…"
         aria-label="Filter options"
         @click.stop
+        @keydown="onKeydown"
         @input="query = ($event.target as HTMLInputElement).value"
       />
       <div role="listbox">
         <div
-          v-for="opt in visibleOptions"
+          v-for="(opt, i) in visibleOptions"
           :key="opt.value"
           class="ds-combo-option"
-          :class="{ 'is-selected': isSelected(opt) }"
+          :class="{ 'is-selected': isSelected(opt), 'is-active': i === activeIndex }"
           role="option"
           :aria-selected="isSelected(opt)"
           :aria-disabled="opt.disabled || undefined"
