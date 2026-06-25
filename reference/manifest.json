@@ -4050,6 +4050,13 @@
           "default": "false",
           "required": false,
           "description": ""
+        },
+        {
+          "name": "placement",
+          "type": "\"bottom\" | \"top\" | undefined",
+          "default": "\"bottom\"",
+          "required": false,
+          "description": ""
         }
       ],
       "events": [

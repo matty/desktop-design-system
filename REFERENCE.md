@@ -3709,6 +3709,7 @@ import { DsPopover } from 'design-language/vue'
 | --- | --- | --- | --- |
 | ariaLabel | `string \| undefined` | `undefined` | false |
 | open | `boolean \| undefined` | `false` | false |
+| placement | `"bottom" \| "top" \| undefined` | `"bottom"` | false |
 
 **Events:** `update:open`
 

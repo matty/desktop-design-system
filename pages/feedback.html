@@ -146,6 +146,21 @@
             </template>
             <div class="example-caption">Trigger + floating surface with <code>.ds-popover-anchor</code> / <code>.ds-popover</code>.</div>
           </div>
+          <div class="example">
+            <div class="example-preview" style="padding-top:80px">
+              <div class="ds-popover-anchor is-open">
+                <button class="ds-btn" aria-expanded="true">Upward</button>
+                <div class="ds-popover" role="dialog" aria-label="Upward" data-placement="top">Flips above the trigger when there's no room below.</div>
+              </div>
+            </div>
+            <template data-vue>
+<DsPopover aria-label="Upward" placement="top">
+  <template #trigger>Upward</template>
+  <div>Flips above the trigger when there's no room below.</div>
+</DsPopover>
+            </template>
+            <div class="example-caption">Collision-aware: <code>placement="top"</code> / <code>[data-placement="top"]</code>.</div>
+          </div>
         </section>
 
         <section class="doc-section">
