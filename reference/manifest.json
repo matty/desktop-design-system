@@ -2994,8 +2994,22 @@
           "description": ""
         },
         {
+          "name": "indeterminate",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "modelValue",
           "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string | undefined",
           "default": "undefined",
           "required": false,
           "description": ""
@@ -3086,6 +3100,13 @@
       "props": [
         {
           "name": "checklist",
+          "type": "boolean | undefined",
+          "default": "false",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "disabled",
           "type": "boolean | undefined",
           "default": "false",
           "required": false,
@@ -3652,9 +3673,23 @@
           "description": ""
         },
         {
+          "name": "name",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "placeholder",
           "type": "string | undefined",
           "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "type": "boolean | undefined",
+          "default": "false",
           "required": false,
           "description": ""
         },
@@ -3909,6 +3944,13 @@
           "description": ""
         },
         {
+          "name": "name",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "step",
           "type": "number | undefined",
           "default": "1",
@@ -4136,8 +4178,15 @@
           "description": ""
         },
         {
+          "name": "name",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "options",
-          "type": "{ value: string; label: string; }[]",
+          "type": "OptionItem[]",
           "default": "undefined",
           "required": true,
           "description": ""
@@ -4233,6 +4282,13 @@
           "description": ""
         },
         {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "modelValue",
           "type": "string | undefined",
           "default": "undefined",
@@ -4241,7 +4297,7 @@
         },
         {
           "name": "options",
-          "type": "{ value: string; label: string; }[]",
+          "type": "OptionItem[]",
           "default": "undefined",
           "required": true,
           "description": ""
@@ -4301,6 +4357,13 @@
         {
           "name": "modelValue",
           "type": "number | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string | undefined",
           "default": "undefined",
           "required": false,
           "description": ""
@@ -4615,6 +4678,13 @@
           "default": "undefined",
           "required": false,
           "description": ""
+        },
+        {
+          "name": "name",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
         }
       ],
       "events": [
@@ -4743,9 +4813,23 @@
           "description": ""
         },
         {
+          "name": "name",
+          "type": "string | undefined",
+          "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
           "name": "placeholder",
           "type": "string | undefined",
           "default": "undefined",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "type": "boolean | undefined",
+          "default": "false",
           "required": false,
           "description": ""
         },

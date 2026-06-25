@@ -3259,7 +3259,9 @@ import { DsCheckbox } from 'design-language/vue'
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
 | disabled | `boolean \| undefined` | `undefined` | false |
+| indeterminate | `boolean \| undefined` | `false` | false |
 | modelValue | `boolean \| undefined` | `undefined` | false |
+| name | `string \| undefined` | `undefined` | false |
 
 **Events:** `update:modelValue`
 
@@ -3307,6 +3309,7 @@ import { DsCombobox } from 'design-language/vue'
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
 | checklist | `boolean \| undefined` | `false` | false |
+| disabled | `boolean \| undefined` | `false` | false |
 | filterable | `boolean \| undefined` | `false` | false |
 | modelValue | `string \| string[] \| null` | `undefined` | true |
 | multiple | `boolean \| undefined` | `false` | false |
@@ -3537,7 +3540,9 @@ import { DsInput } from 'design-language/vue'
 | invalid | `boolean \| undefined` | `false` | false |
 | modelValue | `string \| undefined` | `undefined` | false |
 | mono | `boolean \| undefined` | `false` | false |
+| name | `string \| undefined` | `undefined` | false |
 | placeholder | `string \| undefined` | `undefined` | false |
+| readonly | `boolean \| undefined` | `false` | false |
 | type | `string \| undefined` | `"text"` | false |
 | valid | `boolean \| undefined` | `false` | false |
 
@@ -3648,6 +3653,7 @@ import { DsNumber } from 'design-language/vue'
 | max | `number \| undefined` | `Number.POSITIVE_INFINITY` | false |
 | min | `number \| undefined` | `Number.NEGATIVE_INFINITY` | false |
 | modelValue | `number \| undefined` | `undefined` | false |
+| name | `string \| undefined` | `undefined` | false |
 | step | `number \| undefined` | `1` | false |
 
 **Events:** `update:modelValue`
@@ -3743,7 +3749,8 @@ import { DsRadioGroup } from 'design-language/vue'
 | ariaLabel | `string \| undefined` | `undefined` | false |
 | disabled | `boolean \| undefined` | `undefined` | false |
 | modelValue | `string \| undefined` | `undefined` | false |
-| options | `{ value: string; label: string; }[]` | `undefined` | true |
+| name | `string \| undefined` | `undefined` | false |
+| options | `OptionItem[]` | `undefined` | true |
 
 **Events:** `update:modelValue`
 
@@ -3790,8 +3797,9 @@ import { DsSegmented } from 'design-language/vue'
 | Prop | Type | Default | Required |
 | --- | --- | --- | --- |
 | ariaLabel | `string \| undefined` | `undefined` | false |
+| disabled | `boolean \| undefined` | `undefined` | false |
 | modelValue | `string \| undefined` | `undefined` | false |
-| options | `{ value: string; label: string; }[]` | `undefined` | true |
+| options | `OptionItem[]` | `undefined` | true |
 
 **Events:** `update:modelValue`
 
@@ -3819,6 +3827,7 @@ import { DsSlider } from 'design-language/vue'
 | max | `number \| undefined` | `100` | false |
 | min | `number \| undefined` | `0` | false |
 | modelValue | `number \| undefined` | `undefined` | false |
+| name | `string \| undefined` | `undefined` | false |
 | step | `number \| undefined` | `1` | false |
 
 **Events:** `update:modelValue`
@@ -3955,6 +3964,7 @@ import { DsSwitch } from 'design-language/vue'
 | --- | --- | --- | --- |
 | disabled | `boolean \| undefined` | `undefined` | false |
 | modelValue | `boolean \| undefined` | `undefined` | false |
+| name | `string \| undefined` | `undefined` | false |
 
 **Events:** `update:modelValue`
 
@@ -4016,7 +4026,9 @@ import { DsTextarea } from 'design-language/vue'
 | id | `string \| undefined` | `undefined` | false |
 | invalid | `boolean \| undefined` | `false` | false |
 | modelValue | `string \| undefined` | `undefined` | false |
+| name | `string \| undefined` | `undefined` | false |
 | placeholder | `string \| undefined` | `undefined` | false |
+| readonly | `boolean \| undefined` | `false` | false |
 | rows | `number \| undefined` | `3` | false |
 | valid | `boolean \| undefined` | `false` | false |
 
