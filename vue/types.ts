@@ -16,6 +16,12 @@ export interface ComboOption {
   disabled?: boolean;
 }
 
+export interface OptionItem {
+  value: string;
+  label: string;
+  disabled?: boolean;
+}
+
 export interface TreeNode {
   id: string;
   label: string;
