@@ -49,6 +49,11 @@ export interface UseFlipReturn {
   floatStyle: Ref<{ left: string }>;
 }
 
+/**
+ * `placement` is captured at call time (not reactive). `gap` is baked into the
+ * flip threshold; the consumer's CSS must offset the panel from the trigger by
+ * the same gap (DsPopover's CSS uses 6px to match the default).
+ */
 export function useFlip(opts: UseFlipOptions): UseFlipReturn {
   const preferred = opts.placement ?? "bottom";
   const gap = opts.gap ?? 6;
@@ -61,6 +66,7 @@ export function useFlip(opts: UseFlipOptions): UseFlipReturn {
 
   function measure() {
     if (typeof window === "undefined") return;
+    if (!opts.open.value) return;
     const t = opts.trigger.value;
     const f = opts.floating.value;
     if (!t || !f) return;
@@ -86,11 +92,14 @@ export function useFlip(opts: UseFlipOptions): UseFlipReturn {
   }
 
   function attach() {
+    if (typeof window === "undefined") return;
+    // Capture phase catches scroll on any ancestor/overflow container.
     window.addEventListener("scroll", schedule, true);
     window.addEventListener("resize", schedule);
   }
 
   function detach() {
+    if (typeof window === "undefined") return;
     window.removeEventListener("scroll", schedule, true);
     window.removeEventListener("resize", schedule);
     if (raf) {
