@@ -29,7 +29,7 @@ const opts = [
   { value: "c", label: "C" }
 ];
 
-describe("DsRadioGroup — Task 6: per-option disabled + name override", () => {
+describe("DsRadioGroup — per-option disabled + name override", () => {
   it("disables only the per-option disabled radio", () => {
     const w = mount(DsRadioGroup, { props: { modelValue: "a", options: opts } });
     const inputs = w.findAll("input[type=radio]");
