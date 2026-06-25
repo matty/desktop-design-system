@@ -1,6 +1,18 @@
 <script setup lang="ts">
-defineProps<{ modelValue?: string; options: { value: string; label: string }[]; ariaLabel?: string }>();
+import type { OptionItem } from "../types";
+
+const props = defineProps<{
+  modelValue?: string;
+  options: OptionItem[];
+  disabled?: boolean;
+  ariaLabel?: string;
+}>();
 const emit = defineEmits<{ "update:modelValue": [string] }>();
+
+function select(opt: OptionItem) {
+  if (props.disabled || opt.disabled) return;
+  emit("update:modelValue", opt.value);
+}
 </script>
 
 <template>
@@ -11,7 +23,8 @@ const emit = defineEmits<{ "update:modelValue": [string] }>();
       type="button"
       :class="{ 'is-active': modelValue === opt.value }"
       :aria-pressed="modelValue === opt.value"
-      @click="emit('update:modelValue', opt.value)"
+      :disabled="disabled || opt.disabled || undefined"
+      @click="select(opt)"
     >
       {{ opt.label }}
     </button>
