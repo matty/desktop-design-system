@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import { useId } from "vue";
+import { computed, useId } from "vue";
+import type { OptionItem } from "../types";
 
-defineProps<{ modelValue?: string; options: { value: string; label: string }[]; disabled?: boolean; ariaLabel?: string }>();
+const props = defineProps<{
+  modelValue?: string;
+  options: OptionItem[];
+  disabled?: boolean;
+  name?: string;
+  ariaLabel?: string;
+}>();
 const emit = defineEmits<{ "update:modelValue": [string] }>();
-const name = useId();
+const generatedName = useId();
+const groupName = computed(() => props.name ?? generatedName);
 </script>
 
 <template>
@@ -11,10 +19,10 @@ const name = useId();
     <label v-for="opt in options" :key="opt.value" class="ds-radio">
       <input
         type="radio"
-        :name="name"
+        :name="groupName"
         :value="opt.value"
         :checked="modelValue === opt.value"
-        :disabled="disabled || undefined"
+        :disabled="disabled || opt.disabled || undefined"
         @change="emit('update:modelValue', opt.value)"
       />
       {{ opt.label }}
