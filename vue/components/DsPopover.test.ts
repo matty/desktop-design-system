@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mount } from "@vue/test-utils";
+import { mount, flushPromises } from "@vue/test-utils";
 import { h } from "vue";
 import DsPopover from "./DsPopover.vue";
 
@@ -41,5 +41,35 @@ describe("DsPopover", () => {
     expect(w.find(".ds-popover").exists()).toBe(true);
     await w.setProps({ open: false });
     expect(w.find(".ds-popover").exists()).toBe(false);
+  });
+
+  it("defaults the open popover to data-placement=bottom", async () => {
+    const w = mount(DsPopover, { slots: { trigger: () => "x", default: () => "y" } });
+    await w.find("button").trigger("click");
+    await flushPromises();
+    expect(w.find(".ds-popover").attributes("data-placement")).toBe("bottom");
+  });
+
+  it("honors the placement prop", async () => {
+    const w = mount(DsPopover, { attachTo: document.body, props: { placement: "top" }, slots: { trigger: () => "x", default: () => "y" } });
+    const btn = w.find("button").element as HTMLElement;
+    btn.getBoundingClientRect = () =>
+      ({ top: 100, bottom: 118, left: 100, right: 200, width: 100, height: 18, x: 100, y: 100, toJSON: () => ({}) }) as DOMRect;
+    await w.find("button").trigger("click");
+    await flushPromises();
+    expect(w.find(".ds-popover").attributes("data-placement")).toBe("top");
+    w.unmount();
+  });
+
+  it("flips to top when the trigger sits near the viewport bottom", async () => {
+    const w = mount(DsPopover, { attachTo: document.body, slots: { trigger: () => "x", default: () => "y" } });
+    const vh = window.innerHeight;
+    const btn = w.find("button").element as HTMLElement;
+    btn.getBoundingClientRect = () =>
+      ({ top: vh - 20, bottom: vh - 2, left: 100, right: 200, width: 100, height: 18, x: 100, y: vh - 20, toJSON: () => ({}) }) as DOMRect;
+    await w.find("button").trigger("click");
+    await flushPromises();
+    expect(w.find(".ds-popover").attributes("data-placement")).toBe("top");
+    w.unmount();
   });
 });
