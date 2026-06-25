@@ -11,14 +11,18 @@ const props = withDefaults(
     invalid?: boolean;
     valid?: boolean;
     disabled?: boolean;
+    readonly?: boolean;
     id?: string;
+    name?: string;
   }>(),
-  { type: "text", mono: false, invalid: false, valid: false, disabled: false }
+  { type: "text", mono: false, invalid: false, valid: false, disabled: false, readonly: false }
 );
 const emit = defineEmits<{ "update:modelValue": [string] }>();
 
 const field = inject(dsFieldKey, null);
-const resolvedId = computed(() => props.id ?? field?.id.value);
+// Field-id-wins: inside a DsField the field id is authoritative so the
+// field's <label for> always matches; the consumer id is only used standalone.
+const resolvedId = computed(() => field?.id.value ?? props.id);
 const ariaInvalid = computed(() => props.invalid || field?.invalid.value || undefined);
 const classes = computed(() => ({
   "is-mono": props.mono,
@@ -35,7 +39,9 @@ const classes = computed(() => ({
     :value="modelValue"
     :placeholder="placeholder"
     :disabled="disabled || undefined"
+    :readonly="readonly || undefined"
     :id="resolvedId"
+    :name="name"
     :aria-invalid="ariaInvalid"
     :aria-describedby="field?.describedby.value"
     @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"

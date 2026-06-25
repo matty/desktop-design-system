@@ -27,4 +27,27 @@ describe("DsInput", () => {
     expect(input.attributes("id")).toBeTruthy();
     expect(input.attributes("aria-invalid")).toBe("true");
   });
+
+  it("uses the field id even when the input has its own id (label for matches)", () => {
+    const w = mount(DsField, {
+      props: { label: "Email" },
+      slots: { default: () => h(DsInput, { modelValue: "", id: "my-own-id" }) }
+    });
+    const labelFor = w.find("label.ds-field-label").attributes("for");
+    const inputId = w.find("input").attributes("id");
+    expect(inputId).toBe(labelFor);
+    expect(inputId).not.toBe("my-own-id");
+  });
+
+  it("uses the consumer id when standalone (no field)", () => {
+    const w = mount(DsInput, { props: { modelValue: "", id: "standalone" } });
+    expect(w.find("input").attributes("id")).toBe("standalone");
+  });
+
+  it("passes name and readonly through to the native input", () => {
+    const w = mount(DsInput, { props: { modelValue: "", name: "email", readonly: true } });
+    const input = w.find("input");
+    expect(input.attributes("name")).toBe("email");
+    expect(input.attributes("readonly")).toBeDefined();
+  });
 });
