@@ -40,6 +40,8 @@ Follow the class grammar:
 - Primitives use `.ds-*`, for example `.ds-btn`, `.ds-card`, `.ds-status`.
 - Utilities use `.u-*`, for example `.u-flex`, `.u-gap-*`.
 - States and variants use `.is-*`, for example `.is-primary`, `.is-danger`, `.is-active`.
+- Relationship hooks use `has-*`, for example `.ds-menu-item.has-submenu` (a node that *contains* something).
+- Full-screen pattern recipes use `.ptn-*`, for example `.ptn-workspace`, `.ptn-stage` (composition-level, distinct from `.ds-*` primitives).
 - Modes use `data-*`, for example `data-theme="light"` or `data-density="compact"`.
 - Design values should reference CSS custom properties from `tokens.css` instead of hard-coded colors or sizes.
 

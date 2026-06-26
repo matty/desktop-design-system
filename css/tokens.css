@@ -54,6 +54,9 @@
   --tooltip-bg:  #000000;
   --tooltip-ink: #ffffff;
   --overlay-bg:  rgba(0,0,0,.55);
+  --selection:        rgba(255,255,255,.18);   /* text selection highlight    */
+  --scrollbar-thumb:  rgba(255,255,255,.12);   /* scrollbar thumb             */
+  --scrollbar-hover:  rgba(255,255,255,.18);   /* scrollbar thumb hovered     */
 
   /* ---- Focus ring ---- */
   --focus:      rgba(255,255,255,.55);
@@ -151,14 +154,18 @@
   --accent-soft:  color-mix(in srgb, AccentColor 18%, transparent);
   --accent-border:color-mix(in srgb, AccentColor 38%, transparent);
 
-  --success-ink:#247245;
-  --warning-ink:#805800;
-  --info-ink:#245f9f;
-  --danger-ink:#9a302c;
+  /* Semantic hues re-tuned for white surfaces (base + soft were dark-only) */
+  --success:#1f9d57; --success-soft:rgba(31,157,87,.13);  --success-ink:#247245;
+  --warning:#b5780a; --warning-soft:rgba(181,120,10,.15); --warning-ink:#805800;
+  --info:   #2f74c0; --info-soft:   rgba(47,116,192,.12); --info-ink:#245f9f;
+  --danger: #c5403b; --danger-soft: rgba(197,64,59,.12);  --danger-ink:#9a302c;
 
   --titlebar-bg: #e4e6ea;
   --tooltip-bg:  #1b1d21;
   --overlay-bg:  rgba(0,0,0,.35);
+  --selection:        rgba(0,0,0,.14);
+  --scrollbar-thumb:  rgba(0,0,0,.20);
+  --scrollbar-hover:  rgba(0,0,0,.34);
 
   --focus:      rgba(0,0,0,.45);
   --shadow-popover: 0 8px 20px -8px rgba(0,0,0,.22);

@@ -274,9 +274,24 @@
 - value: `198px`
 - _(no description yet)_
 
+### --scrollbar-hover
+
+- value: `rgba(255,255,255,.18)`
+- _(no description yet)_
+
+### --scrollbar-thumb
+
+- value: `rgba(255,255,255,.12)`
+- _(no description yet)_
+
 ### --selected
 
 - value: `var(--fill-hover)`
+- _(no description yet)_
+
+### --selection
+
+- value: `rgba(255,255,255,.18)`
 - _(no description yet)_
 
 ### --shadow-dialog
@@ -514,9 +529,9 @@ _(no description yet)_
             <span class="ds-spinner"></span>
             <span class="ds-spinner is-lg"></span>
             <div class="u-flex u-col u-gap-2" style="width:200px">
-              <div class="ds-skeleton text" style="width:70%"></div>
-              <div class="ds-skeleton text" style="width:100%"></div>
-              <div class="ds-skeleton text" style="width:45%"></div>
+              <div class="ds-skeleton is-text" style="width:70%"></div>
+              <div class="ds-skeleton is-text" style="width:100%"></div>
+              <div class="ds-skeleton is-text" style="width:45%"></div>
             </div>
 ```
 
@@ -800,6 +815,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Definition list / facts grid
+- states: `is-cols-2`
 
 ```html
 <dl class="ds-dl w-320">
@@ -819,7 +835,7 @@ _(no description yet)_
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -902,11 +918,12 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Definition list / facts grid
+- states: `is-cols-2`
 
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -919,11 +936,12 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Definition list / facts grid
+- states: `is-cols-2`
 
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -1096,17 +1114,17 @@ _(no description yet)_
 
 ```html
 <div class="ds-menubar" role="menubar" aria-label="Main">
-      <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="menu" aria-expanded="true">File
-        <div class="ds-menu" role="menu" aria-label="File">
-          <div class="ds-menu-item" role="menuitem">New</div>
-          <div class="ds-menu-item" role="menuitem">Open…</div>
-          <div class="ds-menu-sep"></div>
-          <div class="ds-menu-item" role="menuitem">Quit</div>
-        </div>
-      </div>
-      <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
-      <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
-    </div>
+                <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="menu" aria-expanded="true">File
+                  <div class="ds-menu" role="menu" aria-label="File">
+                    <div class="ds-menu-item" role="menuitem">New</div>
+                    <div class="ds-menu-item" role="menuitem">Open…</div>
+                    <div class="ds-menu-sep"></div>
+                    <div class="ds-menu-item" role="menuitem">Quit</div>
+                  </div>
+                </div>
+                <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
+                <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
+              </div>
 ```
 
 ### ds-meter
@@ -1280,7 +1298,7 @@ Titled content region with a .ds-panel-head and body.
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -1372,7 +1390,7 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
                 </div>
@@ -1445,6 +1463,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Skeleton loader
+- states: `is-circle`, `is-text`
 
 ```html
 <div class="ds-avatar is-lg">M</div>
@@ -1453,9 +1472,9 @@ _(no description yet)_
             <span class="ds-spinner"></span>
             <span class="ds-spinner is-lg"></span>
             <div class="u-flex u-col u-gap-2" style="width:200px">
-              <div class="ds-skeleton text" style="width:70%"></div>
-              <div class="ds-skeleton text" style="width:100%"></div>
-              <div class="ds-skeleton text" style="width:45%"></div>
+              <div class="ds-skeleton is-text" style="width:70%"></div>
+              <div class="ds-skeleton is-text" style="width:100%"></div>
+              <div class="ds-skeleton is-text" style="width:45%"></div>
             </div>
 ```
 
@@ -1546,7 +1565,7 @@ _(no description yet)_
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -1587,7 +1606,7 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
                 </div>
@@ -1632,10 +1651,10 @@ _(no description yet)_
 
 ```html
 <ol class="ds-steps">
-      <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
-      <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
-      <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
-    </ol>
+                <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
+                <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
+                <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
+              </ol>
 ```
 
 ### ds-sub
@@ -1833,7 +1852,7 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
                 </div>
@@ -1891,7 +1910,7 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
                 </div>
@@ -1998,7 +2017,7 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
                 </div>
@@ -2066,9 +2085,9 @@ _(no description yet)_
             <span class="ds-spinner"></span>
             <span class="ds-spinner is-lg"></span>
             <div class="u-flex u-col u-gap-2" style="width:200px">
-              <div class="ds-skeleton text" style="width:70%"></div>
-              <div class="ds-skeleton text" style="width:100%"></div>
-              <div class="ds-skeleton text" style="width:45%"></div>
+              <div class="ds-skeleton is-text" style="width:70%"></div>
+              <div class="ds-skeleton is-text" style="width:100%"></div>
+              <div class="ds-skeleton is-text" style="width:45%"></div>
             </div>
 ```
 
@@ -2344,6 +2363,38 @@ _(no description yet)_
 
 _(no description yet)_
 
+```html
+<div style="border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; width:100%">
+                <div class="ds-titlebar">
+                  <div class="ds-titlebar-title">Atlas</div>
+                  <div class="ds-winbtns">
+                    <button><svg><!-- icon --></svg></button>
+                    <button><svg><!-- icon --></svg></button>
+                    <button class="is-close"><svg><!-- icon --></svg></button>
+                  </div>
+                </div>
+                <div class="u-flex">
+                  <nav class="ds-rail">
+                    <a class="ds-navi is-active"><svg><!-- icon --></svg>Home</a>
+                    <a class="ds-navi"><svg><!-- icon --></svg>Files</a>
+                  </nav>
+                  <div class="u-flex-1">
+                    <div class="ds-toolbar">
+                      <div class="ds-toolbar-title">Documents</div>
+                      <div class="ds-toolbar-spacer"></div>
+                      <button class="ds-btn is-sm is-primary">New</button>
+                    </div>
+                    <div style="padding:12px; min-height:48px;" class="ds-muted">Content area</div>
+                    <div class="ds-statusbar">
+                      <div class="seg">Ready</div>
+                      <div class="ds-statusbar-spacer"></div>
+                      <div class="seg u-mono">v2.4.0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+```
+
 ### u-mt-2
 
 _(no description yet)_
@@ -2580,6 +2631,10 @@ _(no description yet)_
 
 _(no description yet)_
 
+### is-circle
+
+_(no description yet)_
+
 ### is-close
 
 _(no description yet)_
@@ -2609,9 +2664,25 @@ _(no description yet)_
                     <div class="ds-statusbar">
                       <div class="seg">Ready</div>
                       <div class="ds-statusbar-spacer"></div>
-                      <div class="seg mono">v2.4.0</div>
+                      <div class="seg u-mono">v2.4.0</div>
                     </div>
                   </div>
+                </div>
+              </div>
+```
+
+### is-cols-2
+
+_(no description yet)_
+
+```html
+<div class="ds-panel">
+                <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
+                <div class="ds-facts is-cols-2">
+                  <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
+                  <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
+                  <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
+                  <div class="ds-fact"><div class="k">Uptime</div><div class="v">4d 12:41</div></div>
                 </div>
               </div>
 ```
@@ -2622,10 +2693,10 @@ _(no description yet)_
 
 ```html
 <ol class="ds-steps">
-      <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
-      <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
-      <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
-    </ol>
+                <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
+                <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
+                <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
+              </ol>
 ```
 
 ### is-danger
@@ -2831,7 +2902,7 @@ _(no description yet)_
 ```html
 <div class="ds-panel">
                 <div class="ds-panel-head"><h3>Service status</h3><span class="ds-status is-on"><span class="ds-dot"></span>Online</span></div>
-                <div class="ds-facts cols-2">
+                <div class="ds-facts is-cols-2">
                   <div class="ds-fact"><div class="k">Version</div><div class="v">2.4.0</div></div>
                   <div class="ds-fact"><div class="k">Channel</div><div class="v">Stable</div></div>
                   <div class="ds-fact"><div class="k">Region</div><div class="v">us-east-1</div></div>
@@ -2962,6 +3033,23 @@ _(no description yet)_
               <span class="ds-badge is-danger">Danger</span>
               <span class="ds-status is-success"><span class="ds-dot"></span>Online</span>
               <span class="ds-status is-warning"><span class="ds-dot"></span>Degraded</span>
+```
+
+### is-text
+
+_(no description yet)_
+
+```html
+<div class="ds-avatar is-lg">M</div>
+            <div class="ds-avatar">VR</div>
+            <div class="ds-avatar is-sm">ab</div>
+            <span class="ds-spinner"></span>
+            <span class="ds-spinner is-lg"></span>
+            <div class="u-flex u-col u-gap-2" style="width:200px">
+              <div class="ds-skeleton is-text" style="width:70%"></div>
+              <div class="ds-skeleton is-text" style="width:100%"></div>
+              <div class="ds-skeleton is-text" style="width:45%"></div>
+            </div>
 ```
 
 ### is-today

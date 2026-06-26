@@ -188,38 +188,6 @@
             <div class="example-caption"><b>data-ds-context="ctxDemo"</b> on the trigger · hidden <b>#ctxDemo</b> template cloned at cursor · <b>.ds-menu-item.has-submenu</b> with nested <b>.ds-menu</b> for fly-out · <b>ArrowRight</b> / <b>ArrowLeft</b> open and close submenus · <b>Esc</b> closes and returns focus</div>
           </div>
 
-          <div class="example">
-  <div class="example-preview">
-    <ol class="ds-steps">
-      <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
-      <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
-      <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
-    </ol>
-  </div>
-  <div class="example-caption">Step indicator with <code>.ds-steps</code>.</div>
-</div>
-
-          <div class="example">
-  <div class="example-preview">
-    <div class="ds-menubar" role="menubar" aria-label="Main">
-      <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="menu" aria-expanded="true">File
-        <div class="ds-menu" role="menu" aria-label="File">
-          <div class="ds-menu-item" role="menuitem">New</div>
-          <div class="ds-menu-item" role="menuitem">Open…</div>
-          <div class="ds-menu-sep"></div>
-          <div class="ds-menu-item" role="menuitem">Quit</div>
-        </div>
-      </div>
-      <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
-      <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
-    </div>
-  </div>
-  <template data-vue>
-<DsMenubar :menus="menus" aria-label="Main" @select="onSelect" />
-  </template>
-  <div class="example-caption">Application menu bar with <code>.ds-menubar</code> (dropdowns reuse <code>.ds-menu</code>).</div>
-</div>
-
           <div class="ds-menu" id="ctxDemo" hidden>
             <div class="ds-menu-item" role="menuitem">Cut</div>
             <div class="ds-menu-item" role="menuitem">Copy</div>
@@ -232,6 +200,44 @@
                 <div class="ds-menu-item" role="menuitem">Copy link</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Step indicator</h2>
+          <div class="example">
+            <div class="example-preview">
+              <ol class="ds-steps">
+                <li class="ds-steps-item is-complete"><span class="ds-steps-num">1</span>Account</li>
+                <li class="ds-steps-item is-active"><span class="ds-steps-num">2</span>Profile</li>
+                <li class="ds-steps-item"><span class="ds-steps-num">3</span>Done</li>
+              </ol>
+            </div>
+            <div class="example-caption">Step indicator with <code>.ds-steps</code>.</div>
+          </div>
+        </section>
+
+        <section class="doc-section">
+          <h2>Menu bar</h2>
+          <div class="example">
+            <div class="example-preview">
+              <div class="ds-menubar" role="menubar" aria-label="Main">
+                <div class="ds-menubar-item is-open" role="menuitem" tabindex="0" aria-haspopup="menu" aria-expanded="true">File
+                  <div class="ds-menu" role="menu" aria-label="File">
+                    <div class="ds-menu-item" role="menuitem">New</div>
+                    <div class="ds-menu-item" role="menuitem">Open…</div>
+                    <div class="ds-menu-sep"></div>
+                    <div class="ds-menu-item" role="menuitem">Quit</div>
+                  </div>
+                </div>
+                <div class="ds-menubar-item" role="menuitem" tabindex="0">Edit</div>
+                <div class="ds-menubar-item" role="menuitem" tabindex="0">View</div>
+              </div>
+            </div>
+            <template data-vue>
+<DsMenubar :menus="menus" aria-label="Main" @select="onSelect" />
+            </template>
+            <div class="example-caption">Application menu bar with <code>.ds-menubar</code> (dropdowns reuse <code>.ds-menu</code>).</div>
           </div>
         </section>
       </div>

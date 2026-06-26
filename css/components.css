@@ -229,7 +229,7 @@
 /* ---------- Status indicator (dot + label) ---------- */
 .ds-status { display:inline-flex; align-items:center; gap:8px; font-size:var(--fz-base); }
 .ds-status .ds-dot { width:8px; height:8px; border-radius:50%; flex:none; }
-.ds-status.is-on  .ds-dot { background:var(--text); box-shadow:0 0 9px rgba(255,255,255,.55); }
+.ds-status.is-on  .ds-dot { background:var(--text); box-shadow:0 0 9px color-mix(in srgb, var(--text) 55%, transparent); }
 .ds-status.is-off .ds-dot { background:var(--text-3); }
 .ds-status.is-busy .ds-dot { background:var(--text-2); animation:ds-pulse 1.3s ease-in-out infinite; }
 .ds-status.is-error .ds-dot { background:var(--danger); box-shadow:0 0 9px color-mix(in srgb, var(--danger) 60%, transparent); }
@@ -241,8 +241,8 @@
 
 /* large breathing indicator (status hero) */
 .ds-indicator { width:42px; height:42px; border-radius:50%; display:grid; place-items:center; position:relative; flex:none; background:var(--inset); border:1px solid var(--border); }
-.ds-indicator .ds-core { width:11px; height:11px; border-radius:50%; background:var(--text); box-shadow:0 0 13px rgba(255,255,255,.55); }
-.ds-indicator.is-on::after { content:""; position:absolute; inset:-1px; border-radius:50%; border:1px solid rgba(255,255,255,.4); animation:ds-breathe 2.6s ease-in-out infinite; }
+.ds-indicator .ds-core { width:11px; height:11px; border-radius:50%; background:var(--text); box-shadow:0 0 13px color-mix(in srgb, var(--text) 55%, transparent); }
+.ds-indicator.is-on::after { content:""; position:absolute; inset:-1px; border-radius:50%; border:1px solid color-mix(in srgb, var(--text) 40%, transparent); animation:ds-breathe 2.6s ease-in-out infinite; }
 .ds-indicator.is-off .ds-core { background:var(--text-3); box-shadow:none; }
 @keyframes ds-breathe { 50% { transform:scale(1.14); opacity:0; } }
 
@@ -256,7 +256,7 @@
 /* ---------- Definition list / facts grid ---------- */
 .ds-facts { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--border-soft); }
 .ds-fact { padding:10px 16px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
-.ds-facts.cols-2 .ds-fact:nth-child(2n) { border-right:0; }
+.ds-facts.is-cols-2 .ds-fact:nth-child(2n) { border-right:0; }
 .ds-fact .k { font-size:var(--fz-2xs); color:var(--text-3); letter-spacing:var(--label-ls); text-transform:uppercase; }
 .ds-fact .v { margin-top:2px; font-size:var(--fz-sm); font-family:var(--font-mono); color:var(--text); }
 
@@ -271,7 +271,7 @@
 .ds-table th { text-align:left; font-size:var(--fz-2xs); letter-spacing:var(--label-ls); text-transform:uppercase; color:var(--text-3); font-weight:var(--fw-semibold); padding:9px 14px; border-bottom:1px solid var(--border); }
 .ds-table td { padding:10px 14px; border-bottom:1px solid var(--border-soft); }
 .ds-table tbody tr:hover { background:var(--hover); }
-.ds-table td.mono { font-family:var(--font-mono); }
+.ds-table td.u-mono { font-family:var(--font-mono); }
 
 /* ---------- Meter / progress ---------- */
 .ds-meter { display:grid; grid-template-columns:130px 1fr 44px; align-items:center; gap:12px; padding:6px 0; }
@@ -340,7 +340,7 @@
 .ds-statusbar { display:flex; align-items:center; height:24px; background:var(--rail); border-top:1px solid var(--border-soft); font-size:var(--fz-xs); color:var(--text-2); }
 .ds-statusbar .seg { display:flex; align-items:center; gap:6px; padding:0 12px; height:100%; border-right:1px solid var(--border-soft); }
 .ds-statusbar .seg:last-child { border-right:0; }
-.ds-statusbar .seg.mono { font-family:var(--font-mono); }
+.ds-statusbar .seg.u-mono { font-family:var(--font-mono); }
 .ds-statusbar .ds-statusbar-spacer { flex:1; }
 
 /* toolbar / command bar */
@@ -375,8 +375,8 @@
 
 /* ---------- Skeleton loader ---------- */
 .ds-skeleton { background:linear-gradient(90deg, var(--fill), var(--fill-hover), var(--fill)); background-size:200% 100%; border-radius:var(--radius-sm); animation:ds-shimmer 1.4s ease-in-out infinite; }
-.ds-skeleton.text { height:11px; border-radius:4px; }
-.ds-skeleton.circle { border-radius:50%; }
+.ds-skeleton.is-text { height:11px; border-radius:4px; }
+.ds-skeleton.is-circle { border-radius:50%; }
 @keyframes ds-shimmer { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
 
 /* ---------- Avatar ---------- */

@@ -21,25 +21,25 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 a { color: inherit; }
 
-::selection { background: rgba(255,255,255,.18); }
+::selection { background: var(--selection); }
 
 /* Consistent scrollbars */
-* { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.12) transparent; }
+* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
 *::-webkit-scrollbar { width: 11px; height: 11px; }
 *::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,.1);
+  background: var(--scrollbar-thumb);
   border-radius: 6px;
   border: 3px solid transparent;
   background-clip: padding-box;
 }
-*::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.18); background-clip: padding-box; }
+*::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); background-clip: padding-box; }
 
 /* Focus: only show ring for keyboard users */
 :focus { outline: none; }
 :focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
 /* Monospace numerics read better tabular */
-.mono, code, kbd { font-family: var(--font-mono); }
+.u-mono, code, kbd { font-family: var(--font-mono); }
 
 /* Respect reduced-motion: kill ambient/looping animation, keep instant feedback */
 @media (prefers-reduced-motion: reduce) {
