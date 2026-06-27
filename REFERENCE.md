@@ -1863,18 +1863,39 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Toast / notification
-- sub-parts: `ds-toast-body`, `ds-toast-close`, `ds-toast-ico`, `ds-toast-stack`
+- sub-parts: `ds-toast-actions`, `ds-toast-body`, `ds-toast-close`, `ds-toast-enter-active`, `ds-toast-enter-from`, `ds-toast-ico`, `ds-toast-leave-active`, `ds-toast-leave-to`, `ds-toast-stack`
+- states: `is-bottom-center`, `is-bottom-left`, `is-bottom-right`, `is-top-center`, `is-top-left`, `is-top-right`, `is-warn`
 
 ```html
 <div class="ds-toast is-success" style="width:100%; max-width:none">
               <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
               <div class="ds-toast-body"><b>Changes saved</b>Your settings have been updated.</div>
-              <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              <div class="ds-toast-actions">
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+            <div class="ds-toast is-info" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Update available</b>Version 2.5.0 is ready to install.</div>
+              <div class="ds-toast-actions">
+                <button class="ds-btn is-ghost is-sm">Install</button>
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+            <div class="ds-toast is-warn" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Low disk space</b>Less than 1 GB remaining on this volume.</div>
+              <div class="ds-toast-actions">
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
             </div>
             <div class="ds-toast is-danger" style="width:100%; max-width:none">
               <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
               <div class="ds-toast-body"><b>Connection lost</b>Reconnecting…</div>
-              <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              <div class="ds-toast-actions">
+                <button class="ds-btn is-ghost is-sm">Retry</button>
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
             </div>
 ```
 
@@ -2623,6 +2644,18 @@ _(no description yet)_
     </nav>
 ```
 
+### is-bottom-center
+
+_(no description yet)_
+
+### is-bottom-left
+
+_(no description yet)_
+
+### is-bottom-right
+
+_(no description yet)_
+
 ### is-busy
 
 _(no description yet)_
@@ -3072,6 +3105,18 @@ _(no description yet)_
               </div>
 ```
 
+### is-top-center
+
+_(no description yet)_
+
+### is-top-left
+
+_(no description yet)_
+
+### is-top-right
+
+_(no description yet)_
+
 ### is-up
 
 _(no description yet)_
@@ -3114,6 +3159,43 @@ _(no description yet)_
 ### is-vertical
 
 _(no description yet)_
+
+### is-warn
+
+_(no description yet)_
+
+```html
+<div class="ds-toast is-success" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Changes saved</b>Your settings have been updated.</div>
+              <div class="ds-toast-actions">
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+            <div class="ds-toast is-info" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Update available</b>Version 2.5.0 is ready to install.</div>
+              <div class="ds-toast-actions">
+                <button class="ds-btn is-ghost is-sm">Install</button>
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+            <div class="ds-toast is-warn" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Low disk space</b>Less than 1 GB remaining on this volume.</div>
+              <div class="ds-toast-actions">
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+            <div class="ds-toast is-danger" style="width:100%; max-width:none">
+              <span class="ds-toast-ico"><svg><!-- icon --></svg></span>
+              <div class="ds-toast-body"><b>Connection lost</b>Reconnecting…</div>
+              <div class="ds-toast-actions">
+                <button class="ds-btn is-ghost is-sm">Retry</button>
+                <button class="ds-toast-close"><svg><!-- icon --></svg></button>
+              </div>
+            </div>
+```
 
 ### is-warning
 
@@ -4148,7 +4230,11 @@ _(no description yet)_
 ```ts
 import { DsToastHost } from 'design-language/vue'
 ```
-- renders: `ds-toast`, `ds-toast-body`, `ds-toast-close`, `ds-toast-stack`
+- renders: `ds-btn`, `ds-toast`, `ds-toast-actions`, `ds-toast-body`, `ds-toast-close`, `ds-toast-ico`
+
+| Prop | Type | Default | Required |
+| --- | --- | --- | --- |
+| placement | `ToastPlacement \| undefined` | `"bottom-right"` | false |
 
 ### DsToolbar
 
