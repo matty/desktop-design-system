@@ -36,6 +36,28 @@ describe("useToast", () => {
     expect(toasts.length).toBe(0);
   });
 
+  it("tone shorthands set the tone", () => {
+    const { toast, toasts } = useToast();
+    toast.success("Saved");
+    toast.danger("Failed");
+    expect(toasts.find((t) => t.message === "Saved")?.tone).toBe("success");
+    expect(toasts.find((t) => t.message === "Failed")?.tone).toBe("danger");
+  });
+
+  it("pause stops auto-dismiss; resume restarts it with remaining time", () => {
+    const { toast, pause, resume, toasts } = useToast();
+    const id = toast({ message: "Hover me", timeout: 1000 });
+    vi.advanceTimersByTime(600);
+    pause(id);
+    vi.advanceTimersByTime(5000); // would have expired if not paused
+    expect(toasts.length).toBe(1);
+    resume(id);
+    vi.advanceTimersByTime(399);
+    expect(toasts.length).toBe(1); // 400ms remained
+    vi.advanceTimersByTime(1);
+    expect(toasts.length).toBe(0);
+  });
+
   it("reused id: stale timer from first toast does not remove second toast", () => {
     const { toast, dismiss, toasts } = useToast();
     // raise first toast with explicit id and 1000ms timeout

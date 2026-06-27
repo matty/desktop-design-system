@@ -48,12 +48,23 @@ export interface TabItem {
 
 export type ToastTone = "info" | "success" | "warn" | "danger";
 
+export type ToastPlacement =
+  | "top-left" | "top-center" | "top-right"
+  | "bottom-left" | "bottom-center" | "bottom-right";
+
+export interface ToastAction {
+  label: string;
+  onClick: () => void;
+}
+
 export interface ToastOptions {
   id?: string;
   message: string;
+  title?: string;
   tone?: ToastTone;
   timeout?: number;
   assertive?: boolean;
+  action?: ToastAction;
 }
 
 export type Tone = "info" | "success" | "warning" | "danger";
