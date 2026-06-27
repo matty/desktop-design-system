@@ -1863,7 +1863,7 @@ _(no description yet)_
 
 _(no description yet)_
 - category: Toast / notification
-- sub-parts: `ds-toast-actions`, `ds-toast-body`, `ds-toast-close`, `ds-toast-enter-active`, `ds-toast-enter-from`, `ds-toast-ico`, `ds-toast-leave-active`, `ds-toast-leave-to`, `ds-toast-stack`
+- sub-parts: `ds-toast-actions`, `ds-toast-body`, `ds-toast-close`, `ds-toast-enter-active`, `ds-toast-enter-from`, `ds-toast-ico`, `ds-toast-leave-active`, `ds-toast-leave-to`, `ds-toast-move`, `ds-toast-stack`
 - states: `is-bottom-center`, `is-bottom-left`, `is-bottom-right`, `is-top-center`, `is-top-left`, `is-top-right`, `is-warn`
 
 ```html

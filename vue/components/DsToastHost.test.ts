@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { mount } from "@vue/test-utils";
 import { nextTick } from "vue";
 import DsToastHost from "./DsToastHost.vue";
+import DsIcon from "./DsIcon.vue";
 import { useToast } from "../composables/useToast";
 import { cssHas } from "../__support__/css";
 
@@ -62,6 +63,37 @@ describe("DsToastHost", () => {
     expect(onClick).toHaveBeenCalledOnce();
     await nextTick();
     expect(w.find(".ds-toast").exists()).toBe(false);
+  });
+
+  it("maps each tone to its own glyph", async () => {
+    const w = mount(DsToastHost);
+    const t = useToast();
+    t.toast({ message: "i", tone: "info", timeout: 0 });
+    t.toast({ message: "s", tone: "success", timeout: 0 });
+    t.toast({ message: "w", tone: "warn", timeout: 0 });
+    t.toast({ message: "d", tone: "danger", timeout: 0 });
+    await nextTick();
+    const names = w.findAllComponents(DsIcon).map((c) => c.props("name"));
+    expect(names).toEqual(["info", "check", "warning", "error"]);
+  });
+
+  it("double pause (hover + focus) does not over-count elapsed time", async () => {
+    const w = mount(DsToastHost);
+    useToast().toast({ message: "Churn", timeout: 1000 });
+    await nextTick();
+    const el = w.find(".ds-toast");
+    vi.advanceTimersByTime(600);
+    await el.trigger("mouseenter"); // pause: 400ms remains
+    await el.trigger("focusin"); // second pause must be a no-op
+    vi.advanceTimersByTime(5000);
+    expect(w.findAll(".ds-toast")).toHaveLength(1);
+    await el.trigger("mouseleave"); // resume with 400ms
+    await el.trigger("focusout"); // stray resume must be a no-op
+    vi.advanceTimersByTime(399);
+    expect(w.findAll(".ds-toast")).toHaveLength(1);
+    vi.advanceTimersByTime(1);
+    await nextTick();
+    expect(w.findAll(".ds-toast")).toHaveLength(0);
   });
 
   it("pauses auto-dismiss on hover and resumes on leave", async () => {

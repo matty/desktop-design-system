@@ -1562,6 +1562,7 @@
         "ds-toast-ico",
         "ds-toast-leave-active",
         "ds-toast-leave-to",
+        "ds-toast-move",
         "ds-toast-stack"
       ],
       "states": [

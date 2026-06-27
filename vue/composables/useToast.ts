@@ -6,7 +6,7 @@ export interface ActiveToast extends ToastOptions {
   id: string;
 }
 
-type Timer = { handle: ReturnType<typeof setTimeout>; remaining: number; startedAt: number };
+type Timer = { handle: ReturnType<typeof setTimeout> | null; remaining: number; startedAt: number };
 
 const state = reactive<{ toasts: ActiveToast[] }>({ toasts: [] });
 let seq = 0;
@@ -23,27 +23,31 @@ export interface ToastFn {
 }
 
 function arm(id: string, ms: number): void {
-  if (timers.has(id)) clearTimeout(timers.get(id)!.handle);
+  const existing = timers.get(id);
+  if (existing?.handle != null) clearTimeout(existing.handle);
   timers.set(id, { handle: setTimeout(() => dismiss(id), ms), remaining: ms, startedAt: Date.now() });
 }
 
 function dismiss(id: string): void {
   const t = timers.get(id);
-  if (t) { clearTimeout(t.handle); timers.delete(id); }
+  if (t) { if (t.handle != null) clearTimeout(t.handle); timers.delete(id); }
   const i = state.toasts.findIndex((x) => x.id === id);
   if (i >= 0) state.toasts.splice(i, 1);
 }
 
+// pause/resume are idempotent: hover + focus handlers can both fire for a
+// single interaction, so a second pause (or a resume without a pause) is a no-op.
 function pause(id: string): void {
   const t = timers.get(id);
-  if (!t) return;
+  if (!t || t.handle == null) return; // missing timer or already paused
   clearTimeout(t.handle);
+  t.handle = null;
   t.remaining = Math.max(0, t.remaining - (Date.now() - t.startedAt));
 }
 
 function resume(id: string): void {
   const t = timers.get(id);
-  if (!t) return;
+  if (!t || t.handle != null) return; // missing timer or already running
   arm(id, t.remaining);
 }
 
