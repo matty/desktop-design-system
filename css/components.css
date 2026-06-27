@@ -356,17 +356,34 @@
 .ds-breadcrumb .current { color:var(--text); font-weight:var(--fw-medium); }
 
 /* ---------- Toast / notification ---------- */
-.ds-toast-stack { position:fixed; right:16px; bottom:30px; display:flex; flex-direction:column; gap:8px; z-index:120; }
+.ds-toast-stack { position:fixed; display:flex; flex-direction:column; gap:8px; z-index:120; }
+.ds-toast-stack.is-top-left     { top:16px; left:16px; flex-direction:column-reverse; }
+.ds-toast-stack.is-top-center   { top:16px; left:50%; transform:translateX(-50%); flex-direction:column-reverse; }
+.ds-toast-stack.is-top-right    { top:16px; right:16px; flex-direction:column-reverse; }
+.ds-toast-stack.is-bottom-left  { bottom:30px; left:16px; }
+.ds-toast-stack.is-bottom-center{ bottom:30px; left:50%; transform:translateX(-50%); }
+.ds-toast-stack.is-bottom-right { bottom:30px; right:16px; }
 .ds-toast { display:flex; align-items:center; gap:11px; min-width:240px; max-width:380px; padding:11px 13px; background:var(--surface-2); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-popover); }
 .ds-toast .ds-toast-ico { flex:none; width:17px; height:17px; color:var(--text-2); }
 .ds-toast .ds-toast-ico svg { width:17px; height:17px; stroke:currentColor; stroke-width:2; fill:none; }
+.ds-toast.is-info    .ds-toast-ico { color:var(--info); }
 .ds-toast.is-success .ds-toast-ico { color:var(--success); }
+.ds-toast.is-warn    .ds-toast-ico { color:var(--warning); }
 .ds-toast.is-danger  .ds-toast-ico { color:var(--danger); }
 .ds-toast .ds-toast-body { font-size:var(--fz-sm); color:var(--text-2); min-width:0; }
 .ds-toast .ds-toast-body b { display:block; font-weight:var(--fw-semibold); font-size:var(--fz-base); color:var(--text); }
-.ds-toast .ds-toast-close { margin-left:auto; flex:none; width:20px; height:20px; display:grid; place-items:center; color:var(--text-3); background:none; border:0; cursor:default; border-radius:5px; }
+.ds-toast .ds-toast-actions { margin-left:auto; flex:none; display:flex; align-items:center; gap:6px; }
+.ds-toast .ds-toast-close { flex:none; width:20px; height:20px; display:grid; place-items:center; color:var(--text-3); background:none; border:0; cursor:default; border-radius:5px; }
 .ds-toast .ds-toast-close:hover { background:var(--hover); color:var(--text); }
 .ds-toast .ds-toast-close svg { width:11px; height:11px; stroke:currentColor; stroke-width:1.8; fill:none; }
+/* Enter/exit transitions (disabled globally under prefers-reduced-motion) */
+.ds-toast-enter-active, .ds-toast-leave-active { transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.ds-toast-move { transition: transform var(--dur) var(--ease); }
+.ds-toast-leave-active { position:absolute; } /* take leaving toast out of flow so siblings slide */
+.ds-toast-enter-from, .ds-toast-leave-to { opacity:0; transform:translateY(6px); }
+.ds-toast-stack.is-top-left .ds-toast-enter-from,   .ds-toast-stack.is-top-left .ds-toast-leave-to,
+.ds-toast-stack.is-top-center .ds-toast-enter-from, .ds-toast-stack.is-top-center .ds-toast-leave-to,
+.ds-toast-stack.is-top-right .ds-toast-enter-from,  .ds-toast-stack.is-top-right .ds-toast-leave-to { transform:translateY(-6px); }
 
 /* ---------- Spinner ---------- */
 .ds-spinner { width:16px; height:16px; border-radius:50%; border:2px solid var(--border-strong); border-top-color:var(--text); animation:ds-spin .7s linear infinite; display:inline-block; vertical-align:middle; }
