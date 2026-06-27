@@ -34,4 +34,47 @@ describe("DsToastHost", () => {
     expect(cssHas("ds-toast-stack")).toBe(true);
     expect(cssHas("ds-toast-close")).toBe(true);
   });
+
+  it("applies the placement class to the stack (default bottom-right)", () => {
+    expect(cssHas("is-top-right")).toBe(true);
+    expect(mount(DsToastHost).find(".ds-toast-stack").classes()).toContain("is-bottom-right");
+    const w = mount(DsToastHost, { props: { placement: "top-right" } });
+    expect(w.find(".ds-toast-stack").classes()).toContain("is-top-right");
+  });
+
+  it("renders tone icon, title and action button; action fires then dismisses", async () => {
+    const onClick = vi.fn();
+    const w = mount(DsToastHost);
+    useToast().toast({
+      message: "Deleted",
+      title: "Item removed",
+      tone: "danger",
+      timeout: 0,
+      action: { label: "Undo", onClick },
+    });
+    await nextTick();
+    expect(w.find(".ds-toast.is-danger").exists()).toBe(true);
+    expect(w.find(".ds-toast-ico").exists()).toBe(true);
+    expect(w.find(".ds-toast-body b").text()).toBe("Item removed");
+    const btn = w.find(".ds-toast-actions .ds-btn");
+    expect(btn.text()).toContain("Undo");
+    await btn.trigger("click");
+    expect(onClick).toHaveBeenCalledOnce();
+    await nextTick();
+    expect(w.find(".ds-toast").exists()).toBe(false);
+  });
+
+  it("pauses auto-dismiss on hover and resumes on leave", async () => {
+    const w = mount(DsToastHost);
+    useToast().toast({ message: "Hover", timeout: 1000 });
+    await nextTick();
+    const el = w.find(".ds-toast");
+    await el.trigger("mouseenter");
+    vi.advanceTimersByTime(5000); // paused: should survive
+    expect(w.findAll(".ds-toast")).toHaveLength(1);
+    await el.trigger("mouseleave");
+    vi.advanceTimersByTime(1000);
+    await nextTick();
+    expect(w.findAll(".ds-toast")).toHaveLength(0);
+  });
 });
