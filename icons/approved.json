@@ -18,6 +18,7 @@
     "close": "lucide:x",
     "data-display": "lucide:table-2",
     "delete": "lucide:trash-2",
+    "error": "lucide:circle-x",
     "file": "lucide:file",
     "feedback": "lucide:message-square",
     "folder": "lucide:folder",
